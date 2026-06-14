@@ -16,7 +16,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-14T16:41:03.000Z",
+  "last_updated": "2026-06-14T16:47:55.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -803,6 +803,45 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
+      "id": "2026-06-12-bike-endurance-i157265404",
+      "date": "2026-06-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265404",
+      "planned": null,
+      "executed": {
+        "duration_min": 40,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 94,
+        "hr_avg": 154,
+        "hr_max": 179,
+        "tss": 46,
+        "distance_m": 17421,
+        "cadence": 80,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
+    },
+    {
       "id": "2026-06-13-bike-race",
       "date": "2026-06-13",
       "week_id": "2026-06-08",
@@ -821,6 +860,84 @@ window.SPORT_DATA = {
       },
       "executed": null,
       "notes": "Objectif A 2026 — BCF CLM en équipe"
+    },
+    {
+      "id": "2026-06-13-bike-endurance-i157265400",
+      "date": "2026-06-13",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265400",
+      "planned": null,
+      "executed": {
+        "duration_min": 58,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 167,
+        "hr_avg": 183,
+        "hr_max": 194,
+        "tss": 80,
+        "distance_m": 34011,
+        "cadence": 96,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
+    },
+    {
+      "id": "2026-06-14-bike-endurance-i157265396",
+      "date": "2026-06-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265396",
+      "planned": null,
+      "executed": {
+        "duration_min": 91,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 215,
+        "hr_avg": 152,
+        "hr_max": 174,
+        "tss": 89,
+        "distance_m": 41755,
+        "cadence": 91,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
     },
     {
       "id": "2026-06-16-run-easy",
