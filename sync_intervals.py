@@ -19,12 +19,11 @@ from pathlib import Path
 HERE = Path(__file__).parent
 config_path = HERE / "config.json"
 
-if not config_path.exists():
-    print("❌ config.json introuvable. Crée-le avec ton athlete_id et api_key.")
-    sys.exit(1)
-
-with open(config_path) as f:
-    config = json.load(f)
+if config_path.exists():
+    with open(config_path) as f:
+        config = json.load(f)
+else:
+    config = {"intervals_icu": {"athlete_id": "", "api_key": ""}, "sync": {}}
 
 ATHLETE_ID = os.environ.get("INTERVALS_ATHLETE_ID") or config["intervals_icu"]["athlete_id"]
 API_KEY    = os.environ.get("INTERVALS_API_KEY")    or config["intervals_icu"]["api_key"]
