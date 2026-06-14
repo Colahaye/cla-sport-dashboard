@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Suivi semaine — CLA 2026</title>
+<script src="../sport_data.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#FAFAF6;--surface:#fff;--surface2:#F4F2EC;--surface-warm:#FFF7F2;
+  --border:#E8E5DD;--border-strong:#D3D1C7;
+  --accent:#D85A30;--accent-dark:#993C1D;--accent-soft:#FAECE7;
+  --amber:#BA7517;--amber-soft:#FAEEDA;
+  --green:#639922;--green-soft:#EAF3DE;--green-dark:#3B6D11;
+  --red:#A32D2D;--red-soft:#FCEBEB;
+  --blue:#185FA5;--blue-soft:#E6F1FB;
+  --purple:#534AB7;--purple-soft:#EEEDFE;
+  --text:#2C2C2A;--text2:#5F5E5A;--text-muted:#888780;
+  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow-x:hidden;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+
+/* Header */
+.hdr{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:20;}
+.hdr-title{font-size:15px;font-weight:700;}
+.hdr-sub{font-size:11px;color:var(--text-muted);font-family:var(--mono);}
+.back{font-size:12px;color:var(--text-muted);border:1px solid var(--border);
+  padding:5px 10px;border-radius:6px;background:none;cursor:pointer;}
+.back:active{background:var(--border);}
+
+/* Nav semaine */
+.week-nav{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:8px 14px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:49px;z-index:10;}
+.week-lbl{font-size:13px;font-weight:700;font-family:var(--mono);}
+.nav-btn{background:var(--surface2);border:none;border-radius:6px;
+  padding:6px 12px;font-size:12px;cursor:pointer;}
+.nav-btn:active{background:var(--border);}
+.today-btn{font-size:11px;color:var(--accent);background:var(--accent-soft);
+  border:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-weight:600;}
+
+/* Résumé semaine */
+.week-summary{display:flex;gap:8px;padding:10px 14px;overflow-x:auto;
+  background:var(--surface);border-bottom:1px solid var(--border);}
+.summary-chip{text-align:center;background:var(--surface2);border-radius:8px;
+  padding:6px 10px;flex-shrink:0;}
+.summary-chip .val{font-size:16px;font-weight:800;font-family:var(--mono);color:var(--accent);}
+.summary-chip .lbl{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);}
+.summary-chip .val.good{color:var(--green);}
+
+/* Jours */
+.days-body{padding:10px 14px 80px;}
+
+.day-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  margin-bottom:10px;overflow:hidden;}
+.day-card.today-card{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft);}
+
+.day-head{padding:10px 14px;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid var(--border);
+  background:var(--surface);}
+.day-card.today-card .day-head{background:var(--accent);}
+.day-card.today-card .day-head *{color:#fff !important;}
+
+.day-name{font-size:15px;font-weight:800;}
+.day-date{font-size:11px;color:var(--text-muted);font-family:var(--mono);}
+.day-training-pill{font-size:10px;font-weight:700;padding:3px 10px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.4px;}
+.tp-rest    {background:var(--surface2);color:var(--text-muted);}
+.tp-run     {background:var(--green-soft);color:var(--green-dark);}
+.tp-bike    {background:var(--accent-soft);color:var(--accent-dark);}
+.tp-strength{background:var(--purple-soft);color:var(--purple);}
+.tp-race    {background:#FAEEDA;color:#854F0B;}
+
+/* Grille de checks */
+.day-checks{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.check-cell{padding:10px 12px;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid var(--border);}
+.check-cell:nth-child(odd){border-right:1px solid var(--border);}
+.check-cell:nth-last-child(-n+2){border-bottom:none;}
+.check-label{font-size:12px;font-weight:600;color:var(--text);}
+.check-label small{display:block;font-size:10px;color:var(--text-muted);font-weight:400;margin-top:1px;}
+
+.check-btn{width:36px;height:36px;border-radius:10px;border:2px solid var(--border);
+  background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all .12s;-webkit-tap-highlight-color:transparent;flex-shrink:0;}
+.check-btn.done{background:var(--green);border-color:var(--green);color:#fff;}
+.check-btn.skipped{background:var(--surface2);border-color:var(--border);color:var(--text-muted);font-size:14px;}
+
+/* Score douleur */
+.pain-row{padding:10px 12px;display:flex;align-items:center;
+  justify-content:space-between;border-top:1px solid var(--border);}
+.pain-label{font-size:12px;font-weight:600;}
+.pain-label small{display:block;font-size:10px;color:var(--text-muted);}
+.pain-scale{display:flex;gap:5px;}
+.pdot{width:30px;height:30px;border-radius:50%;border:2px solid var(--border);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;font-family:var(--mono);
+  background:var(--surface2);color:var(--text-muted);transition:all .12s;
+  -webkit-tap-highlight-color:transparent;}
+.pdot[data-score="0"].sel{background:#3B6D11;border-color:#3B6D11;color:#fff;}
+.pdot[data-score="1"].sel{background:#639922;border-color:#639922;color:#fff;}
+.pdot[data-score="2"].sel{background:#BA7517;border-color:#BA7517;color:#fff;}
+.pdot[data-score="3"].sel{background:#E65100;border-color:#E65100;color:#fff;}
+.pdot[data-score="4"].sel{background:#C62828;border-color:#C62828;color:#fff;}
+.pdot[data-score="5"].sel{background:#8B0000;border-color:#8B0000;color:#fff;}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-title">Suivi de la semaine</div>
+    <div class="hdr-sub" id="hdr-sub">CLA · 2026</div>
+  </div>
+  <button class="back" onclick="window.parent.postMessage({type:'switch-tab',target:'log'},'*')">← Log</button>
+</header>
+
+<div class="week-nav">
+  <button class="nav-btn" onclick="shiftWeek(-1)">◀</button>
+  <span class="week-lbl" id="week-lbl">—</span>
+  <button class="nav-btn" onclick="shiftWeek(1)">▶</button>
+  <button class="today-btn" onclick="goToThisWeek()">Cette semaine</button>
+</div>
+
+<div class="week-summary" id="week-summary"></div>
+<div class="days-body" id="days-body"></div>
+
+<script>
+// ════════════════════════════════════════════════════
+// CONFIG — à adapter selon l'utilisateur / blessure
+// ════════════════════════════════════════════════════
+const TRACKER_CONFIG = {
+  checks: [
+    { id: 'proto_matin', label: 'Protocole matin',   sub: 'Avant le 1er pas · ~10 min',      sport: null },
+    { id: 'proto_soir',  label: 'Protocole soir',    sub: 'Heel drops + étirements · ~15 min', sport: null },
+    { id: 'renfo_a',     label: 'Renfo A — Tronc',   sub: '~40 min · pompes, planche, ...',   sport: 'strength' },
+    { id: 'renfo_b',     label: 'Renfo B — Jambes',  sub: '~35 min · hip thrust, squat, ...',  sport: 'strength' },
+  ],
+  symptom: {
+    id: 'fasciite',
+    label: 'Fasciite plantaire',
+    sub: '0 = rien · 5 = intense',
+    scale: 5,
+    warn_above: 3
+  }
+};
+
+const TRACKER_KEY = 'suivi_cla_v1';
+const SD = window.SPORT_DATA || {};
+const SESSIONS = SD.sessions || [];
+
+const JOURS = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+const MOIS  = ['janv','févr','mars','avr','mai','juin','juil','août','sept','oct','nov','déc'];
+
+let currentMonday = getMonday(new Date());
+
+// ── Helpers ─────────────────────────────────────────
+function getMonday(d) {
+  const dt = new Date(d);
+  const day = dt.getDay();
+  dt.setDate(dt.getDate() - (day === 0 ? 6 : day - 1));
+  dt.setHours(0,0,0,0);
+  return dt;
+}
+function isoDate(d) {
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function todayISO() { return isoDate(new Date()); }
+
+function loadTracker() {
+  try { return JSON.parse(localStorage.getItem(TRACKER_KEY) || '{}'); } catch(e) { return {}; }
+}
+function saveTracker(data) { localStorage.setItem(TRACKER_KEY, JSON.stringify(data)); }
+
+function shiftWeek(d) {
+  currentMonday.setDate(currentMonday.getDate() + d * 7);
+  render();
+}
+function goToThisWeek() {
+  currentMonday = getMonday(new Date());
+  render();
+}
+
+function getSessionsForDay(iso) {
+  return SESSIONS.filter(s => s.date === iso && s.sport !== 'rest');
+}
+function sportClass(sport) {
+  const m = { run:'tp-run', bike:'tp-bike', strength:'tp-strength', race:'tp-race' };
+  return m[sport] || 'tp-rest';
+}
+function sportLabel(session) {
+  if (!session) return 'Repos';
+  if (session.type === 'race') return '🏁 ' + (session.planned && session.planned.name || 'Course');
+  const p = session.planned;
+  return (p && p.name) || session.type;
+}
+
+// ── Render ───────────────────────────────────────────
+function render() {
+  const today = todayISO();
+  const tracker = loadTracker();
+
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(currentMonday);
+    d.setDate(d.getDate() + i);
+    days.push(d);
+  }
+
+  // Header semaine
+  const s = days[0], e = days[6];
+  document.getElementById('week-lbl').textContent =
+    s.getDate() + ' ' + MOIS[s.getMonth()] + ' → ' + e.getDate() + ' ' + MOIS[e.getMonth()];
+
+  // Résumé semaine
+  const summary = document.getElementById('week-summary');
+  let totalProtoMatin = 0, totalProtoSoir = 0, totalPainAvg = 0, painCount = 0;
+  days.forEach(d => {
+    const iso = isoDate(d);
+    const t = tracker[iso] || {};
+    if (t.proto_matin) totalProtoMatin++;
+    if (t.proto_soir) totalProtoSoir++;
+    const sym = TRACKER_CONFIG.symptom;
+    if (t[sym.id] !== undefined) { totalPainAvg += t[sym.id]; painCount++; }
+  });
+  const painAvg = painCount > 0 ? (totalPainAvg / painCount).toFixed(1) : '—';
+  summary.innerHTML = `
+    <div class="summary-chip">
+      <div class="val${totalProtoMatin >= 5 ? ' good' : ''}">${totalProtoMatin}/7</div>
+      <div class="lbl">Matin</div>
+    </div>
+    <div class="summary-chip">
+      <div class="val${totalProtoSoir >= 5 ? ' good' : ''}">${totalProtoSoir}/7</div>
+      <div class="lbl">Soir</div>
+    </div>
+    <div class="summary-chip">
+      <div class="val" style="color:${painAvg !== '—' && parseFloat(painAvg) >= TRACKER_CONFIG.symptom.warn_above ? 'var(--red)' : 'var(--text)'}">${painAvg}</div>
+      <div class="lbl">Douleur moy.</div>
+    </div>`;
+
+  // Jours
+  const body = document.getElementById('days-body');
+  body.innerHTML = '';
+
+  days.forEach(d => {
+    const iso = isoDate(d);
+    const isToday = iso === today;
+    const isPast = iso < today;
+    const daySessions = getSessionsForDay(iso);
+    const primarySession = daySessions[0] || null;
+    const dayData = tracker[iso] || {};
+
+    const card = document.createElement('div');
+    card.className = 'day-card' + (isToday ? ' today-card' : '');
+
+    // En-tête
+    const jIdx = d.getDay() === 0 ? 6 : d.getDay() - 1;
+    const head = document.createElement('div');
+    head.className = 'day-head';
+    head.innerHTML = `
+      <div>
+        <div class="day-name">${JOURS[jIdx]} ${d.getDate()} ${MOIS[d.getMonth()]}</div>
+      </div>
+      <div>
+        ${primarySession
+          ? `<span class="day-training-pill ${sportClass(primarySession.sport)}">${sportLabel(primarySession)}</span>`
+          : `<span class="day-training-pill tp-rest">Repos</span>`
+        }
+        ${primarySession && primarySession.status === 'done' ? '<span style="font-size:11px;margin-left:4px;color:var(--green);font-weight:700">✓</span>' : ''}
+      </div>`;
+    card.appendChild(head);
+
+    // Grille de checks
+    const checksGrid = document.createElement('div');
+    checksGrid.className = 'day-checks';
+
+    TRACKER_CONFIG.checks.forEach(chk => {
+      const isDone = dayData[chk.id] === true;
+      const cell = document.createElement('div');
+      cell.className = 'check-cell';
+      cell.innerHTML = `
+        <div class="check-label">${chk.label}<small>${chk.sub}</small></div>
+        <button class="check-btn${isDone ? ' done' : ''}" data-date="${iso}" data-check="${chk.id}">
+          ${isDone ? '✓' : ''}
+        </button>`;
+      cell.querySelector('.check-btn').addEventListener('click', function() {
+        const t = loadTracker();
+        if (!t[iso]) t[iso] = {};
+        t[iso][chk.id] = !t[iso][chk.id];
+        saveTracker(t);
+        this.classList.toggle('done', t[iso][chk.id]);
+        this.textContent = t[iso][chk.id] ? '✓' : '';
+        renderSummary(days, loadTracker());
+      });
+      checksGrid.appendChild(cell);
+    });
+    card.appendChild(checksGrid);
+
+    // Score douleur
+    const sym = TRACKER_CONFIG.symptom;
+    const currentScore = dayData[sym.id] !== undefined ? dayData[sym.id] : null;
+    const painRow = document.createElement('div');
+    painRow.className = 'pain-row';
+    const dots = Array.from({length: sym.scale + 1}, (_,n) =>
+      `<button class="pdot${currentScore === n ? ' sel' : ''}" data-score="${n}" data-date="${iso}">${n}</button>`
+    ).join('');
+    painRow.innerHTML = `
+      <div class="pain-label">${sym.label}<small>${sym.sub}</small></div>
+      <div class="pain-scale">${dots}</div>`;
+    painRow.querySelectorAll('.pdot').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const score = parseInt(this.dataset.score);
+        const t = loadTracker();
+        if (!t[iso]) t[iso] = {};
+        t[iso][sym.id] = score;
+        saveTracker(t);
+        painRow.querySelectorAll('.pdot').forEach(b => b.classList.remove('sel'));
+        this.classList.add('sel');
+        renderSummary(days, loadTracker());
+      });
+    });
+    card.appendChild(painRow);
+    body.appendChild(card);
+  });
+}
+
+function renderSummary(days, tracker) {
+  const sym = TRACKER_CONFIG.symptom;
+  let matin = 0, soir = 0, painSum = 0, painN = 0;
+  days.forEach(d => {
+    const t = tracker[isoDate(d)] || {};
+    if (t.proto_matin) matin++;
+    if (t.proto_soir) soir++;
+    if (t[sym.id] !== undefined) { painSum += t[sym.id]; painN++; }
+  });
+  const avg = painN > 0 ? (painSum/painN).toFixed(1) : '—';
+  const chips = document.querySelectorAll('.summary-chip .val');
+  if (chips[0]) { chips[0].textContent = matin+'/7'; chips[0].className = 'val' + (matin>=5?' good':''); }
+  if (chips[1]) { chips[1].textContent = soir+'/7';  chips[1].className = 'val' + (soir>=5?' good':''); }
+  if (chips[2]) { chips[2].textContent = avg; chips[2].style.color = avg !== '—' && parseFloat(avg) >= sym.warn_above ? 'var(--red)' : 'var(--text)'; }
+}
+
+// Init
+render();
+</script>
+</body>
+</html>

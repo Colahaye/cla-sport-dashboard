@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Renforcement — CLA 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#FAFAF6;--surface:#fff;--surface2:#F4F2EC;--surface-warm:#FFF7F2;
+  --border:#E8E5DD;--border-strong:#D3D1C7;
+  --accent:#D85A30;--accent-dark:#993C1D;--accent-soft:#FAECE7;
+  --amber:#BA7517;--amber-soft:#FAEEDA;
+  --green:#639922;--green-soft:#EAF3DE;--green-dark:#3B6D11;
+  --red:#A32D2D;--red-soft:#FCEBEB;
+  --blue:#185FA5;--blue-soft:#E6F1FB;
+  --purple:#534AB7;--purple-soft:#EEEDFE;
+  --text:#2C2C2A;--text2:#5F5E5A;--text-muted:#888780;
+  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ── Header ── */
+.hdr{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:20;}
+.hdr-title{font-size:15px;font-weight:700;}
+.hdr-sub{font-size:11px;color:var(--text-muted);font-family:var(--mono);}
+.back{font-size:12px;color:var(--text-muted);border:1px solid var(--border);
+  padding:5px 10px;border-radius:6px;background:none;cursor:pointer;}
+.back:active{background:var(--border);}
+
+/* ── Subtabs ── */
+.subtabs{display:flex;gap:4px;padding:10px 14px;background:var(--surface);
+  border-bottom:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.subtab{padding:8px 16px;border-radius:999px;border:none;cursor:pointer;
+  font-family:var(--font);font-size:13px;font-weight:600;white-space:nowrap;
+  background:var(--surface2);color:var(--text2);flex-shrink:0;transition:all .15s;}
+.subtab.active{background:var(--accent);color:#fff;}
+.subtab:active:not(.active){background:var(--border);}
+
+/* ── Pages ── */
+.page{display:none;padding:12px 14px 80px;}
+.page.active{display:block;}
+
+/* Section ── */
+.sec-title{font-size:17px;font-weight:800;margin-bottom:2px;}
+.sec-sub{font-size:12px;color:var(--text-muted);font-family:var(--mono);margin-bottom:14px;}
+.alert{background:var(--red-soft);border:1px solid #E8AAAA;border-radius:8px;
+  padding:10px 12px;font-size:12px;color:var(--red);margin-bottom:14px;}
+
+/* Block ── */
+.block-lbl{font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;
+  letter-spacing:.8px;margin:20px 0 10px;display:flex;align-items:center;gap:8px;}
+.block-lbl::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── Exercise card ── */
+.exo{background:var(--surface);border:1px solid var(--border);border-radius:14px;
+  overflow:hidden;margin-bottom:12px;}
+
+/* Schema pleine largeur */
+.schema-wrap{background:var(--surface2);width:100%;padding:16px 12px;
+  display:flex;align-items:center;justify-content:center;gap:16px;}
+.schema-wrap svg{width:160px;height:160px;flex-shrink:0;}
+.schema-caption{font-size:11px;color:var(--text-muted);font-style:italic;
+  writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);max-height:140px;}
+
+/* Info zone ── */
+.exo-info{padding:14px;}
+.exo-name{font-size:17px;font-weight:800;margin-bottom:4px;}
+.exo-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.4px;
+  text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-bottom:10px;}
+.b-fasciite{background:var(--red-soft);color:var(--red);}
+.b-core{background:var(--purple-soft);color:var(--purple);}
+.b-force{background:var(--green-soft);color:var(--green-dark);}
+.b-etir{background:var(--blue-soft);color:var(--blue);}
+.b-massage{background:var(--amber-soft);color:#854F0B;}
+
+/* Sets row ── */
+.sets-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+.chip{text-align:center;background:var(--surface2);border-radius:10px;
+  padding:8px 14px;min-width:64px;}
+.chip .val{font-size:24px;font-weight:800;font-family:var(--mono);
+  color:var(--accent);line-height:1;}
+.chip .lbl{font-size:9px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--text-muted);margin-top:2px;}
+
+/* ── TIMER BUTTON ── */
+.timer-btn{display:flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;border:none;border-radius:12px;
+  padding:10px 18px;font-size:15px;font-weight:700;cursor:pointer;
+  font-family:var(--font);flex-shrink:0;transition:all .12s;
+  -webkit-tap-highlight-color:transparent;}
+.timer-btn:active{background:var(--accent-dark);transform:scale(.97);}
+.timer-btn.running{background:#185FA5;}
+.timer-btn.done{background:var(--green);}
+
+/* ── TIMER DISPLAY ── */
+.timer-display{display:none;margin:10px 0;
+  background:var(--surface2);border-radius:14px;padding:16px;
+  text-align:center;}
+.timer-display.visible{display:block;}
+.timer-ring-wrap{position:relative;width:120px;height:120px;margin:0 auto 10px;}
+.timer-ring{transform:rotate(-90deg);}
+.timer-ring circle.bg{fill:none;stroke:var(--border);stroke-width:6;}
+.timer-ring circle.prog{fill:none;stroke:var(--accent);stroke-width:6;
+  stroke-linecap:round;transition:stroke-dashoffset .5s linear;}
+.timer-num{position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;font-size:30px;font-weight:800;
+  font-family:var(--mono);color:var(--text);}
+.timer-actions{display:flex;gap:8px;justify-content:center;margin-top:8px;}
+.t-btn{padding:8px 16px;border-radius:8px;border:none;cursor:pointer;
+  font-size:13px;font-weight:600;font-family:var(--font);}
+.t-pause{background:var(--amber-soft);color:#854F0B;}
+.t-reset{background:var(--surface2);color:var(--text2);}
+.t-side{font-size:12px;color:var(--text-muted);margin-top:6px;}
+
+/* Desc ── */
+.exo-desc{font-size:13px;color:var(--text2);line-height:1.6;
+  border-top:1px solid var(--border);padding:12px 14px;background:var(--bg);}
+.cue{margin-top:8px;padding:8px 12px;background:var(--amber-soft);
+  border-radius:8px;font-size:12px;color:#854F0B;font-weight:500;}
+.cue::before{content:'💡 ';}
+
+/* ════ TRACKER SUIVI ════ */
+.suivi-week{padding:12px 14px;}
+.suivi-day{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  margin-bottom:10px;overflow:hidden;}
+.suivi-day-head{padding:10px 12px;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid var(--border);}
+.suivi-day-head.today-day{background:var(--accent);color:#fff;}
+.suivi-day-name{font-size:14px;font-weight:800;}
+.suivi-training-pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;
+  text-transform:uppercase;}
+.suivi-body{padding:12px;}
+.suivi-row{display:flex;align-items:center;justify-content:space-between;
+  padding:8px 0;border-bottom:1px solid var(--border);}
+.suivi-row:last-child{border:none;}
+.suivi-label{font-size:13px;font-weight:500;}
+.suivi-label small{display:block;font-size:10px;color:var(--text-muted);font-weight:400;}
+/* Checkbox */
+.check-btn{width:36px;height:36px;border-radius:10px;border:2px solid var(--border);
+  background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all .12s;-webkit-tap-highlight-color:transparent;}
+.check-btn.checked{background:var(--green);border-color:var(--green);color:#fff;}
+/* Pain score */
+.pain-dots{display:flex;gap:6px;align-items:center;}
+.pain-dot{width:32px;height:32px;border-radius:50%;border:2px solid var(--border);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;font-family:var(--mono);transition:all .12s;
+  -webkit-tap-highlight-color:transparent;background:var(--surface2);color:var(--text-muted);}
+.pain-dot.active-0{background:#639922;border-color:#639922;color:#fff;}
+.pain-dot.active-1{background:#8BC34A;border-color:#8BC34A;color:#fff;}
+.pain-dot.active-2{background:#BA7517;border-color:#BA7517;color:#fff;}
+.pain-dot.active-3{background:#E65100;border-color:#E65100;color:#fff;}
+.pain-dot.active-4{background:#C62828;border-color:#C62828;color:#fff;}
+.pain-dot.active-5{background:#8B0000;border-color:#8B0000;color:#fff;}
+.suivi-legend{font-size:10px;color:var(--text-muted);padding:4px 14px 10px;
+  display:flex;justify-content:space-between;}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-title">Renforcement &amp; Mobilité</div>
+    <div class="hdr-sub">CLA · 2026</div>
+  </div>
+  <button class="back" onclick="window.parent.postMessage({type:'switch-tab',target:'log'},'*')">← Log</button>
+</header>
+
+<div class="subtabs">
+  <button class="subtab active" onclick="showPage('quotidien',this)">Protocole quotidien</button>
+  <button class="subtab" onclick="showPage('renfoA',this)">Renfo A — Tronc</button>
+  <button class="subtab" onclick="showPage('renfoB',this)">Renfo B — Jambes</button>
+</div>
+
+
+<!-- ════════════════════════════════
+     PAGE 1 — QUOTIDIEN
+════════════════════════════════ -->
+<div id="page-quotidien" class="page active">
+  <div class="sec-title">Protocole fasciite plantaire</div>
+  <div class="sec-sub">À maintenir jusqu'à disparition + 4 semaines</div>
+  <div class="alert">⚠️ Douleur > 4/10 → stopper cet exercice seulement, pas toute la routine</div>
+
+  <div class="block-lbl">🌅 Matin — avant le premier pas <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">(8–10 min)</span></div>
+
+  <!-- Tirage orteils -->
+  <div class="exo" data-seconds="30" data-sides="2" data-side-label="pied">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Lit -->
+        <rect x="10" y="100" width="140" height="16" rx="4" fill="#E8E5DD"/>
+        <!-- Personne assise -->
+        <ellipse cx="36" cy="52" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="36" y1="66" x2="36" y2="98" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Bras -->
+        <line x1="36" y1="76" x2="18" y2="92" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <!-- Jambe tendue -->
+        <line x1="36" y1="96" x2="128" y2="100" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Pied -->
+        <ellipse cx="130" cy="100" rx="10" ry="6" fill="#D3D1C7" stroke="#888780" stroke-width="2"/>
+        <!-- Serviette en boucle orange -->
+        <path d="M128 100 Q138 82 128 70" stroke="#D85A30" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <line x1="128" y1="70" x2="100" y2="82" stroke="#D85A30" stroke-width="3" stroke-linecap="round"/>
+        <line x1="100" y1="82" x2="70" y2="90" stroke="#D85A30" stroke-width="3" stroke-linecap="round"/>
+        <!-- Flèche tirage vers tibia -->
+        <path d="M110 72 L98 52" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a1)"/>
+        <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="146" text-anchor="middle" fill="#888780" font-size="12" font-family="Inter">serviette en boucle autour des orteils</text>
+      </svg>
+      <div class="schema-caption">assis · jambe tendue</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Tirage d'orteils en dorsiflexion</div>
+      <span class="exo-badge b-fasciite">⭐ Clé fasciite</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">30s</div><div class="lbl">/ pied</div></div>
+        <button class="timer-btn" onclick="startTimer(this,30,2,'pied')">▶ 30s / pied</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Assis dans le lit, jambe aussi tendue que possible. Serviette en boucle autour des 5 orteils, tenir dans la main. Tirer vers le tibia jusqu'à étirement sous la voûte. Maintenir 30s sans à-coups.
+      <div class="cue">Si tu vois les tendons se dessiner sous le pied → bonne position. Laisser la serviette au pied du lit la veille.</div>
+    </div>
+  </div>
+
+  <!-- Massage balle tennis -->
+  <div class="exo" data-seconds="120" data-sides="2" data-side-label="pied">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Chaise -->
+        <rect x="40" y="90" width="80" height="10" rx="3" fill="#E8E5DD"/>
+        <line x1="50" y1="100" x2="50" y2="148" stroke="#D3D1C7" stroke-width="5" stroke-linecap="round"/>
+        <line x1="110" y1="100" x2="110" y2="148" stroke="#D3D1C7" stroke-width="5" stroke-linecap="round"/>
+        <!-- Personne -->
+        <ellipse cx="80" cy="42" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="80" y1="56" x2="80" y2="90" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Jambe pliée -->
+        <line x1="80" y1="90" x2="80" y2="130" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <line x1="80" y1="130" x2="110" y2="130" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <!-- Balle tennis -->
+        <circle cx="102" cy="140" r="12" fill="#8BC34A" stroke="#4CAF50" stroke-width="2"/>
+        <path d="M94 136 Q102 142 110 136" stroke="#fff" stroke-width="1.5" fill="none"/>
+        <path d="M94 144 Q102 138 110 144" stroke="#fff" stroke-width="1.5" fill="none"/>
+        <!-- Pied sur balle -->
+        <path d="M88 130 Q102 126 116 130" stroke="#888780" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Flèche roulement -->
+        <path d="M88 148 L116 148" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a2)"/>
+        <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="156" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">rouler lentement · insister zones sensibles</text>
+      </svg>
+      <div class="schema-caption">assis · balle sous le pied</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Massage balle de tennis</div>
+      <span class="exo-badge b-massage">Massage</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">min</div></div>
+        <div class="chip"><div class="val">×2</div><div class="lbl">pieds</div></div>
+        <button class="timer-btn" onclick="startTimer(this,120,2,'pied')">▶ 2min / pied</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Assis, poser la balle sous le pied. Rouler lentement de l'avant du talon vers la voûte. Insister sur les zones sensibles 10–15s. Appuyer avec le poids du corps selon tolérance.
+      <div class="cue">Douleur ≤ 3/10. Pas de vitesse — le travail se fait lentement.</div>
+    </div>
+  </div>
+
+  <!-- Étirement Achille genou tendu -->
+  <div class="exo" data-seconds="30" data-sides="2" data-side-label="côté">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Mur -->
+        <rect x="8" y="10" width="16" height="140" rx="4" fill="#E8E5DD"/>
+        <!-- Personne debout -->
+        <ellipse cx="85" cy="32" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="85" y1="46" x2="84" y2="82" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Bras vers mur -->
+        <line x1="84" y1="58" x2="24" y2="58" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <!-- Jambe avant -->
+        <line x1="84" y1="82" x2="68" y2="102" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <line x1="68" y1="102" x2="60" y2="142" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <!-- Jambe arrière TENDUE (orange) -->
+        <line x1="84" y1="82" x2="108" y2="100" stroke="#D85A30" stroke-width="5" stroke-linecap="round"/>
+        <line x1="108" y1="100" x2="118" y2="142" stroke="#D85A30" stroke-width="5" stroke-linecap="round"/>
+        <!-- Sol -->
+        <line x1="8" y1="146" x2="152" y2="146" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Talon au sol -->
+        <ellipse cx="118" cy="145" rx="10" ry="4" fill="#D85A30"/>
+        <text x="122" y="136" fill="#D85A30" font-size="11" font-family="Inter" font-weight="700">talon sol</text>
+        <!-- Annotation jambe tendue -->
+        <text x="108" y="92" fill="#D85A30" font-size="10" font-family="Inter">tendue</text>
+        <text x="80" y="156" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">jambe arrière droite · talon qui ne lève pas</text>
+      </svg>
+      <div class="schema-caption">genou arrière tendu</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Étirement Achille — genou tendu</div>
+      <span class="exo-badge b-etir">Étirement mollet haut</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">30s</div><div class="lbl">/ côté</div></div>
+        <button class="timer-btn" onclick="startTimer(this,30,2,'côté')">▶ 30s / côté</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Mains contre un mur, pied en arrière, jambe arrière complètement tendue, talon au sol. Pousser la hanche avant vers le mur jusqu'à étirement dans le mollet haut.
+      <div class="cue">Talon arrière qui ne décolle pas. Si tu dois le lever → reculer moins le pied.</div>
+    </div>
+  </div>
+
+  <!-- Étirement soléaire genou fléchi -->
+  <div class="exo" data-seconds="30" data-sides="2" data-side-label="côté">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="10" width="16" height="140" rx="4" fill="#E8E5DD"/>
+        <ellipse cx="85" cy="32" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="85" y1="46" x2="84" y2="82" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="84" y1="58" x2="24" y2="58" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <line x1="84" y1="82" x2="68" y2="102" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <line x1="68" y1="102" x2="60" y2="142" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <!-- Jambe arrière FLÉCHIE -->
+        <line x1="84" y1="82" x2="108" y2="100" stroke="#D85A30" stroke-width="5" stroke-linecap="round"/>
+        <line x1="108" y1="100" x2="112" y2="142" stroke="#D85A30" stroke-width="5" stroke-linecap="round"/>
+        <line x1="8" y1="146" x2="152" y2="146" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="112" cy="145" rx="10" ry="4" fill="#D85A30"/>
+        <!-- Annotation genou fléchi -->
+        <path d="M108 100 Q122 98 118 110" stroke="#D85A30" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+        <text x="122" y="108" fill="#D85A30" font-size="11" font-family="Inter">~20°</text>
+        <text x="80" y="156" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">même position MAIS genou légèrement fléchi</text>
+      </svg>
+      <div class="schema-caption">soléaire (mollet bas)</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Étirement soléaire — genou fléchi</div>
+      <span class="exo-badge b-etir">Soléaire · Grand oublié</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">30s</div><div class="lbl">/ côté</div></div>
+        <button class="timer-btn" onclick="startTimer(this,30,2,'côté')">▶ 30s / côté</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Même position que ci-dessus MAIS genou arrière légèrement fléchi (~20°). Sentir l'étirement plus bas dans le mollet. Les deux exercices ciblent des muscles différents — ne pas en sauter un.
+      <div class="cue">Soléaire = insertion très proche du fascia. Ne jamais sauter cet exo.</div>
+    </div>
+  </div>
+
+  <div class="block-lbl">🌙 Soir <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:10px">(12–15 min)</span></div>
+
+  <!-- Heel drop -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Marche -->
+        <rect x="20" y="104" width="120" height="14" rx="3" fill="#E8E5DD"/>
+        <rect x="20" y="118" width="120" height="28" rx="3" fill="#D3D1C7"/>
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="2"/>
+        <!-- Personne -->
+        <ellipse cx="80" cy="26" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="80" y1="40" x2="80" y2="78" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="80" y1="54" x2="56" y2="70" stroke="#888780" stroke-width="3" stroke-linecap="round"/>
+        <line x1="80" y1="54" x2="104" y2="70" stroke="#888780" stroke-width="3" stroke-linecap="round"/>
+        <!-- Jambes -->
+        <line x1="80" y1="78" x2="60" y2="104" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <line x1="80" y1="78" x2="100" y2="104" stroke="#888780" stroke-width="5" stroke-linecap="round"/>
+        <!-- Avant pieds sur bord -->
+        <rect x="46" y="100" width="20" height="7" rx="3" fill="#888780"/>
+        <rect x="86" y="100" width="20" height="7" rx="3" fill="#888780"/>
+        <!-- Talons en dessous (en orange) -->
+        <ellipse cx="56" cy="120" rx="11" ry="6" fill="#D85A30" opacity=".8"/>
+        <ellipse cx="96" cy="120" rx="11" ry="6" fill="#D85A30" opacity=".8"/>
+        <!-- Grande flèche descente -->
+        <path d="M80 82 L80 112" stroke="#D85A30" stroke-width="3" marker-end="url(#a3)" stroke-linecap="round"/>
+        <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="140" text-anchor="middle" fill="#D85A30" font-size="13" font-family="Inter" font-weight="800">DESCENTE 3–4s LENTE</text>
+      </svg>
+      <div class="schema-caption">avant pied sur bord de marche</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Heel drop excentrique</div>
+      <span class="exo-badge b-fasciite">⭐⭐ Exercice n°1 fasciite</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">15</div><div class="lbl">reps</div></div>
+        <div class="chip"><div class="val">3–4s</div><div class="lbl">descente</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Avant du pied sur le bord de la marche, talon dans le vide. <strong>Monter sur les DEUX pieds → enlever le pied sain → descendre LENTEMENT sur un seul en 3–4s</strong> jusqu'au talon en dessous du niveau de la marche → remonter sur les deux.
+      <div class="cue">La descente lente EST le soin. Ne jamais bâcler. Douleur > 4/10 → stopper.</div>
+    </div>
+  </div>
+
+  <!-- Short foot -->
+  <div class="exo" data-seconds="2" data-sides="15" data-side-label="reps/pied">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sol -->
+        <line x1="16" y1="130" x2="144" y2="130" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Pied vu de côté, grand -->
+        <path d="M28 130 Q36 96 64 88 Q100 82 124 102 Q132 112 130 130" fill="#D3D1C7" stroke="#888780" stroke-width="2.5"/>
+        <!-- Arche qui se soulève (pointillés orange) -->
+        <path d="M44 130 Q80 106 116 130" stroke="#D85A30" stroke-width="3" fill="none" stroke-dasharray="5,3"/>
+        <!-- Flèche arche vers haut -->
+        <path d="M80 118 L80 96" stroke="#D85A30" stroke-width="3" marker-end="url(#a4)"/>
+        <defs><marker id="a4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <!-- Orteils -->
+        <ellipse cx="125" cy="126" rx="10" ry="5" fill="#D3D1C7" stroke="#888780" stroke-width="2"/>
+        <!-- Talon -->
+        <ellipse cx="34" cy="129" rx="14" ry="6" fill="#D3D1C7" stroke="#888780" stroke-width="2"/>
+        <!-- Croix orteils ne griffent pas -->
+        <line x1="118" y1="118" x2="132" y2="126" stroke="#A32D2D" stroke-width="2.5"/>
+        <line x1="132" y1="118" x2="118" y2="126" stroke="#A32D2D" stroke-width="2.5"/>
+        <text x="138" y="118" fill="#A32D2D" font-size="10" font-family="Inter" font-weight="700">✕</text>
+        <text x="56" y="88" fill="#D85A30" font-size="12" font-family="Inter" font-weight="700">arche ↑</text>
+        <text x="80" y="148" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">orteils ne griffent PAS · micro-mouvement</text>
+      </svg>
+      <div class="schema-caption">pied vu de côté</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Short foot</div>
+      <span class="exo-badge b-fasciite">Muscles intrinsèques</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">15</div><div class="lbl">/ pied</div></div>
+        <div class="chip"><div class="val">2s</div><div class="lbl">tenu</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Debout, pied nu à plat. Sans plier les orteils, "raccourcir" le pied en rapprochant l'os sous le gros orteil vers le talon. L'arche se soulève légèrement. Tenir 2s, relâcher.
+      <div class="cue">Orteils ne doivent pas griffer le sol — sinon c'est les fléchisseurs, pas les intrinsèques. Difficile à apprendre : c'est normal.</div>
+    </div>
+  </div>
+
+  <!-- Curl serviette -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="16" y1="130" x2="144" y2="130" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Serviette étalée -->
+        <rect x="24" y="122" width="112" height="10" rx="3" fill="#E8E5DD" stroke="#D3D1C7" stroke-width="1.5"/>
+        <!-- Pied dessus -->
+        <path d="M34 128 Q44 104 76 98 Q106 92 122 108 Q128 116 126 128" fill="#D3D1C7" stroke="#888780" stroke-width="2.5"/>
+        <!-- Orteils qui froissent -->
+        <path d="M106 110 Q114 96 122 110" stroke="#D85A30" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M96 112 Q104 98 112 112" stroke="#D85A30" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M86 114 Q94 100 102 114" stroke="#D85A30" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Serviette froissée vers talon -->
+        <path d="M80 126 Q96 116 108 120" stroke="#D85A30" stroke-width="2.5" fill="none" stroke-dasharray="3,2"/>
+        <!-- Flèche -->
+        <path d="M106 120 L72 126" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a5)"/>
+        <defs><marker id="a5" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <!-- Talon fixe -->
+        <ellipse cx="40" cy="129" rx="14" ry="5" fill="#888780" opacity=".4"/>
+        <text x="40" y="144" text-anchor="middle" fill="#888780" font-size="10" font-family="Inter">talon fixe</text>
+        <text x="100" y="148" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">froisser vers soi avec les orteils</text>
+      </svg>
+      <div class="schema-caption">pied sur serviette</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Curl de serviette</div>
+      <span class="exo-badge b-fasciite">Fléchisseurs voûte</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">20</div><div class="lbl">/ pied</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Assis sur une chaise, pied nu à plat sur une serviette. Froisser la serviette vers toi avec les orteils uniquement. Maintenir 1s, relâcher.
+      <div class="cue">Le talon reste au sol. Seuls les orteils et l'avant du pied travaillent.</div>
+    </div>
+  </div>
+
+  <!-- Étirement fascia couché -->
+  <div class="exo" data-seconds="30" data-sides="2" data-side-label="pied">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Lit -->
+        <rect x="10" y="104" width="140" height="16" rx="4" fill="#E8E5DD"/>
+        <!-- Personne allongée -->
+        <ellipse cx="28" cy="90" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="42" y1="90" x2="138" y2="104" stroke="#888780" stroke-width="10" stroke-linecap="round"/>
+        <!-- Jambe levée avec serviette -->
+        <line x1="108" y1="100" x2="100" y2="62" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Serviette autour orteil (orange) -->
+        <path d="M100 62 Q90 48 100 36" stroke="#D85A30" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <line x1="100" y1="36" x2="76" y2="50" stroke="#D85A30" stroke-width="3" stroke-linecap="round"/>
+        <line x1="76" y1="50" x2="56" y2="70" stroke="#D85A30" stroke-width="3" stroke-linecap="round"/>
+        <!-- Flèche tirage -->
+        <path d="M90 40 L74 24" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a6)"/>
+        <defs><marker id="a6" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="132" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">allongé · jambe levée · tirer vers tibia</text>
+        <text x="80" y="144" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">idéal juste avant de dormir</text>
+      </svg>
+      <div class="schema-caption">position allongée = plus profond</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Étirement fascia — couché</div>
+      <span class="exo-badge b-etir">Étirement profond</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">30s</div><div class="lbl">/ pied</div></div>
+        <button class="timer-btn" onclick="startTimer(this,30,2,'pied')">▶ 30s / pied</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Allongé sur le dos sur le lit. Jambe levée, serviette autour des orteils, tirer vers le tibia. Reposer la jambe en maintenant le tirage. Idéal juste avant de dormir.
+      <div class="cue">Allongé = muscles relâchés → étirement plus profond qu'assis à effort égal.</div>
+    </div>
+  </div>
+
+</div><!-- end quotidien -->
+
+
+<!-- ════════════════════════════════
+     PAGE 2 — RENFO A
+════════════════════════════════ -->
+<div id="page-renfoA" class="page">
+  <div class="sec-title">Renfo A — Tronc + haut du corps</div>
+  <div class="sec-sub">~40 min · Repos 60s séries · 90s exercices</div>
+
+  <!-- Pompes -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Corps en planche -->
+        <ellipse cx="32" cy="72" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="46" y1="72" x2="138" y2="96" stroke="#888780" stroke-width="12" stroke-linecap="round"/>
+        <!-- Bras à 45° -->
+        <line x1="56" y1="76" x2="40" y2="118" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="76" y1="82" x2="60" y2="122" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Mains sol -->
+        <ellipse cx="40" cy="120" rx="10" ry="4" fill="#888780"/>
+        <ellipse cx="60" cy="124" rx="10" ry="4" fill="#888780"/>
+        <!-- Orteils sol -->
+        <ellipse cx="138" cy="116" rx="10" ry="4" fill="#888780"/>
+        <!-- Ligne droite corps -->
+        <line x1="32" y1="72" x2="138" y2="96" stroke="#D85A30" stroke-width="2" stroke-dasharray="6,4"/>
+        <!-- Annotation 45° -->
+        <path d="M54 84 Q44 90 50 104" stroke="#D85A30" stroke-width="1.5" fill="none" stroke-dasharray="2,2"/>
+        <text x="28" y="100" fill="#D85A30" font-size="13" font-family="Inter" font-weight="700">45°</text>
+        <text x="80" y="140" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">coudes à 45° · corps gainé · descente 3s</text>
+      </svg>
+      <div class="schema-caption">vue de côté</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Pompes</div>
+      <span class="exo-badge b-force">Pectoraux · Triceps</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">12</div><div class="lbl">reps</div></div>
+        <div class="chip"><div class="val">3s</div><div class="lbl">descente</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Mains à largeur d'épaules, corps gainé tête→talons. Descente contrôlée 3s, coudes à 45° (pas évasés), poitrine effleure le sol, remontée explosive.
+      <div class="cue">Serrer les fessiers pendant tout le mouvement — protège le bas du dos.</div>
+    </div>
+  </div>
+
+  <!-- Planche frontale -->
+  <div class="exo" data-seconds="45">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="30" cy="72" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="44" y1="74" x2="136" y2="96" stroke="#888780" stroke-width="12" stroke-linecap="round"/>
+        <!-- Avant-bras au sol -->
+        <line x1="54" y1="78" x2="30" y2="120" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="70" y1="84" x2="46" y2="124" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="30" cy="122" rx="10" ry="4" fill="#888780"/>
+        <ellipse cx="46" cy="126" rx="10" ry="4" fill="#888780"/>
+        <ellipse cx="136" cy="118" rx="10" ry="4" fill="#888780"/>
+        <!-- Ligne droite -->
+        <line x1="30" y1="72" x2="136" y2="96" stroke="#D85A30" stroke-width="2.5" stroke-dasharray="6,4"/>
+        <text x="80" y="142" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">avant-bras · ligne droite tête→talons · hanches neutres</text>
+      </svg>
+      <div class="schema-caption">avant-bras au sol</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Planche frontale</div>
+      <span class="exo-badge b-core">Core · Stabilité</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">45s</div><div class="lbl">maintien</div></div>
+        <button class="timer-btn" onclick="startTimer(this,45,1,'')">▶ 45s</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Avant-bras au sol (coudes sous les épaules), orteils en appui, corps horizontal. Pousser mentalement les coudes vers les pieds et inversement.
+      <div class="cue">Hanches ni trop hautes ni trop basses. Tremblements avant 45s → réduire à 30s.</div>
+    </div>
+  </div>
+
+  <!-- Planche latérale -->
+  <div class="exo" data-seconds="30" data-sides="2" data-side-label="côté">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Corps de côté -->
+        <ellipse cx="34" cy="56" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="46" y1="64" x2="130" y2="104" stroke="#888780" stroke-width="14" stroke-linecap="round"/>
+        <!-- Avant-bras -->
+        <line x1="48" y1="68" x2="22" y2="120" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="22" cy="122" rx="10" ry="4" fill="#888780"/>
+        <!-- Pieds empilés -->
+        <ellipse cx="130" cy="128" rx="14" ry="5" fill="#888780"/>
+        <!-- Bras levé -->
+        <line x1="88" y1="84" x2="88" y2="44" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="88" cy="40" rx="8" ry="8" fill="#D3D1C7"/>
+        <!-- Corps en ligne droite -->
+        <line x1="34" y1="56" x2="130" y2="104" stroke="#D85A30" stroke-width="2" stroke-dasharray="5,3"/>
+        <text x="80" y="142" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">corps en ligne · hanches ne tombent pas</text>
+      </svg>
+      <div class="schema-caption">pieds empilés · bras libre levé</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Planche latérale</div>
+      <span class="exo-badge b-core">Obliques · Hanches</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">30s</div><div class="lbl">/ côté</div></div>
+        <button class="timer-btn" onclick="startTimer(this,30,2,'côté')">▶ 30s / côté</button>
+      </div>
+      <div class="timer-display"></div>
+    </div>
+    <div class="exo-desc">
+      Un avant-bras au sol perpendiculaire au corps, pieds empilés. Hanches soulevées, corps en ligne droite.
+      <div class="cue">Progression : lever le bras libre vers le plafond pendant tout l'exercice.</div>
+    </div>
+  </div>
+
+  <!-- Superman -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="88" width="140" height="14" rx="3" fill="#E8E5DD"/>
+        <!-- Corps ventre sol -->
+        <ellipse cx="32" cy="74" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="46" y1="76" x2="136" y2="88" stroke="#888780" stroke-width="12" stroke-linecap="round"/>
+        <!-- Bras levés devant -->
+        <line x1="32" y1="74" x2="12" y2="48" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="44" y1="72" x2="24" y2="46" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Jambes levées -->
+        <line x1="120" y1="86" x2="142" y2="62" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="130" y1="88" x2="152" y2="64" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <!-- Flèches -->
+        <path d="M18 52 L12 36" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a7)"/>
+        <path d="M144 66 L150 50" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a7)"/>
+        <defs><marker id="a7" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="118" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">ventre sol · bras ET jambes simultanément</text>
+        <text x="80" y="130" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">regard vers le sol · tenir 2s en haut</text>
+      </svg>
+      <div class="schema-caption">simultané · 2s tenu</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Superman</div>
+      <span class="exo-badge b-core">Érecteurs · Fessiers</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">15</div><div class="lbl">reps</div></div>
+        <div class="chip"><div class="val">2s</div><div class="lbl">tenu</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Allongé ventre au sol, bras tendus devant. Soulever simultanément bras ET jambes. Tenir 2s en haut, descente contrôlée.
+      <div class="cue">Regard vers le sol — pas en avant — pour ne pas comprimer les cervicales.</div>
+    </div>
+  </div>
+
+  <!-- Mountain climbers -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="30" cy="50" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="44" y1="54" x2="138" y2="88" stroke="#888780" stroke-width="12" stroke-linecap="round"/>
+        <!-- Bras tendus -->
+        <line x1="54" y1="60" x2="32" y2="110" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <line x1="70" y1="66" x2="48" y2="114" stroke="#888780" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="32" cy="112" rx="10" ry="4" fill="#888780"/>
+        <ellipse cx="48" cy="116" rx="10" ry="4" fill="#888780"/>
+        <ellipse cx="138" cy="108" rx="10" ry="4" fill="#888780"/>
+        <!-- Genou ramené poitrine (orange) -->
+        <path d="M100 80 Q86 64 70 80 Q78 104 86 108" stroke="#D85A30" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- Flèche -->
+        <path d="M86 72 L72 54" stroke="#D85A30" stroke-width="2.5" marker-end="url(#a8)"/>
+        <defs><marker id="a8" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="138" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">genou → poitrine · hanches basses</text>
+        <text x="80" y="148" text-anchor="middle" fill="#D85A30" font-size="11" font-family="Inter" font-weight="700">rythme modéré · 15 propres > 20 bâclées</text>
+      </svg>
+      <div class="schema-caption">position pompe · bras tendus</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Mountain climbers</div>
+      <span class="exo-badge b-core">Core dynamique</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">2</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">20</div><div class="lbl">reps</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Position pompe haute, corps gainé, hanches basses. Ramener alternativement chaque genou vers la poitrine, rythme modéré et contrôlé.
+      <div class="cue">Si les hanches montent → ralentir. 15 reps propres > 20 bâclées.</div>
+    </div>
+  </div>
+
+</div><!-- end renfoA -->
+
+
+<!-- ════════════════════════════════
+     PAGE 3 — RENFO B
+════════════════════════════════ -->
+<div id="page-renfoB" class="page">
+  <div class="sec-title">Renfo B — Chaîne postérieure · Jambes</div>
+  <div class="sec-sub">~35 min · Repos 75s séries · 2 min exercices</div>
+
+  <!-- Hip thrust -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <!-- Personne allongée, hanches levées -->
+        <ellipse cx="28" cy="112" rx="14" ry="14" fill="#D3D1C7"/>
+        <!-- Épaules au sol -->
+        <line x1="28" y1="112" x2="68" y2="104" stroke="#888780" stroke-width="10" stroke-linecap="round"/>
+        <!-- Torse montant -->
+        <line x1="68" y1="104" x2="90" y2="72" stroke="#888780" stroke-width="10" stroke-linecap="round"/>
+        <!-- Hanches en haut (orange) -->
+        <ellipse cx="90" cy="70" rx="16" ry="10" fill="#D85A30" opacity=".3"/>
+        <!-- Jambes -->
+        <line x1="90" y1="72" x2="116" y2="96" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="116" y1="96" x2="118" y2="138" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Pieds sol -->
+        <rect x="104" y="136" width="26" height="8" rx="3" fill="#888780"/>
+        <!-- Flèche hanches vers haut -->
+        <path d="M90 72 L90 44" stroke="#D85A30" stroke-width="3.5" marker-end="url(#a9)"/>
+        <defs><marker id="a9" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <!-- Ligne épaules-hanches-genoux -->
+        <line x1="42" y1="106" x2="116" y2="96" stroke="#D85A30" stroke-width="2" stroke-dasharray="5,3"/>
+        <text x="80" y="140" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">épaules sol · pousser les talons · serrer fessiers</text>
+      </svg>
+      <div class="schema-caption">ligne épaules–hanches–genoux</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Hip thrust au sol</div>
+      <span class="exo-badge b-force">Fessiers ⭐ Vélo</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">15</div><div class="lbl">reps</div></div>
+        <div class="chip"><div class="val">1s</div><div class="lbl">tenu haut</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Allongé dos, genoux fléchis 90°, pieds à ~30 cm des fessiers. Pousser les talons dans le sol, soulever les hanches jusqu'à ligne épaules–hanches–genoux. Serrer fessiers 1s, descente contrôlée 2s.
+      <div class="cue">Ne pas creuser le bas du dos en haut — le mouvement vient des fessiers, pas des lombaires.</div>
+    </div>
+  </div>
+
+  <!-- Fentes arrière -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="66" cy="22" rx="14" ry="14" fill="#D3D1C7"/>
+        <!-- Torse vertical -->
+        <line x1="66" y1="36" x2="66" y2="78" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Bras -->
+        <line x1="66" y1="52" x2="44" y2="66" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <line x1="66" y1="52" x2="88" y2="66" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <!-- Jambe avant à 90° -->
+        <line x1="66" y1="78" x2="48" y2="106" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="48" y1="106" x2="40" y2="148" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Jambe arrière à 90° (orange) -->
+        <line x1="66" y1="78" x2="102" y2="106" stroke="#D85A30" stroke-width="8" stroke-linecap="round"/>
+        <line x1="102" y1="106" x2="110" y2="148" stroke="#D85A30" stroke-width="8" stroke-linecap="round"/>
+        <!-- Genou arrière au sol -->
+        <ellipse cx="110" cy="146" rx="12" ry="5" fill="#D85A30" opacity=".7"/>
+        <!-- Annotation 90° -->
+        <path d="M44 102 Q32 106 36 118" stroke="#888780" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+        <text x="20" y="118" fill="#888780" font-size="12" font-family="Inter" font-weight="700">90°</text>
+        <text x="80" y="138" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">tronc vertical · genou arr. 2-3 cm du sol</text>
+      </svg>
+      <div class="schema-caption">tronc vertical · jambe arrière orange</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Fentes arrière</div>
+      <span class="exo-badge b-force">Quadriceps · Fessiers</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">12</div><div class="lbl">/ jambe</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Debout, reculer un pied jusqu'au genou arrière à 2–3 cm du sol, genou avant à 90° dans l'axe du pied, repousser le sol avec le pied avant.
+      <div class="cue">Tronc vertical, ne pas se pencher en avant. Genou avant ne rentre pas vers l'intérieur.</div>
+    </div>
+  </div>
+
+  <!-- Step up -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="54" y="100" width="96" height="18" rx="3" fill="#E8E5DD"/>
+        <rect x="54" y="118" width="96" height="28" rx="3" fill="#D3D1C7"/>
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="88" cy="26" rx="14" ry="14" fill="#D3D1C7"/>
+        <line x1="88" y1="40" x2="88" y2="76" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="88" y1="54" x2="64" y2="68" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <line x1="88" y1="54" x2="112" y2="68" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <!-- Jambe sur marche (orange) -->
+        <line x1="88" y1="76" x2="92" y2="100" stroke="#D85A30" stroke-width="8" stroke-linecap="round"/>
+        <rect x="80" y="97" width="22" height="8" rx="3" fill="#D85A30"/>
+        <!-- Autre jambe qui monte -->
+        <line x1="88" y1="76" x2="66" y2="108" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Flèche poussée talon -->
+        <path d="M92 80 L92 52" stroke="#D85A30" stroke-width="3" marker-end="url(#a10)"/>
+        <defs><marker id="a10" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#D85A30"/>
+        </marker></defs>
+        <text x="80" y="136" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">pousser sur le TALON · pas d'élan jambe arrière</text>
+      </svg>
+      <div class="schema-caption">pied entier sur la marche</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Step up sur marche</div>
+      <span class="exo-badge b-force">Quadriceps · Équilibre</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">12</div><div class="lbl">/ jambe</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Face à une marche stable, poser un pied entier dessus. Pousser sur le talon pour monter, ramener l'autre pied à côté sans élan. Finir toutes les reps d'un côté avant de changer.
+      <div class="cue">Genou ne rentre pas vers l'intérieur. Si c'est le cas → réduire la hauteur de la marche.</div>
+    </div>
+  </div>
+
+  <!-- Squat lent -->
+  <div class="exo">
+    <div class="schema-wrap">
+      <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8" y1="148" x2="152" y2="148" stroke="#D3D1C7" stroke-width="3"/>
+        <ellipse cx="80" cy="28" rx="14" ry="14" fill="#D3D1C7"/>
+        <!-- Torse légèrement incliné -->
+        <line x1="80" y1="42" x2="76" y2="84" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Bras tendus devant -->
+        <line x1="76" y1="62" x2="38" y2="62" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <line x1="76" y1="62" x2="114" y2="62" stroke="#888780" stroke-width="4" stroke-linecap="round"/>
+        <!-- Jambes position basse -->
+        <line x1="76" y1="84" x2="48" y2="112" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="48" y1="112" x2="40" y2="148" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="76" y1="84" x2="108" y2="112" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <line x1="108" y1="112" x2="118" y2="148" stroke="#888780" stroke-width="8" stroke-linecap="round"/>
+        <!-- Talons sol (orange) -->
+        <ellipse cx="40" cy="147" rx="12" ry="4" fill="#D85A30"/>
+        <ellipse cx="118" cy="147" rx="12" ry="4" fill="#D85A30"/>
+        <!-- Ligne cuisses parallèles -->
+        <line x1="48" y1="112" x2="108" y2="112" stroke="#D85A30" stroke-width="2" stroke-dasharray="4,3"/>
+        <text x="78" y="110" text-anchor="middle" fill="#D85A30" font-size="11" font-family="Inter">cuisses parallèles au sol</text>
+        <text x="80" y="140" text-anchor="middle" fill="#888780" font-size="11" font-family="Inter">talons sol · genoux dans l'axe · 4s descente</text>
+      </svg>
+      <div class="schema-caption">talons au sol tout le long</div>
+    </div>
+    <div class="exo-info">
+      <div class="exo-name">Squat lent</div>
+      <span class="exo-badge b-force">Quadriceps · Fessiers</span>
+      <div class="sets-row">
+        <div class="chip"><div class="val">3</div><div class="lbl">séries</div></div>
+        <div class="chip"><div class="val">12</div><div class="lbl">reps</div></div>
+        <div class="chip"><div class="val">4s</div><div class="lbl">descente</div></div>
+      </div>
+    </div>
+    <div class="exo-desc">
+      Pieds à largeur d'épaules, orteils légèrement vers l'extérieur, bras devant. Descente en 4s jusqu'aux cuisses parallèles, remontée en 2s. Genoux dans l'axe des pieds.
+      <div class="cue">Talons restent au sol toute la descente. Si tu te lèves sur la pointe → manque de mobilité de cheville (fréquent chez les coureurs).</div>
+    </div>
+  </div>
+
+</div><!-- end renfoB -->
+
+
+<!-- ════════════════════ TIMER LOGIC ════════════════════ -->
+<script>
+let activeTimer = null;
+
+function parseSeconds(el) {
+  return parseInt(el.dataset.seconds) || 0;
+}
+
+function startTimer(btn, seconds, sides, sideLabel) {
+  const card = btn.closest('.exo');
+  const display = card.querySelector('.timer-display');
+
+  // Si un autre timer tourne → reset
+  if (activeTimer && activeTimer.card !== card) {
+    activeTimer.reset();
+  }
+
+  // Créer le timer si pas encore
+  if (!card._timer) {
+    card._timer = createTimer(card, display, seconds, sides, sideLabel, btn);
+    activeTimer = card._timer;
+  }
+  card._timer.toggle();
+}
+
+function createTimer(card, display, totalSec, sides, sideLabel, btn) {
+  const RADIUS = 52;
+  const CIRC = 2 * Math.PI * RADIUS;
+
+  let timeLeft = totalSec;
+  let currentSide = 1;
+  let running = false;
+  let interval = null;
+
+  // Créer le DOM du timer
+  display.classList.add('visible');
+  display.innerHTML = `
+    <div class="timer-ring-wrap">
+      <svg class="timer-ring" width="120" height="120" viewBox="0 0 120 120">
+        <circle class="bg"   cx="60" cy="60" r="${RADIUS}"/>
+        <circle class="prog" cx="60" cy="60" r="${RADIUS}"
+          stroke-dasharray="${CIRC}" stroke-dashoffset="0"/>
+      </svg>
+      <div class="timer-num">--</div>
+    </div>
+    ${sides > 1 ? `<div class="t-side">Côté <strong>${currentSide}/${sides}</strong>${sideLabel ? ' · ' + sideLabel : ''}</div>` : ''}
+    <div class="timer-actions">
+      <button class="t-btn t-pause">⏸ Pause</button>
+      <button class="t-btn t-reset">↺ Reset</button>
+    </div>
+  `;
+
+  const ring = display.querySelector('.prog');
+  const num  = display.querySelector('.timer-num');
+  const sideDiv = display.querySelector('.t-side');
+  const pauseBtn = display.querySelector('.t-pause');
+  const resetBtn = display.querySelector('.t-reset');
+
+  function updateDisplay() {
+    const pct = 1 - timeLeft / totalSec;
+    ring.style.strokeDashoffset = CIRC * pct;
+    const m = Math.floor(timeLeft / 60);
+    const s = timeLeft % 60;
+    num.textContent = m > 0 ? `${m}:${s.toString().padStart(2,'0')}` : `${s}`;
+    ring.style.stroke = timeLeft <= 5 ? '#A32D2D' : (timeLeft <= 10 ? '#BA7517' : '#D85A30');
+  }
+
+  function beep() {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      [0, 150, 300].forEach(delay => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.frequency.value = delay === 300 ? 880 : 660;
+        gain.gain.setValueAtTime(0.3, ctx.currentTime + delay/1000);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay/1000 + 0.3);
+        osc.start(ctx.currentTime + delay/1000);
+        osc.stop(ctx.currentTime + delay/1000 + 0.35);
+      });
+    } catch(e) {}
+    if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+  }
+
+  function tick() {
+    if (timeLeft <= 0) {
+      beep();
+      if (sides > 1 && currentSide < sides) {
+        currentSide++;
+        timeLeft = totalSec;
+        if (sideDiv) sideDiv.innerHTML = `Côté <strong>${currentSide}/${sides}</strong>${sideLabel ? ' · ' + sideLabel : ''}`;
+        updateDisplay();
+      } else {
+        // Terminé !
+        clearInterval(interval); running = false;
+        btn.textContent = '✓ Terminé';
+        btn.classList.add('done'); btn.classList.remove('running');
+        num.textContent = '✓';
+        ring.style.stroke = '#639922';
+        pauseBtn.textContent = '▶ Relancer';
+        setTimeout(() => {
+          btn.textContent = '▶ ' + (totalSec >= 60 ? Math.floor(totalSec/60)+'min' : totalSec+'s') + (sides > 1 ? ' / ' + sideLabel : '');
+          btn.classList.remove('done','running');
+        }, 3000);
+      }
+    } else {
+      timeLeft--;
+      updateDisplay();
+    }
+  }
+
+  function toggle() {
+    if (running) {
+      clearInterval(interval); running = false;
+      btn.classList.remove('running');
+      pauseBtn.textContent = '▶ Reprendre';
+    } else {
+      running = true;
+      btn.classList.add('running');
+      pauseBtn.textContent = '⏸ Pause';
+      updateDisplay();
+      interval = setInterval(tick, 1000);
+    }
+  }
+
+  function reset() {
+    clearInterval(interval); running = false;
+    timeLeft = totalSec; currentSide = 1;
+    btn.classList.remove('running','done');
+    if (sideDiv) sideDiv.innerHTML = `Côté <strong>1/${sides}</strong>${sideLabel ? ' · ' + sideLabel : ''}`;
+    updateDisplay();
+    pauseBtn.textContent = '⏸ Pause';
+  }
+
+  pauseBtn.onclick = () => toggle();
+  resetBtn.onclick = () => reset();
+
+  updateDisplay();
+  return { card, toggle, reset };
+}
+
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.subtab').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
+  if (activeTimer) { activeTimer.reset(); activeTimer = null; }
+}
+
+// ════════════════════════════════════════════════════════
+// TRACKER SUIVI — Architecture générique
+// CONFIG : modifier pour adapter à un autre utilisateur
+// ════════════════════════════════════════════════════════
+const TRACKER_CONFIG = {
+  // Protocoles à cocher (matin / soir)
+  protocols: [
+    { id: 'morning', label: 'Protocole matin', sub: 'Avant le premier pas · 8–10 min' },
+    { id: 'evening', label: 'Protocole soir',  sub: 'Heel drops + short foot + étirements · 12–15 min' }
+  ],
+  // Symptôme à évaluer
+  symptom: {
+    id:    'fasciite',
+    label: 'Fasciite plantaire',
+    scale: 5,       // de 0 à 5
+    labels: { 0:'Rien', 5:'Intense' },
+    alert_above: 3  // afficher alerte si score > 3
+  }
+};
+
+const TRACKER_KEY   = 'wellness_tracker_cla_v1';
+const SPORT_SESSIONS = (window.SPORT_DATA && window.SPORT_DATA.sessions) || [];
+
+const JOURS_S = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+const MOIS_S  = ['janv','févr','mars','avr','mai','juin','juil','août','sept','oct','nov','déc'];
+
+function loadTracker() {
+  try { return JSON.parse(localStorage.getItem(TRACKER_KEY) || '{}'); } catch(e) { return {}; }
+}
+function saveTracker(data) { localStorage.setItem(TRACKER_KEY, JSON.stringify(data)); }
+
+function isoDateLocal(d) {
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+
+function getTrainingForDay(iso) {
+  return SPORT_SESSIONS.find(s => s.date === iso && s.sport !== 'rest') || null;
+}
+function sportClass(sport) {
+  return { run:'tp-run', bike:'tp-bike', strength:'tp-strength' }[sport] || 'tp-repos';
+}
+function sportLabel(s) {
+  if (!s) return 'Repos';
+  const label = (s.planned && s.planned.name) || s.type || s.sport;
+  return label;
+}
+
+function renderSuivi() {
+  const today = isoDateLocal(new Date());
+  const tracker = loadTracker();
+
+  // Construire la semaine (lundi → dimanche)
+  const mon = new Date();
+  const dayIdx = mon.getDay() === 0 ? 6 : mon.getDay() - 1;
+  mon.setDate(mon.getDate() - dayIdx);
+  mon.setHours(0,0,0,0);
+
+  const container = document.getElementById('suivi-week');
+  container.innerHTML = '';
+
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(mon);
+    d.setDate(d.getDate() + i);
+    const iso = isoDateLocal(d);
+    const isToday = iso === today;
+    const session = getTrainingForDay(iso);
+    const dayData = tracker[iso] || {};
+
+    const block = document.createElement('div');
+    block.className = 'suivi-day';
+
+    // En-tête jour
+    const jIdx = d.getDay() === 0 ? 6 : d.getDay() - 1;
+    const head = document.createElement('div');
+    head.className = 'suivi-day-head' + (isToday ? ' today-day' : '');
+    head.innerHTML = `
+      <div class="suivi-day-name">${JOURS_S[jIdx]} ${d.getDate()} ${MOIS_S[d.getMonth()]}</div>
+      <div>
+        ${session
+          ? `<span class="suivi-training-pill ${sportClass(session.sport)}" style="${isToday?'background:rgba(255,255,255,.25);color:#fff':''}">${sportLabel(session)}</span>`
+          : `<span class="suivi-training-pill tp-repos" style="${isToday?'background:rgba(255,255,255,.2);color:#fff':''}">Repos</span>`}
+      </div>`;
+    block.appendChild(head);
+
+    const body = document.createElement('div');
+    body.className = 'suivi-body';
+
+    // Protocoles (checkboxes)
+    TRACKER_CONFIG.protocols.forEach(proto => {
+      const isDone = dayData[proto.id] === true;
+      const row = document.createElement('div');
+      row.className = 'suivi-row';
+      row.innerHTML = `
+        <div class="suivi-label">${proto.label}<small>${proto.sub}</small></div>
+        <button class="check-btn${isDone ? ' checked' : ''}" data-date="${iso}" data-proto="${proto.id}">
+          ${isDone ? '✓' : ''}
+        </button>`;
+      row.querySelector('.check-btn').addEventListener('click', function() {
+        const t = loadTracker();
+        if (!t[iso]) t[iso] = {};
+        t[iso][proto.id] = !t[iso][proto.id];
+        saveTracker(t);
+        this.classList.toggle('checked', t[iso][proto.id]);
+        this.textContent = t[iso][proto.id] ? '✓' : '';
+      });
+      body.appendChild(row);
+    });
+
+    // Symptôme (score)
+    const sym = TRACKER_CONFIG.symptom;
+    const currentScore = dayData[sym.id] !== undefined ? dayData[sym.id] : null;
+    const symRow = document.createElement('div');
+    symRow.className = 'suivi-row';
+    const dots = Array.from({length: sym.scale + 1}, (_, n) => {
+      const isActive = currentScore === n;
+      return `<button class="pain-dot${isActive ? ' active-'+n : ''}" data-date="${iso}" data-score="${n}">${n}</button>`;
+    }).join('');
+    symRow.innerHTML = `
+      <div class="suivi-label">${sym.label}
+        <small>0 = aucune douleur · ${sym.scale} = intense</small>
+      </div>
+      <div class="pain-dots">${dots}</div>`;
+    symRow.querySelectorAll('.pain-dot').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const score = parseInt(this.dataset.score);
+        const dateKey = this.dataset.date;
+        const t = loadTracker();
+        if (!t[dateKey]) t[dateKey] = {};
+        t[dateKey][sym.id] = score;
+        saveTracker(t);
+        // Update UI
+        const allDots = symRow.querySelectorAll('.pain-dot');
+        allDots.forEach(d => { d.className = 'pain-dot'; });
+        this.classList.add('active-' + score);
+        // Alerte si score élevé
+        if (score >= sym.alert_above) {
+          this.style.animation = 'none';
+        }
+      });
+    });
+    body.appendChild(symRow);
+
+    block.appendChild(body);
+    container.appendChild(block);
+  }
+}
+
+// Rendre le suivi actif au chargement de la page
+const _origShowPage = showPage;
+function showPage(id, btn) {
+  _origShowPage(id, btn);
+  if (id === 'suivi') renderSuivi();
+}
+
+</script>
+
+<!-- ════════════════════════════════
+     PAGE SUIVI — TRACKER GÉNÉRIQUE
+════════════════════════════════ -->
+<div id="page-suivi" class="page">
+  <div id="suivi-week" class="suivi-week"></div>
+</div>
+
+</body>
+</html>

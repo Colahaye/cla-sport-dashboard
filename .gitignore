@@ -1,0 +1,7 @@
+config.json
+sync_log.txt
+__pycache__/
+*.pyc
+.DS_Store
+install_sync_task.ps1
+launch.bat

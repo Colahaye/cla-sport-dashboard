@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Nutrition — CLA 2026</title>
+<script src="../sport_data.js"></script>
+<script src="../recettes_data.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#FAFAF6;--surface:#fff;--surface2:#F4F2EC;--surface-warm:#FFF7F2;
+  --border:#E8E5DD;--border-strong:#D3D1C7;
+  --accent:#D85A30;--accent-dark:#993C1D;--accent-soft:#FAECE7;
+  --amber:#BA7517;--amber-soft:#FAEEDA;
+  --green:#639922;--green-soft:#EAF3DE;--green-dark:#3B6D11;
+  --red:#A32D2D;--red-soft:#FCEBEB;
+  --blue:#185FA5;--blue-soft:#E6F1FB;
+  --purple:#534AB7;--purple-soft:#EEEDFE;
+  --text:#2C2C2A;--text2:#5F5E5A;--text-muted:#888780;
+  --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;}
+body{font-family:var(--font);background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;}
+
+/* ── Header ── */
+.hdr{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;}
+.hdr-title{font-size:15px;font-weight:700;}
+.hdr-sub{font-size:11px;color:var(--text-muted);font-family:var(--mono);}
+.back{font-size:12px;color:var(--text-muted);border:1px solid var(--border);
+  padding:5px 10px;border-radius:6px;background:none;cursor:pointer;}
+.back:active{background:var(--border);}
+
+/* ── Tabs ── */
+.tabs{display:flex;gap:0;background:var(--surface);border-bottom:1px solid var(--border);
+  flex-shrink:0;}
+.tab{flex:1;padding:10px;border:none;cursor:pointer;font-family:var(--font);
+  font-size:13px;font-weight:600;background:none;color:var(--text2);
+  border-bottom:2px solid transparent;transition:all .15s;}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+
+/* ── Pages ── */
+.page{display:none;flex:1;overflow-y:auto;overflow-x:hidden;}
+.page.active{display:flex;flex-direction:column;}
+
+/* ════════════════════════════════
+   CALENDRIER
+════════════════════════════════ */
+.cal-nav{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:8px 14px;display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;}
+.cal-week-lbl{font-size:13px;font-weight:700;font-family:var(--mono);}
+.nav-btn{background:var(--surface2);border:none;border-radius:6px;
+  padding:6px 12px;font-size:12px;cursor:pointer;}
+.nav-btn:active{background:var(--border);}
+.today-btn{font-size:11px;color:var(--accent);background:var(--accent-soft);
+  border:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-weight:600;}
+
+.cal-body{flex:1;overflow-y:auto;padding:10px 12px 80px;}
+
+.day-block{background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;margin-bottom:10px;overflow:hidden;}
+.day-head{padding:10px 12px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border);}
+.day-head.today-head{background:var(--accent);color:#fff;}
+.day-head.today-head .day-sub{color:rgba(255,255,255,.8);}
+.day-name{font-size:14px;font-weight:800;}
+.day-sub{font-size:11px;color:var(--text-muted);font-family:var(--mono);}
+.day-training{display:flex;align-items:center;gap:6px;}
+.training-pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.4px;}
+.tp-repos    {background:var(--surface2);color:var(--text-muted);}
+.tp-run      {background:var(--green-soft);color:var(--green-dark);}
+.tp-bike     {background:var(--accent-soft);color:var(--accent-dark);}
+.tp-strength {background:var(--purple-soft);color:var(--purple);}
+.glucide-target{font-size:10px;font-family:var(--mono);color:var(--text-muted);}
+
+.meal-slots{display:grid;grid-template-columns:1fr 1fr;}
+.slot{padding:10px 12px;cursor:pointer;transition:background .1s;position:relative;
+  min-height:70px;}
+.slot:first-child{border-right:1px solid var(--border);}
+.slot:hover{background:var(--surface-warm);}
+.slot-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--text-muted);margin-bottom:6px;}
+.slot-empty{font-size:12px;color:var(--text-muted);font-style:italic;
+  display:flex;align-items:center;gap:5px;}
+.slot-empty::before{content:'+';font-size:16px;color:var(--border-strong);}
+.slot-recipe{font-size:12px;font-weight:600;color:var(--text);line-height:1.3;}
+.slot-macros{font-size:10px;color:var(--text-muted);margin-top:3px;font-family:var(--mono);}
+.slot-tag{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;}
+.slot-remove{position:absolute;top:8px;right:8px;background:var(--red-soft);
+  color:var(--red);border:none;border-radius:4px;font-size:10px;padding:2px 6px;
+  cursor:pointer;opacity:0;transition:opacity .15s;}
+.slot:hover .slot-remove{opacity:1;}
+
+/* ════════════════════════════════
+   BANQUE DE RECETTES
+════════════════════════════════ */
+.bank-filters{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:8px 12px;flex-shrink:0;}
+.filter-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;
+  -webkit-overflow-scrolling:touch;}
+.filter-chip{padding:5px 12px;border-radius:999px;border:1px solid var(--border);
+  font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;
+  background:var(--surface);color:var(--text2);transition:all .12s;flex-shrink:0;}
+.filter-chip.active{border-color:var(--accent);background:var(--accent-soft);color:var(--accent-dark);}
+
+.bank-list{padding:10px 12px 80px;overflow-y:auto;}
+.recipe-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  margin-bottom:10px;overflow:hidden;cursor:pointer;transition:all .12s;}
+.recipe-card:hover,.recipe-card:active{border-color:var(--accent);box-shadow:0 2px 8px rgba(216,90,48,.1);}
+.rc-head{padding:12px 14px;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+.rc-name{font-size:14px;font-weight:700;line-height:1.3;}
+.rc-source{font-size:10px;color:var(--text-muted);margin-top:2px;}
+.rc-tag{font-size:9px;font-weight:700;padding:3px 8px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.4px;flex-shrink:0;}
+.tag-REPOS          {background:var(--red-soft);color:var(--red);}
+.tag-RUNNING_COURT  {background:var(--amber-soft);color:var(--amber);}
+.tag-RUNNING_LONG   {background:var(--green-soft);color:var(--green-dark);}
+.tag-VELO           {background:var(--accent-soft);color:var(--accent-dark);}
+.tag-UNIVERSEL      {background:var(--blue-soft);color:var(--blue);}
+.rc-macros{padding:0 14px 10px;display:flex;gap:10px;font-size:11px;font-family:var(--mono);}
+.rc-macro{display:flex;flex-direction:column;align-items:center;}
+.rc-macro .val{font-weight:700;color:var(--text);}
+.rc-macro .lbl{font-size:9px;color:var(--text-muted);text-transform:uppercase;}
+.rc-meta{padding:0 14px 10px;font-size:11px;color:var(--text-muted);display:flex;gap:10px;}
+
+/* ════════════════════════════════
+   LISTE DE COURSES
+════════════════════════════════ */
+.courses-header{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:10px 14px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.courses-week{font-size:12px;color:var(--text-muted);font-family:var(--mono);}
+.print-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;
+  padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.courses-body{padding:10px 12px 80px;overflow-y:auto;}
+.courses-cat{margin-bottom:18px;}
+.cat-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;
+  color:var(--text-muted);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.cat-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.item-row{display:flex;align-items:center;gap:10px;padding:8px 0;
+  border-bottom:1px solid var(--border);}
+.item-row:last-child{border:none;}
+.item-check{width:20px;height:20px;border-radius:5px;border:2px solid var(--border);
+  cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  transition:all .12s;}
+.item-check.checked{background:var(--accent);border-color:var(--accent);color:#fff;}
+.item-name{flex:1;font-size:13px;font-weight:500;}
+.item-name.checked-text{text-decoration:line-through;color:var(--text-muted);}
+.item-qty{font-size:12px;color:var(--text-muted);font-family:var(--mono);}
+
+.courses-note{background:var(--amber-soft);border-radius:8px;padding:10px 12px;
+  font-size:12px;color:#854F0B;margin-bottom:12px;}
+
+/* ════════════════════════════════
+   MODAL ASSIGNATION
+════════════════════════════════ */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:100;
+  display:none;align-items:flex-end;}
+.modal-backdrop.open{display:flex;}
+.modal{background:var(--surface);border-radius:18px 18px 0 0;width:100%;
+  max-height:85vh;display:flex;flex-direction:column;}
+.modal-hdr{padding:14px 16px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;}
+.modal-title{font-size:15px;font-weight:800;}
+.modal-close{background:none;border:none;font-size:20px;cursor:pointer;
+  color:var(--text-muted);padding:4px 8px;}
+.modal-reco{background:var(--green-soft);padding:8px 16px;
+  font-size:11px;color:var(--green-dark);font-weight:600;}
+.modal-list{overflow-y:auto;padding:8px 12px 20px;}
+.modal-recipe{padding:10px 12px;border-radius:10px;border:1px solid var(--border);
+  margin-bottom:8px;cursor:pointer;transition:all .12s;}
+.modal-recipe:hover,.modal-recipe:active{border-color:var(--accent);background:var(--surface-warm);}
+.modal-recipe.recommended{border-color:var(--green);background:var(--green-soft);}
+.modal-recipe.recommended::before{content:'✓ Recommandé · ';font-size:10px;
+  font-weight:700;color:var(--green-dark);display:block;margin-bottom:4px;}
+.mr-name{font-size:13px;font-weight:700;}
+.mr-macros{font-size:11px;color:var(--text-muted);font-family:var(--mono);margin-top:3px;}
+.mr-source{font-size:10px;color:var(--text-muted);}
+
+/* ── Drag & drop desktop ── */
+.recipe-card[draggable=true]{cursor:grab;}
+.recipe-card[draggable=true]:active{cursor:grabbing;opacity:.8;}
+.slot.dragover{background:var(--accent-soft);border:2px dashed var(--accent);}
+
+/* ════ MODALE DÉTAIL RECETTE ════ */
+.recipe-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;
+  display:none;align-items:flex-end;}
+.recipe-modal-backdrop.open{display:flex;}
+.recipe-modal{background:var(--surface);border-radius:20px 20px 0 0;width:100%;
+  max-height:92vh;display:flex;flex-direction:column;overflow:hidden;}
+.rm-header{padding:14px 16px 10px;display:flex;align-items:flex-start;
+  justify-content:space-between;gap:8px;flex-shrink:0;border-bottom:1px solid var(--border);}
+.rm-name{font-size:17px;font-weight:800;line-height:1.3;flex:1;}
+.rm-close{background:var(--surface2);border:none;border-radius:50%;width:30px;height:30px;
+  cursor:pointer;font-size:16px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.rm-scroll{overflow-y:auto;padding:14px 16px 32px;}
+.rm-tag-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.rm-macros{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.rm-macro-chip{background:var(--surface2);border-radius:8px;padding:6px 12px;text-align:center;}
+.rm-macro-chip .val{font-size:16px;font-weight:800;font-family:var(--mono);color:var(--accent);line-height:1;}
+.rm-macro-chip .lbl{font-size:9px;text-transform:uppercase;letter-spacing:.5px;color:var(--text-muted);}
+.rm-section{margin-bottom:16px;}
+.rm-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;
+  color:var(--text-muted);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.rm-section-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.rm-ingredient{display:flex;justify-content:space-between;align-items:center;
+  padding:6px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.rm-ingredient:last-child{border:none;}
+.rm-ing-qty{font-family:var(--mono);font-size:12px;color:var(--text-muted);}
+.rm-step{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.5;}
+.rm-step:last-child{border:none;}
+.rm-step-num{background:var(--accent);color:#fff;border-radius:50%;width:22px;height:22px;
+  flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;font-family:var(--mono);margin-top:1px;}
+.rm-note{background:var(--amber-soft);border-radius:8px;padding:10px 12px;
+  font-size:12px;color:#854F0B;margin-bottom:10px;}
+.rm-source-btn{display:flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--surface2);border:1px solid var(--border);border-radius:10px;
+  padding:10px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;
+  color:var(--text);margin-bottom:10px;transition:all .12s;}
+.rm-source-btn:hover{border-color:var(--accent);color:var(--accent);}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-title">Nutrition</div>
+    <div class="hdr-sub">CLA · Planification semaine</div>
+  </div>
+  <button class="back" onclick="window.parent.postMessage({type:'switch-tab',target:'log'},'*')">← Log</button>
+</header>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('calendrier',this)">Calendrier</button>
+  <button class="tab" onclick="switchTab('banque',this)">Recettes</button>
+  <button class="tab" onclick="switchTab('courses',this)">Liste de courses</button>
+</div>
+
+<!-- ═══════════════════════ CALENDRIER ═══════════════════════ -->
+<div id="page-calendrier" class="page active">
+  <div class="cal-nav">
+    <button class="nav-btn" onclick="shiftWeek(-1)">◀</button>
+    <span class="cal-week-lbl" id="cal-week-lbl">—</span>
+    <button class="nav-btn" onclick="shiftWeek(1)">▶</button>
+    <button class="today-btn" onclick="goToThisWeek()">Cette semaine</button>
+  </div>
+  <div class="cal-body" id="cal-body"></div>
+</div>
+
+<!-- ═══════════════════════ BANQUE ═══════════════════════ -->
+<div id="page-banque" class="page">
+  <div class="bank-filters">
+    <div class="filter-row" id="filter-row">
+      <button class="filter-chip active" data-filter="all" onclick="setFilter('all',this)">Toutes</button>
+      <button class="filter-chip" data-filter="REPOS" onclick="setFilter('REPOS',this)">Repos</button>
+      <button class="filter-chip" data-filter="RUNNING_COURT" onclick="setFilter('RUNNING_COURT',this)">Running court</button>
+      <button class="filter-chip" data-filter="RUNNING_LONG" onclick="setFilter('RUNNING_LONG',this)">Running long</button>
+      <button class="filter-chip" data-filter="VELO" onclick="setFilter('VELO',this)">Vélo</button>
+      <button class="filter-chip" data-filter="UNIVERSEL" onclick="setFilter('UNIVERSEL',this)">Universel</button>
+      <button class="filter-chip" data-filter="midi" onclick="setFilter('midi',this)">Midi</button>
+      <button class="filter-chip" data-filter="soir" onclick="setFilter('soir',this)">Soir</button>
+    </div>
+  </div>
+  <div class="bank-list" id="bank-list"></div>
+</div>
+
+<!-- ═══════════════════════ COURSES ═══════════════════════ -->
+<div id="page-courses" class="page">
+  <div class="courses-header">
+    <div>
+      <div style="font-size:14px;font-weight:700">Liste de courses</div>
+      <div class="courses-week" id="courses-week-lbl">—</div>
+    </div>
+    <button class="print-btn" onclick="window.print()">Imprimer</button>
+  </div>
+  <div class="courses-body" id="courses-body"></div>
+</div>
+
+<!-- ═══════════════════════ MODAL ═══════════════════════ -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-hdr">
+      <div class="modal-title" id="modal-title">Choisir une recette</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-reco" id="modal-reco"></div>
+    <div class="modal-list" id="modal-list"></div>
+  </div>
+</div>
+
+<script>
+const SD = window.SPORT_DATA || {};
+const RD = window.RECETTES_DATA || {};
+const RECETTES = RD.recettes || [];
+const MAPPING = RD.mapping_training_tags || {};
+
+const MOIS = ['janv','févr','mars','avr','mai','juin','juil','août','sept','oct','nov','déc'];
+const JOURS = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+
+// ── State ──────────────────────────────────────────────────
+let currentMonday = getMonday(new Date());
+let activePlanKey = '';
+let plan = {}; // { "2026-06-09": { midi: "id", soir: "id" }, ... }
+let pendingSlot = null; // { date, moment }
+let bankFilter = 'all';
+let courseChecks = {}; // { key: bool }
+
+// ── Storage ────────────────────────────────────────────────
+function planKey(monday) {
+  const y = monday.getFullYear();
+  const d = new Date(Date.UTC(y,0,1));
+  const w = Math.ceil(((monday - d)/86400000 + d.getUTCDay()+1)/7);
+  return `meal_plan_v1_${y}_W${String(w).padStart(2,'0')}`;
+}
+function loadPlan(monday) {
+  activePlanKey = planKey(monday);
+  try {
+    const raw = localStorage.getItem(activePlanKey);
+    plan = raw ? JSON.parse(raw) : {};
+  } catch(e) { plan = {}; }
+}
+function savePlan() {
+  localStorage.setItem(activePlanKey, JSON.stringify(plan));
+}
+function loadChecks() {
+  try { courseChecks = JSON.parse(localStorage.getItem('course_checks_v1') || '{}'); }
+  catch(e) { courseChecks = {}; }
+}
+function saveChecks() {
+  localStorage.setItem('course_checks_v1', JSON.stringify(courseChecks));
+}
+
+// ── Helpers ────────────────────────────────────────────────
+function getMonday(d) {
+  const dt = new Date(d);
+  const day = dt.getDay();
+  dt.setDate(dt.getDate() - (day === 0 ? 6 : day - 1));
+  dt.setHours(0,0,0,0);
+  return dt;
+}
+function isoDate(d) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+function todayISO() { return isoDate(new Date()); }
+
+function getRecipeById(id) { return RECETTES.find(r => r.id === id); }
+
+function getTrainingForDate(iso) {
+  const sessions = (SD.sessions || []).filter(s => s.date === iso && s.sport !== 'rest');
+  return sessions[0] || null;
+}
+
+function getTrainingMapping(session) {
+  if (!session) return MAPPING['default'] || { tags:['UNIVERSEL'], glucides_cible:[160,200], label:'—' };
+  const type = session.type || 'default';
+  return MAPPING[type] || MAPPING['default'] || { tags:['UNIVERSEL'], glucides_cible:[160,200], label:'—' };
+}
+
+function getRecommendedRecipes(mapping, moment) {
+  return RECETTES.filter(r => {
+    if (!r.moments.includes(moment)) return false;
+    return r.tags.some(t => mapping.tags.includes(t)) || r.tags.includes('UNIVERSEL');
+  });
+}
+
+function getTagColor(tag) {
+  const m = { REPOS:'var(--red)', RUNNING_COURT:'var(--amber)', RUNNING_LONG:'var(--green-dark)', VELO:'var(--accent)', UNIVERSEL:'var(--blue)' };
+  return m[tag] || '#888';
+}
+
+function getTagLabel(tag) {
+  const m = { REPOS:'Repos', RUNNING_COURT:'Running court', RUNNING_LONG:'Running long', VELO:'Vélo', UNIVERSEL:'Universel' };
+  return m[tag] || tag;
+}
+
+function getSportClass(sport) {
+  const m = { run:'tp-run', bike:'tp-bike', strength:'tp-strength' };
+  return m[sport] || 'tp-repos';
+}
+
+// ── Week navigation ────────────────────────────────────────
+function shiftWeek(delta) {
+  currentMonday.setDate(currentMonday.getDate() + delta * 7);
+  loadPlan(currentMonday);
+  renderCalendar();
+  renderCourses();
+}
+function goToThisWeek() {
+  currentMonday = getMonday(new Date());
+  loadPlan(currentMonday);
+  renderCalendar();
+  renderCourses();
+}
+
+// ── Tab switching ──────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
+  if (id === 'courses') renderCourses();
+}
+
+// ══════════════════════════════════════════════════════════
+// CALENDRIER
+// ══════════════════════════════════════════════════════════
+function renderCalendar() {
+  const today = todayISO();
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(currentMonday);
+    d.setDate(d.getDate() + i);
+    days.push(d);
+  }
+  const start = days[0], end = days[6];
+  document.getElementById('cal-week-lbl').textContent =
+    start.getDate() + ' ' + MOIS[start.getMonth()] + ' → ' +
+    end.getDate() + ' ' + MOIS[end.getMonth()];
+
+  const body = document.getElementById('cal-body');
+  body.innerHTML = '';
+
+  days.forEach(d => {
+    const iso = isoDate(d);
+    const isToday = iso === today;
+    const session = getTrainingForDate(iso);
+    const mapping = getTrainingMapping(session);
+    const dayPlan = plan[iso] || {};
+
+    const block = document.createElement('div');
+    block.className = 'day-block';
+
+    // Head
+    const head = document.createElement('div');
+    head.className = 'day-head' + (isToday ? ' today-head' : '');
+    const jourIdx = d.getDay() === 0 ? 6 : d.getDay() - 1;
+    head.innerHTML = `
+      <div>
+        <div class="day-name">${JOURS[jourIdx]} ${d.getDate()} ${MOIS[d.getMonth()]}</div>
+        <div class="day-sub glucide-target">${mapping.glucides_cible[0]}–${mapping.glucides_cible[1]}g glucides</div>
+      </div>
+      <div class="day-training">
+        ${session ? `<span class="training-pill ${getSportClass(session.sport)}">${session.planned ? (session.planned.name || session.type) : session.type}</span>` : '<span class="training-pill tp-repos">Repos</span>'}
+      </div>`;
+    block.appendChild(head);
+
+    // Slots midi + soir
+    const slots = document.createElement('div');
+    slots.className = 'meal-slots';
+
+    ['midi','soir'].forEach(moment => {
+      const assignedId = dayPlan[moment];
+      const recipe = assignedId ? getRecipeById(assignedId) : null;
+      const slot = document.createElement('div');
+      slot.className = 'slot';
+      slot.dataset.date = iso;
+      slot.dataset.moment = moment;
+
+      if (recipe) {
+        const tagColor = getTagColor(recipe.tags[0]);
+        slot.innerHTML = `
+          <div class="slot-label">${moment === 'midi' ? 'Midi' : 'Soir'}</div>
+          <div class="slot-recipe">
+            <span class="slot-tag" style="background:${tagColor}"></span>${recipe.nom}
+          </div>
+          <div class="slot-macros">${recipe.macros.proteines}g P · ${recipe.macros.glucides}g G · ${recipe.macros.kcal} kcal</div>
+          <button class="slot-remove" onclick="removeRecipe('${iso}','${moment}',event)">✕</button>`;
+      } else {
+        slot.innerHTML = `
+          <div class="slot-label">${moment === 'midi' ? 'Midi' : 'Soir'}</div>
+          <div class="slot-empty">Ajouter une recette</div>`;
+      }
+
+      // Click to assign
+      slot.addEventListener('click', () => openModal(iso, moment, mapping));
+
+      // Desktop drag & drop
+      slot.addEventListener('dragover', e => { e.preventDefault(); slot.classList.add('dragover'); });
+      slot.addEventListener('dragleave', () => slot.classList.remove('dragover'));
+      slot.addEventListener('drop', e => {
+        e.preventDefault();
+        slot.classList.remove('dragover');
+        const id = e.dataTransfer.getData('recipe-id');
+        if (id) assignRecipe(iso, moment, id);
+      });
+
+      slots.appendChild(slot);
+    });
+
+    block.appendChild(slots);
+    body.appendChild(block);
+  });
+}
+
+function assignRecipe(date, moment, recipeId) {
+  if (!plan[date]) plan[date] = {};
+  plan[date][moment] = recipeId;
+  savePlan();
+  renderCalendar();
+  renderCourses();
+  closeModal();
+}
+
+function removeRecipe(date, moment, e) {
+  e.stopPropagation();
+  if (plan[date]) delete plan[date][moment];
+  savePlan();
+  renderCalendar();
+  renderCourses();
+}
+
+// ══════════════════════════════════════════════════════════
+// MODAL
+// ══════════════════════════════════════════════════════════
+function openModal(date, moment, mapping) {
+  pendingSlot = { date, moment };
+  const recommended = getRecommendedRecipes(mapping, moment);
+  const all = RECETTES.filter(r => r.moments.includes(moment));
+  const others = all.filter(r => !recommended.find(rr => rr.id === r.id));
+
+  document.getElementById('modal-title').textContent =
+    `${moment === 'midi' ? 'Midi' : 'Soir'} — ${date}`;
+  document.getElementById('modal-reco').textContent =
+    recommended.length > 0
+      ? `✓ ${recommended.length} recette(s) recommandée(s) pour ce jour (${mapping.label})`
+      : 'Toutes les recettes disponibles';
+
+  const list = document.getElementById('modal-list');
+  list.innerHTML = '';
+
+  const renderModalRecipe = (r, isReco) => {
+    const div = document.createElement('div');
+    div.className = 'modal-recipe' + (isReco ? ' recommended' : '');
+    div.innerHTML = `
+      <div class="mr-name">${r.nom}</div>
+      <div class="mr-macros">${r.macros.proteines}g P · ${r.macros.glucides}g G · ${r.macros.lipides}g L · ${r.macros.kcal} kcal</div>
+      <div class="mr-source">${r.source} · ${r.temps_prep_min} min · ${r.portions} pers.</div>`;
+    div.onclick = () => assignRecipe(date, moment, r.id);
+    list.appendChild(div);
+  };
+
+  recommended.forEach(r => renderModalRecipe(r, true));
+  if (others.length > 0 && recommended.length > 0) {
+    const sep = document.createElement('div');
+    sep.style.cssText = 'font-size:11px;color:var(--text-muted);padding:8px 2px 4px;font-weight:600;';
+    sep.textContent = 'Autres recettes :';
+    list.appendChild(sep);
+  }
+  others.forEach(r => renderModalRecipe(r, false));
+
+  document.getElementById('modal-backdrop').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e && e.target !== document.getElementById('modal-backdrop')) return;
+  document.getElementById('modal-backdrop').classList.remove('open');
+  pendingSlot = null;
+}
+
+// ══════════════════════════════════════════════════════════
+// BANQUE
+// ══════════════════════════════════════════════════════════
+function setFilter(filter, btn) {
+  bankFilter = filter;
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  renderBank();
+}
+
+function renderBank() {
+  const list = document.getElementById('bank-list');
+  list.innerHTML = '';
+  const filtered = RECETTES.filter(r => {
+    if (bankFilter === 'all') return true;
+    if (bankFilter === 'midi') return r.moments.includes('midi');
+    if (bankFilter === 'soir') return r.moments.includes('soir');
+    return r.tags.includes(bankFilter);
+  });
+
+  filtered.forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+    card.draggable = true;
+    card.dataset.id = r.id;
+    card.innerHTML = `
+      <div class="rc-head">
+        <div>
+          <div class="rc-name">${r.nom}</div>
+          <div class="rc-source">${r.source} · ${r.temps_prep_min} min · ${r.portions} pers.</div>
+        </div>
+        <span class="rc-tag tag-${r.tags[0]}">${getTagLabel(r.tags[0])}</span>
+      </div>
+      <div class="rc-macros">
+        <div class="rc-macro"><span class="val">${r.macros.proteines}g</span><span class="lbl">Prot</span></div>
+        <div class="rc-macro"><span class="val">${r.macros.glucides}g</span><span class="lbl">Gluc</span></div>
+        <div class="rc-macro"><span class="val">${r.macros.lipides}g</span><span class="lbl">Lip</span></div>
+        <div class="rc-macro"><span class="val">${r.macros.kcal}</span><span class="lbl">kcal</span></div>
+      </div>
+      <div class="rc-meta">
+        <span>${r.moments.map(m => m === 'midi' ? 'Midi' : 'Soir').join(' · ')}</span>
+        ${r.note_adaptation ? `<span>· ${r.note_adaptation}</span>` : ''}
+      </div>`;
+
+    card.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('recipe-id', r.id);
+    });
+    // Clic long / bouton détail
+    card.addEventListener('click', () => openRecipeDetail(r.id));
+
+    list.appendChild(card);
+  });
+}
+
+// ══════════════════════════════════════════════════════════
+// LISTE DE COURSES
+// ══════════════════════════════════════════════════════════
+const CAT_LABELS = {
+  proteines:    'Protéines · Viandes · Poissons',
+  legumes:      'Légumes & Aromates',
+  feculent:     'Féculents & Céréales',
+  laitier:      'Produits Laitiers & Fromages',
+  matiere_grasse: 'Matières Grasses',
+  condiment:    'Épices & Condiments',
+  divers:       'Divers'
+};
+const CAT_ORDER = ['proteines','legumes','feculent','laitier','matiere_grasse','condiment','divers'];
+
+function aggregateIngredients() {
+  const agg = {}; // key: `nom||categorie` → { nom, quantite, unite, categorie }
+
+  // 1. Petit déjeuner fixe (5 jours semaine + 2 week-end)
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(currentMonday);
+    d.setDate(d.getDate() + i);
+    days.push(d);
+  }
+  const weekdayCount = days.filter(d => d.getDay() >= 1 && d.getDay() <= 5).length;
+  const weekendCount = days.filter(d => d.getDay() === 0 || d.getDay() === 6).length;
+
+  // Petit-dej semaine (× weekdayCount/5 semaines normales)
+  const pdj = RD.petit_dejeuner_fixe;
+  if (pdj && weekdayCount > 0) {
+    const ratio = weekdayCount / 5;
+    (pdj.semaine.ingredients_semaine_2pers || []).forEach(ing => {
+      addIngredient(agg, ing.nom, ing.quantite * ratio, ing.unite, ing.categorie);
+    });
+  }
+  if (pdj && weekendCount > 0) {
+    const ratio = weekendCount / 2;
+    (pdj.weekend.ingredients_weekend_2pers || []).forEach(ing => {
+      addIngredient(agg, ing.nom, ing.quantite * ratio, ing.unite, ing.categorie);
+    });
+  }
+
+  // 2. Recettes assignées dans le plan
+  const assignedIds = new Set();
+  days.forEach(d => {
+    const iso = isoDate(d);
+    const dayPlan = plan[iso] || {};
+    ['midi','soir'].forEach(m => {
+      if (dayPlan[m]) assignedIds.add({ id: dayPlan[m], iso, moment: m });
+    });
+  });
+
+  // Compter les occurrences par recette id
+  const recipeCounts = {};
+  days.forEach(d => {
+    const iso = isoDate(d);
+    const dayPlan = plan[iso] || {};
+    ['midi','soir'].forEach(m => {
+      const id = dayPlan[m];
+      if (id) recipeCounts[id] = (recipeCounts[id] || 0) + 1;
+    });
+  });
+
+  Object.entries(recipeCounts).forEach(([id, count]) => {
+    const recipe = getRecipeById(id);
+    if (!recipe) return;
+    const portions_factor = count / recipe.portions; // nombre de fois qu'on fait la recette
+    // Si count <= portions → on fait la recette 1 fois
+    // Si count > portions → on fait plusieurs fois
+    const batches = Math.ceil(count / recipe.portions);
+    recipe.ingredients.forEach(ing => {
+      addIngredient(agg, ing.nom, ing.quantite * batches, ing.unite, ing.categorie);
+    });
+  });
+
+  return agg;
+}
+
+// Normalisation : singulier → pluriel canonique pour regrouper correctement
+const NORMALIZE_NAMES = {
+  'œuf': 'Œufs', 'oeuf': 'Œufs', 'Œuf': 'Œufs',
+  'blanc de poulet': 'Blancs de poulet', 'Blanc de poulet': 'Blancs de poulet',
+  'citron': 'Citron(s)', 'Citron': 'Citron(s)',
+  'gousse d\'ail': 'Ail', 'gousses d\'ail': 'Ail', 'Gousse d\'ail': 'Ail',
+  'ail frais': 'Ail', 'Ail frais': 'Ail', 'ail en poudre': 'Ail en poudre',
+  'oignon': 'Oignon(s)', 'Oignon': 'Oignon(s)',
+  'tomate': 'Tomates cerises', 'Tomate': 'Tomates',
+  'patate douce': 'Patates douces', 'Patate douce': 'Patates douces',
+  'avocat': 'Avocat(s)', 'Avocat': 'Avocat(s)',
+  'concombre': 'Concombre(s)', 'Concombre': 'Concombre(s)',
+};
+function normalizeName(nom) {
+  return NORMALIZE_NAMES[nom] || NORMALIZE_NAMES[nom.toLowerCase()] || nom;
+}
+
+function addIngredient(agg, nom, quantite, unite, categorie) {
+  const cleanNom = normalizeName(nom.trim());
+  const key = `${cleanNom}||${unite}`;
+  if (agg[key]) {
+    agg[key].quantite += quantite;
+  } else {
+    agg[key] = { nom: cleanNom, quantite, unite, categorie: categorie || 'divers' };
+  }
+}
+
+function formatQty(quantite, unite) {
+  const q = Math.round(quantite * 10) / 10;
+  if (unite === 'pièces' || unite === 'pièce') return `${Math.ceil(q)} pcs`;
+  if (unite === 'cs') return `${q} c.à.s`;
+  if (unite === 'cc') return `${q} c.à.c`;
+  if (unite === 'g') return q >= 1000 ? `${(q/1000).toFixed(1)} kg` : `${Math.ceil(q)} g`;
+  if (unite === 'ml') return q >= 1000 ? `${(q/1000).toFixed(1)} L` : `${Math.ceil(q)} ml`;
+  return `${q} ${unite}`;
+}
+
+function renderCourses() {
+  loadChecks();
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(currentMonday);
+    d.setDate(d.getDate() + i);
+    days.push(d);
+  }
+  document.getElementById('courses-week-lbl').textContent =
+    isoDate(days[0]) + ' → ' + isoDate(days[6]);
+
+  const body = document.getElementById('courses-body');
+  body.innerHTML = '';
+
+  // Compter recettes assignées
+  let totalAssigned = 0;
+  days.forEach(d => {
+    const dp = plan[isoDate(d)] || {};
+    if (dp.midi) totalAssigned++;
+    if (dp.soir) totalAssigned++;
+  });
+
+  if (totalAssigned === 0) {
+    body.innerHTML = `<div class="courses-note">Aucune recette assignée cette semaine. Le petit-déjeuner est inclus automatiquement.</div>`;
+  } else {
+    body.innerHTML = `<div class="courses-note">${totalAssigned} repas planifiés · Petit-déjeuner inclus automatiquement</div>`;
+  }
+
+  const agg = aggregateIngredients();
+  const byCat = {};
+  Object.values(agg).forEach(ing => {
+    const cat = ing.categorie || 'divers';
+    if (!byCat[cat]) byCat[cat] = [];
+    byCat[cat].push(ing);
+  });
+
+  CAT_ORDER.forEach(cat => {
+    const items = (byCat[cat] || []).sort((a,b) => a.nom.localeCompare(b.nom));
+    if (items.length === 0) return;
+
+    const section = document.createElement('div');
+    section.className = 'courses-cat';
+    section.innerHTML = `<div class="cat-title">${CAT_LABELS[cat] || cat}</div>`;
+
+    items.forEach(ing => {
+      const key = `check_${cat}_${ing.nom}`;
+      const isChecked = courseChecks[key] || false;
+      const row = document.createElement('div');
+      row.className = 'item-row';
+      row.innerHTML = `
+        <div class="item-check${isChecked ? ' checked' : ''}" onclick="toggleCheck('${key}',this)">
+          ${isChecked ? '✓' : ''}
+        </div>
+        <div class="item-name${isChecked ? ' checked-text' : ''}">${ing.nom}</div>
+        <div class="item-qty">${formatQty(ing.quantite, ing.unite)}</div>`;
+      section.appendChild(row);
+    });
+
+    body.appendChild(section);
+  });
+}
+
+function toggleCheck(key, el) {
+  const isChecked = !courseChecks[key];
+  courseChecks[key] = isChecked;
+  saveChecks();
+  el.classList.toggle('checked', isChecked);
+  el.innerHTML = isChecked ? '✓' : '';
+  const nameEl = el.nextElementSibling;
+  if (nameEl) nameEl.classList.toggle('checked-text', isChecked);
+}
+
+// ══════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════
+loadPlan(currentMonday);
+loadChecks();
+renderCalendar();
+renderBank();
+
+// ── Détail recette ─────────────────────────────────────────────
+function openRecipeDetail(recipeId) {
+  const r = RECETTES.find(x => x.id === recipeId);
+  if (!r) return;
+  document.getElementById('rm-name').textContent = r.nom;
+  // Tag
+  const tagRow = document.getElementById('rm-tag-row');
+  tagRow.innerHTML = `<span class="rc-tag tag-${r.tags[0]}">${getTagLabel(r.tags[0])}</span>
+    <span style="font-size:11px;color:var(--text-muted)">${r.source} · ${r.temps_prep_min} min · ${r.portions} pers.</span>`;
+  // Macros
+  const m = r.macros;
+  document.getElementById('rm-macros').innerHTML = [
+    {v:m.proteines+'g', l:'Protéines'},{v:m.glucides+'g', l:'Glucides'},
+    {v:m.lipides+'g', l:'Lipides'},{v:m.kcal, l:'kcal'}
+  ].map(x=>`<div class="rm-macro-chip"><div class="val">${x.v}</div><div class="lbl">${x.l}</div></div>`).join('');
+  // Note
+  const noteZ = document.getElementById('rm-note-zone');
+  noteZ.innerHTML = r.note_adaptation ? `<div class="rm-note">💡 ${r.note_adaptation}</div>` : '';
+  // Source
+  const srcZ = document.getElementById('rm-source-zone');
+  srcZ.innerHTML = r.source_url
+    ? `<a class="rm-source-btn" href="${r.source_url}" target="_blank" rel="noopener">📸 Voir la photo sur Instagram</a>`
+    : '';
+  // Ingrédients
+  document.getElementById('rm-ingredients').innerHTML =
+    (r.ingredients||[]).map(ing=>`<div class="rm-ingredient">
+      <span>${ing.nom}</span>
+      <span class="rm-ing-qty">${ing.quantite} ${ing.unite}</span>
+    </div>`).join('');
+  // Étapes
+  document.getElementById('rm-steps').innerHTML =
+    (r.steps||['Étapes non disponibles.']).map((s,i)=>`<div class="rm-step">
+      <div class="rm-step-num">${i+1}</div><div>${s}</div>
+    </div>`).join('');
+  // Adaptations
+  const adaptZ = document.getElementById('rm-adapt-zone');
+  if (r.adaptations && Object.keys(r.adaptations).length > 0) {
+    const tags = {REPOS:'Repos/Renfo',RUNNING_LONG:'Running long',VELO:'Vélo long'};
+    adaptZ.innerHTML = `<div class="rm-section"><div class="rm-section-title">Adaptations</div>` +
+      Object.entries(r.adaptations).map(([k,v])=>`<div class="rm-ingredient">
+        <span style="font-size:11px">${tags[k]||k}</span><span class="rm-ing-qty" style="font-size:11px">${v}</span>
+      </div>`).join('') + '</div>';
+  } else { adaptZ.innerHTML = ''; }
+
+  document.getElementById('rm-backdrop').classList.add('open');
+}
+function closeRecipeModal(e) {
+  if (e && e.target !== document.getElementById('rm-backdrop')) return;
+  document.getElementById('rm-backdrop').classList.remove('open');
+}
+</script>
+
+<!-- ═══ MODALE DÉTAIL RECETTE ═══ -->
+<div class="recipe-modal-backdrop" id="rm-backdrop" onclick="closeRecipeModal(event)">
+  <div class="recipe-modal" onclick="event.stopPropagation()">
+    <div class="rm-header">
+      <div class="rm-name" id="rm-name">—</div>
+      <button class="rm-close" onclick="closeRecipeModal()">✕</button>
+    </div>
+    <div class="rm-scroll">
+      <div class="rm-tag-row" id="rm-tag-row"></div>
+      <div class="rm-macros" id="rm-macros"></div>
+      <div id="rm-note-zone"></div>
+      <div id="rm-source-zone"></div>
+      <div class="rm-section">
+        <div class="rm-section-title">Ingrédients</div>
+        <div id="rm-ingredients"></div>
+      </div>
+      <div class="rm-section">
+        <div class="rm-section-title">Préparation</div>
+        <div id="rm-steps"></div>
+      </div>
+      <div id="rm-adapt-zone"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

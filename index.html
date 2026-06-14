@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sport Dashboard — CLA 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="sport_data.js"></script>
+<script src="recettes_data.js"></script>
+<style>
+  :root {
+    --bg: #FAFAF6;
+    --surface: #FFFFFF;
+    --surface-warm: #FFF7F2;
+    --surface-secondary: #F4F2EC;
+    --border: #E8E5DD;
+    --border-strong: #D3D1C7;
+    --accent: #D85A30;
+    --accent-dark: #993C1D;
+    --accent-soft: #FAECE7;
+    --accent-soft-strong: #F5C4B3;
+    --amber: #BA7517;
+    --amber-soft: #FAEEDA;
+    --green: #639922;
+    --green-soft: #EAF3DE;
+    --red: #A32D2D;
+    --red-soft: #FCEBEB;
+    --text: #2C2C2A;
+    --text-secondary: #5F5E5A;
+    --text-muted: #888780;
+    --font-sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; width: 100%; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .shell-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 22px 10px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 30px; height: 30px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .brand-text { line-height: 1.15; }
+  .brand-text .name { font-size: 14px; font-weight: 600; color: var(--text); }
+  .brand-text .sub  { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+  .shell-tabs { display: flex; gap: 4px; margin-left: 12px; }
+  .shell-tab {
+    background: var(--surface-secondary);
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 999px;
+    padding: 7px 18px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .shell-tab:hover:not(.active) { color: var(--text); background: var(--surface-warm); }
+  .shell-tab.active {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(216, 90, 48, 0.25);
+  }
+  .shell-meta-right {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 14px;
+    font-size: 12px; color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+  .shell-meta-right .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 3px var(--green-soft);
+  }
+  /* Strava badge */
+  .strava-badge {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 11px; color: var(--text-muted);
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+  }
+  .strava-badge svg { width: 14px; height: 14px; fill: #FC4C02; }
+  .strava-badge.connected { border-color: #FC4C02; color: #FC4C02; }
+  .hero {
+    background: var(--bg);
+    padding: 12px 22px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1.3fr;
+    gap: 12px;
+  }
+  .hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+    cursor: pointer;
+  }
+  .hero-card:hover { border-color: var(--border-strong); }
+  .hero-label {
+    font-size: 10px; font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+  .hero-headline {
+    display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  }
+  .hero-headline .big {
+    font-size: 22px; font-weight: 600;
+    line-height: 1; letter-spacing: -0.5px;
+  }
+  .hero-headline .tag {
+    font-size: 11px; font-weight: 600;
+    padding: 2px 9px; border-radius: 999px;
+    letter-spacing: 0.3px;
+  }
+  .tag-frais     { background: var(--green-soft); color: #3B6D11; }
+  .tag-productif { background: var(--amber-soft); color: #854F0B; }
+  .tag-fatigue   { background: var(--accent-soft); color: var(--accent-dark); }
+  .tag-surcharge { background: var(--red-soft); color: var(--red); }
+  .hero-metrics { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-metric { display: flex; flex-direction: column; gap: 1px; }
+  .hero-metric .v {
+    font-size: 14px; font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--text);
+  }
+  .hero-metric .l {
+    font-size: 10px; color: var(--text-muted);
+    letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  .hero-metric .v.good { color: var(--green); }
+  .hero-metric .v.warn { color: var(--amber); }
+  .hero-metric .v.bad  { color: var(--red); }
+  .countdown-card {
+    background: linear-gradient(135deg, #FAECE7 0%, #FFF7F2 100%);
+    border-color: var(--accent-soft-strong);
+  }
+  .countdown-card .hero-label { color: var(--accent-dark); }
+  .countdown-days {
+    font-size: 28px; font-weight: 700;
+    line-height: 1; color: var(--accent);
+    letter-spacing: -0.8px;
+    font-family: var(--font-mono);
+  }
+  .countdown-days .prefix {
+    font-size: 15px; font-weight: 500;
+    color: var(--accent-dark); margin-right: 2px;
+  }
+  .countdown-event { font-size: 13px; font-weight: 600; color: var(--accent-dark); }
+  .countdown-date  { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+  .countdown-row   { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .next-session-card .next-when {
+    font-size: 12px; color: var(--text-secondary); font-weight: 500;
+  }
+  .next-session-card .next-when .today {
+    background: var(--accent); color: #fff;
+    padding: 1px 8px; border-radius: 999px;
+    font-size: 10px; font-weight: 600;
+    margin-left: 4px; letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .next-session-card .next-name      { font-size: 15px; font-weight: 600; color: var(--text); }
+  .next-session-card .next-structure {
+    font-size: 11px; color: var(--text-secondary);
+    font-family: var(--font-mono); line-height: 1.4;
+  }
+  .next-session-card .sport-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: var(--accent-soft); color: var(--accent-dark);
+    padding: 2px 8px; border-radius: 6px;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.4px; text-transform: uppercase;
+    margin-right: 6px;
+  }
+  /* Sport pill colors */
+  .sport-pill-run      { background: #EAF3DE; color: #3B6D11; }
+  .sport-pill-bike     { background: var(--accent-soft); color: var(--accent-dark); }
+  .sport-pill-strength { background: #EEEDFE; color: #534AB7; }
+  .sport-pill-rest     { background: var(--surface-secondary); color: var(--text-muted); }
+
+  .frame-wrap { flex: 1; position: relative; min-height: 0; width: 100%; }
+  .frame-wrap iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0; background: var(--bg);
+    display: none;
+  }
+  .frame-wrap iframe.active { display: block; }
+  .loading-msg {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); font-size: 13px;
+  }
+  .loading-msg.hidden { display: none; }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 8px; padding: 10px 14px; }
+    .shell-header { padding: 10px 14px; }
+  }
+</style>
+</head>
+<body>
+<header class="shell-header">
+  <div class="brand">
+    <div class="brand-mark">⚡</div>
+    <div class="brand-text">
+      <div class="name">Sport Dashboard</div>
+      <div class="sub" id="brand-sub">CLA · 2026</div>
+    </div>
+  </div>
+  <div class="shell-tabs">
+    <button class="shell-tab active" data-tab="log"   id="tab-log">Log</button>
+    <button class="shell-tab" data-tab="plan"         id="tab-plan">Plan</button>
+    <button class="shell-tab" data-tab="renfo"        id="tab-renfo">Renfo</button>
+    <button class="shell-tab" data-tab="nutrition"    id="tab-nutrition">Nutrition</button>
+  </div>
+  <div class="shell-meta-right">
+    <!-- Strava badge — lien direct vers le compte -->
+    <a class="strava-badge connected" id="strava-status"
+       href="https://www.strava.com/dashboard"
+       target="_blank" rel="noopener"
+       title="Ouvrir mon compte Strava">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+      <span id="strava-label">Strava</span>
+    </a>
+    <span class="dot"></span>
+    <span id="shell-cycle-info">—</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-card" id="card-state">
+    <div class="hero-label">Forme du moment</div>
+    <div class="hero-headline">
+      <span class="big" id="state-status">—</span>
+      <span class="tag" id="state-tag">—</span>
+    </div>
+    <div class="hero-metrics">
+      <div class="hero-metric"><span class="v" id="m-rhr">—</span><span class="l">FC repos</span></div>
+      <div class="hero-metric"><span class="v" id="m-sleep">—</span><span class="l">Sommeil</span></div>
+      <div class="hero-metric"><span class="v" id="m-ctl">—</span><span class="l">CTL</span></div>
+      <div class="hero-metric"><span class="v" id="m-tsb">—</span><span class="l">TSB</span></div>
+    </div>
+  </div>
+
+  <div class="hero-card countdown-card" id="card-countdown">
+    <div class="hero-label">Prochain objectif</div>
+    <div class="countdown-row">
+      <div class="countdown-days"><span class="prefix">J−</span><span id="cd-days">—</span></div>
+      <div style="text-align: right;">
+        <div class="countdown-event" id="cd-event">—</div>
+        <div class="countdown-date"  id="cd-date">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-card next-session-card" id="card-next">
+    <div class="hero-label">Prochaine séance</div>
+    <div>
+      <span class="sport-pill" id="next-sport">—</span>
+      <span class="next-when" id="next-when">—</span>
+    </div>
+    <div class="next-name" id="next-name">—</div>
+    <div class="next-structure" id="next-structure">—</div>
+  </div>
+</section>
+
+<div class="frame-wrap">
+  <div class="loading-msg" id="loading-msg">Chargement…</div>
+  <iframe id="frame-log"       class="active" src="training_log.html"              title="Training Log"></iframe>
+  <iframe id="frame-plan"      src="about:blank"                                   title="Training Plan"></iframe>
+  <iframe id="frame-renfo"     src="about:blank"                                   title="Renforcement"></iframe>
+  <iframe id="frame-nutrition" src="about:blank"                                   title="Nutrition"></iframe>
+</div>
+
+<script>
+  const DATA = window.SPORT_DATA || {};
+  const PLAN_PATH  = (DATA.current_plan && DATA.current_plan.html_path) || 'Plan_CLA/plan_CLA_2026-06.html';
+  const RENFO_PATH = 'Renfo_CLA/renfo.html';
+  const NUTRI_PATH = 'Nutrition_CLA/nutrition.html';
+
+  // ── Helpers ──────────────────────────────────────────────────
+  function formatDateShort(iso) {
+    if (!iso) return '—';
+    const [y, m, d] = iso.split('-');
+    return d + '.' + m;
+  }
+  function formatDateLong(iso) {
+    if (!iso) return '—';
+    const d = new Date(iso + 'T12:00:00Z');
+    return d.toLocaleDateString('fr-BE', { day: '2-digit', month: 'short', year: 'numeric' }).replace('.', '');
+  }
+  function todayISO() { return new Date().toISOString().split('T')[0]; }
+  function daysBetween(fromISO, toISO) {
+    const a = new Date(fromISO + 'T12:00:00Z');
+    const b = new Date(toISO  + 'T12:00:00Z');
+    return Math.round((b - a) / 86400000);
+  }
+
+  // Cycle info in header
+  const cycleInfo = DATA.current_plan
+    ? 'cycle ' + formatDateShort(DATA.current_plan.plan_start_date) + ' → ' + formatDateShort(DATA.current_plan.plan_end_date)
+    : '—';
+  document.getElementById('shell-cycle-info').textContent = cycleInfo;
+
+  // ── TSS computation (multi-sport) ────────────────────────────
+  function computeTSS(session) {
+    const ex = session.executed;
+    if (!ex || !ex.duration_min) return 0;
+    if (ex.tss !== undefined && ex.tss !== null) return ex.tss;
+    const FTP = (DATA.athlete && DATA.athlete.ftp_ref_w) || 220;
+    let IF = null;
+    if (session.sport === 'bike' && ex.np_w && ex.np_w > 0) {
+      IF = ex.np_w / FTP;
+    } else if (ex.subjective && ex.subjective.rpe) {
+      IF = 0.50 + (ex.subjective.rpe - 1) * 0.0666;
+    } else {
+      return 0;
+    }
+    return (ex.duration_min / 60) * IF * IF * 100;
+  }
+
+  function computePMC(asOfISO) {
+    const sessions = (DATA.sessions || []).filter(s => s.status === 'done' && s.date <= asOfISO);
+    if (sessions.length === 0) return { CTL: 0, ATL: 0, TSB: 0 };
+    const dailyTSS = {};
+    sessions.forEach(s => { dailyTSS[s.date] = (dailyTSS[s.date] || 0) + computeTSS(s); });
+    const dates = Object.keys(dailyTSS).sort();
+    let CTL = 0, ATL = 0;
+    const start = new Date(dates[0] + 'T12:00:00Z');
+    const end   = new Date(asOfISO  + 'T12:00:00Z');
+    for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
+      const iso = d.toISOString().split('T')[0];
+      const tss = dailyTSS[iso] || 0;
+      CTL = CTL + (tss - CTL) / 42;
+      ATL = ATL + (tss - ATL) / 7;
+    }
+    return {
+      CTL: Math.round(CTL * 10) / 10,
+      ATL: Math.round(ATL * 10) / 10,
+      TSB: Math.round((CTL - ATL) * 10) / 10
+    };
+  }
+
+  // ── Hero cards ────────────────────────────────────────────────
+  function renderState() {
+    const TODAY = todayISO();
+    const pmc = computePMC(TODAY);
+    document.getElementById('m-ctl').textContent = pmc.CTL.toFixed(0);
+    const tsbEl = document.getElementById('m-tsb');
+    tsbEl.textContent = (pmc.TSB >= 0 ? '+' : '') + pmc.TSB.toFixed(0);
+    tsbEl.classList.toggle('good', pmc.TSB > 5);
+    tsbEl.classList.toggle('warn', pmc.TSB <= 5 && pmc.TSB >= -15);
+    tsbEl.classList.toggle('bad',  pmc.TSB < -15);
+
+    // FC repos + Sommeil — depuis wellness Intervals.icu
+    const wellness = DATA.wellness || {};
+    // Chercher la donnée la plus récente (aujourd'hui ou J-1)
+    let rhr = null, sleepH = null;
+    for (let daysBack = 0; daysBack <= 2; daysBack++) {
+      const d = new Date(); d.setDate(d.getDate() - daysBack);
+      const iso = d.getFullYear() + '-' +
+        String(d.getMonth()+1).padStart(2,'0') + '-' +
+        String(d.getDate()).padStart(2,'0');
+      const w = wellness[iso];
+      if (w) {
+        if (rhr === null && w.resting_hr != null) rhr = w.resting_hr;
+        if (sleepH === null && w.sleep_h != null) sleepH = w.sleep_h;
+        if (rhr !== null && sleepH !== null) break;
+      }
+    }
+    const rhrEl = document.getElementById('m-rhr');
+    rhrEl.textContent = rhr !== null ? (rhr + ' bpm') : '—';
+    const BASELINE_RHR = DATA.athlete && DATA.athlete.hr_rest_bpm || 52;
+    rhrEl.classList.toggle('warn', rhr !== null && rhr > BASELINE_RHR + 5);
+    rhrEl.classList.toggle('bad',  rhr !== null && rhr > BASELINE_RHR + 10);
+
+    const sleepEl = document.getElementById('m-sleep');
+    sleepEl.textContent = sleepH !== null ? (sleepH + 'h') : '—';
+    sleepEl.classList.toggle('good', sleepH !== null && sleepH >= 7.5);
+    sleepEl.classList.toggle('warn', sleepH !== null && sleepH >= 6 && sleepH < 7.5);
+    sleepEl.classList.toggle('bad',  sleepH !== null && sleepH < 6);
+
+    let status, tagClass;
+    if      (pmc.TSB > 10)  { status = 'Frais';     tagClass = 'tag-frais'; }
+    else if (pmc.TSB >= -10) { status = 'Productif'; tagClass = 'tag-productif'; }
+    else if (pmc.TSB >= -20) { status = 'Fatigué';   tagClass = 'tag-fatigue'; }
+    else                     { status = 'Surcharge'; tagClass = 'tag-surcharge'; }
+    document.getElementById('state-status').textContent = status;
+    const tagEl = document.getElementById('state-tag');
+    tagEl.className = 'tag ' + tagClass;
+    tagEl.textContent = 'TSB ' + (pmc.TSB >= 0 ? '+' : '') + pmc.TSB.toFixed(0);
+  }
+
+  function renderCountdown() {
+    const TODAY = todayISO();
+    const upcoming = (DATA.races || [])
+      .filter(r => r.status === 'upcoming' && r.date >= TODAY)
+      .sort((a, b) => a.date.localeCompare(b.date));
+    if (upcoming.length === 0) {
+      document.getElementById('cd-days').textContent  = '—';
+      document.getElementById('cd-event').textContent = 'Aucun objectif';
+      document.getElementById('cd-date').textContent  = '';
+      return;
+    }
+    const race = upcoming[0];
+    document.getElementById('cd-days').textContent  = daysBetween(TODAY, race.date);
+    document.getElementById('cd-event').textContent = race.name;
+    document.getElementById('cd-date').textContent  = formatDateLong(race.date);
+  }
+
+  function renderNextSession() {
+    const TODAY = todayISO();
+    const upcoming = (DATA.sessions || [])
+      .filter(s => s.status === 'planned' && s.date >= TODAY && s.sport !== 'rest')
+      .sort((a, b) => a.date.localeCompare(b.date));
+    if (upcoming.length === 0) {
+      document.getElementById('next-when').innerHTML = '<em style="color:var(--text-muted)">aucune séance à venir</em>';
+      document.getElementById('next-name').textContent      = '—';
+      document.getElementById('next-structure').textContent = '';
+      document.getElementById('next-sport').textContent     = '—';
+      return;
+    }
+    const s = upcoming[0];
+    const p = s.planned || {};
+    const dDays = daysBetween(TODAY, s.date);
+    let whenText;
+    if      (dDays === 0) whenText = '<span class="today">Aujourd\'hui</span>';
+    else if (dDays === 1) whenText = 'Demain · ' + formatDateLong(s.date);
+    else                  whenText = 'Dans ' + dDays + ' jours · ' + formatDateLong(s.date);
+
+    const sportEmoji  = { bike: '🚴', run: '🏃', strength: '💪', rest: '😴' };
+    const sportLabel  = { bike: 'Vélo', run: 'Running', strength: 'Renfo', rest: 'Repos' };
+    const sportClass  = { bike: 'sport-pill-bike', run: 'sport-pill-run', strength: 'sport-pill-strength', rest: 'sport-pill-rest' };
+    const pill = document.getElementById('next-sport');
+    pill.textContent = (sportEmoji[s.sport] || '') + ' ' + (sportLabel[s.sport] || s.sport) + ' · ' + s.type;
+    pill.className   = 'sport-pill ' + (sportClass[s.sport] || '');
+
+    document.getElementById('next-when').innerHTML      = whenText;
+    document.getElementById('next-name').textContent    = p.name || '—';
+    const bits = [];
+    if (p.duration_min) bits.push(p.duration_min + ' min');
+    if (p.distance_m)   bits.push(Math.round(p.distance_m / 1000) + ' km');
+    if (p.primary_zone) bits.push(p.primary_zone);
+    document.getElementById('next-structure').textContent = bits.join(' · ');
+  }
+
+  // ── Boot ─────────────────────────────────────────────────────
+  function bootHero() {
+    if (!window.SPORT_DATA || !window.SPORT_DATA.sessions) {
+      console.warn('[shell] SPORT_DATA pas disponible, retry dans 200ms');
+      setTimeout(bootHero, 200);
+      return;
+    }
+    try { renderState(); }       catch(e) { console.error('renderState error', e); }
+    try { renderCountdown(); }   catch(e) { console.error('renderCountdown error', e); }
+    try { renderNextSession(); } catch(e) { console.error('renderNextSession error', e); }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootHero);
+  } else {
+    bootHero();
+  }
+
+  // ── Tabs ─────────────────────────────────────────────────────
+  const framePlan = document.getElementById('frame-plan');
+  const frameLog  = document.getElementById('frame-log');
+
+  frameLog.addEventListener('load', () => {
+    document.getElementById('loading-msg').classList.add('hidden');
+    setTimeout(() => {
+      if (framePlan.src === 'about:blank') framePlan.src = PLAN_PATH;
+    }, 100);
+  });
+
+  const frameRenfo = document.getElementById('frame-renfo');
+  const frameNutri = document.getElementById('frame-nutrition');
+
+  function setActiveTab(target) {
+    document.querySelectorAll('.shell-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === target));
+    document.querySelectorAll('.frame-wrap iframe').forEach(f => f.classList.toggle('active', f.id === 'frame-' + target));
+    if (target === 'plan'      && framePlan.src  === 'about:blank') framePlan.src  = PLAN_PATH;
+    if (target === 'renfo'     && frameRenfo.src === 'about:blank') frameRenfo.src = RENFO_PATH;
+    if (target === 'nutrition' && frameNutri.src === 'about:blank') frameNutri.src = NUTRI_PATH;
+  }
+  document.querySelectorAll('.shell-tab').forEach(t => {
+    t.addEventListener('click', () => setActiveTab(t.dataset.tab));
+  });
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.type === 'switch-tab') {
+      const target = e.data.target;
+      if (target === 'log' || target === 'plan' || target === 'renfo' || target === 'nutrition') setActiveTab(target);
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.altKey && e.key === '1') { e.preventDefault(); setActiveTab('log'); }
+    if (e.altKey && e.key === '2') { e.preventDefault(); setActiveTab('plan'); }
+    if (e.altKey && e.key === '3') { e.preventDefault(); setActiveTab('renfo'); }
+    if (e.altKey && e.key === '4') { e.preventDefault(); setActiveTab('nutrition'); }
+  });
+
+  document.getElementById('card-next').addEventListener('click',      () => setActiveTab('plan'));
+  document.getElementById('card-countdown').addEventListener('click', () => setActiveTab('plan'));
+  document.getElementById('card-state').addEventListener('click',     () => setActiveTab('log'));
+</script>
+</body>
+</html>

@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Log — CLA 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF6;
+    --surface: #FFFFFF;
+    --surface-warm: #FFF7F2;
+    --surface2: #F4F2EC;
+    --border: #E8E5DD;
+    --border-strong: #D3D1C7;
+    --accent: #D85A30;
+    --accent-dark: #993C1D;
+    --accent-soft: #FAECE7;
+    --accent2: #BA7517;
+    --amber: #BA7517;
+    --amber-soft: #FAEEDA;
+    --green: #639922;
+    --green-soft: #EAF3DE;
+    --green-dark: #3B6D11;
+    --yellow: #BA7517;
+    --orange: #D85A30;
+    --red: #A32D2D;
+    --red-soft: #FCEBEB;
+    --blue: #185FA5;
+    --blue-soft: #E6F1FB;
+    --purple: #534AB7;
+    --purple-soft: #EEEDFE;
+    --text: #2C2C2A;
+    --text-muted: #888780;
+    --text-secondary: #5F5E5A;
+    --font-sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg); color: var(--text);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 22px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .header-left h1 {
+    font-size: 1.1rem; font-weight: 600; color: var(--text);
+    letter-spacing: -0.2px;
+  }
+  .header-left p {
+    font-size: 0.72rem; color: var(--text-muted);
+    margin-top: 2px; font-family: var(--font-mono);
+  }
+  .header-actions { display: flex; gap: 8px; }
+  button {
+    padding: 7px 14px; border: none; border-radius: 8px; cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.78rem; font-weight: 500; transition: all 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    box-shadow: 0 1px 2px rgba(216, 90, 48, 0.25);
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-ghost {
+    background: var(--surface2); color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover { color: var(--text); background: var(--surface-warm); border-color: var(--border-strong); }
+  .btn-danger { background: var(--red); color: #fff; }
+  .btn-danger:hover { background: #791F1F; }
+  .btn-sm { padding: 4px 9px; font-size: 0.72rem; }
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    background: transparent;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 22px;
+    min-height: 70px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-align: left;
+    transition: border-color 0.15s ease;
+  }
+  .stat-card:hover { border-color: var(--border-strong); }
+  .stat-card .val {
+    font-size: 1.25rem; font-weight: 600; color: var(--accent);
+    line-height: 1.05; font-family: var(--font-mono); letter-spacing: -0.5px;
+    display: block;
+  }
+  .stat-card .lbl {
+    font-size: 0.62rem; color: var(--text-muted);
+    margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+    font-weight: 500;
+    display: block;
+  }
+  main { padding: 20px 22px; max-width: 1600px; margin: 0 auto; }
+  .form-panel {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 22px; margin-bottom: 22px;
+    display: none;
+  }
+  .form-panel.open { display: block; }
+  .form-panel h2 { font-size: 0.95rem; font-weight: 600; margin-bottom: 14px; color: var(--text); }
+  .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 11px; }
+  .form-group { display: flex; flex-direction: column; gap: 4px; }
+  .form-group.wide { grid-column: span 2; }
+  .form-group.full { grid-column: 1 / -1; }
+  label {
+    font-size: 0.66rem; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+  }
+  input, select, textarea {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 7px; color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 0.82rem; padding: 7px 10px; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(216, 90, 48, 0.12);
+  }
+  textarea { resize: vertical; min-height: 60px; font-family: inherit; }
+  select option { background: var(--surface); }
+  .form-actions { display: flex; gap: 8px; margin-top: 14px; justify-content: flex-end; }
+  .table-container {
+    overflow-x: auto; border-radius: 12px;
+    border: 1px solid var(--border); background: var(--surface);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  thead th {
+    background: var(--surface2); padding: 9px 11px; text-align: left;
+    font-size: 0.62rem; color: var(--text-muted); text-transform: uppercase;
+    letter-spacing: 0.6px; white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; font-weight: 600;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: var(--surface-warm); }
+  td { padding: 9px 11px; vertical-align: middle; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.note { white-space: normal; min-width: 180px; max-width: 260px; font-size: 0.72rem; color: var(--text-secondary); line-height: 1.4; }
+  td.actions { text-align: right; }
+  .badge {
+    display: inline-block; padding: 2px 9px; border-radius: 999px;
+    font-size: 0.66rem; font-weight: 600; white-space: nowrap;
+    letter-spacing: 0.2px;
+  }
+  .badge-z1 { background: var(--blue-soft); color: var(--blue); }
+  .badge-z2 { background: var(--green-soft); color: var(--green-dark); }
+  .badge-z3 { background: var(--amber-soft); color: #854F0B; }
+  .badge-vo2 { background: var(--red-soft); color: var(--red); }
+  .badge-seuil { background: var(--accent-soft); color: var(--accent-dark); }
+  .badge-sweet { background: var(--purple-soft); color: var(--purple); }
+  .badge-course { background: var(--accent); color: #fff; }
+  .badge-xfit { background: #EFE3DA; color: #5A3318; }
+  .badge-activation { background: #E1F5EE; color: #0F6E56; }
+  .badge-planned {
+    background: var(--surface2); color: var(--text-secondary);
+    border: 1px dashed var(--border-strong);
+  }
+  .badge-sprint { background: #FBEAF0; color: #993556; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; }
+  .rpe-1, .rpe-2, .rpe-3 { color: var(--green); font-weight: 600; }
+  .rpe-4, .rpe-5, .rpe-6 { color: var(--amber); font-weight: 600; }
+  .rpe-7, .rpe-8 { color: var(--accent); font-weight: 600; }
+  .rpe-9, .rpe-10 { color: var(--red); font-weight: 700; }
+  .knee-0 { color: var(--green); font-weight: 600; }
+  .knee-1 { color: var(--amber); font-weight: 600; }
+  .knee-2 { color: var(--accent); font-weight: 600; }
+  .knee-3 { color: var(--red); font-weight: 700; }
+  .bb-high { color: var(--green); font-weight: 600; }
+  .bb-mid { color: var(--amber); font-weight: 600; }
+  .bb-low { color: var(--red); font-weight: 700; }
+  tr.planned-row { opacity: 0.7; font-style: italic; }
+  tr.planned-row:hover { background: var(--surface-warm); opacity: 1; }
+  .kj-val { font-weight: 600; color: var(--accent2); font-family: var(--font-mono); }
+  .filters {
+    display: flex; gap: 10px; margin-bottom: 14px;
+    flex-wrap: wrap; align-items: center;
+  }
+  .filters input, .filters select { padding: 6px 11px; font-size: 0.78rem; }
+  .filters label { margin-right: -6px; font-size: 0.68rem; }
+  .empty { text-align: center; padding: 48px; color: var(--text-muted); }
+  .empty .icon { font-size: 2.6rem; margin-bottom: 12px; opacity: 0.5; }
+  [title] { cursor: help; }
+  .pmc-section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 22px; margin-bottom: 22px;
+  }
+  .pmc-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 10px;
+  }
+  .pmc-header h2 { font-size: 0.95rem; font-weight: 600; color: var(--text); letter-spacing: 0.2px; }
+  .pmc-header .pmc-help { font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono); }
+  .pmc-controls { display: flex; gap: 8px; align-items: center; }
+  .pmc-controls select { padding: 5px 9px; font-size: 0.72rem; }
+  .pmc-body { display: grid; grid-template-columns: 1fr 290px; gap: 18px; align-items: stretch; }
+  @media (max-width: 1000px) { .pmc-body { grid-template-columns: 1fr; } }
+  .pmc-canvas-wrap { position: relative; height: 280px; width: 100%; min-width: 0; }
+  .pmc-help-panel {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 13px 15px;
+    font-size: 0.74rem; line-height: 1.5; align-self: stretch;
+    color: var(--text-secondary);
+  }
+  .pmc-help-panel h3 {
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--text); margin-bottom: 8px; letter-spacing: 0.2px;
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+  /* PMC MINI CARDS */
+  #pmcMini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .mini-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    text-align: left;
+  }
+  .mini-card .v {
+    font-size: 1.3rem; font-weight: 600;
+    font-family: var(--font-mono); letter-spacing: -0.5px;
+    line-height: 1; color: var(--text);
+  }
+  .mini-card .l {
+    font-size: 0.62rem; color: var(--text-muted);
+    margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+    font-weight: 500;
+  }
+  .mini-card .v.v-ctl { color: var(--blue); }
+  .mini-card .v.v-atl { color: var(--accent); }
+  .mini-card .v.v-tsb-pos { color: var(--green); }
+  .mini-card .v.v-tsb-neutral { color: var(--amber); }
+  .mini-card .v.v-tsb-neg { color: var(--red); }
+
+  /* TABLE — note (commentaire) avec lire plus */
+  td.note { position: relative; cursor: pointer; }
+  td.note .note-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  td.note.expanded .note-text {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+  td.note .read-more {
+    display: none;
+    margin-top: 4px;
+    font-size: 0.65rem;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  td.note.has-overflow .read-more { display: inline-block; }
+  td.note .read-more::after { content: 'Lire plus '; }
+  td.note.expanded .read-more::after { content: 'Reduire '; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>🚴 Training Log — CLA 2026</h1>
+    <p>FTP 250W (eFTP Intervals.icu) · FC seuil 176 bpm · Fasciite plantaire — cadence ≥ 88 rpm</p>
+  </div>
+  <div class="header-actions">
+    <button class="btn-ghost" onclick="openCurrentPlan()">📅 Plan →</button>
+    <button class="btn-ghost" onclick="exportCSV()">⬇ Export CSV</button>
+    <button class="btn-primary" onclick="toggleForm()">+ Ajouter séance</button>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<div class="stats-bar" id="statsBar"></div>
+
+<main>
+  <!-- PERFORMANCE MANAGER CHART (CTL / ATL / TSB) -->
+  <div class="pmc-section">
+    <div class="pmc-header">
+      <div>
+        <h2>📊 Fitness · Fatigue · Forme (PMC)</h2>
+        <div class="pmc-help">CTL = fitness 42j · ATL = fatigue 7j · TSB = CTL−ATL · TSS depuis NP×durée (NP-based) ou estimé via RPE×durée (marqué <span style="color:var(--text-muted);font-style:italic">est.</span>)</div>
+      </div>
+      <div class="pmc-controls">
+        <label style="font-size:0.7rem;color:var(--text-muted)">Période</label>
+        <select id="pmcRange" onchange="renderFitnessChart()">
+          <option value="60">60 jours</option>
+          <option value="90" selected>90 jours</option>
+          <option value="180">180 jours</option>
+          <option value="365">1 an</option>
+        </select>
+      </div>
+    </div>
+    <div class="pmc-body">
+      <div class="pmc-canvas-wrap">
+        <canvas id="pmcChart"></canvas>
+      </div>
+      <aside class="pmc-help-panel">
+        <h3>Comment lire ces courbes</h3>
+        <div class="help-item">
+          <span class="lbl" style="color:#4f8ef7">CTL — Fitness</span><br>
+          Charge moyenne pondérée sur <strong>42 jours</strong>. Représente ta forme de fond. Monte lentement (4-8 sem.), descend lentement.
+        </div>
+        <div class="help-item">
+          <span class="lbl" style="color:#e67e22">ATL — Fatigue</span><br>
+          Charge moyenne pondérée sur <strong>7 jours</strong>. Réagit vite à une grosse séance ou une course. Indicateur de stress aigu.
+        </div>
+        <div class="help-item">
+          <span class="lbl" style="color:#2ecc71">TSB — Forme</span><br>
+          <code style="background:var(--surface);padding:1px 5px;border-radius:3px;font-size:0.72rem">CTL − ATL</code>.
+          <br>– Si <strong>négatif</strong> (–10 à –30), tu charges, corps fatigué.
+          <br>– Si <strong>0 à +5</strong>, état neutre.
+          <br>– Si <strong>+5 à +20</strong>, tu es frais → cible jour de course.
+          <br>– Au-delà de <strong>+25</strong>, perte de fitness possible.
+        </div>
+        <div class="help-item">
+          <span class="lbl" style="color:#9b59b6">TSS quotidien</span><br>
+          Stress d'une séance. <strong>100 TSS = 1 h pile à FTP</strong>. Ordres de grandeur : Z2 1 h ≈ 50, Sweet Spot ≈ 100, course 4 h ≈ 250-350.
+        </div>
+        <div class="help-warn">
+          ⚠ Modèle quantitatif uniquement. Toujours croiser avec <strong>VFC + Body Battery + ressenti</strong> avant décision d'intensité.
+        </div>
+      </aside>
+    </div>
+    <div class="pmc-mini" id="pmcMini"></div>
+  </div>
+  <!-- FORM -->
+  <div class="form-panel" id="formPanel">
+    <h2 id="formTitle">Nouvelle séance</h2>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Date *</label>
+        <input type="date" id="f_date">
+      </div>
+      <div class="form-group wide">
+        <label>Type de séance *</label>
+        <select id="f_type">
+          <option value="">— choisir —</option>
+          <option>Z2 récupération</option>
+          <option>Z2 endurance</option>
+          <option>Tempo</option>
+          <option>Sweet spot</option>
+          <option>Seuil</option>
+          <option>Over-Unders</option>
+          <option>VO2</option>
+          <option>Activation</option>
+          <option>Intermédiaire</option>
+          <option>Course BCF</option>
+          <option>Sortie route</option>
+          <option>CrossFit</option>
+          <option>Padel</option>
+          <option>Course à pied</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Durée (min)</label>
+        <input type="number" id="f_duree" placeholder="60">
+      </div>
+      <div class="form-group">
+        <label>NP / Puissance (W)</label>
+        <input type="number" id="f_np" placeholder="250">
+      </div>
+      <div class="form-group">
+        <label>kJ (énergie totale)</label>
+        <input type="number" id="f_kj" placeholder="500">
+      </div>
+      <div class="form-group">
+        <label>FC moy (bpm)</label>
+        <input type="number" id="f_fc_moy" placeholder="145">
+      </div>
+      <div class="form-group">
+        <label>FC max (bpm)</label>
+        <input type="number" id="f_fc_max" placeholder="175">
+      </div>
+      <div class="form-group">
+        <label>RPE (/10) *</label>
+        <select id="f_rpe">
+          <option value="">—</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option>
+          <option>9</option><option>10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Jambes</label>
+        <select id="f_jambes">
+          <option value="">—</option>
+          <option>Fraîches</option>
+          <option>Correctes</option>
+          <option>Lourdes</option>
+          <option>Lourdes → mieux</option>
+          <option>Molles → OK</option>
+          <option>Très dures</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mental</label>
+        <select id="f_mental">
+          <option value="">—</option>
+          <option>Motivé</option>
+          <option>Bon</option>
+          <option>Neutre</option>
+          <option>Dur</option>
+          <option>Excellent</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Genou (0–3)</label>
+        <select id="f_genou">
+          <option value="">—</option>
+          <option value="0">0 — Aucune gêne</option>
+          <option value="1">1 — Légère</option>
+          <option value="2">2 — Notable</option>
+          <option value="3">3 — Importante</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Cheville (0–3)</label>
+        <select id="f_cheville">
+          <option value="">—</option>
+          <option value="0">0 — OK</option>
+          <option value="1">1 — Légère</option>
+          <option value="2">2 — Notable</option>
+          <option value="3">3 — Importante</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Sommeil</label>
+        <input type="text" id="f_sommeil" placeholder="7h30 · bon">
+      </div>
+      <div class="form-group">
+        <label>VFC matin (ms)</label>
+        <input type="number" id="f_vfc" placeholder="86">
+      </div>
+      <div class="form-group">
+        <label>Body Battery matin</label>
+        <input type="number" id="f_bb" placeholder="90" min="0" max="100">
+      </div>
+      <div class="form-group">
+        <label>Glucides (g/h)</label>
+        <input type="number" id="f_glucides" placeholder="65">
+      </div>
+      <div class="form-group full">
+        <label>Commentaire / analyse</label>
+        <textarea id="f_commentaire" placeholder="Sensations, contexte, corrections appliquées..."></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn-ghost" onclick="cancelForm()">Annuler</button>
+      <button class="btn-primary" onclick="saveEntry()">Enregistrer</button>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="🔍 Rechercher..." oninput="renderTable()" style="width:180px">
+    <select id="typeFilter" onchange="renderTable()">
+      <option value="">Tous les types</option>
+      <option>Z2 récupération</option>
+      <option>Z2 endurance</option>
+      <option>VO2</option>
+      <option>Seuil</option>
+      <option>Sweet spot</option>
+      <option>Tempo</option>
+      <option>Over-Unders</option>
+      <option>Course BCF</option>
+      <option>Sortie route</option>
+      <option>CrossFit</option>
+      <option>Activation</option>
+      <option>Intermédiaire</option>
+    </select>
+    <select id="kneeFilter" onchange="renderTable()">
+      <option value="">Genou : tous</option>
+      <option value="0">0 — aucune gêne</option>
+      <option value="1">1 — légère</option>
+      <option value="2">2 — notable</option>
+      <option value="3">3 — importante</option>
+    </select>
+    <button class="btn-ghost btn-sm" onclick="resetFilters()">✕ Réinitialiser</button>
+    <span id="countLabel" style="margin-left:auto; font-size:0.75rem; color:var(--text-muted)"></span>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Durée</th>
+          <th>NP/W</th>
+          <th>kJ</th>
+          <th>FC moy/max</th>
+          <th title="Training Stress Score">TSS</th>
+          <th>RPE</th>
+          <th>Jambes</th>
+          <th>Mental</th>
+          <th>Genou</th>
+          <th>Sommeil</th>
+          <th>VFC</th>
+          <th>BB</th>
+          <th>Glucides</th>
+          <th>Commentaire</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="logBody"></tbody>
+    </table>
+    <div class="empty" id="emptyState" style="display:none">
+      <div class="icon">📋</div>
+      <div>Aucune séance trouvée</div>
+    </div>
+  </div>
+</main>
+
+<script src="sport_data.js"></script>
+<script>
+// ═══════════════════════════════════════════════════════════════
+// DATA — externe (cycling_data.js)
+// ═══════════════════════════════════════════════════════════════
+if (!window.SPORT_DATA) {
+  document.body.innerHTML = '<div>Erreur</div>';
+  throw new Error("cycling_data.js non charge");
+}
+
+const SEED_VERSION = 7;
+
+function _adaptSessionToFlat(s) {
+  const ex = s.executed || {};
+  return {
+    date: s.date,
+    type: s.type_log || (s.planned && s.planned.name) || s.type,
+    duree: ex.duration_min !== undefined ? ex.duration_min : (s.planned && s.planned.duration_min) || null,
+    np: ex.np_w !== undefined ? ex.np_w : null,
+    kj: ex.kj !== undefined ? ex.kj : null,
+    fc_moy: ex.hr_avg !== undefined ? ex.hr_avg : null,
+    fc_max: ex.hr_max !== undefined ? ex.hr_max : null,
+    rpe: (ex.subjective && ex.subjective.rpe !== undefined) ? ex.subjective.rpe : null,
+    jambes: (ex.subjective && ex.subjective.legs) || null,
+    mental: (ex.subjective && ex.subjective.mental) || null,
+    genou: (ex.subjective && ex.subjective.knee_0_3 !== undefined) ? ex.subjective.knee_0_3 : null,
+    cheville: (ex.subjective && ex.subjective.ankle_0_3 !== undefined) ? ex.subjective.ankle_0_3 : null,
+    tss: ex.tss !== undefined ? ex.tss : null,
+    sommeil: (ex.recovery && ex.recovery.sleep_raw) || null,
+    vfc: (ex.recovery && ex.recovery.hrv_ms !== undefined) ? ex.recovery.hrv_ms : null,
+    bb: (ex.recovery && ex.recovery.body_battery !== undefined) ? ex.recovery.body_battery : null,
+    glucides: (ex.nutrition && ex.nutrition.carbs_g !== undefined) ? ex.nutrition.carbs_g : null,
+    commentaire: s.notes || null,
+    planned: s.status === 'planned' ? true : undefined,
+    _v1: {
+      id: s.id, sport: s.sport, typeNorm: s.type,
+      status: s.status, source: s.source, week_id: s.week_id,
+      planned_details: s.planned
+    }
+  };
+}
+
+const MANUAL_ENTRIES = [];
+const GARMIN_ENTRIES = [];
+const SEED_DATA = (window.SPORT_DATA.sessions || [])
+  .filter(s => s.status === 'done')
+  .map(_adaptSessionToFlat);
+const STORAGE_KEY = 'sport_log_2026_cla';
+const SEED_VERSION_KEY = 'sport_log_seed_v_cla';
+let editingId = null;
+
+// ═══════════════════════════════════════════════════════════════
+// STORAGE — with smart merge for new seed entries
+// ═══════════════════════════════════════════════════════════════
+const HARD_RESET_FROM_VERSION = 6;
+
+function loadData() {
+  const todayISO = new Date().toISOString().split('T')[0];
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const savedVersion = parseInt(localStorage.getItem(SEED_VERSION_KEY) || '0');
+
+    if (raw && savedVersion < HARD_RESET_FROM_VERSION) {
+      console.info('[training_log] Hard reset migration v' + savedVersion + ' -> v' + SEED_VERSION);
+      localStorage.removeItem(STORAGE_KEY);
+    } else if (raw) {
+      let existing = JSON.parse(raw);
+      let dirty = false;
+      // Merge new seed entries not yet in localStorage
+      if (savedVersion < SEED_VERSION) {
+        // Clé de déduplication : intervals_id si dispo, sinon date|type|duree
+        // Évite les faux doublons quand plusieurs séances du même type le même jour
+        const existingKeys = new Set(existing.map(e =>
+          (e._v1 && e._v1.id) ? 'iid:' + e._v1.id : e.date + '|' + e.type + '|' + (e.duree ?? '')
+        ));
+        const toAdd = SEED_DATA.filter(s => {
+          const key = (s._v1 && s._v1.id) ? 'iid:' + s._v1.id : s.date + '|' + s.type + '|' + (s.duree ?? '');
+          return !existingKeys.has(key);
+        });
+        if (toAdd.length > 0) {
+          const newEntries = toAdd.map((d, i) => ({ ...d, id: 'garmin_' + d.date + '_' + i }));
+          existing = [...existing, ...newEntries];
+        }
+        dirty = true;
+        localStorage.setItem(SEED_VERSION_KEY, SEED_VERSION);
+      }
+      // Auto-purge planned sessions whose date has passed (not done in time)
+      const before = existing.length;
+      existing = existing.filter(e => !(e.planned && e.date < todayISO));
+      if (existing.length < before) dirty = true;
+      if (dirty) saveData(existing);
+      return existing;
+    }
+  } catch(e) {}
+  // First load — seed everything (also filter out already-passed planned entries)
+  const seeded = SEED_DATA
+    .filter(d => !(d.planned && d.date < todayISO))
+    .map((d, i) => ({ ...d, id: 'seed_' + i }));
+  saveData(seeded);
+  localStorage.setItem(SEED_VERSION_KEY, SEED_VERSION);
+  return seeded;
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function getData() {
+  return loadData().sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TSS / CTL / ATL / TSB — modèle PMC (Banister / Coggan)
+// FTP de référence pour le calcul TSS NP-based.
+// À mettre à jour après chaque ramp test.
+// ═══════════════════════════════════════════════════════════════
+// FTP_REF derive
+const FTP_REF = (window.SPORT_DATA && window.SPORT_DATA.athlete && window.SPORT_DATA.athlete.ftp_ref_w) || 308;
+
+// Heuristique RPE → IF (utilisée comme fallback quand NP absent).
+// Calibrée Coggan-style pour le vélo. Pour cross-training (CrossFit, course, padel),
+// l'estimation est moins précise — à interpréter avec prudence.
+const RPE_TO_IF = {
+  1: 0.50, 2: 0.55, 3: 0.60, 4: 0.65, 5: 0.72,
+  6: 0.78, 7: 0.85, 8: 0.92, 9: 1.00, 10: 1.10
+};
+
+function computeTSS(entry) {
+  if (!entry || !entry.duree || entry.planned) return { tss: null, estimated: false };
+  const durHours = entry.duree / 60;
+
+  // Mode 0 : TSS direct depuis Intervals.icu (le plus fiable)
+  if (entry.tss != null && entry.tss > 0) {
+    return { tss: Math.round(entry.tss), estimated: false };
+  }
+
+  // Mode 1 : NP × durée × FTP (le plus précis, vélo uniquement)
+  if (entry.np && entry.np > 0 && FTP_REF > 0) {
+    const IF = entry.np / FTP_REF;
+    const tss = durHours * IF * IF * 100;
+    return { tss: Math.round(tss), estimated: false, IF: IF };
+  }
+
+  // Mode 2 : RPE × durée (fallback estimation)
+  if (entry.rpe != null && entry.rpe >= 1 && entry.rpe <= 10) {
+    const IF = RPE_TO_IF[Math.round(entry.rpe)];
+    const tss = durHours * IF * IF * 100;
+    return { tss: Math.round(tss), estimated: true, IF: IF };
+  }
+
+  return { tss: null, estimated: false };
+}
+
+// Génère une série quotidienne depuis startDate jusqu'à endDate
+// avec CTL (EWMA τ=42), ATL (EWMA τ=7), TSB (=CTL−ATL).
+// Le modèle est initialisé à 60 jours avant la 1ère séance pour stabiliser.
+function computeFitnessSeries(allEntries, daysShown) {
+  if (!allEntries.length) return [];
+
+  // 1) Agréger TSS par jour
+  const tssByDay = {};
+  allEntries.forEach(e => {
+    const r = computeTSS(e);
+    if (r.tss != null) {
+      tssByDay[e.date] = (tssByDay[e.date] || 0) + r.tss;
+    }
+  });
+
+  // 2) Bornes : start = 60j avant la 1ère séance, end = aujourd'hui
+  const allDates = allEntries.map(e => e.date).sort();
+  const firstDate = allDates[0];
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const startDate = new Date(firstDate + 'T00:00:00');
+  startDate.setDate(startDate.getDate() - 60);
+
+  // 3) Itération quotidienne — formule EWMA TrainingPeaks
+  // CTL(t) = CTL(t-1) * exp(-1/42) + TSS(t) * (1 - exp(-1/42))
+  // ATL(t) = ATL(t-1) * exp(-1/7)  + TSS(t) * (1 - exp(-1/7))
+  const decayCTL = Math.exp(-1 / 42);
+  const decayATL = Math.exp(-1 / 7);
+  let ctl = 0, atl = 0;
+  const series = [];
+
+  for (let d = new Date(startDate); d <= today; d.setDate(d.getDate() + 1)) {
+    const iso = d.toISOString().split('T')[0];
+    const tssDay = tssByDay[iso] || 0;
+    ctl = ctl * decayCTL + tssDay * (1 - decayCTL);
+    atl = atl * decayATL + tssDay * (1 - decayATL);
+    const tsb = ctl - atl;
+    series.push({ date: iso, tss: tssDay, ctl, atl, tsb });
+  }
+
+  // 4) Tronquer aux N derniers jours visibles
+  if (daysShown && series.length > daysShown) {
+    return series.slice(series.length - daysShown);
+  }
+  return series;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FITNESS CHART (Chart.js)
+// ═══════════════════════════════════════════════════════════════
+let pmcChartInstance = null;
+function renderFitnessChart() {
+  const ctx = document.getElementById('pmcChart');
+  if (!ctx || typeof Chart === 'undefined') return;
+
+  const range = parseInt(document.getElementById('pmcRange')?.value || '90');
+  const all = loadData().filter(e => !e.planned).sort((a,b) => new Date(a.date) - new Date(b.date));
+  const series = computeFitnessSeries(all, range);
+
+  const labels = series.map(s => s.date);
+  const dataCTL = series.map(s => Math.round(s.ctl * 10) / 10);
+  const dataATL = series.map(s => Math.round(s.atl * 10) / 10);
+  const dataTSB = series.map(s => Math.round(s.tsb * 10) / 10);
+  const dataTSS = series.map(s => s.tss);
+
+  // Fasciite plantaire — données depuis localStorage (pastilles Plan)
+  const SUIVI_KEY = 'suivi_cla_v1';
+  let suiviData = {};
+  try { suiviData = JSON.parse(localStorage.getItem(SUIVI_KEY) || '{}'); } catch(e) {}
+  const dataFasciite = labels.map(date => {
+    const d = suiviData[date];
+    return (d && d.fasciite !== undefined) ? d.fasciite : null;
+  });
+  const hasFasciiteData = dataFasciite.some(v => v !== null);
+
+  if (pmcChartInstance) pmcChartInstance.destroy();
+
+  pmcChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'CTL (fitness)',
+          data: dataCTL,
+          borderColor: '#4f8ef7',
+          backgroundColor: 'rgba(79,142,247,0.12)',
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: 0.3,
+          fill: true,
+          yAxisID: 'y',
+        },
+        {
+          label: 'ATL (fatigue)',
+          data: dataATL,
+          borderColor: '#e67e22',
+          backgroundColor: 'rgba(230,126,34,0.05)',
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: 0.3,
+          fill: false,
+          yAxisID: 'y',
+        },
+        {
+          label: 'TSB (forme)',
+          data: dataTSB,
+          borderColor: '#2ecc71',
+          backgroundColor: 'rgba(46,204,113,0.08)',
+          borderWidth: 2,
+          borderDash: [5, 4],
+          pointRadius: 0,
+          tension: 0.25,
+          fill: false,
+          yAxisID: 'y1',
+        },
+        {
+          label: 'TSS quotidien',
+          data: dataTSS,
+          type: 'bar',
+          backgroundColor: 'rgba(155,89,182,0.45)',
+          borderColor: 'rgba(155,89,182,0.8)',
+          borderWidth: 1,
+          yAxisID: 'y',
+        },
+        {
+          label: 'Fasciite plantaire (0=rien · 5=intense)',
+          data: dataFasciite,
+          hidden: !hasFasciiteData,
+          borderColor: '#e74c3c',
+          backgroundColor: 'rgba(231,76,60,0.10)',
+          borderWidth: 2.5,
+          borderDash: [4, 3],
+          pointRadius: (ctx) => ctx.raw !== null ? 4 : 0,
+          pointBackgroundColor: (ctx) => {
+            const v = ctx.raw;
+            if (v === null) return 'transparent';
+            const colors = ['#27ae60','#639922','#f39c12','#e67e22','#c0392b','#922b21'];
+            return colors[Math.min(v, 5)];
+          },
+          pointBorderColor: '#fff',
+          pointBorderWidth: 1.5,
+          tension: 0.3,
+          fill: false,
+          spanGaps: false,
+          yAxisID: 'y2',
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          labels: { color: '#e4e6f0', font: { size: 11 }, boxWidth: 12, padding: 12 }
+        },
+        tooltip: {
+          backgroundColor: '#1a1d27',
+          borderColor: '#2e3348',
+          borderWidth: 1,
+          titleColor: '#e4e6f0',
+          bodyColor: '#e4e6f0',
+          callbacks: {
+            title: (items) => {
+              if (!items.length) return '';
+              const d = new Date(items[0].label + 'T00:00:00');
+              return d.toLocaleDateString('fr-FR', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' });
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: '#8b90a8',
+            maxTicksLimit: 12,
+            callback: function(val, idx) {
+              const d = new Date(this.getLabelForValue(val) + 'T00:00:00');
+              return d.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short' });
+            }
+          },
+          grid: { color: 'rgba(46,51,72,0.5)' }
+        },
+        y: {
+          position: 'left',
+          title: { display: true, text: 'CTL · ATL · TSS', color: '#8b90a8', font: { size: 11 } },
+          ticks: { color: '#8b90a8' },
+          grid: { color: 'rgba(46,51,72,0.5)' },
+          beginAtZero: true
+        },
+        y1: {
+          position: 'right',
+          title: { display: true, text: 'TSB', color: '#2ecc71', font: { size: 11 } },
+          ticks: { color: '#2ecc71' },
+          grid: { drawOnChartArea: false }
+        },
+        y2: {
+          position: 'right',
+          min: 0,
+          max: 5,
+          title: { display: true, text: 'Fasciite (0→5)', color: '#e74c3c', font: { size: 11 } },
+          ticks: {
+            color: '#e74c3c',
+            stepSize: 1,
+            callback: (v) => ['✓','1','2','3','4','⚠️'][v] || v
+          },
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+
+  renderPmcMini(series);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TYPE → BADGE
+// ═══════════════════════════════════════════════════════════════
+function typeBadge(type) {
+  if (!type) return '<span class="badge">—</span>';
+  const map = {
+    'Z2 récupération': 'badge-z1',
+    'Z2 endurance': 'badge-z2',
+    'Tempo': 'badge-z3',
+    'Sweet spot': 'badge-sweet',
+    'Seuil': 'badge-seuil',
+    'Over-Unders': 'badge-seuil',
+    'VO2': 'badge-vo2',
+    'Activation': 'badge-activation',
+    'Intermédiaire': 'badge-sweet',
+    'Course BCF': 'badge-course',
+    'Sortie route': 'badge-z2',
+    'CrossFit': 'badge-xfit',
+    'Padel': 'badge-z1',
+    'Course à pied': 'badge-z3',
+    'Course a pied': 'badge-z3',
+    'Neuromuscular Sprint': 'badge-sprint',
+    'Planifié': 'badge-planned',
+  };
+  const cls = Object.keys(map).find(k => type.includes(k.split(' ')[0])) || '';
+  return `<span class="badge ${map[cls] || ''}">${type}</span>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FORMAT HELPERS
+// ═══════════════════════════════════════════════════════════════
+function fmtDate(d) {
+  if (!d) return '—';
+  const dt = new Date(d + 'T00:00:00');
+  return dt.toLocaleDateString('fr-FR', { day:'2-digit', month:'short', year:'2-digit' });
+}
+function fmtDuree(m) {
+  if (!m) return '—';
+  if (m < 60) return m + ' min';
+  const h = Math.floor(m/60), min = m%60;
+  return min ? `${h}h${String(min).padStart(2,'0')}` : `${h}h`;
+}
+function rpeCell(v) {
+  if (v == null || v === '') return '<td>—</td>';
+  return `<td class="rpe-${v}" style="font-weight:700">${v}/10</td>`;
+}
+function kneeCell(v) {
+  if (v == null || v === '') return '<td>—</td>';
+  const labels = ['✓', '⚠ 1', '⚠ 2', '⛔ 3'];
+  return `<td class="knee-${v}" style="font-weight:600">${labels[v] ?? v}</td>`;
+}
+function bbCell(v) {
+  if (v == null || v === '') return '<td>—</td>';
+  const cls = v >= 70 ? 'bb-high' : v >= 40 ? 'bb-mid' : 'bb-low';
+  return `<td class="${cls}" style="font-weight:600">${v}</td>`;
+}
+function vfcCell(v) {
+  if (!v) return '<td style="color:var(--text-muted)">—</td>';
+  const cls = v >= 80 ? 'bb-high' : v >= 60 ? 'bb-mid' : 'bb-low';
+  return `<td class="${cls}">${v} ms</td>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// STATS BAR
+// ═══════════════════════════════════════════════════════════════
+function renderStats() {
+  const data = getData();
+  const last30 = data.filter(d => {
+    const day = (new Date() - new Date(d.date)) / 86400000;
+    return day <= 30;
+  });
+
+  const totalSeances = data.length;
+  const totalDuree = data.reduce((s, d) => s + (d.duree || 0), 0);
+  const hTotal = Math.round(totalDuree / 60);
+  const dernierVFC = data.find(d => d.vfc)?.vfc ?? '—';
+  const dernierBB = data.find(d => d.bb)?.bb ?? '—';
+  const avgRPE30 = last30.filter(d=>d.rpe).reduce((s,d,_,a) => s + d.rpe/a.length, 0);
+  const kneeSessions = data.filter(d=>d.genou >= 2).length;
+
+  const stats = [
+    { val: totalSeances, lbl: 'Séances total' },
+    { val: hTotal + 'h', lbl: 'Volume logué' },
+    { val: last30.length, lbl: 'Séances / 30j' },
+    { val: avgRPE30 ? avgRPE30.toFixed(1) : '—', lbl: 'RPE moy / 30j' },
+    { val: dernierVFC + (dernierVFC !== '—' ? ' ms' : ''), lbl: 'VFC dernière' },
+    { val: dernierBB + (dernierBB !== '—' ? '' : ''), lbl: 'Body Battery' },
+    { val: kneeSessions, lbl: 'Genou ≥ 2 (total)' },
+  ];
+
+  document.getElementById('statsBar').innerHTML = stats.map(s =>
+    `<div class="stat-card"><div class="val">${s.val}</div><div class="lbl">${s.lbl}</div></div>`
+  ).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PMC MINI CARDS (CTL / ATL / TSB courants)
+// ═══════════════════════════════════════════════════════════════
+function renderPmcMini(series) {
+  if (!series.length) {
+    document.getElementById('pmcMini').innerHTML = '';
+    return;
+  }
+  const last = series[series.length - 1];
+  const last7Tss = series.slice(-7).reduce((s, x) => s + x.tss, 0);
+  const tsb = last.tsb;
+  let tsbCls = 'v-tsb-neutral';
+  let tsbState = '';
+  if (tsb >= 5) { tsbCls = 'v-tsb-pos'; tsbState = ' (frais)'; }
+  else if (tsb >= -10) { tsbCls = 'v-tsb-neutral'; tsbState = ' (neutre)'; }
+  else if (tsb >= -30) { tsbCls = 'v-tsb-neg'; tsbState = ' (charge)'; }
+  else { tsbCls = 'v-tsb-neg'; tsbState = ' (surcharge)'; }
+
+  const cards = [
+    { v: Math.round(last.ctl), l: 'CTL — fitness', cls: 'v-ctl' },
+    { v: Math.round(last.atl), l: 'ATL — fatigue', cls: 'v-atl' },
+    { v: (tsb >= 0 ? '+' : '') + Math.round(tsb), l: 'TSB — forme' + tsbState, cls: tsbCls },
+    { v: Math.round(last7Tss), l: 'TSS · 7 derniers j', cls: 'v-ctl' },
+    { v: Math.round(last.ctl - series[Math.max(0, series.length - 8)].ctl) + ' / sem', l: 'Rampe CTL', cls: 'v-ctl' },
+  ];
+  document.getElementById('pmcMini').innerHTML = cards.map(c =>
+    `<div class="mini-card"><div class="v ${c.cls}">${c.v}</div><div class="l">${c.l}</div></div>`
+  ).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// RENDER TABLE
+// ═══════════════════════════════════════════════════════════════
+function renderTable() {
+  const data = getData();
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const typeF = document.getElementById('typeFilter').value;
+  const kneeF = document.getElementById('kneeFilter').value;
+
+  let filtered = data.filter(d => {
+    const matchSearch = !search || JSON.stringify(d).toLowerCase().includes(search);
+    const matchType = !typeF || d.type === typeF;
+    const matchKnee = kneeF === '' || String(d.genou) === kneeF;
+    return matchSearch && matchType && matchKnee;
+  });
+
+  document.getElementById('countLabel').textContent = `${filtered.length} séance${filtered.length > 1 ? 's' : ''}`;
+
+  const tbody = document.getElementById('logBody');
+  tbody.innerHTML = '';
+  document.getElementById('emptyState').style.display = filtered.length ? 'none' : 'block';
+
+  filtered.forEach(d => {
+    const row = document.createElement('tr');
+    if (d.planned) row.classList.add('planned-row');
+    const planBadge = d.planned ? ' <span style="font-size:0.65rem;color:#5db8e8;border:1px dashed #5db8e8;border-radius:4px;padding:1px 5px;margin-left:4px">PRÉVU</span>' : '';
+    const tssRes = computeTSS(d);
+    row.innerHTML = `
+      <td style="font-weight:600; white-space:nowrap">${fmtDate(d.date)}${planBadge}</td>
+      <td>${typeBadge(d.type)}</td>
+      <td>${fmtDuree(d.duree)}</td>
+      <td style="font-weight:600">${d.np ? d.np + ' W' : '—'}</td>
+      <td class="kj-val">${d.kj ? d.kj + ' kJ' : '—'}</td>
+      <td>${d.fc_moy ? d.fc_moy + ' / ' + (d.fc_max || '?') : '—'}</td>
+      <td class="tss-cell">${tssRes.tss != null ? tssRes.tss + (tssRes.estimated ? '<span class="tss-est">est.</span>' : '') : '—'}</td>
+      ${rpeCell(d.rpe)}
+      <td style="color:var(--text-muted);font-size:0.75rem">${d.jambes || '—'}</td>
+      <td style="color:var(--text-muted);font-size:0.75rem">${d.mental || '—'}</td>
+      ${kneeCell(d.genou)}
+      <td style="color:var(--text-muted);font-size:0.75rem">${d.sommeil || '—'}</td>
+      ${vfcCell(d.vfc)}
+      ${bbCell(d.bb)}
+      <td style="color:var(--text-muted)">${d.glucides != null ? d.glucides + ' g/h' : '—'}</td>
+      <td class="note"><div class="note-text">${d.commentaire || ''}</div><span class="read-more"></span></td>
+      <td class="actions">
+        ${d.planned ? '<span style="font-size:0.7rem;color:var(--text-muted)">—</span>' :
+        `<button class="btn-ghost btn-sm" onclick="editEntry('${d.id}')">✏</button>
+        <button class="btn-danger btn-sm" onclick="deleteEntry('${d.id}')" style="margin-left:4px">✕</button>`}
+      </td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  renderStats();
+  renderFitnessChart();
+}
+
+// NAV
+function openCurrentPlan() {
+  if (window.top !== window) {
+    window.top.postMessage({ type: 'switch-tab', target: 'plan' }, '*');
+    return;
+  }
+  const path = window.SPORT_DATA && window.SPORT_DATA.current_plan && window.SPORT_DATA.current_plan.html_path;
+  if (path) {
+    window.open(path, '_blank');
+  } else {
+    alert("Pas de plan");
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FORM
+// ═══════════════════════════════════════════════════════════════
+function toggleForm() {
+  const panel = document.getElementById('formPanel');
+  if (panel.classList.contains('open')) {
+    cancelForm();
+  } else {
+    editingId = null;
+    clearForm();
+    document.getElementById('formTitle').textContent = 'Nouvelle séance';
+    document.getElementById('f_date').value = new Date().toISOString().split('T')[0];
+    panel.classList.add('open');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function cancelForm() {
+  document.getElementById('formPanel').classList.remove('open');
+  editingId = null;
+  clearForm();
+}
+
+function clearForm() {
+  ['f_date','f_type','f_duree','f_np','f_kj','f_fc_moy','f_fc_max','f_rpe',
+   'f_jambes','f_mental','f_genou','f_cheville','f_sommeil','f_vfc','f_bb','f_glucides','f_commentaire']
+  .forEach(id => { document.getElementById(id).value = ''; });
+}
+
+function getFormData() {
+  const n = id => { const v = document.getElementById(id).value; return v === '' ? null : Number(v); };
+  const s = id => document.getElementById(id).value.trim() || null;
+  return {
+    date: s('f_date'),
+    type: s('f_type'),
+    duree: n('f_duree'),
+    np: n('f_np'),
+    kj: n('f_kj'),
+    fc_moy: n('f_fc_moy'),
+    fc_max: n('f_fc_max'),
+    rpe: n('f_rpe'),
+    jambes: s('f_jambes'),
+    mental: s('f_mental'),
+    genou: n('f_genou'),
+    cheville: n('f_cheville'),
+    sommeil: s('f_sommeil'),
+    vfc: n('f_vfc'),
+    bb: n('f_bb'),
+    glucides: n('f_glucides'),
+    commentaire: s('f_commentaire'),
+  };
+}
+
+function saveEntry() {
+  const data = getFormData();
+  if (!data.date || !data.type) { alert('Date et type de séance requis.'); return; }
+
+  const all = loadData();
+  if (editingId) {
+    const idx = all.findIndex(d => d.id === editingId);
+    if (idx !== -1) all[idx] = { ...data, id: editingId };
+  } else {
+    all.push({ ...data, id: Date.now().toString() });
+  }
+  saveData(all);
+  cancelForm();
+  renderTable();
+}
+
+function editEntry(id) {
+  const all = loadData();
+  const d = all.find(x => x.id === id);
+  if (!d) return;
+  editingId = id;
+  const set = (fid, val) => { document.getElementById(fid).value = val ?? ''; };
+  set('f_date', d.date); set('f_type', d.type); set('f_duree', d.duree);
+  set('f_np', d.np); set('f_kj', d.kj); set('f_fc_moy', d.fc_moy); set('f_fc_max', d.fc_max);
+  set('f_rpe', d.rpe); set('f_jambes', d.jambes); set('f_mental', d.mental);
+  set('f_genou', d.genou); set('f_cheville', d.cheville); set('f_sommeil', d.sommeil);
+  set('f_vfc', d.vfc); set('f_bb', d.bb); set('f_glucides', d.glucides);
+  set('f_commentaire', d.commentaire);
+  document.getElementById('formTitle').textContent = 'Modifier la séance';
+  const panel = document.getElementById('formPanel');
+  panel.classList.add('open');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function deleteEntry(id) {
+  if (!confirm('Supprimer cette séance ?')) return;
+  const all = loadData().filter(d => d.id !== id);
+  saveData(all);
+  renderTable();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// FILTERS
+// ═══════════════════════════════════════════════════════════════
+function resetFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('typeFilter').value = '';
+  document.getElementById('kneeFilter').value = '';
+  renderTable();
+}
+
+// ═══════════════════════════════════════════════════════════════
+// NOTES — detection overflow + clic pour etendre
+function setupNoteToggles() {
+  document.querySelectorAll('td.note').forEach(td => {
+    const textEl = td.querySelector('.note-text');
+    if (!textEl) return;
+    if (textEl.scrollHeight > textEl.clientHeight + 2) {
+      td.classList.add('has-overflow');
+    }
+    if (!td.dataset.toggleBound) {
+      td.dataset.toggleBound = '1';
+      td.addEventListener('click', () => {
+        if (td.classList.contains('has-overflow') || td.classList.contains('expanded')) {
+          td.classList.toggle('expanded');
+        }
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tbody = document.getElementById('logBody');
+  if (tbody && typeof MutationObserver !== 'undefined') {
+    new MutationObserver(() => setupNoteToggles()).observe(tbody, { childList: true });
+    setupNoteToggles();
+  }
+});
+
+// EXPORT CSV
+// ═══════════════════════════════════════════════════════════════
+function exportCSV() {
+  const data = getData();
+  const headers = ['Date','Type','Durée (min)','NP (W)','kJ','FC moy','FC max','TSS','TSS estimé','RPE','Jambes','Mental','Genou','Cheville','Sommeil','VFC (ms)','Body Battery','Glucides (g/h)','Planifié','Commentaire'];
+  const rows = data.map(d => {
+    const t = computeTSS(d);
+    return [
+      d.date, d.type, d.duree ?? '', d.np ?? '', d.kj ?? '', d.fc_moy ?? '', d.fc_max ?? '',
+      t.tss ?? '', t.estimated ? 'oui' : '',
+      d.rpe ?? '', d.jambes ?? '', d.mental ?? '', d.genou ?? '', d.cheville ?? '',
+      d.sommeil ?? '', d.vfc ?? '', d.bb ?? '', d.glucides ?? '', d.planned ? 'oui' : '',
+      (d.commentaire ?? '').replace(/"/g, '""')
+    ].map(v => `"${v}"`).join(',');
+  });
+
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'training_log_cyclisme_2026.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════
+renderTable();
+</script>
+</body>
+</html>
