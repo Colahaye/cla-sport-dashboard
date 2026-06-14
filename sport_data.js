@@ -16,7 +16,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-10T06:39:01.000Z",
+  "last_updated": "2026-06-14T16:47:55.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -803,6 +803,45 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
+      "id": "2026-06-12-bike-endurance-i157265404",
+      "date": "2026-06-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265404",
+      "planned": null,
+      "executed": {
+        "duration_min": 40,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 94,
+        "hr_avg": 154,
+        "hr_max": 179,
+        "tss": 46,
+        "distance_m": 17421,
+        "cadence": 80,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
+    },
+    {
       "id": "2026-06-13-bike-race",
       "date": "2026-06-13",
       "week_id": "2026-06-08",
@@ -823,55 +862,115 @@ window.SPORT_DATA = {
       "notes": "Objectif A 2026 — BCF CLM en équipe"
     },
     {
-      "id": "2026-06-15-repos",
-      "date": "2026-06-15",
-      "week_id": "2026-W25",
+      "id": "2026-06-13-bike-endurance-i157265400",
+      "date": "2026-06-13",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265400",
+      "planned": null,
+      "executed": {
+        "duration_min": 58,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 167,
+        "hr_avg": 183,
+        "hr_max": 194,
+        "tss": 80,
+        "distance_m": 34011,
+        "cadence": 96,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
+    },
+    {
+      "id": "2026-06-14-bike-endurance-i157265396",
+      "date": "2026-06-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157265396",
+      "planned": null,
+      "executed": {
+        "duration_min": 91,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 215,
+        "hr_avg": 152,
+        "hr_max": 174,
+        "tss": 89,
+        "distance_m": 41755,
+        "cadence": 91,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Cyclisme"
+    },
+    {
+      "id": "2026-06-16-run-easy",
+      "date": "2026-06-16",
+      "week_id": "2026-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Running Z1 récup",
+        "duration_min": 30,
+        "description": "30 min très léger, FC < 152 bpm",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-17-bike-recovery",
+      "date": "2026-06-17",
+      "week_id": "2026-06",
       "sport": "bike",
       "type": "recovery",
       "type_log": "Vélo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Repos actif — J+2 CLM",
-        "duration_min": 0,
-        "description": "Repos total ou balade 20min max. Tu sors d'un CLM.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-16-bike-z2",
-      "date": "2026-06-16",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Vélo Z2 relance",
-        "duration_min": 120,
-        "description": "2h, FC < 152 bpm, cadence 88+ rpm. Première vraie sortie post-CLM.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-17-bike-sweetspot",
-      "date": "2026-06-17",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "tempo",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Vélo Sweet Spot 3×12' Z3",
-        "duration_min": 105,
-        "description": "Échauff 20' + 3×12 min Z3 (FC 158-170, ~88% FTP) + récup 5' + retour 15'. Total ~1h45.",
-        "primary_zone": "Z3"
+        "name": "Vélo récup Z1",
+        "duration_min": 60,
+        "description": "1h Z1, FC < 140 bpm, cadence élevée",
+        "primary_zone": "Z1"
       },
       "executed": null,
       "notes": null
@@ -879,115 +978,43 @@ window.SPORT_DATA = {
     {
       "id": "2026-06-18-strength-renfo",
       "date": "2026-06-18",
-      "week_id": "2026-W25",
+      "week_id": "2026-06",
       "sport": "strength",
       "type": "renfo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Renfo complet",
-        "duration_min": 45,
-        "description": "Programme RENFO_COMPLET. Squat goblet, hip thrust, fentes bulgares, soulevé roumain, planche, Copenhagen.",
+        "name": "Renfo A léger",
+        "duration_min": 30,
+        "description": "30 min, intensité réduite",
         "primary_zone": null
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-19-bike-z2",
-      "date": "2026-06-19",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Vélo Z2 endurance",
-        "duration_min": 150,
-        "description": "2h30, FC < 155 bpm, terrain vallonné si possible.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-20-repos",
+      "id": "2026-06-20-run-easy",
       "date": "2026-06-20",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "recovery",
-      "type_log": "Vélo",
+      "week_id": "2026-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Repos",
-        "duration_min": 0,
-        "description": "Repos complet. 5 jours de charge — récup avant la longue.",
-        "primary_zone": null
+        "name": "Running Z2",
+        "duration_min": 60,
+        "description": "60 min, FC 152-162 bpm",
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-21-bike-longue",
+      "id": "2026-06-21-bike-endurance",
       "date": "2026-06-21",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Longue Z2 — 3h30",
-        "duration_min": 210,
-        "description": "3h30, FC < 155 bpm. Mangre 60g carbs/h après 45'. Sortie longue de la semaine.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-22-bike-z2",
-      "date": "2026-06-22",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Vélo Z2 récup active",
-        "duration_min": 90,
-        "description": "1h30 Z1/Z2, FC < 148 bpm. Récup après la longue.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-23-bike-intervalles",
-      "date": "2026-06-23",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "interval",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Vélo intervalles Z4 5×6'",
-        "duration_min": 120,
-        "description": "Échauff 20' + 5×6 min Z4 (FC 176-185, 105-115% FTP) + récup 4' + retour 20'. Séance qualité.",
-        "primary_zone": "Z4"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-24-bike-z2",
-      "date": "2026-06-24",
-      "week_id": "2026-W26",
+      "week_id": "2026-06",
       "sport": "bike",
       "type": "endurance",
       "type_log": "Vélo",
@@ -995,62 +1022,116 @@ window.SPORT_DATA = {
       "source": "plan_generated",
       "planned": {
         "name": "Vélo Z2",
-        "duration_min": 150,
-        "description": "2h30, FC < 155 bpm. Volume.",
+        "duration_min": 120,
+        "description": "2h, FC < 155 bpm",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-25-strength-renfo",
-      "date": "2026-06-25",
-      "week_id": "2026-W26",
+      "id": "2026-06-22-strength-renfo",
+      "date": "2026-06-22",
+      "week_id": "2026-06",
       "sport": "strength",
       "type": "renfo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Renfo léger",
+        "name": "Renfo A",
         "duration_min": 40,
-        "description": "Programme VELO : squat unijambiste, hip thrust, Copenhagen, montées talons. Avant la grande sortie finale.",
+        "description": "40 min",
         "primary_zone": null
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-26-bike-finale",
-      "date": "2026-06-26",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "GRANDE SORTIE FINALE — 3h Z2/Z3",
-        "duration_min": 180,
-        "description": "3h, FC 148-162 bpm. Dernière sortie vélo avant Ardèche. Profite ! Peut inclure 2×15' Sweet Spot en cours de route.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-28-run-easy",
-      "date": "2026-06-28",
-      "week_id": "2026-W26",
+      "id": "2026-06-23-run-easy",
+      "date": "2026-06-23",
+      "week_id": "2026-06",
       "sport": "run",
       "type": "easy",
       "type_log": "Course à pied",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Running Z1 transition",
+        "name": "Running Z2",
+        "duration_min": 50,
+        "description": "50 min",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-24-bike-endurance",
+      "date": "2026-06-24",
+      "week_id": "2026-06",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Vélo Z2",
+        "duration_min": 120,
+        "description": "2h, FC < 155 bpm",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-25-run-easy",
+      "date": "2026-06-25",
+      "week_id": "2026-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Running Z2",
+        "duration_min": 45,
+        "description": "45 min",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-26-strength-renfo",
+      "date": "2026-06-26",
+      "week_id": "2026-06",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B",
         "duration_min": 30,
-        "description": "30 min très léger, FC < 152 bpm. Réactiver les jambes avant Ardèche.",
+        "description": "30 min",
+        "primary_zone": "None"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-30-run-easy",
+      "date": "2026-06-30",
+      "week_id": "2026-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Running Z1 Ardèche",
+        "duration_min": 30,
+        "description": "25-30 min, FC < 152 bpm, terrain plat",
         "primary_zone": "Z1"
       },
       "executed": null,
