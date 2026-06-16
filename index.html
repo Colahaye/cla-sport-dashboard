@@ -230,6 +230,28 @@
     .hero { grid-template-columns: 1fr; gap: 8px; padding: 10px 14px; }
     .shell-header { padding: 10px 14px; }
   }
+  /* ── Recommandations ─────────────────────────────────────── */
+  .reco-bar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 22px;
+    display: flex; flex-direction: column; gap: 6px;
+    flex-shrink: 0;
+  }
+  .reco-bar:empty { display: none; }
+  .reco-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; line-height: 1.4;
+    padding: 8px 12px; border-radius: 8px;
+    border-left: 3px solid transparent;
+  }
+  .reco-item.ok      { background: #f0faf3; border-color: #3d9a5c; color: #1e5c34; }
+  .reco-item.warn    { background: #fff8ec; border-color: #d4900a; color: #7a5200; }
+  .reco-item.danger  { background: #fff0f0; border-color: #c0392b; color: #7a1a1a; }
+  .reco-item.info    { background: #f0f4ff; border-color: #3a6fd8; color: #1a3a7a; }
+  .reco-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .reco-text strong  { display: block; font-weight: 600; margin-bottom: 1px; }
+  @media (max-width: 900px) { .reco-bar { padding: 8px 14px; } }
 </style>
 </head>
 <body>
@@ -297,6 +319,9 @@
     <div class="next-structure" id="next-structure">—</div>
   </div>
 </section>
+
+<!-- ── Barre de recommandations ─────────────────────────── -->
+<div class="reco-bar" id="reco-bar"></div>
 
 <div class="frame-wrap">
   <div class="loading-msg" id="loading-msg">Chargement…</div>
@@ -425,6 +450,111 @@
     tagEl.textContent = 'TSB ' + (pmc.TSB >= 0 ? '+' : '') + pmc.TSB.toFixed(0);
   }
 
+  // ── Recommandations ──────────────────────────────────────────
+  function renderRecommendations() {
+    const TODAY = todayISO();
+    const pmc   = computePMC(TODAY);
+    const { CTL, ATL, TSB } = pmc;
+
+    const wellness = DATA.wellness || {};
+    let rhr = null, sleepH = null;
+    for (let i = 0; i <= 2; i++) {
+      const d = new Date(); d.setDate(d.getDate() - i);
+      const iso = d.toISOString().split('T')[0];
+      const w = wellness[iso];
+      if (w) {
+        if (rhr    === null && w.resting_hr != null) rhr    = w.resting_hr;
+        if (sleepH === null && w.sleep_h    != null) sleepH = w.sleep_h;
+        if (rhr !== null && sleepH !== null) break;
+      }
+    }
+    const BASELINE_RHR = (DATA.athlete && DATA.athlete.hr_rest_bpm) || 52;
+
+    // Séances planifiées dans les 3 prochains jours
+    const upcoming = (DATA.sessions || [])
+      .filter(s => s.status === 'planned' && s.date >= TODAY)
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .slice(0, 5);
+
+    const nextQuality = upcoming.find(s =>
+      s.planned && ['interval','tempo','sweetspot'].includes(s.planned.primary_zone === 'Z4' ? 'interval' :
+        s.type === 'interval' ? 'interval' : s.type === 'tempo' ? 'tempo' : 'other')
+      || (s.type === 'interval' || s.type === 'tempo')
+    );
+    const nextInDays  = upcoming.length > 0 ? daysBetween(TODAY, upcoming[0].date) : null;
+
+    const recos = [];
+
+    // ── Règle 1 : surcharge critique
+    if (TSB < -30) {
+      recos.push({ level: 'danger', icon: '🚨',
+        title: 'Surcharge — repos prioritaire',
+        msg: `TSB ${TSB > 0 ? '+' : ''}${TSB} : fatigue accumulée très élevée. Repos ou sortie Z1 max aujourd'hui et demain. Pas d'intensité avant TSB > -20.`
+      });
+    }
+    // ── Règle 2 : fatigue élevée + séance qualité imminente
+    else if (TSB < -20 && nextQuality) {
+      const daysToQ = daysBetween(TODAY, nextQuality.date);
+      recos.push({ level: 'warn', icon: '⚠️',
+        title: `Fatigue élevée — ${nextQuality.planned?.name || 'séance qualité'} à risque`,
+        msg: `TSB ${TSB} : tu arrives à la séance intensive dans ${daysToQ === 0 ? "aujourd'hui" : daysToQ + ' j'} avec les jambes lourdes. Si elles sont mortes à l'échauffement, convertis en Z2 steady.`
+      });
+    }
+    // ── Règle 3 : forme fraîche → vert pour l'intensité
+    else if (TSB > 5 && nextQuality) {
+      recos.push({ level: 'ok', icon: '✅',
+        title: 'Forme fraîche — intensité OK',
+        msg: `TSB +${TSB} : bonnes jambes prévues. C'est le bon moment pour ${nextQuality.planned?.name || 'la séance qualité'}.`
+      });
+    }
+    // ── Règle 4 : charge en hausse régulière
+    else if (ATL > CTL * 1.3 && TSB > -20) {
+      recos.push({ level: 'warn', icon: '📈',
+        title: 'Charge en pic — surveille la récupération',
+        msg: `ATL (${ATL.toFixed(0)}) nettement au-dessus du CTL (${CTL.toFixed(0)}). Tu accumules vite. Assure-toi d'avoir une journée légère cette semaine.`
+      });
+    }
+
+    // ── Règle 5 : FC repos élevée
+    if (rhr !== null && rhr > BASELINE_RHR + 8) {
+      recos.push({ level: 'warn', icon: '❤️',
+        title: `FC repos haute — ${rhr} bpm (base ${BASELINE_RHR})`,
+        msg: `+${rhr - BASELINE_RHR} bpm au-dessus de ta baseline. Signe de fatigue ou début d'état grippal. Réduis l'intensité du jour, hydrate-toi.`
+      });
+    }
+    // ── Règle 6 : mauvais sommeil
+    if (sleepH !== null && sleepH < 6) {
+      recos.push({ level: 'warn', icon: '😴',
+        title: `Sommeil court — ${sleepH}h`,
+        msg: `Moins de 6h détectées. Évite toute séance intensive aujourd'hui. Zone 1/2 uniquement ou repos.`
+      });
+    }
+
+    // ── Règle 7 : forme productive sans alerte → message positif
+    if (recos.length === 0 && TSB >= -10 && TSB <= 5) {
+      recos.push({ level: 'info', icon: '🎯',
+        title: 'Zone productive',
+        msg: `TSB ${TSB} : charge d'entraînement bien dosée. Continue sur cette lancée.`
+      });
+    }
+
+    // ── Règle 8 : pas de séance planifiée dans les 2 jours
+    if (nextInDays === null || nextInDays > 2) {
+      recos.push({ level: 'info', icon: '📅',
+        title: 'Aucune séance planifiée cette semaine',
+        msg: 'Le plan ne couvre pas les prochains jours. Pense à mettre à jour sport_data.js.'
+      });
+    }
+
+    const bar = document.getElementById('reco-bar');
+    if (!bar) return;
+    bar.innerHTML = recos.map(r => `
+      <div class="reco-item ${r.level}">
+        <span class="reco-icon">${r.icon}</span>
+        <span class="reco-text"><strong>${r.title}</strong>${r.msg}</span>
+      </div>`).join('');
+  }
+
   function renderCountdown() {
     const TODAY = todayISO();
     const upcoming = (DATA.races || [])
@@ -488,6 +618,7 @@
     try { renderState(); }       catch(e) { console.error('renderState error', e); }
     try { renderCountdown(); }   catch(e) { console.error('renderCountdown error', e); }
     try { renderNextSession(); } catch(e) { console.error('renderNextSession error', e); }
+    try { renderRecommendations(); } catch(e) { console.error('renderRecommendations error', e); }
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', bootHero);
