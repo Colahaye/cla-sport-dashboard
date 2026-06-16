@@ -31,12 +31,6 @@ jobs:
           INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
         run: python sync_intervals.py
 
-      - name: Push workouts to Intervals.icu (Wahoo sync)
-        env:
-          INTERVALS_ATHLETE_ID: ${{ secrets.INTERVALS_ATHLETE_ID }}
-          INTERVALS_API_KEY: ${{ secrets.INTERVALS_API_KEY }}
-        run: python push_workouts.py --days 14
-
       - name: Commit sport_data.js
         run: |
           git config user.name "github-actions[bot]"
