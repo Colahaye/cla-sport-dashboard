@@ -115,6 +115,10 @@ def fetch_activities(days_back=DAYS_BACK, fetch_all=False):
 
 # ── Conversion activité → session sport_data ─────────────────────
 def activity_to_session(act):
+    # Exclure les navettes (commute) — ne contribuent pas à l'entraînement
+    if act.get("commute", False):
+        return None
+
     act_type  = act.get("type", "Workout")
     sport, workout_type = SPORT_MAP.get(act_type, ("strength", "autre"))
 
