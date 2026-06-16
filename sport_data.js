@@ -12,12 +12,12 @@ window.SPORT_DATA = {
     "full_name": "Corto Lahaye",
     "age": 29,
     "height_cm": 180,
-    "weight_kg": 73.5,
-    "weight_target_kg": 71,
-    "ftp_ref_w": 250,
-    "ftp_note": "FTP Intervals.icu — eFTP calculé automatiquement",
-    "ftp_last_test": null,
-    "hr_max_observed": 211,
+    "weight_kg": 72,
+    "weight_target_kg": 72,
+    "ftp_ref_w": 262,
+    "ftp_note": "FTP testé Zwift — 16 juin 2026 (3,64 W/kg)",
+    "ftp_last_test": "2026-06-16",
+    "hr_max_observed": 194,
     "hr_rest_bpm": 52,
     "hrv_baseline_ms": null,
     "vo2max_garmin": null,
@@ -40,51 +40,23 @@ window.SPORT_DATA = {
   },
   "zones": {
     "bike": {
-      "power_basis_ftp_w": 250,
-      "power_note": "Zones calculées sur FTP 250W (eFTP Intervals.icu)",
+      "power_basis_ftp_w": 262,
+      "power_note": "Zones Coggan 7Z — FTP 262W testé Zwift 16/06/2026",
       "power": {
-        "Z1": [
-          0,
-          138
-        ],
-        "Z2": [
-          140,
-          188
-        ],
-        "Z3": [
-          190,
-          225
-        ],
-        "Z4": [
-          228,
-          262
-        ],
-        "Z5": [
-          265,
-          300
-        ]
+        "Z1": [0, 144],
+        "Z2": [145, 196],
+        "Z3": [197, 236],
+        "Z4": [237, 275],
+        "Z5": [276, 314],
+        "Z6": [315, 393],
+        "Z7": [394, 999]
       },
       "hr": {
-        "Z1": [
-          0,
-          139
-        ],
-        "Z2": [
-          140,
-          157
-        ],
-        "Z3": [
-          158,
-          175
-        ],
-        "Z4": [
-          176,
-          190
-        ],
-        "Z5": [
-          191,
-          211
-        ]
+        "Z1": [0, 135],
+        "Z2": [135, 155],
+        "Z3": [155, 175],
+        "Z4": [175, 185],
+        "Z5": [185, 194]
       }
     },
     "run": {
