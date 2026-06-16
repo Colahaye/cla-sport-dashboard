@@ -6,7 +6,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-16T00:20:30.000Z",
+  "last_updated": "2026-06-16T14:52:38.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -186,6 +186,6090 @@ window.SPORT_DATA = {
     }
   ],
   "sessions": [
+    {
+      "id": "2025-12-07-run-easy-i157774119",
+      "date": "2025-12-07",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157774119",
+      "planned": null,
+      "executed": {
+        "duration_min": 77,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 186,
+        "hr_avg": 146,
+        "hr_max": 164,
+        "tss": 64,
+        "distance_m": 14127,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2025-12-09-bike-endurance-i157774040",
+      "date": "2025-12-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157774040",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 27,
+        "hr_avg": 120,
+        "hr_max": 149,
+        "tss": 6,
+        "distance_m": 3825,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2025-12-09-bike-endurance-i157774047",
+      "date": "2025-12-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157774047",
+      "planned": null,
+      "executed": {
+        "duration_min": 24,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 57,
+        "hr_avg": 128,
+        "hr_max": 166,
+        "tss": 14,
+        "distance_m": 9544,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-09-run-easy-i157774067",
+      "date": "2025-12-09",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S3.01",
+      "intervals_id": "i157774067",
+      "planned": null,
+      "executed": {
+        "duration_min": 53,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 158,
+        "hr_avg": 162,
+        "hr_max": 190,
+        "tss": 67,
+        "distance_m": 11233,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S3.01"
+    },
+    {
+      "id": "2025-12-10-bike-endurance-i157774019",
+      "date": "2025-12-10",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157774019",
+      "planned": null,
+      "executed": {
+        "duration_min": 30,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 53,
+        "hr_avg": 120,
+        "hr_max": 154,
+        "tss": 13,
+        "distance_m": 10483,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2025-12-10-bike-endurance-i157774033",
+      "date": "2025-12-10",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157774033",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 19,
+        "hr_avg": 116,
+        "hr_max": 135,
+        "tss": 4,
+        "distance_m": 4166,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-11-bike-endurance-i157773976",
+      "date": "2025-12-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773976",
+      "planned": null,
+      "executed": {
+        "duration_min": 18,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 34,
+        "hr_avg": 121,
+        "hr_max": 140,
+        "tss": 8,
+        "distance_m": 5471,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2025-12-11-bike-endurance-i157773984",
+      "date": "2025-12-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773984",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 22,
+        "hr_avg": 120,
+        "hr_max": 151,
+        "tss": 5,
+        "distance_m": 4020,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-11-run-easy-i157774013",
+      "date": "2025-12-11",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S3.02",
+      "intervals_id": "i157774013",
+      "planned": null,
+      "executed": {
+        "duration_min": 70,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 195,
+        "hr_avg": 163,
+        "hr_max": 194,
+        "tss": 96,
+        "distance_m": 15109,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S3.02"
+    },
+    {
+      "id": "2025-12-12-bike-endurance-i157773952",
+      "date": "2025-12-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773952",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 120,
+        "hr_max": 175,
+        "tss": 6,
+        "distance_m": 3762,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2025-12-12-bike-endurance-i157773957",
+      "date": "2025-12-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773957",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 15,
+        "hr_avg": 105,
+        "hr_max": 129,
+        "tss": 3,
+        "distance_m": 3972,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-14-run-easy-i157773935",
+      "date": "2025-12-14",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S3.03",
+      "intervals_id": "i157773935",
+      "planned": null,
+      "executed": {
+        "duration_min": 75,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 168,
+        "hr_avg": 144,
+        "hr_max": 163,
+        "tss": 59,
+        "distance_m": 14002,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S3.03"
+    },
+    {
+      "id": "2025-12-14-bike-endurance-i157773945",
+      "date": "2025-12-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773945",
+      "planned": null,
+      "executed": {
+        "duration_min": 59,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 117,
+        "hr_avg": 132,
+        "hr_max": 157,
+        "tss": 34,
+        "distance_m": 24840,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-15-bike-endurance-i157773867",
+      "date": "2025-12-15",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773867",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 28,
+        "hr_avg": 128,
+        "hr_max": 157,
+        "tss": 7,
+        "distance_m": 3905,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2025-12-15-bike-endurance-i157773917",
+      "date": "2025-12-15",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773917",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 16,
+        "hr_avg": 114,
+        "hr_max": 132,
+        "tss": 3,
+        "distance_m": 4076,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-16-run-easy-i157773858",
+      "date": "2025-12-16",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S4.01",
+      "intervals_id": "i157773858",
+      "planned": null,
+      "executed": {
+        "duration_min": 46,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 115,
+        "hr_avg": 147,
+        "hr_max": 161,
+        "tss": 39,
+        "distance_m": 8611,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S4.01"
+    },
+    {
+      "id": "2025-12-18-run-easy-i157773848",
+      "date": "2025-12-18",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S4.02",
+      "intervals_id": "i157773848",
+      "planned": null,
+      "executed": {
+        "duration_min": 68,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 179,
+        "hr_avg": 161,
+        "hr_max": 193,
+        "tss": 83,
+        "distance_m": 14797,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S4.02"
+    },
+    {
+      "id": "2025-12-22-run-easy-i157773796",
+      "date": "2025-12-22",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S4.03",
+      "intervals_id": "i157773796",
+      "planned": null,
+      "executed": {
+        "duration_min": 63,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 171,
+        "hr_avg": 153,
+        "hr_max": 175,
+        "tss": 63,
+        "distance_m": 11405,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S4.03"
+    },
+    {
+      "id": "2025-12-24-run-easy-i157773781",
+      "date": "2025-12-24",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S5.01",
+      "intervals_id": "i157773781",
+      "planned": null,
+      "executed": {
+        "duration_min": 62,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 179,
+        "hr_avg": 163,
+        "hr_max": 194,
+        "tss": 81,
+        "distance_m": 13225,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S5.01"
+    },
+    {
+      "id": "2025-12-26-run-easy-i157773775",
+      "date": "2025-12-26",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S5.02",
+      "intervals_id": "i157773775",
+      "planned": null,
+      "executed": {
+        "duration_min": 72,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 198,
+        "hr_avg": 158,
+        "hr_max": 194,
+        "tss": 104,
+        "distance_m": 15641,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S5.02"
+    },
+    {
+      "id": "2025-12-28-run-easy-i157773764",
+      "date": "2025-12-28",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S5.03",
+      "intervals_id": "i157773764",
+      "planned": null,
+      "executed": {
+        "duration_min": 90,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 208,
+        "hr_avg": 149,
+        "hr_max": 168,
+        "tss": 81,
+        "distance_m": 16038,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S5.03"
+    },
+    {
+      "id": "2025-12-30-run-easy-i157773739",
+      "date": "2025-12-30",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S6.01",
+      "intervals_id": "i157773739",
+      "planned": null,
+      "executed": {
+        "duration_min": 58,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 160,
+        "hr_avg": 162,
+        "hr_max": 192,
+        "tss": 73,
+        "distance_m": 12513,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S6.01"
+    },
+    {
+      "id": "2026-01-02-run-easy-i157773718",
+      "date": "2026-01-02",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S6.02",
+      "intervals_id": "i157773718",
+      "planned": null,
+      "executed": {
+        "duration_min": 77,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 212,
+        "hr_avg": 163,
+        "hr_max": 194,
+        "tss": 104,
+        "distance_m": 16008,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S6.02"
+    },
+    {
+      "id": "2026-01-05-bike-endurance-i157773690",
+      "date": "2026-01-05",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773690",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 28,
+        "hr_avg": 124,
+        "hr_max": 160,
+        "tss": 6,
+        "distance_m": 3916,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-05-bike-endurance-i157773696",
+      "date": "2026-01-05",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773696",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 17,
+        "hr_avg": 112,
+        "hr_max": 135,
+        "tss": 4,
+        "distance_m": 4232,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-05-run-easy-i157773702",
+      "date": "2026-01-05",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157773702",
+      "planned": null,
+      "executed": {
+        "duration_min": 69,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 171,
+        "hr_avg": 149,
+        "hr_max": 164,
+        "tss": 61,
+        "distance_m": 13239,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-01-07-bike-endurance-i157773597",
+      "date": "2026-01-07",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Night Cyclisme",
+      "intervals_id": "i157773597",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 23,
+        "hr_avg": 125,
+        "hr_max": 155,
+        "tss": 5,
+        "distance_m": 3896,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Night Cyclisme"
+    },
+    {
+      "id": "2026-01-07-bike-endurance-i157773601",
+      "date": "2026-01-07",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773601",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 19,
+        "hr_avg": 116,
+        "hr_max": 131,
+        "tss": 4,
+        "distance_m": 3763,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-07-bike-endurance-i157773607",
+      "date": "2026-01-07",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773607",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 33,
+        "hr_avg": 126,
+        "hr_max": 138,
+        "tss": 7,
+        "distance_m": 4011,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-01-07-bike-endurance-i157773680",
+      "date": "2026-01-07",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773680",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 22,
+        "hr_avg": 120,
+        "hr_max": 141,
+        "tss": 5,
+        "distance_m": 4153,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-07-run-easy-i157773683",
+      "date": "2026-01-07",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S7.01",
+      "intervals_id": "i157773683",
+      "planned": null,
+      "executed": {
+        "duration_min": 58,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 167,
+        "hr_avg": 163,
+        "hr_max": 193,
+        "tss": 73,
+        "distance_m": 12321,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S7.01"
+    },
+    {
+      "id": "2026-01-08-bike-endurance-i157773585",
+      "date": "2026-01-08",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773585",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 129,
+        "hr_max": 163,
+        "tss": 7,
+        "distance_m": 3932,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-01-08-bike-endurance-i157773592",
+      "date": "2026-01-08",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773592",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 116,
+        "hr_max": 137,
+        "tss": 4,
+        "distance_m": 4221,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-09-bike-endurance-i157773574",
+      "date": "2026-01-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773574",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 33,
+        "hr_avg": 123,
+        "hr_max": 154,
+        "tss": 7,
+        "distance_m": 4590,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-09-bike-endurance-i157773580",
+      "date": "2026-01-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773580",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 20,
+        "hr_avg": 118,
+        "hr_max": 153,
+        "tss": 4,
+        "distance_m": 4150,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-11-bike-endurance-i157773554",
+      "date": "2026-01-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157773554",
+      "planned": null,
+      "executed": {
+        "duration_min": 8,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 19,
+        "hr_avg": 133,
+        "hr_max": 164,
+        "tss": 5,
+        "distance_m": 2852,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-01-11-run-easy-i157773563",
+      "date": "2026-01-11",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S7.02",
+      "intervals_id": "i157773563",
+      "planned": null,
+      "executed": {
+        "duration_min": 63,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 179,
+        "hr_avg": 166,
+        "hr_max": 194,
+        "tss": 88,
+        "distance_m": 13526,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S7.02"
+    },
+    {
+      "id": "2026-01-11-bike-endurance-i157773566",
+      "date": "2026-01-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773566",
+      "planned": null,
+      "executed": {
+        "duration_min": 9,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 132,
+        "hr_max": 165,
+        "tss": 6,
+        "distance_m": 2832,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-13-bike-endurance-i157773512",
+      "date": "2026-01-13",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773512",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 30,
+        "hr_avg": 122,
+        "hr_max": 173,
+        "tss": 7,
+        "distance_m": 3818,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-13-bike-endurance-i157773517",
+      "date": "2026-01-13",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773517",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 123,
+        "hr_max": 142,
+        "tss": 5,
+        "distance_m": 4242,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-13-run-easy-i157773519",
+      "date": "2026-01-13",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157773519",
+      "planned": null,
+      "executed": {
+        "duration_min": 61,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 149,
+        "hr_avg": 148,
+        "hr_max": 164,
+        "tss": 53,
+        "distance_m": 11508,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-01-14-bike-endurance-i157773498",
+      "date": "2026-01-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773498",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 23,
+        "hr_avg": 112,
+        "hr_max": 144,
+        "tss": 5,
+        "distance_m": 3997,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-14-bike-endurance-i157773503",
+      "date": "2026-01-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773503",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 121,
+        "hr_max": 145,
+        "tss": 5,
+        "distance_m": 4034,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-15-bike-endurance-i157773468",
+      "date": "2026-01-15",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773468",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 33,
+        "hr_avg": 129,
+        "hr_max": 162,
+        "tss": 8,
+        "distance_m": 3997,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-15-bike-endurance-i157773472",
+      "date": "2026-01-15",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773472",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 122,
+        "hr_max": 148,
+        "tss": 5,
+        "distance_m": 4034,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-15-run-easy-i157773476",
+      "date": "2026-01-15",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S8.01",
+      "intervals_id": "i157773476",
+      "planned": null,
+      "executed": {
+        "duration_min": 44,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 121,
+        "hr_avg": 156,
+        "hr_max": 186,
+        "tss": 48,
+        "distance_m": 8918,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S8.01"
+    },
+    {
+      "id": "2026-01-16-bike-endurance-i157773453",
+      "date": "2026-01-16",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773453",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 45,
+        "hr_avg": 122,
+        "hr_max": 141,
+        "tss": 11,
+        "distance_m": 7821,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-01-16-bike-endurance-i157773458",
+      "date": "2026-01-16",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773458",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 23,
+        "hr_avg": 107,
+        "hr_max": 146,
+        "tss": 5,
+        "distance_m": 4032,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-17-bike-endurance-i157773440",
+      "date": "2026-01-17",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157773440",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 29,
+        "hr_avg": 123,
+        "hr_max": 153,
+        "tss": 7,
+        "distance_m": 5025,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-01-18-run-easy-i157773217",
+      "date": "2026-01-18",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Course à pied",
+      "intervals_id": "i157773217",
+      "planned": null,
+      "executed": {
+        "duration_min": 53,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 150,
+        "hr_avg": 169,
+        "hr_max": 193,
+        "tss": 82,
+        "distance_m": 12144,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Course à pied"
+    },
+    {
+      "id": "2026-01-18-run-easy-i157773225",
+      "date": "2026-01-18",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Course à pied",
+      "intervals_id": "i157773225",
+      "planned": null,
+      "executed": {
+        "duration_min": 26,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 76,
+        "hr_avg": 153,
+        "hr_max": 176,
+        "tss": 27,
+        "distance_m": 5035,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Course à pied"
+    },
+    {
+      "id": "2026-01-19-bike-endurance-i157773200",
+      "date": "2026-01-19",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Night Cyclisme",
+      "intervals_id": "i157773200",
+      "planned": null,
+      "executed": {
+        "duration_min": 18,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 36,
+        "hr_avg": 126,
+        "hr_max": 147,
+        "tss": 9,
+        "distance_m": 7456,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Night Cyclisme"
+    },
+    {
+      "id": "2026-01-19-bike-endurance-i157773206",
+      "date": "2026-01-19",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773206",
+      "planned": null,
+      "executed": {
+        "duration_min": 27,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 48,
+        "hr_avg": 118,
+        "hr_max": 135,
+        "tss": 10,
+        "distance_m": 10529,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-19-bike-endurance-i157773212",
+      "date": "2026-01-19",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773212",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 17,
+        "hr_avg": 113,
+        "hr_max": 131,
+        "tss": 3,
+        "distance_m": 3642,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-20-bike-endurance-i157773179",
+      "date": "2026-01-20",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773179",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 114,
+        "hr_max": 146,
+        "tss": 4,
+        "distance_m": 3795,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-20-bike-endurance-i157773188",
+      "date": "2026-01-20",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773188",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 18,
+        "hr_avg": 109,
+        "hr_max": 130,
+        "tss": 3,
+        "distance_m": 4210,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-21-bike-endurance-i157773153",
+      "date": "2026-01-21",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773153",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 37,
+        "hr_avg": 110,
+        "hr_max": 144,
+        "tss": 7,
+        "distance_m": 6748,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-21-bike-endurance-i157773169",
+      "date": "2026-01-21",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773169",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 16,
+        "hr_avg": 109,
+        "hr_max": 135,
+        "tss": 3,
+        "distance_m": 4241,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-22-bike-endurance-i157773136",
+      "date": "2026-01-22",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773136",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 29,
+        "hr_avg": 125,
+        "hr_max": 150,
+        "tss": 6,
+        "distance_m": 3791,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-01-22-bike-endurance-i157773143",
+      "date": "2026-01-22",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773143",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 23,
+        "hr_avg": 123,
+        "hr_max": 145,
+        "tss": 5,
+        "distance_m": 4126,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-22-run-easy-i157773146",
+      "date": "2026-01-22",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157773146",
+      "planned": null,
+      "executed": {
+        "duration_min": 57,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 137,
+        "hr_avg": 144,
+        "hr_max": 162,
+        "tss": 45,
+        "distance_m": 11051,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-01-23-bike-endurance-i157773114",
+      "date": "2026-01-23",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773114",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 129,
+        "hr_max": 156,
+        "tss": 8,
+        "distance_m": 4314,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-01-23-bike-endurance-i157773128",
+      "date": "2026-01-23",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773128",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 20,
+        "hr_avg": 121,
+        "hr_max": 141,
+        "tss": 4,
+        "distance_m": 4032,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-01-23-run-easy-i157773131",
+      "date": "2026-01-23",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157773131",
+      "planned": null,
+      "executed": {
+        "duration_min": 50,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 122,
+        "hr_avg": 144,
+        "hr_max": 156,
+        "tss": 39,
+        "distance_m": 9356,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-01-25-strength-autre-i157773107",
+      "date": "2026-01-25",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157773107",
+      "planned": null,
+      "executed": {
+        "duration_min": 94,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 89,
+        "hr_avg": 95,
+        "hr_max": 127,
+        "tss": 17,
+        "distance_m": 44394,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-01-26-strength-autre-i157772995",
+      "date": "2026-01-26",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772995",
+      "planned": null,
+      "executed": {
+        "duration_min": 98,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 103,
+        "hr_avg": 99,
+        "hr_max": 136,
+        "tss": 21,
+        "distance_m": 50798,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-01-27-strength-autre-i157772982",
+      "date": "2026-01-27",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772982",
+      "planned": null,
+      "executed": {
+        "duration_min": 31,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 34,
+        "hr_avg": 101,
+        "hr_max": 119,
+        "tss": 7,
+        "distance_m": 19438,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-01-28-strength-autre-i157772967",
+      "date": "2026-01-28",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Snowboard",
+      "intervals_id": "i157772967",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 14,
+        "hr_avg": 102,
+        "hr_max": 116,
+        "tss": 3,
+        "distance_m": 6956,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Snowboard"
+    },
+    {
+      "id": "2026-01-28-strength-autre-i157772975",
+      "date": "2026-01-28",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772975",
+      "planned": null,
+      "executed": {
+        "duration_min": 92,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 90,
+        "hr_avg": 100,
+        "hr_max": 126,
+        "tss": 20,
+        "distance_m": 25812,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-01-29-strength-autre-i157772966",
+      "date": "2026-01-29",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772966",
+      "planned": null,
+      "executed": {
+        "duration_min": 78,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 72,
+        "hr_avg": 95,
+        "hr_max": 122,
+        "tss": 14,
+        "distance_m": 42493,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-01-30-strength-autre-i157772941",
+      "date": "2026-01-30",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772941",
+      "planned": null,
+      "executed": {
+        "duration_min": 110,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 137,
+        "hr_avg": 107,
+        "hr_max": 155,
+        "tss": 31,
+        "distance_m": 51289,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-02-01-run-easy-i157772925",
+      "date": "2026-02-01",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772925",
+      "planned": null,
+      "executed": {
+        "duration_min": 89,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 282,
+        "hr_avg": 168,
+        "hr_max": 188,
+        "tss": 125,
+        "distance_m": 17015,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-02-03-run-easy-i157772914",
+      "date": "2026-02-03",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772914",
+      "planned": null,
+      "executed": {
+        "duration_min": 61,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 150,
+        "hr_avg": 152,
+        "hr_max": 168,
+        "tss": 58,
+        "distance_m": 12170,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-02-06-run-trail-i157772888",
+      "date": "2026-02-06",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Trail",
+      "intervals_id": "i157772888",
+      "planned": null,
+      "executed": {
+        "duration_min": 101,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 118,
+        "hr_avg": 100,
+        "hr_max": 135,
+        "tss": 22,
+        "distance_m": 8308,
+        "cadence": 53,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Trail"
+    },
+    {
+      "id": "2026-02-07-run-trail-i157772800",
+      "date": "2026-02-07",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Trail",
+      "intervals_id": "i157772800",
+      "planned": null,
+      "executed": {
+        "duration_min": 95,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 250,
+        "hr_avg": 153,
+        "hr_max": 193,
+        "tss": 105,
+        "distance_m": 14991,
+        "cadence": 75,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Trail"
+    },
+    {
+      "id": "2026-02-08-run-trail-i157772782",
+      "date": "2026-02-08",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Trail",
+      "intervals_id": "i157772782",
+      "planned": null,
+      "executed": {
+        "duration_min": 88,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 270,
+        "hr_avg": 165,
+        "hr_max": 194,
+        "tss": 125,
+        "distance_m": 14700,
+        "cadence": 79,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Trail"
+    },
+    {
+      "id": "2026-02-09-run-trail-i157772773",
+      "date": "2026-02-09",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Trail",
+      "intervals_id": "i157772773",
+      "planned": null,
+      "executed": {
+        "duration_min": 203,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 272,
+        "hr_avg": 113,
+        "hr_max": 154,
+        "tss": 70,
+        "distance_m": 14718,
+        "cadence": 53,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Trail"
+    },
+    {
+      "id": "2026-02-10-run-trail-i157772757",
+      "date": "2026-02-10",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Trail",
+      "intervals_id": "i157772757",
+      "planned": null,
+      "executed": {
+        "duration_min": 98,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 273,
+        "hr_avg": 162,
+        "hr_max": 185,
+        "tss": 126,
+        "distance_m": 18053,
+        "cadence": 79,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Trail"
+    },
+    {
+      "id": "2026-02-13-strength-autre-i157772732",
+      "date": "2026-02-13",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Snowboard",
+      "intervals_id": "i157772732",
+      "planned": null,
+      "executed": {
+        "duration_min": 97,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 89,
+        "hr_avg": 94,
+        "hr_max": 130,
+        "tss": 16,
+        "distance_m": 36249,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Snowboard"
+    },
+    {
+      "id": "2026-02-14-strength-autre-i157772700",
+      "date": "2026-02-14",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772700",
+      "planned": null,
+      "executed": {
+        "duration_min": 121,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 136,
+        "hr_avg": 103,
+        "hr_max": 138,
+        "tss": 29,
+        "distance_m": 36884,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-02-15-strength-autre-i157772689",
+      "date": "2026-02-15",
+      "sport": "strength",
+      "type": "autre",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Snowboard",
+      "intervals_id": "i157772689",
+      "planned": null,
+      "executed": {
+        "duration_min": 111,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 133,
+        "hr_avg": 106,
+        "hr_max": 166,
+        "tss": 31,
+        "distance_m": 37320,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+    },
+    {
+      "id": "2026-02-20-bike-endurance-i157772637",
+      "date": "2026-02-20",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157772637",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 125,
+        "hr_max": 142,
+        "tss": 6,
+        "distance_m": 4001,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-02-20-bike-endurance-i157772638",
+      "date": "2026-02-20",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772638",
+      "planned": null,
+      "executed": {
+        "duration_min": 9,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 19,
+        "hr_avg": 125,
+        "hr_max": 156,
+        "tss": 5,
+        "distance_m": 4035,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-02-20-run-easy-i157772684",
+      "date": "2026-02-20",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772684",
+      "planned": null,
+      "executed": {
+        "duration_min": 60,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 167,
+        "hr_avg": 158,
+        "hr_max": 181,
+        "tss": 66,
+        "distance_m": 12016,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-02-21-run-trail-i157772629",
+      "date": "2026-02-21",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Trail",
+      "intervals_id": "i157772629",
+      "planned": null,
+      "executed": {
+        "duration_min": 410,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 891,
+        "hr_avg": 170,
+        "hr_max": 194,
+        "tss": 611,
+        "distance_m": 51317,
+        "cadence": 68,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Trail"
+    },
+    {
+      "id": "2026-02-28-bike-endurance-i157772539",
+      "date": "2026-02-28",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772539",
+      "planned": null,
+      "executed": {
+        "duration_min": 231,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 567,
+        "hr_avg": 152,
+        "hr_max": 186,
+        "tss": 248,
+        "distance_m": 100988,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-01-bike-endurance-i157772526",
+      "date": "2026-03-01",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157772526",
+      "planned": null,
+      "executed": {
+        "duration_min": 74,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 112,
+        "hr_avg": 113,
+        "hr_max": 148,
+        "tss": 26,
+        "distance_m": 22987,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-03-02-bike-endurance-i157772520",
+      "date": "2026-03-02",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772520",
+      "planned": null,
+      "executed": {
+        "duration_min": 25,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 46,
+        "hr_avg": 117,
+        "hr_max": 155,
+        "tss": 10,
+        "distance_m": 8326,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-03-bike-endurance-i157772497",
+      "date": "2026-03-03",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157772497",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 122,
+        "hr_max": 146,
+        "tss": 7,
+        "distance_m": 3995,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-03-bike-endurance-i157772499",
+      "date": "2026-03-03",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772499",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 14,
+        "hr_avg": 108,
+        "hr_max": 127,
+        "tss": 3,
+        "distance_m": 4036,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-03-run-easy-i157772502",
+      "date": "2026-03-03",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772502",
+      "planned": null,
+      "executed": {
+        "duration_min": 56,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 141,
+        "hr_avg": 150,
+        "hr_max": 169,
+        "tss": 52,
+        "distance_m": 11426,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-03-04-bike-endurance-i157772158",
+      "date": "2026-03-04",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157772158",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 16,
+        "hr_avg": 104,
+        "hr_max": 137,
+        "tss": 3,
+        "distance_m": 3712,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-04-bike-endurance-i157772164",
+      "date": "2026-03-04",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772164",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 15,
+        "hr_avg": 109,
+        "hr_max": 150,
+        "tss": 3,
+        "distance_m": 3974,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-05-bike-endurance-i157772101",
+      "date": "2026-03-05",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157772101",
+      "planned": null,
+      "executed": {
+        "duration_min": 17,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 35,
+        "hr_avg": 127,
+        "hr_max": 155,
+        "tss": 9,
+        "distance_m": 5158,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-05-run-easy-i157772145",
+      "date": "2026-03-05",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772145",
+      "planned": null,
+      "executed": {
+        "duration_min": 58,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 151,
+        "hr_avg": 153,
+        "hr_max": 167,
+        "tss": 58,
+        "distance_m": 12011,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-03-06-bike-endurance-i157772092",
+      "date": "2026-03-06",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157772092",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 130,
+        "hr_max": 170,
+        "tss": 9,
+        "distance_m": 4768,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-03-07-run-easy-i157772086",
+      "date": "2026-03-07",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Course à pied",
+      "intervals_id": "i157772086",
+      "planned": null,
+      "executed": {
+        "duration_min": 79,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 192,
+        "hr_avg": 151,
+        "hr_max": 171,
+        "tss": 76,
+        "distance_m": 15730,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Course à pied"
+    },
+    {
+      "id": "2026-03-08-bike-endurance-i157772078",
+      "date": "2026-03-08",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772078",
+      "planned": null,
+      "executed": {
+        "duration_min": 148,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 354,
+        "hr_avg": 154,
+        "hr_max": 182,
+        "tss": 163,
+        "distance_m": 73541,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-09-bike-endurance-i157772020",
+      "date": "2026-03-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Night Cyclisme",
+      "intervals_id": "i157772020",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 16,
+        "hr_avg": 105,
+        "hr_max": 133,
+        "tss": 3,
+        "distance_m": 3945,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Night Cyclisme"
+    },
+    {
+      "id": "2026-03-09-bike-endurance-i157772031",
+      "date": "2026-03-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157772031",
+      "planned": null,
+      "executed": {
+        "duration_min": 8,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 13,
+        "hr_avg": 113,
+        "hr_max": 130,
+        "tss": 3,
+        "distance_m": 2887,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-03-09-bike-endurance-i157772039",
+      "date": "2026-03-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157772039",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 37,
+        "hr_avg": 121,
+        "hr_max": 154,
+        "tss": 10,
+        "distance_m": 8354,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-10-bike-endurance-i157772009",
+      "date": "2026-03-10",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157772009",
+      "planned": null,
+      "executed": {
+        "duration_min": 33,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 56,
+        "hr_avg": 121,
+        "hr_max": 155,
+        "tss": 15,
+        "distance_m": 11975,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-03-10-run-easy-i157772015",
+      "date": "2026-03-10",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157772015",
+      "planned": null,
+      "executed": {
+        "duration_min": 54,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 134,
+        "hr_avg": 149,
+        "hr_max": 168,
+        "tss": 49,
+        "distance_m": 11016,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-03-11-bike-endurance-i157771981",
+      "date": "2026-03-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771981",
+      "planned": null,
+      "executed": {
+        "duration_min": 70,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 119,
+        "hr_avg": 126,
+        "hr_max": 163,
+        "tss": 37,
+        "distance_m": 30420,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-11-bike-endurance-i157771987",
+      "date": "2026-03-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771987",
+      "planned": null,
+      "executed": {
+        "duration_min": 16,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 112,
+        "hr_max": 133,
+        "tss": 5,
+        "distance_m": 6123,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-12-bike-endurance-i157771917",
+      "date": "2026-03-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771917",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 28,
+        "hr_avg": 130,
+        "hr_max": 161,
+        "tss": 7,
+        "distance_m": 3839,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-12-bike-endurance-i157771926",
+      "date": "2026-03-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771926",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 18,
+        "hr_avg": 120,
+        "hr_max": 142,
+        "tss": 4,
+        "distance_m": 4050,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-12-run-easy-i157771955",
+      "date": "2026-03-12",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "10k - S1.02",
+      "intervals_id": "i157771955",
+      "planned": null,
+      "executed": {
+        "duration_min": 65,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 154,
+        "hr_avg": 156,
+        "hr_max": 193,
+        "tss": 69,
+        "distance_m": 14013,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 10k - S1.02"
+    },
+    {
+      "id": "2026-03-16-bike-endurance-i157771907",
+      "date": "2026-03-16",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771907",
+      "planned": null,
+      "executed": {
+        "duration_min": 65,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 131,
+        "hr_avg": 137,
+        "hr_max": 182,
+        "tss": 49,
+        "distance_m": 30361,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-17-bike-endurance-i157771822",
+      "date": "2026-03-17",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771822",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 29,
+        "hr_avg": 126,
+        "hr_max": 162,
+        "tss": 8,
+        "distance_m": 3980,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-17-bike-endurance-i157771830",
+      "date": "2026-03-17",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771830",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 15,
+        "hr_avg": 107,
+        "hr_max": 146,
+        "tss": 3,
+        "distance_m": 3931,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-17-run-easy-i157771847",
+      "date": "2026-03-17",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "21 - S1 - Vma",
+      "intervals_id": "i157771847",
+      "planned": null,
+      "executed": {
+        "duration_min": 65,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 159,
+        "hr_avg": 151,
+        "hr_max": 172,
+        "tss": 61,
+        "distance_m": 13508,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 21 - S1 - Vma"
+    },
+    {
+      "id": "2026-03-18-bike-endurance-i157771809",
+      "date": "2026-03-18",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771809",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 122,
+        "hr_max": 152,
+        "tss": 6,
+        "distance_m": 5535,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-20-bike-endurance-i157771799",
+      "date": "2026-03-20",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157771799",
+      "planned": null,
+      "executed": {
+        "duration_min": 37,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 65,
+        "hr_avg": 123,
+        "hr_max": 153,
+        "tss": 18,
+        "distance_m": 12952,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-03-22-bike-endurance-i157771707",
+      "date": "2026-03-22",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157771707",
+      "planned": null,
+      "executed": {
+        "duration_min": 99,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 150,
+        "hr_avg": 123,
+        "hr_max": 187,
+        "tss": 47,
+        "distance_m": 40049,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-03-22-bike-endurance-i157771716",
+      "date": "2026-03-22",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157771716",
+      "planned": null,
+      "executed": {
+        "duration_min": 65,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 95,
+        "hr_avg": 117,
+        "hr_max": 187,
+        "tss": 27,
+        "distance_m": 41892,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-03-23-bike-endurance-i157771678",
+      "date": "2026-03-23",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771678",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 26,
+        "hr_avg": 119,
+        "hr_max": 141,
+        "tss": 6,
+        "distance_m": 4189,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-23-bike-endurance-i157771687",
+      "date": "2026-03-23",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771687",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 18,
+        "hr_avg": 118,
+        "hr_max": 137,
+        "tss": 4,
+        "distance_m": 4084,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-24-bike-endurance-i157771632",
+      "date": "2026-03-24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771632",
+      "planned": null,
+      "executed": {
+        "duration_min": 15,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 26,
+        "hr_avg": 118,
+        "hr_max": 154,
+        "tss": 6,
+        "distance_m": 3889,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-24-bike-endurance-i157771641",
+      "date": "2026-03-24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771641",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 124,
+        "hr_max": 152,
+        "tss": 5,
+        "distance_m": 4013,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-24-run-easy-i157771654",
+      "date": "2026-03-24",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "21 - S2 - Vma1",
+      "intervals_id": "i157771654",
+      "planned": null,
+      "executed": {
+        "duration_min": 53,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 116,
+        "hr_avg": 143,
+        "hr_max": 161,
+        "tss": 41,
+        "distance_m": 10009,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — 21 - S2 - Vma1"
+    },
+    {
+      "id": "2026-03-25-bike-endurance-i157771621",
+      "date": "2026-03-25",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771621",
+      "planned": null,
+      "executed": {
+        "duration_min": 28,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 52,
+        "hr_avg": 122,
+        "hr_max": 148,
+        "tss": 13,
+        "distance_m": 9533,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-03-25-bike-endurance-i157771627",
+      "date": "2026-03-25",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771627",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 16,
+        "hr_avg": 113,
+        "hr_max": 139,
+        "tss": 3,
+        "distance_m": 3914,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-26-bike-endurance-i157771616",
+      "date": "2026-03-26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771616",
+      "planned": null,
+      "executed": {
+        "duration_min": 26,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 45,
+        "hr_avg": 117,
+        "hr_max": 144,
+        "tss": 11,
+        "distance_m": 8872,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-27-bike-endurance-i157771585",
+      "date": "2026-03-27",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771585",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 37,
+        "hr_avg": 117,
+        "hr_max": 149,
+        "tss": 9,
+        "distance_m": 7965,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-27-bike-endurance-i157771613",
+      "date": "2026-03-27",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771613",
+      "planned": null,
+      "executed": {
+        "duration_min": 52,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 100,
+        "hr_avg": 131,
+        "hr_max": 179,
+        "tss": 30,
+        "distance_m": 20219,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-29-bike-endurance-i157771580",
+      "date": "2026-03-29",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771580",
+      "planned": null,
+      "executed": {
+        "duration_min": 161,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 212,
+        "hr_avg": 117,
+        "hr_max": 175,
+        "tss": 63,
+        "distance_m": 72029,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-03-30-bike-endurance-i157771222",
+      "date": "2026-03-30",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771222",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 39,
+        "hr_avg": 117,
+        "hr_max": 163,
+        "tss": 9,
+        "distance_m": 7758,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-01-bike-endurance-i157771218",
+      "date": "2026-04-01",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771218",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 33,
+        "hr_avg": 108,
+        "hr_max": 143,
+        "tss": 7,
+        "distance_m": 7994,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-02-bike-endurance-i157771213",
+      "date": "2026-04-02",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771213",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 21,
+        "hr_avg": 93,
+        "hr_max": 117,
+        "tss": 4,
+        "distance_m": 7802,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-03-bike-endurance-i157771199",
+      "date": "2026-04-03",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771199",
+      "planned": null,
+      "executed": {
+        "duration_min": 18,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 119,
+        "hr_max": 137,
+        "tss": 8,
+        "distance_m": 6615,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-04-03-bike-endurance-i157771208",
+      "date": "2026-04-03",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771208",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 15,
+        "hr_avg": 110,
+        "hr_max": 135,
+        "tss": 3,
+        "distance_m": 3890,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-04-bike-endurance-i157771186",
+      "date": "2026-04-04",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771186",
+      "planned": null,
+      "executed": {
+        "duration_min": 68,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 138,
+        "hr_avg": 137,
+        "hr_max": 171,
+        "tss": 45,
+        "distance_m": 25314,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-04-06-run-easy-i157771173",
+      "date": "2026-04-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157771173",
+      "planned": null,
+      "executed": {
+        "duration_min": 26,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 69,
+        "hr_avg": 144,
+        "hr_max": 171,
+        "tss": 22,
+        "distance_m": 5395,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-04-07-bike-endurance-i157771121",
+      "date": "2026-04-07",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771121",
+      "planned": null,
+      "executed": {
+        "duration_min": 7,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 18,
+        "hr_avg": 108,
+        "hr_max": 132,
+        "tss": 4,
+        "distance_m": 4183,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-08-bike-endurance-i157771115",
+      "date": "2026-04-08",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771115",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 34,
+        "hr_avg": 112,
+        "hr_max": 137,
+        "tss": 7,
+        "distance_m": 7802,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-09-bike-endurance-i157771071",
+      "date": "2026-04-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771071",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 26,
+        "hr_avg": 127,
+        "hr_max": 166,
+        "tss": 7,
+        "distance_m": 4103,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-04-09-bike-endurance-i157771077",
+      "date": "2026-04-09",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771077",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 24,
+        "hr_avg": 115,
+        "hr_max": 144,
+        "tss": 6,
+        "distance_m": 5617,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-09-run-easy-i157771112",
+      "date": "2026-04-09",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157771112",
+      "planned": null,
+      "executed": {
+        "duration_min": 42,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 124,
+        "hr_avg": 157,
+        "hr_max": 178,
+        "tss": 46,
+        "distance_m": 9050,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-04-10-bike-endurance-i157771066",
+      "date": "2026-04-10",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157771066",
+      "planned": null,
+      "executed": {
+        "duration_min": 28,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 49,
+        "hr_avg": 115,
+        "hr_max": 153,
+        "tss": 12,
+        "distance_m": 10008,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+    },
+    {
+      "id": "2026-04-11-bike-endurance-i157771055",
+      "date": "2026-04-11",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771055",
+      "planned": null,
+      "executed": {
+        "duration_min": 145,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 329,
+        "hr_avg": 152,
+        "hr_max": 194,
+        "tss": 153,
+        "distance_m": 64418,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-12-bike-endurance-i157771047",
+      "date": "2026-04-12",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157771047",
+      "planned": null,
+      "executed": {
+        "duration_min": 49,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 92,
+        "hr_avg": 125,
+        "hr_max": 169,
+        "tss": 25,
+        "distance_m": 19166,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-04-14-bike-endurance-i157771042",
+      "date": "2026-04-14",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771042",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 26,
+        "hr_avg": 102,
+        "hr_max": 142,
+        "tss": 5,
+        "distance_m": 7704,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-16-bike-endurance-i157771037",
+      "date": "2026-04-16",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771037",
+      "planned": null,
+      "executed": {
+        "duration_min": 28,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 40,
+        "hr_avg": 108,
+        "hr_max": 156,
+        "tss": 9,
+        "distance_m": 10467,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-17-bike-endurance-i157771024",
+      "date": "2026-04-17",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157771024",
+      "planned": null,
+      "executed": {
+        "duration_min": 20,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 36,
+        "hr_avg": 120,
+        "hr_max": 151,
+        "tss": 9,
+        "distance_m": 7115,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-18-bike-endurance-i157771012",
+      "date": "2026-04-18",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157771012",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 28,
+        "hr_avg": 128,
+        "hr_max": 151,
+        "tss": 7,
+        "distance_m": 5791,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+    },
+    {
+      "id": "2026-04-18-bike-endurance-i157771019",
+      "date": "2026-04-18",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157771019",
+      "planned": null,
+      "executed": {
+        "duration_min": 160,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 459,
+        "hr_avg": 171,
+        "hr_max": 193,
+        "tss": 256,
+        "distance_m": 78274,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-04-21-bike-endurance-i157770814",
+      "date": "2026-04-21",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770814",
+      "planned": null,
+      "executed": {
+        "duration_min": 64,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 182,
+        "hr_avg": 157,
+        "hr_max": 180,
+        "tss": 74,
+        "distance_m": 29271,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-22-bike-endurance-i157770782",
+      "date": "2026-04-22",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770782",
+      "planned": null,
+      "executed": {
+        "duration_min": 65,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 115,
+        "hr_avg": 121,
+        "hr_max": 162,
+        "tss": 29,
+        "distance_m": 24832,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-24-bike-endurance-i157770768",
+      "date": "2026-04-24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770768",
+      "planned": null,
+      "executed": {
+        "duration_min": 70,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 119,
+        "hr_avg": 120,
+        "hr_max": 174,
+        "tss": 32,
+        "distance_m": 26733,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-26-bike-endurance-i157770738",
+      "date": "2026-04-26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Lunch Cyclisme",
+      "intervals_id": "i157770738",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 134,
+        "hr_max": 169,
+        "tss": 9,
+        "distance_m": 5001,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+    },
+    {
+      "id": "2026-04-26-bike-endurance-i157770741",
+      "date": "2026-04-26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770741",
+      "planned": null,
+      "executed": {
+        "duration_min": 185,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 238,
+        "hr_avg": 115,
+        "hr_max": 173,
+        "tss": 67,
+        "distance_m": 94222,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-27-bike-endurance-i157770708",
+      "date": "2026-04-27",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770708",
+      "planned": null,
+      "executed": {
+        "duration_min": 34,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 56,
+        "hr_avg": 120,
+        "hr_max": 150,
+        "tss": 14,
+        "distance_m": 11517,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-28-bike-endurance-i157770693",
+      "date": "2026-04-28",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Vélo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157770693",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 34,
+        "hr_avg": 112,
+        "hr_max": 143,
+        "tss": 7,
+        "distance_m": 7885,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+    },
+    {
+      "id": "2026-04-28-run-easy-i157770700",
+      "date": "2026-04-28",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157770700",
+      "planned": null,
+      "executed": {
+        "duration_min": 30,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 87,
+        "hr_avg": 153,
+        "hr_max": 173,
+        "tss": 30,
+        "distance_m": 5654,
+        "cadence": 84,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
+    {
+      "id": "2026-05-06-run-easy-i157770636",
+      "date": "2026-05-06",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course à pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Course à pied",
+      "intervals_id": "i157770636",
+      "planned": null,
+      "executed": {
+        "duration_min": 32,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 95,
+        "hr_avg": 154,
+        "hr_max": 168,
+        "tss": 33,
+        "distance_m": 6414,
+        "cadence": 86,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+    },
     {
       "id": "2026-06-02-bike-endurance-i155251140",
       "date": "2026-06-02",
