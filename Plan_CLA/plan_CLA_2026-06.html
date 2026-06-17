@@ -389,4 +389,26 @@ function makePastilles(iso) {
   // Pastille douleur (cycle 0→5)
   const pd = document.createElement('div');
   pd.style.textAlign = 'center';
-  const score = dayData.fasciite !== undefined ? day
+  const score = dayData.fasciite !== undefined ? dayData.fasciite : null;
+  const btnD = document.createElement('button');
+  btnD.className = 'pastille' + (score !== null ? ' p-' + score : '');
+  btnD.title = 'Douleur fasciite (0=rien · 5=intense)';
+  btnD.textContent = score !== null ? score : '?';
+  btnD.addEventListener('click', () => {
+    const d = loadSuivi(); if (!d[iso]) d[iso] = {};
+    const cur = d[iso].fasciite !== undefined ? d[iso].fasciite : -1;
+    d[iso].fasciite = cur >= 5 ? 0 : cur + 1; saveSuivi(d);
+    btnD.className = 'pastille p-' + d[iso].fasciite;
+    btnD.textContent = d[iso].fasciite;
+  });
+  const lD = document.createElement('div'); lD.className='pastille-label'; lD.textContent='Douleur';
+  pd.appendChild(btnD); pd.appendChild(lD);
+
+  row.appendChild(pm); row.appendChild(ps); row.appendChild(pd);
+  wrap.appendChild(row);
+  return wrap;
+}
+
+</script>
+</body>
+</html>
