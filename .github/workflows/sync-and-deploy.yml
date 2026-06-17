@@ -2,7 +2,7 @@ name: Sync Intervals.icu + Deploy
 
 on:
   schedule:
-    - cron: '0 23 * * *'   # 23h UTC = minuit heure belge (CET/CEST)
+    - cron: '0 5,7,9,11,13,15,17,19,21,23 * * *'  # toutes les 2h de 7h à 1h (heure belge)
   workflow_dispatch:         # lancement manuel possible
 
 jobs:
