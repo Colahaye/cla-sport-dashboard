@@ -5276,5 +5276,133 @@ window.SPORT_DATA = {
       "executed": null,
       "notes": null
     }
-  ]
+  ],
+  "wellness": {
+    "2026-05-28": {
+      "resting_hr": 58,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 2471
+    },
+    "2026-05-29": {
+      "resting_hr": 57,
+      "sleep_secs": 28140,
+      "sleep_h": 7.8,
+      "steps": 11413
+    },
+    "2026-05-30": {
+      "resting_hr": 62,
+      "sleep_secs": 16260,
+      "sleep_h": 4.5,
+      "steps": 12124
+    },
+    "2026-05-31": {
+      "resting_hr": 63,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 8390
+    },
+    "2026-06-01": {
+      "resting_hr": 56,
+      "sleep_secs": 33420,
+      "sleep_h": 9.3,
+      "steps": 5731
+    },
+    "2026-06-02": {
+      "resting_hr": 55,
+      "sleep_secs": 26940,
+      "sleep_h": 7.5,
+      "steps": 4856
+    },
+    "2026-06-03": {
+      "resting_hr": 60,
+      "sleep_secs": 26220,
+      "sleep_h": 7.3,
+      "steps": 2280
+    },
+    "2026-06-04": {
+      "resting_hr": 59,
+      "sleep_secs": 24480,
+      "sleep_h": 6.8,
+      "steps": 18826
+    },
+    "2026-06-05": {
+      "resting_hr": 65,
+      "sleep_secs": 27240,
+      "sleep_h": 7.6,
+      "steps": 4061
+    },
+    "2026-06-06": {
+      "resting_hr": 64,
+      "sleep_secs": 22860,
+      "sleep_h": 6.3,
+      "steps": 2476
+    },
+    "2026-06-07": {
+      "resting_hr": 65,
+      "sleep_secs": 22320,
+      "sleep_h": 6.2,
+      "steps": 11471
+    },
+    "2026-06-08": {
+      "resting_hr": 63,
+      "sleep_secs": 24420,
+      "sleep_h": 6.8,
+      "steps": 6809
+    },
+    "2026-06-09": {
+      "resting_hr": 58,
+      "sleep_secs": 29280,
+      "sleep_h": 8.1,
+      "steps": 2569
+    },
+    "2026-06-10": {
+      "resting_hr": 65,
+      "sleep_secs": 28740,
+      "sleep_h": 8.0,
+      "steps": 3076
+    },
+    "2026-06-11": {
+      "resting_hr": 61,
+      "sleep_secs": 27000,
+      "sleep_h": 7.5,
+      "steps": 5575
+    },
+    "2026-06-12": {
+      "resting_hr": 58,
+      "sleep_secs": 19080,
+      "sleep_h": 5.3,
+      "steps": 5769
+    },
+    "2026-06-13": {
+      "resting_hr": 61,
+      "sleep_secs": 26880,
+      "sleep_h": 7.5,
+      "steps": 6454
+    },
+    "2026-06-14": {
+      "resting_hr": 61,
+      "sleep_secs": 25020,
+      "sleep_h": 7.0,
+      "steps": 10524
+    },
+    "2026-06-15": {
+      "resting_hr": 63,
+      "sleep_secs": 26580,
+      "sleep_h": 7.4,
+      "steps": 2564
+    },
+    "2026-06-16": {
+      "resting_hr": 59,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 4594
+    },
+    "2026-06-17": {
+      "resting_hr": 58,
+      "sleep_secs": 26640,
+      "sleep_h": 7.4,
+      "steps": 1272
+    }
+  }
 };
