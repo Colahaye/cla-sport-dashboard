@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-17T13:55:36.000Z",
+  "last_updated": "2026-06-17T14:13:24.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4838,7 +4838,18 @@ window.SPORT_DATA = {
       "planned": {
         "name": "SS 3x12' (230-244W)",
         "duration_min": 73,
-        "description": "Sweet Spot Z3–Z4 — puissance soutenue de course.\nFC cible 160–173 bpm · Cadence ≥90 rpm · RPE 7/10.\nSi le 3e bloc décroche <230 W → couper à 2×12' + 1×8'.\n\n- 15m ramp 50-65%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 10m 50%",
+        "description": "Sweet Spot Z3–Z4 — puissance soutenue de course.
+FC cible 160–173 bpm · Cadence ≥90 rpm · RPE 7/10.
+Si le 3e bloc décroche <230 W → couper à 2×12' + 1×8'.
+
+- 15m ramp 50-65%
+- 12m 88-93%
+- 4m 50%
+- 12m 88-93%
+- 4m 50%
+- 12m 88-93%
+- 4m 50%
+- 10m 50%",
         "primary_zone": "Z4"
       },
       "executed": null,
@@ -4856,7 +4867,11 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Endurance Z2 1h15",
         "duration_min": 75,
-        "description": "Endurance Z2 — volume aérobie de base.\n155–190 W · Cadence 85–95 rpm · FC <152 bpm.\nConversation possible ; si tu souffles, tu es trop fort.\n\n- 75m 59-73%",
+        "description": "Endurance Z2 — volume aérobie de base.
+155–190 W · Cadence 85–95 rpm · FC <152 bpm.
+Conversation possible ; si tu souffles, tu es trop fort.
+
+- 75m 59-73%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -4874,7 +4889,11 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Recup Z1 45'",
         "duration_min": 45,
-        "description": "Récupération active Z1 — faire circuler le sang.\n<140 W · Cadence haute 90–100 rpm. Repos complet si fatigue >7/10.\n+ Prépa course : montées de talons 3×15 + mobilité cheville/pied.\n\n- 45m 45-53%",
+        "description": "Récupération active Z1 — faire circuler le sang.
+<140 W · Cadence haute 90–100 rpm. Repos complet si fatigue >7/10.
++ Prépa course : montées de talons 3×15 + mobilité cheville/pied.
+
+- 45m 45-53%",
         "primary_zone": "Z1"
       },
       "executed": null,
@@ -4892,7 +4911,15 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Longue Z2 + 2x20' SS (3h)",
         "duration_min": 180,
-        "description": "Sortie longue 3h (Z2) — la plus rentable de la semaine.\n2×20' Sweet Spot dans la sortie. Boire 1 bidon + 1 glucide/h.\n\n- 30m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 90m 60-72%",
+        "description": "Sortie longue 3h (Z2) — la plus rentable de la semaine.
+2×20' Sweet Spot dans la sortie. Boire 1 bidon + 1 glucide/h.
+
+- 30m 60-72%
+- 20m 88-93%
+- 10m 60-72%
+- 20m 88-93%
+- 10m 60-72%
+- 90m 60-72%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -4910,7 +4937,22 @@ window.SPORT_DATA = {
       "planned": {
         "name": "VO2max 5x4' (280-310W)",
         "duration_min": 65,
-        "description": "VO2max Z5 — capacité à répéter les efforts intenses.\nFC cible blocs 175–185 bpm. La plus dure du bloc.\nSi le 4e/5e décroche <280 W → arrêter à 4 blocs.\n\n- 15m ramp 50-65%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 10m 50%",
+        "description": "VO2max Z5 — capacité à répéter les efforts intenses.
+FC cible blocs 175–185 bpm. La plus dure du bloc.
+Si le 4e/5e décroche <280 W → arrêter à 4 blocs.
+
+- 15m ramp 50-65%
+- 4m 107-118%
+- 4m 45%
+- 4m 107-118%
+- 4m 45%
+- 4m 107-118%
+- 4m 45%
+- 4m 107-118%
+- 4m 45%
+- 4m 107-118%
+- 4m 45%
+- 10m 50%",
         "primary_zone": "Z5"
       },
       "executed": null,
@@ -4928,7 +4970,11 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Endurance Z2 1h30",
         "duration_min": 90,
-        "description": "Endurance Z2 — économie d'effort.\n155–196 W · Cadence 85–95 rpm · FC <152 bpm.\nPuissance constante, pas de pics.\n\n- 90m 59-73%",
+        "description": "Endurance Z2 — économie d'effort.
+155–196 W · Cadence 85–95 rpm · FC <152 bpm.
+Puissance constante, pas de pics.
+
+- 90m 59-73%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -4946,7 +4992,15 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Seuil 2x15' (250-262W)",
         "duration_min": 71,
-        "description": "Seuil Z4 — puissance au seuil.\nFC cible blocs 170–180 bpm. Effort soutenu mais tenable.\n\n- 15m ramp 50-65%\n- 15m 95-100%\n- 8m 50%\n- 15m 95-100%\n- 8m 50%\n- 10m 50%",
+        "description": "Seuil Z4 — puissance au seuil.
+FC cible blocs 170–180 bpm. Effort soutenu mais tenable.
+
+- 15m ramp 50-65%
+- 15m 95-100%
+- 8m 50%
+- 15m 95-100%
+- 8m 50%
+- 10m 50%",
         "primary_zone": "Z4"
       },
       "executed": null,
@@ -4964,11 +5018,150 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Sortie plaisir + 3x15s sprints",
         "duration_min": 73,
-        "description": "Dernière sortie Z2 avant coupure vélo — plaisir.\n3×15\" sprints pour activer les fibres rapides, récup complète.\nGarder de la fraîcheur pour le voyage.\n\n- 20m 60-73%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 40m 60-73%",
+        "description": "Dernière sortie Z2 avant coupure vélo — plaisir.
+3×15\" sprints pour activer les fibres rapides, récup complète.
+Garder de la fraîcheur pour le voyage.
+
+- 20m 60-73%
+- 15s 130-150%
+- 4m 50%
+- 15s 130-150%
+- 4m 50%
+- 15s 130-150%
+- 4m 50%
+- 40m 60-73%",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     }
-  ]
+  ],
+  "wellness": {
+    "2026-05-28": {
+      "resting_hr": 58,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 2471
+    },
+    "2026-05-29": {
+      "resting_hr": 57,
+      "sleep_secs": 28140,
+      "sleep_h": 7.8,
+      "steps": 11413
+    },
+    "2026-05-30": {
+      "resting_hr": 62,
+      "sleep_secs": 16260,
+      "sleep_h": 4.5,
+      "steps": 12124
+    },
+    "2026-05-31": {
+      "resting_hr": 63,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 8390
+    },
+    "2026-06-01": {
+      "resting_hr": 56,
+      "sleep_secs": 33420,
+      "sleep_h": 9.3,
+      "steps": 5731
+    },
+    "2026-06-02": {
+      "resting_hr": 55,
+      "sleep_secs": 26940,
+      "sleep_h": 7.5,
+      "steps": 4856
+    },
+    "2026-06-03": {
+      "resting_hr": 60,
+      "sleep_secs": 26220,
+      "sleep_h": 7.3,
+      "steps": 2280
+    },
+    "2026-06-04": {
+      "resting_hr": 59,
+      "sleep_secs": 24480,
+      "sleep_h": 6.8,
+      "steps": 18826
+    },
+    "2026-06-05": {
+      "resting_hr": 65,
+      "sleep_secs": 27240,
+      "sleep_h": 7.6,
+      "steps": 4061
+    },
+    "2026-06-06": {
+      "resting_hr": 64,
+      "sleep_secs": 22860,
+      "sleep_h": 6.3,
+      "steps": 2476
+    },
+    "2026-06-07": {
+      "resting_hr": 65,
+      "sleep_secs": 22320,
+      "sleep_h": 6.2,
+      "steps": 11471
+    },
+    "2026-06-08": {
+      "resting_hr": 63,
+      "sleep_secs": 24420,
+      "sleep_h": 6.8,
+      "steps": 6809
+    },
+    "2026-06-09": {
+      "resting_hr": 58,
+      "sleep_secs": 29280,
+      "sleep_h": 8.1,
+      "steps": 2569
+    },
+    "2026-06-10": {
+      "resting_hr": 65,
+      "sleep_secs": 28740,
+      "sleep_h": 8.0,
+      "steps": 3076
+    },
+    "2026-06-11": {
+      "resting_hr": 61,
+      "sleep_secs": 27000,
+      "sleep_h": 7.5,
+      "steps": 5575
+    },
+    "2026-06-12": {
+      "resting_hr": 58,
+      "sleep_secs": 19080,
+      "sleep_h": 5.3,
+      "steps": 5769
+    },
+    "2026-06-13": {
+      "resting_hr": 61,
+      "sleep_secs": 26880,
+      "sleep_h": 7.5,
+      "steps": 6454
+    },
+    "2026-06-14": {
+      "resting_hr": 61,
+      "sleep_secs": 25020,
+      "sleep_h": 7.0,
+      "steps": 10524
+    },
+    "2026-06-15": {
+      "resting_hr": 63,
+      "sleep_secs": 26580,
+      "sleep_h": 7.4,
+      "steps": 2564
+    },
+    "2026-06-16": {
+      "resting_hr": 59,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 4594
+    },
+    "2026-06-17": {
+      "resting_hr": 58,
+      "sleep_secs": 26640,
+      "sleep_h": 7.4,
+      "steps": 1272
+    }
+  }
 };
