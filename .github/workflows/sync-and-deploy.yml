@@ -4,6 +4,14 @@ on:
   schedule:
     - cron: '0 5,7,9,11,13,15,17,19,21,23 * * *'  # toutes les 2h de 7h à 1h (heure belge)
   workflow_dispatch:         # lancement manuel possible
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'sport_data.js'      # anti-boucle : le commit auto du bot (qui ne touche que ce fichier) ne re-declenche pas le workflow
+
+concurrency:                 # une seule execution a la fois, annule les runs en double
+  group: sync-deploy
+  cancel-in-progress: false
 
 jobs:
   sync-and-deploy:

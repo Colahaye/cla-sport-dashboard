@@ -201,7 +201,9 @@ def read_sport_data():
     m = re.search(r"window\.SPORT_DATA\s*=\s*(\{.*\})\s*;", content, re.DOTALL)
     if not m:
         raise ValueError("window.SPORT_DATA non trouve dans sport_data.js")
-    return json.loads(m.group(1)), content
+    # strict=False : tolere d'eventuels caracteres de controle bruts dans les chaines
+    # (issus d'un ancien etat du fichier). La reecriture via json.dumps renettoie tout.
+    return json.loads(m.group(1), strict=False), content
 
 
 def write_sport_data(data, original_content):
