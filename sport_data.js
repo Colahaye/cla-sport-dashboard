@@ -1,11 +1,11 @@
 // ═══════════════════════════════════════════════════════════════
 // Sport Data — CLA (Corto Lahaye) — Source de vérité unique
-// Régénéré (fix newlines) : 2026-06-17 — Schéma v1.0
+// Régénéré : 2026-06-17 (course+renfo ajoutés) — Schéma v1.0
 // ═══════════════════════════════════════════════════════════════
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-17T14:55:25.000Z",
+  "last_updated": "2026-06-17T15:13:32.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4966,6 +4966,312 @@ window.SPORT_DATA = {
         "duration_min": 73,
         "description": "Dernière sortie Z2 avant coupure vélo — plaisir.\n3×15\" sprints pour activer les fibres rapides, récup complète.\nGarder de la fraîcheur pour le voyage.\n\n- 20m 60-73%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 40m 60-73%",
         "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-28-run-recovery",
+      "date": "2026-06-28",
+      "week_id": "2026-W26",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing test 25 min",
+        "duration_min": 25,
+        "description": "Reprise course — 1er footing. 25 min très facile, terrain plat. Allure Z1, conversation totale. Si pied tendu → marche/course alternée.",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-30-run-recovery",
+      "date": "2026-06-30",
+      "week_id": "2026-W27",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing Z1 30 min",
+        "duration_min": 30,
+        "description": "Footing facile 30 min, terrain plat. Z1 (<152 bpm), conversationnel. Réveil des tissus.",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-01-strength-renfo",
+      "date": "2026-07-01",
+      "week_id": "2026-W27",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B — Jambes 30 min",
+        "duration_min": 30,
+        "description": "Chaîne postérieure + jambes. Montées de talons 3×15 (prévention fasciite), mobilité cheville/pied, gainage.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-02-run-recovery",
+      "date": "2026-07-02",
+      "week_id": "2026-W27",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing Z1 30 min + lignes",
+        "duration_min": 30,
+        "description": "30 min facile + 4×15\" lignes droites en souplesse (optionnel, seulement si pieds OK).",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-05-run-recovery",
+      "date": "2026-07-05",
+      "week_id": "2026-W27",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue 45 min",
+        "duration_min": 45,
+        "description": "45 min facile, plat/roulant. Pas de trail technique encore. Z1/Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-07-run-recovery",
+      "date": "2026-07-07",
+      "week_id": "2026-W28",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing Z2 35 min",
+        "duration_min": 35,
+        "description": "35 min, terrain légèrement vallonné. Z1/Z2, allure facile.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-08-strength-renfo",
+      "date": "2026-07-08",
+      "week_id": "2026-W28",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A — Tronc 30 min",
+        "duration_min": 30,
+        "description": "Tronc + haut du corps. Gainage, stabilité.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-09-run-endurance",
+      "date": "2026-07-09",
+      "week_id": "2026-W28",
+      "sport": "run",
+      "type": "endurance",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing 35 min + strides",
+        "duration_min": 35,
+        "description": "35 min facile + 4×20\" strides si pieds OK.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-12-run-endurance",
+      "date": "2026-07-12",
+      "week_id": "2026-W28",
+      "sport": "run",
+      "type": "endurance",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue 55 min",
+        "duration_min": 55,
+        "description": "55–60 min roulant, 150–250 m D+. Marche les raidillons. Allure facile.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-15-run-recovery",
+      "date": "2026-07-15",
+      "week_id": "2026-W29",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing Z2 40 min",
+        "duration_min": 40,
+        "description": "40 min vallonné, gestion de l'effort en côte. Z1/Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-16-strength-renfo",
+      "date": "2026-07-16",
+      "week_id": "2026-W29",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B — Jambes 30 min",
+        "duration_min": 30,
+        "description": "Chaîne postérieure, mollets, mobilité cheville/pied.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-17-run-recovery",
+      "date": "2026-07-17",
+      "week_id": "2026-W29",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing 35 min",
+        "duration_min": 35,
+        "description": "35 min facile, récup du chantier. Z1/Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-19-run-trail",
+      "date": "2026-07-19",
+      "week_id": "2026-W29",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Trail 65 min — 250-400m D+",
+        "duration_min": 65,
+        "description": "Trail 1h–1h15, 250–400 m D+. Montées en marche rapide. Allure facile, ne pas chasser le chrono.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-21-run-recovery",
+      "date": "2026-07-21",
+      "week_id": "2026-W30",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing Z2 40 min",
+        "duration_min": 40,
+        "description": "40 min vallonné + travail descente en contrôle. Z1/Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-22-strength-renfo",
+      "date": "2026-07-22",
+      "week_id": "2026-W30",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A — Tronc 30 min",
+        "duration_min": 30,
+        "description": "Tronc + gainage + stabilité.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-23-run-recovery",
+      "date": "2026-07-23",
+      "week_id": "2026-W30",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Footing 40 min",
+        "duration_min": 40,
+        "description": "40 min facile. Z1/Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-26-run-trail",
+      "date": "2026-07-26",
+      "week_id": "2026-W30",
+      "sport": "run",
+      "type": "trail",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Trail 80 min — 400-500m D+",
+        "duration_min": 80,
+        "description": "Trail final 1h15–1h30, 400–500 m D+, descente technique contrôlée. Belle sortie pour clôturer le mois.",
+        "primary_zone": null
       },
       "executed": null,
       "notes": null

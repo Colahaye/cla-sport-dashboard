@@ -69,10 +69,38 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
   border: 1px solid var(--accent-soft-strong, #F5C4B3);
 }
 
-/* Week grid */
+/* Layout : panneau récap + calendrier */
+.plan-layout { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; }
 .week-grid {
   display: grid; grid-template-columns: repeat(7, 1fr);
-  gap: 6px; padding: 12px 16px; min-height: auto;
+  gap: 6px; min-height: auto; flex: 1 1 auto; min-width: 0;
+}
+
+/* Panneau récap */
+.recap-panel { flex: 0 0 190px; display: flex; flex-direction: column; gap: 10px; }
+.recap-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 11px 12px;
+}
+.recap-card h3 {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 8px;
+}
+.recap-big { font-size: 22px; font-weight: 700; font-family: var(--font-mono); line-height: 1; }
+.recap-sub { font-size: 11px; color: var(--text-secondary); margin-top: 3px; }
+.recap-missed { color: var(--accent-dark); font-weight: 600; }
+.recap-ok { color: var(--green-dark); font-weight: 600; }
+.recap-row { display: flex; justify-content: space-between; align-items: baseline; padding: 4px 0; border-top: 1px solid var(--border); }
+.recap-row:first-of-type { border-top: none; }
+.recap-row .rk { font-size: 10px; color: var(--text-muted); }
+.recap-row .rv { font-size: 14px; font-weight: 700; font-family: var(--font-mono); color: var(--text); }
+.recap-sport-ttl { font-size: 11px; font-weight: 700; margin-bottom: 2px; }
+.recap-bike { color: var(--accent-dark); }
+.recap-run  { color: var(--green-dark); }
+@media (max-width: 820px) {
+  .plan-layout { flex-direction: column; }
+  .recap-panel { flex: 1 1 auto; width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .recap-card { flex: 1 1 45%; }
 }
 .day-col {
   display: flex; flex-direction: column; gap: 6px;
@@ -226,7 +254,10 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
   <span class="legend-item" style="margin-left:8px;font-style:italic">Clic sur une séance → détail / analyse</span>
 </div>
 
-<div class="week-grid" id="week-grid"></div>
+<div class="plan-layout">
+  <aside class="recap-panel" id="recap-panel"></aside>
+  <div class="week-grid" id="week-grid"></div>
+</div>
 
 <div id="detail-modal" class="modal-overlay" style="display:none" onclick="if(event.target===this)closeDetail()">
   <div class="modal-box">
@@ -382,6 +413,49 @@ function render() {
 }
 
 render();
+renderRecap();
+
+// ── Panneau récap (réalisé vs prévu, distances) ───────────────
+function renderRecap(){
+  const tISO = todayISO();
+  const t = new Date(); t.setHours(0,0,0,0);
+  const daysAgo = iso => (t - new Date(iso + 'T00:00:00')) / 86400000;
+
+  // Adhérence au plan : séances planifiées dont la date est passée
+  const plannedPassed = sessions.filter(s => s.status === 'planned' && s.date < tISO);
+  const isRealised = p => sessions.some(s => s.status === 'done' && s.date === p.date && s.sport === p.sport);
+  const realized = plannedPassed.filter(isRealised).length;
+  const totalPlanned = plannedPassed.length;
+  const missed = totalPlanned - realized;
+
+  // Distances réalisées
+  const km = (sport, days) => sessions
+    .filter(s => s.status === 'done' && s.sport === sport && s.executed && s.executed.distance_m
+                 && daysAgo(s.date) >= 0 && daysAgo(s.date) < days)
+    .reduce((a, s) => a + s.executed.distance_m, 0) / 1000;
+  const bike7 = km('bike', 7), bike28 = km('bike', 28);
+  const run7 = km('run', 7),  run28 = km('run', 28);
+
+  const adh = totalPlanned === 0
+    ? `<div class="recap-big">—</div><div class="recap-sub">aucune séance prévue passée</div>`
+    : `<div class="recap-big">${realized}/${totalPlanned}</div><div class="recap-sub">séances réalisées</div>`
+      + (missed > 0
+          ? `<div class="recap-sub recap-missed">⚠ ${missed} ratée${missed > 1 ? 's' : ''}</div>`
+          : `<div class="recap-sub recap-ok">✓ aucune ratée</div>`);
+
+  document.getElementById('recap-panel').innerHTML = `
+    <div class="recap-card"><h3>Suivi du plan</h3>${adh}</div>
+    <div class="recap-card">
+      <h3 class="recap-bike">🚴 Vélo — distance</h3>
+      <div class="recap-row"><span class="rk">7 derniers jours</span><span class="rv recap-bike">${bike7.toFixed(0)} km</span></div>
+      <div class="recap-row"><span class="rk">4 dernières sem.</span><span class="rv recap-bike">${bike28.toFixed(0)} km</span></div>
+    </div>
+    <div class="recap-card">
+      <h3 class="recap-run">🏃 Course — distance</h3>
+      <div class="recap-row"><span class="rk">7 derniers jours</span><span class="rv recap-run">${run7.toFixed(0)} km</span></div>
+      <div class="recap-row"><span class="rk">4 dernières sem.</span><span class="rv recap-run">${run28.toFixed(0)} km</span></div>
+    </div>`;
+}
 
 // ── Détail séance au clic ─────────────────────────────────────
 function esc(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }

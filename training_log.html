@@ -440,7 +440,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Genou (0–3)</label>
+        <label>Fasciite (0–3)</label>
         <select id="f_genou">
           <option value="">—</option>
           <option value="0">0 — Aucune gêne</option>
@@ -489,6 +489,12 @@
   <!-- FILTERS -->
   <div class="filters">
     <input type="text" id="searchInput" placeholder="🔍 Rechercher..." oninput="renderTable()" style="width:180px">
+    <select id="sportFilter" onchange="renderTable()">
+      <option value="">Tous les sports</option>
+      <option value="bike">🚴 Vélo</option>
+      <option value="run">🏃 Course à pied</option>
+      <option value="strength">💪 Renfo</option>
+    </select>
     <select id="typeFilter" onchange="renderTable()">
       <option value="">Tous les types</option>
       <option>Z2 récupération</option>
@@ -505,7 +511,7 @@
       <option>Intermédiaire</option>
     </select>
     <select id="kneeFilter" onchange="renderTable()">
-      <option value="">Genou : tous</option>
+      <option value="">Fasciite : tous</option>
       <option value="0">0 — aucune gêne</option>
       <option value="1">1 — légère</option>
       <option value="2">2 — notable</option>
@@ -530,7 +536,7 @@
           <th>RPE</th>
           <th>Jambes</th>
           <th>Mental</th>
-          <th>Genou</th>
+          <th>Fasciite</th>
           <th>Sommeil</th>
           <th>VFC</th>
           <th>BB</th>
@@ -1006,7 +1012,7 @@ function renderStats() {
     { val: avgRPE30 ? avgRPE30.toFixed(1) : '—', lbl: 'RPE moy / 30j' },
     { val: dernierVFC + (dernierVFC !== '—' ? ' ms' : ''), lbl: 'VFC dernière' },
     { val: dernierBB + (dernierBB !== '—' ? '' : ''), lbl: 'Body Battery' },
-    { val: kneeSessions, lbl: 'Genou ≥ 2 (total)' },
+    { val: kneeSessions, lbl: 'Fasciite ≥ 2 (total)' },
   ];
 
   document.getElementById('statsBar').innerHTML = stats.map(s =>
@@ -1050,14 +1056,16 @@ function renderPmcMini(series) {
 function renderTable() {
   const data = getData();
   const search = document.getElementById('searchInput').value.toLowerCase();
+  const sportF = document.getElementById('sportFilter').value;
   const typeF = document.getElementById('typeFilter').value;
   const kneeF = document.getElementById('kneeFilter').value;
 
   let filtered = data.filter(d => {
     const matchSearch = !search || JSON.stringify(d).toLowerCase().includes(search);
+    const matchSport = !sportF || (d._v1 && d._v1.sport === sportF);
     const matchType = !typeF || d.type === typeF;
     const matchKnee = kneeF === '' || String(d.genou) === kneeF;
-    return matchSearch && matchType && matchKnee;
+    return matchSearch && matchSport && matchType && matchKnee;
   });
 
   document.getElementById('countLabel').textContent = `${filtered.length} séance${filtered.length > 1 ? 's' : ''}`;
@@ -1214,6 +1222,7 @@ function deleteEntry(id) {
 // ═══════════════════════════════════════════════════════════════
 function resetFilters() {
   document.getElementById('searchInput').value = '';
+  document.getElementById('sportFilter').value = '';
   document.getElementById('typeFilter').value = '';
   document.getElementById('kneeFilter').value = '';
   renderTable();
