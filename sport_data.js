@@ -1,12 +1,11 @@
 // ═══════════════════════════════════════════════════════════════
 // Sport Data — CLA (Corto Lahaye) — Source de vérité unique
-// Généré : 2026-06-08 — Mis à jour : 2026-06-14
-// Schéma : v1.0
+// Régénéré depuis Intervals.icu : 2026-06-17 — Schéma v1.0
 // ═══════════════════════════════════════════════════════════════
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-17T13:17:44.000Z",
+  "last_updated": "2026-06-17T13:55:36.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -197,19 +196,21 @@ window.SPORT_DATA = {
     {
       "id": "2025-12-07-run-easy-i157774119",
       "date": "2025-12-07",
+      "week_id": "2025-W49",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157774119",
+      "intervals_url": "https://intervals.icu/activities/i157774119",
       "planned": null,
       "executed": {
         "duration_min": 77,
         "np_w": null,
         "avg_w": null,
-        "kj": 186,
+        "kj": null,
         "hr_avg": 146,
         "hr_max": 164,
         "tss": 64,
@@ -231,24 +232,67 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
+    },
+    {
+      "id": "2025-12-09-bike-endurance-i157774040",
+      "date": "2025-12-09",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157774040",
+      "intervals_url": "https://intervals.icu/activities/i157774040",
+      "planned": null,
+      "executed": {
+        "duration_min": 14,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 120,
+        "hr_max": 149,
+        "tss": 6,
+        "distance_m": 3825,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2025-12-09-bike-endurance-i157774047",
       "date": "2025-12-09",
+      "week_id": "2025-W50",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157774047",
+      "intervals_url": "https://intervals.icu/activities/i157774047",
       "planned": null,
       "executed": {
         "duration_min": 24,
         "np_w": null,
         "avg_w": null,
-        "kj": 57,
+        "kj": null,
         "hr_avg": 128,
         "hr_max": 166,
         "tss": 14,
@@ -270,24 +314,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2025-12-09-run-easy-i157774067",
       "date": "2025-12-09",
+      "week_id": "2025-W50",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S3.01",
       "intervals_id": "i157774067",
+      "intervals_url": "https://intervals.icu/activities/i157774067",
       "planned": null,
       "executed": {
         "duration_min": 53,
         "np_w": null,
         "avg_w": null,
-        "kj": 158,
+        "kj": null,
         "hr_avg": 162,
         "hr_max": 190,
         "tss": 67,
@@ -309,24 +355,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S3.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S3.01"
     },
     {
       "id": "2025-12-10-bike-endurance-i157774019",
       "date": "2025-12-10",
+      "week_id": "2025-W50",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157774019",
+      "intervals_url": "https://intervals.icu/activities/i157774019",
       "planned": null,
       "executed": {
         "duration_min": 30,
         "np_w": null,
         "avg_w": null,
-        "kj": 53,
+        "kj": null,
         "hr_avg": 120,
         "hr_max": 154,
         "tss": 13,
@@ -348,24 +396,149 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
+    },
+    {
+      "id": "2025-12-10-bike-endurance-i157774033",
+      "date": "2025-12-10",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157774033",
+      "intervals_url": "https://intervals.icu/activities/i157774033",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 116,
+        "hr_max": 135,
+        "tss": 4,
+        "distance_m": 4166,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-11-bike-endurance-i157773976",
+      "date": "2025-12-11",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Evening Cyclisme",
+      "intervals_id": "i157773976",
+      "intervals_url": "https://intervals.icu/activities/i157773976",
+      "planned": null,
+      "executed": {
+        "duration_min": 18,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 121,
+        "hr_max": 140,
+        "tss": 8,
+        "distance_m": 5471,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
+    },
+    {
+      "id": "2025-12-11-bike-endurance-i157773984",
+      "date": "2025-12-11",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773984",
+      "intervals_url": "https://intervals.icu/activities/i157773984",
+      "planned": null,
+      "executed": {
+        "duration_min": 11,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 120,
+        "hr_max": 151,
+        "tss": 5,
+        "distance_m": 4020,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2025-12-11-run-easy-i157774013",
       "date": "2025-12-11",
+      "week_id": "2025-W50",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S3.02",
       "intervals_id": "i157774013",
+      "intervals_url": "https://intervals.icu/activities/i157774013",
       "planned": null,
       "executed": {
         "duration_min": 70,
         "np_w": null,
         "avg_w": null,
-        "kj": 195,
+        "kj": null,
         "hr_avg": 163,
         "hr_max": 194,
         "tss": 96,
@@ -387,24 +560,108 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S3.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S3.02"
+    },
+    {
+      "id": "2025-12-12-bike-endurance-i157773952",
+      "date": "2025-12-12",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773952",
+      "intervals_url": "https://intervals.icu/activities/i157773952",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 120,
+        "hr_max": 175,
+        "tss": 6,
+        "distance_m": 3762,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Afternoon Cyclisme"
+    },
+    {
+      "id": "2025-12-12-bike-endurance-i157773957",
+      "date": "2025-12-12",
+      "week_id": "2025-W50",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773957",
+      "intervals_url": "https://intervals.icu/activities/i157773957",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 105,
+        "hr_max": 129,
+        "tss": 3,
+        "distance_m": 3972,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2025-12-14-run-easy-i157773935",
       "date": "2025-12-14",
+      "week_id": "2025-W50",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S3.03",
       "intervals_id": "i157773935",
+      "intervals_url": "https://intervals.icu/activities/i157773935",
       "planned": null,
       "executed": {
         "duration_min": 75,
         "np_w": null,
         "avg_w": null,
-        "kj": 168,
+        "kj": null,
         "hr_avg": 144,
         "hr_max": 163,
         "tss": 59,
@@ -426,24 +683,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S3.03"
+      "notes": "Importe depuis Intervals.icu -- 10k - S3.03"
     },
     {
       "id": "2025-12-14-bike-endurance-i157773945",
       "date": "2025-12-14",
+      "week_id": "2025-W50",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157773945",
+      "intervals_url": "https://intervals.icu/activities/i157773945",
       "planned": null,
       "executed": {
         "duration_min": 59,
         "np_w": null,
         "avg_w": null,
-        "kj": 117,
+        "kj": null,
         "hr_avg": 132,
         "hr_max": 157,
         "tss": 34,
@@ -465,24 +724,108 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
+    },
+    {
+      "id": "2025-12-15-bike-endurance-i157773867",
+      "date": "2025-12-15",
+      "week_id": "2025-W51",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Afternoon Cyclisme",
+      "intervals_id": "i157773867",
+      "intervals_url": "https://intervals.icu/activities/i157773867",
+      "planned": null,
+      "executed": {
+        "duration_min": 12,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 128,
+        "hr_max": 157,
+        "tss": 7,
+        "distance_m": 3905,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Afternoon Cyclisme"
+    },
+    {
+      "id": "2025-12-15-bike-endurance-i157773917",
+      "date": "2025-12-15",
+      "week_id": "2025-W51",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Morning Cyclisme",
+      "intervals_id": "i157773917",
+      "intervals_url": "https://intervals.icu/activities/i157773917",
+      "planned": null,
+      "executed": {
+        "duration_min": 10,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 114,
+        "hr_max": 132,
+        "tss": 3,
+        "distance_m": 4076,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2025-12-16-run-easy-i157773858",
       "date": "2025-12-16",
+      "week_id": "2025-W51",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S4.01",
       "intervals_id": "i157773858",
+      "intervals_url": "https://intervals.icu/activities/i157773858",
       "planned": null,
       "executed": {
         "duration_min": 46,
         "np_w": null,
         "avg_w": null,
-        "kj": 115,
+        "kj": null,
         "hr_avg": 147,
         "hr_max": 161,
         "tss": 39,
@@ -504,24 +847,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S4.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S4.01"
     },
     {
       "id": "2025-12-18-run-easy-i157773848",
       "date": "2025-12-18",
+      "week_id": "2025-W51",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S4.02",
       "intervals_id": "i157773848",
+      "intervals_url": "https://intervals.icu/activities/i157773848",
       "planned": null,
       "executed": {
         "duration_min": 68,
         "np_w": null,
         "avg_w": null,
-        "kj": 179,
+        "kj": null,
         "hr_avg": 161,
         "hr_max": 193,
         "tss": 83,
@@ -543,24 +888,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S4.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S4.02"
     },
     {
       "id": "2025-12-22-run-easy-i157773796",
       "date": "2025-12-22",
+      "week_id": "2025-W52",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S4.03",
       "intervals_id": "i157773796",
+      "intervals_url": "https://intervals.icu/activities/i157773796",
       "planned": null,
       "executed": {
         "duration_min": 63,
         "np_w": null,
         "avg_w": null,
-        "kj": 171,
+        "kj": null,
         "hr_avg": 153,
         "hr_max": 175,
         "tss": 63,
@@ -582,24 +929,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S4.03"
+      "notes": "Importe depuis Intervals.icu -- 10k - S4.03"
     },
     {
       "id": "2025-12-24-run-easy-i157773781",
       "date": "2025-12-24",
+      "week_id": "2025-W52",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S5.01",
       "intervals_id": "i157773781",
+      "intervals_url": "https://intervals.icu/activities/i157773781",
       "planned": null,
       "executed": {
         "duration_min": 62,
         "np_w": null,
         "avg_w": null,
-        "kj": 179,
+        "kj": null,
         "hr_avg": 163,
         "hr_max": 194,
         "tss": 81,
@@ -621,24 +970,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S5.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S5.01"
     },
     {
       "id": "2025-12-26-run-easy-i157773775",
       "date": "2025-12-26",
+      "week_id": "2025-W52",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S5.02",
       "intervals_id": "i157773775",
+      "intervals_url": "https://intervals.icu/activities/i157773775",
       "planned": null,
       "executed": {
         "duration_min": 72,
         "np_w": null,
         "avg_w": null,
-        "kj": 198,
+        "kj": null,
         "hr_avg": 158,
         "hr_max": 194,
         "tss": 104,
@@ -660,24 +1011,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S5.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S5.02"
     },
     {
       "id": "2025-12-28-run-easy-i157773764",
       "date": "2025-12-28",
+      "week_id": "2025-W52",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S5.03",
       "intervals_id": "i157773764",
+      "intervals_url": "https://intervals.icu/activities/i157773764",
       "planned": null,
       "executed": {
         "duration_min": 90,
         "np_w": null,
         "avg_w": null,
-        "kj": 208,
+        "kj": null,
         "hr_avg": 149,
         "hr_max": 168,
         "tss": 81,
@@ -699,24 +1052,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S5.03"
+      "notes": "Importe depuis Intervals.icu -- 10k - S5.03"
     },
     {
       "id": "2025-12-30-run-easy-i157773739",
       "date": "2025-12-30",
+      "week_id": "2026-W01",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S6.01",
       "intervals_id": "i157773739",
+      "intervals_url": "https://intervals.icu/activities/i157773739",
       "planned": null,
       "executed": {
         "duration_min": 58,
         "np_w": null,
         "avg_w": null,
-        "kj": 160,
+        "kj": null,
         "hr_avg": 162,
         "hr_max": 192,
         "tss": 73,
@@ -738,24 +1093,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S6.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S6.01"
     },
     {
       "id": "2026-01-02-run-easy-i157773718",
       "date": "2026-01-02",
+      "week_id": "2026-W01",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S6.02",
       "intervals_id": "i157773718",
+      "intervals_url": "https://intervals.icu/activities/i157773718",
       "planned": null,
       "executed": {
         "duration_min": 77,
         "np_w": null,
         "avg_w": null,
-        "kj": 212,
+        "kj": null,
         "hr_avg": 163,
         "hr_max": 194,
         "tss": 104,
@@ -777,24 +1134,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S6.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S6.02"
     },
     {
       "id": "2026-01-05-run-easy-i157773702",
       "date": "2026-01-05",
+      "week_id": "2026-W02",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157773702",
+      "intervals_url": "https://intervals.icu/activities/i157773702",
       "planned": null,
       "executed": {
         "duration_min": 69,
         "np_w": null,
         "avg_w": null,
-        "kj": 171,
+        "kj": null,
         "hr_avg": 149,
         "hr_max": 164,
         "tss": 61,
@@ -816,24 +1175,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-01-07-run-easy-i157773683",
       "date": "2026-01-07",
+      "week_id": "2026-W02",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S7.01",
       "intervals_id": "i157773683",
+      "intervals_url": "https://intervals.icu/activities/i157773683",
       "planned": null,
       "executed": {
         "duration_min": 58,
         "np_w": null,
         "avg_w": null,
-        "kj": 167,
+        "kj": null,
         "hr_avg": 163,
         "hr_max": 193,
         "tss": 73,
@@ -855,24 +1216,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S7.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S7.01"
     },
     {
       "id": "2026-01-11-run-easy-i157773563",
       "date": "2026-01-11",
+      "week_id": "2026-W02",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S7.02",
       "intervals_id": "i157773563",
+      "intervals_url": "https://intervals.icu/activities/i157773563",
       "planned": null,
       "executed": {
         "duration_min": 63,
         "np_w": null,
         "avg_w": null,
-        "kj": 179,
+        "kj": null,
         "hr_avg": 166,
         "hr_max": 194,
         "tss": 88,
@@ -894,24 +1257,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S7.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S7.02"
     },
     {
       "id": "2026-01-13-run-easy-i157773519",
       "date": "2026-01-13",
+      "week_id": "2026-W03",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157773519",
+      "intervals_url": "https://intervals.icu/activities/i157773519",
       "planned": null,
       "executed": {
         "duration_min": 61,
         "np_w": null,
         "avg_w": null,
-        "kj": 149,
+        "kj": null,
         "hr_avg": 148,
         "hr_max": 164,
         "tss": 53,
@@ -933,24 +1298,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-01-15-run-easy-i157773476",
       "date": "2026-01-15",
+      "week_id": "2026-W03",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S8.01",
       "intervals_id": "i157773476",
+      "intervals_url": "https://intervals.icu/activities/i157773476",
       "planned": null,
       "executed": {
         "duration_min": 44,
         "np_w": null,
         "avg_w": null,
-        "kj": 121,
+        "kj": null,
         "hr_avg": 156,
         "hr_max": 186,
         "tss": 48,
@@ -972,24 +1339,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S8.01"
+      "notes": "Importe depuis Intervals.icu -- 10k - S8.01"
     },
     {
       "id": "2026-01-16-bike-endurance-i157773453",
       "date": "2026-01-16",
+      "week_id": "2026-W03",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Afternoon Cyclisme",
       "intervals_id": "i157773453",
+      "intervals_url": "https://intervals.icu/activities/i157773453",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 45,
+        "kj": null,
         "hr_avg": 122,
         "hr_max": 141,
         "tss": 11,
@@ -1011,24 +1380,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Afternoon Cyclisme"
     },
     {
       "id": "2026-01-18-run-easy-i157773217",
       "date": "2026-01-18",
+      "week_id": "2026-W03",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Course à pied",
       "intervals_id": "i157773217",
+      "intervals_url": "https://intervals.icu/activities/i157773217",
       "planned": null,
       "executed": {
         "duration_min": 53,
         "np_w": null,
         "avg_w": null,
-        "kj": 150,
+        "kj": null,
         "hr_avg": 169,
         "hr_max": 193,
         "tss": 82,
@@ -1050,24 +1421,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Lunch Course à pied"
     },
     {
       "id": "2026-01-18-run-easy-i157773225",
       "date": "2026-01-18",
+      "week_id": "2026-W03",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Course à pied",
       "intervals_id": "i157773225",
+      "intervals_url": "https://intervals.icu/activities/i157773225",
       "planned": null,
       "executed": {
         "duration_min": 26,
         "np_w": null,
         "avg_w": null,
-        "kj": 76,
+        "kj": null,
         "hr_avg": 153,
         "hr_max": 176,
         "tss": 27,
@@ -1089,24 +1462,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Lunch Course à pied"
     },
     {
       "id": "2026-01-19-bike-endurance-i157773206",
       "date": "2026-01-19",
+      "week_id": "2026-W04",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157773206",
+      "intervals_url": "https://intervals.icu/activities/i157773206",
       "planned": null,
       "executed": {
         "duration_min": 27,
         "np_w": null,
         "avg_w": null,
-        "kj": 48,
+        "kj": null,
         "hr_avg": 118,
         "hr_max": 135,
         "tss": 10,
@@ -1128,24 +1503,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-01-21-bike-endurance-i157773153",
       "date": "2026-01-21",
+      "week_id": "2026-W04",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157773153",
+      "intervals_url": "https://intervals.icu/activities/i157773153",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 37,
+        "kj": null,
         "hr_avg": 110,
         "hr_max": 144,
         "tss": 7,
@@ -1167,24 +1544,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-01-22-run-easy-i157773146",
       "date": "2026-01-22",
+      "week_id": "2026-W04",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157773146",
+      "intervals_url": "https://intervals.icu/activities/i157773146",
       "planned": null,
       "executed": {
         "duration_min": 57,
         "np_w": null,
         "avg_w": null,
-        "kj": 137,
+        "kj": null,
         "hr_avg": 144,
         "hr_max": 162,
         "tss": 45,
@@ -1206,24 +1585,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-01-23-run-easy-i157773131",
       "date": "2026-01-23",
+      "week_id": "2026-W04",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157773131",
+      "intervals_url": "https://intervals.icu/activities/i157773131",
       "planned": null,
       "executed": {
         "duration_min": 50,
         "np_w": null,
         "avg_w": null,
-        "kj": 122,
+        "kj": null,
         "hr_avg": 144,
         "hr_max": 156,
         "tss": 39,
@@ -1245,11 +1626,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-01-25-strength-autre-i157773107",
       "date": "2026-01-25",
+      "week_id": "2026-W04",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1257,12 +1639,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157773107",
+      "intervals_url": "https://intervals.icu/activities/i157773107",
       "planned": null,
       "executed": {
         "duration_min": 94,
         "np_w": null,
         "avg_w": null,
-        "kj": 89,
+        "kj": null,
         "hr_avg": 95,
         "hr_max": 127,
         "tss": 17,
@@ -1284,11 +1667,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-01-26-strength-autre-i157772995",
       "date": "2026-01-26",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1296,12 +1680,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772995",
+      "intervals_url": "https://intervals.icu/activities/i157772995",
       "planned": null,
       "executed": {
         "duration_min": 98,
         "np_w": null,
         "avg_w": null,
-        "kj": 103,
+        "kj": null,
         "hr_avg": 99,
         "hr_max": 136,
         "tss": 21,
@@ -1323,11 +1708,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-01-27-strength-autre-i157772982",
       "date": "2026-01-27",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1335,12 +1721,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772982",
+      "intervals_url": "https://intervals.icu/activities/i157772982",
       "planned": null,
       "executed": {
         "duration_min": 31,
         "np_w": null,
         "avg_w": null,
-        "kj": 34,
+        "kj": null,
         "hr_avg": 101,
         "hr_max": 119,
         "tss": 7,
@@ -1362,11 +1749,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-01-28-strength-autre-i157772967",
       "date": "2026-01-28",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1374,12 +1762,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Afternoon Snowboard",
       "intervals_id": "i157772967",
+      "intervals_url": "https://intervals.icu/activities/i157772967",
       "planned": null,
       "executed": {
         "duration_min": 12,
         "np_w": null,
         "avg_w": null,
-        "kj": 14,
+        "kj": null,
         "hr_avg": 102,
         "hr_max": 116,
         "tss": 3,
@@ -1401,11 +1790,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Afternoon Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Afternoon Snowboard"
     },
     {
       "id": "2026-01-28-strength-autre-i157772975",
       "date": "2026-01-28",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1413,12 +1803,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772975",
+      "intervals_url": "https://intervals.icu/activities/i157772975",
       "planned": null,
       "executed": {
         "duration_min": 92,
         "np_w": null,
         "avg_w": null,
-        "kj": 90,
+        "kj": null,
         "hr_avg": 100,
         "hr_max": 126,
         "tss": 20,
@@ -1440,11 +1831,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-01-29-strength-autre-i157772966",
       "date": "2026-01-29",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1452,12 +1844,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772966",
+      "intervals_url": "https://intervals.icu/activities/i157772966",
       "planned": null,
       "executed": {
         "duration_min": 78,
         "np_w": null,
         "avg_w": null,
-        "kj": 72,
+        "kj": null,
         "hr_avg": 95,
         "hr_max": 122,
         "tss": 14,
@@ -1479,11 +1872,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-01-30-strength-autre-i157772941",
       "date": "2026-01-30",
+      "week_id": "2026-W05",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1491,12 +1885,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772941",
+      "intervals_url": "https://intervals.icu/activities/i157772941",
       "planned": null,
       "executed": {
         "duration_min": 110,
         "np_w": null,
         "avg_w": null,
-        "kj": 137,
+        "kj": null,
         "hr_avg": 107,
         "hr_max": 155,
         "tss": 31,
@@ -1518,24 +1913,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-02-01-run-easy-i157772925",
       "date": "2026-02-01",
+      "week_id": "2026-W05",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772925",
+      "intervals_url": "https://intervals.icu/activities/i157772925",
       "planned": null,
       "executed": {
         "duration_min": 89,
         "np_w": null,
         "avg_w": null,
-        "kj": 282,
+        "kj": null,
         "hr_avg": 168,
         "hr_max": 188,
         "tss": 125,
@@ -1557,24 +1954,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-02-03-run-easy-i157772914",
       "date": "2026-02-03",
+      "week_id": "2026-W06",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772914",
+      "intervals_url": "https://intervals.icu/activities/i157772914",
       "planned": null,
       "executed": {
         "duration_min": 61,
         "np_w": null,
         "avg_w": null,
-        "kj": 150,
+        "kj": null,
         "hr_avg": 152,
         "hr_max": 168,
         "tss": 58,
@@ -1596,24 +1995,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-02-06-run-trail-i157772888",
       "date": "2026-02-06",
+      "week_id": "2026-W06",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Trail",
       "intervals_id": "i157772888",
+      "intervals_url": "https://intervals.icu/activities/i157772888",
       "planned": null,
       "executed": {
         "duration_min": 101,
         "np_w": null,
         "avg_w": null,
-        "kj": 118,
+        "kj": null,
         "hr_avg": 100,
         "hr_max": 135,
         "tss": 22,
@@ -1635,24 +2036,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Trail"
+      "notes": "Importe depuis Intervals.icu -- Lunch Trail"
     },
     {
       "id": "2026-02-07-run-trail-i157772800",
       "date": "2026-02-07",
+      "week_id": "2026-W06",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Trail",
       "intervals_id": "i157772800",
+      "intervals_url": "https://intervals.icu/activities/i157772800",
       "planned": null,
       "executed": {
         "duration_min": 95,
         "np_w": null,
         "avg_w": null,
-        "kj": 250,
+        "kj": null,
         "hr_avg": 153,
         "hr_max": 193,
         "tss": 105,
@@ -1674,24 +2077,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Trail"
+      "notes": "Importe depuis Intervals.icu -- Morning Trail"
     },
     {
       "id": "2026-02-08-run-trail-i157772782",
       "date": "2026-02-08",
+      "week_id": "2026-W06",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Trail",
       "intervals_id": "i157772782",
+      "intervals_url": "https://intervals.icu/activities/i157772782",
       "planned": null,
       "executed": {
         "duration_min": 88,
         "np_w": null,
         "avg_w": null,
-        "kj": 270,
+        "kj": null,
         "hr_avg": 165,
         "hr_max": 194,
         "tss": 125,
@@ -1713,24 +2118,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Trail"
+      "notes": "Importe depuis Intervals.icu -- Morning Trail"
     },
     {
       "id": "2026-02-09-run-trail-i157772773",
       "date": "2026-02-09",
+      "week_id": "2026-W07",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Trail",
       "intervals_id": "i157772773",
+      "intervals_url": "https://intervals.icu/activities/i157772773",
       "planned": null,
       "executed": {
         "duration_min": 203,
         "np_w": null,
         "avg_w": null,
-        "kj": 272,
+        "kj": null,
         "hr_avg": 113,
         "hr_max": 154,
         "tss": 70,
@@ -1752,24 +2159,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Trail"
+      "notes": "Importe depuis Intervals.icu -- Lunch Trail"
     },
     {
       "id": "2026-02-10-run-trail-i157772757",
       "date": "2026-02-10",
+      "week_id": "2026-W07",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Trail",
       "intervals_id": "i157772757",
+      "intervals_url": "https://intervals.icu/activities/i157772757",
       "planned": null,
       "executed": {
         "duration_min": 98,
         "np_w": null,
         "avg_w": null,
-        "kj": 273,
+        "kj": null,
         "hr_avg": 162,
         "hr_max": 185,
         "tss": 126,
@@ -1791,11 +2200,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Trail"
+      "notes": "Importe depuis Intervals.icu -- Morning Trail"
     },
     {
       "id": "2026-02-13-strength-autre-i157772732",
       "date": "2026-02-13",
+      "week_id": "2026-W07",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1803,12 +2213,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Snowboard",
       "intervals_id": "i157772732",
+      "intervals_url": "https://intervals.icu/activities/i157772732",
       "planned": null,
       "executed": {
         "duration_min": 97,
         "np_w": null,
         "avg_w": null,
-        "kj": 89,
+        "kj": null,
         "hr_avg": 94,
         "hr_max": 130,
         "tss": 16,
@@ -1830,11 +2241,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Lunch Snowboard"
     },
     {
       "id": "2026-02-14-strength-autre-i157772700",
       "date": "2026-02-14",
+      "week_id": "2026-W07",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1842,12 +2254,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772700",
+      "intervals_url": "https://intervals.icu/activities/i157772700",
       "planned": null,
       "executed": {
         "duration_min": 121,
         "np_w": null,
         "avg_w": null,
-        "kj": 136,
+        "kj": null,
         "hr_avg": 103,
         "hr_max": 138,
         "tss": 29,
@@ -1869,11 +2282,12 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-02-15-strength-autre-i157772689",
       "date": "2026-02-15",
+      "week_id": "2026-W07",
       "sport": "strength",
       "type": "autre",
       "type_log": "Renforcement",
@@ -1881,12 +2295,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Morning Snowboard",
       "intervals_id": "i157772689",
+      "intervals_url": "https://intervals.icu/activities/i157772689",
       "planned": null,
       "executed": {
         "duration_min": 111,
         "np_w": null,
         "avg_w": null,
-        "kj": 133,
+        "kj": null,
         "hr_avg": 106,
         "hr_max": 166,
         "tss": 31,
@@ -1908,24 +2323,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Snowboard"
+      "notes": "Importe depuis Intervals.icu -- Morning Snowboard"
     },
     {
       "id": "2026-02-20-run-easy-i157772684",
       "date": "2026-02-20",
+      "week_id": "2026-W08",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772684",
+      "intervals_url": "https://intervals.icu/activities/i157772684",
       "planned": null,
       "executed": {
         "duration_min": 60,
         "np_w": null,
         "avg_w": null,
-        "kj": 167,
+        "kj": null,
         "hr_avg": 158,
         "hr_max": 181,
         "tss": 66,
@@ -1947,24 +2364,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-02-21-run-trail-i157772629",
       "date": "2026-02-21",
+      "week_id": "2026-W08",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Trail",
       "intervals_id": "i157772629",
+      "intervals_url": "https://intervals.icu/activities/i157772629",
       "planned": null,
       "executed": {
         "duration_min": 410,
         "np_w": null,
         "avg_w": null,
-        "kj": 891,
+        "kj": null,
         "hr_avg": 170,
         "hr_max": 194,
         "tss": 611,
@@ -1986,24 +2405,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Trail"
+      "notes": "Importe depuis Intervals.icu -- Morning Trail"
     },
     {
       "id": "2026-02-28-bike-endurance-i157772539",
       "date": "2026-02-28",
+      "week_id": "2026-W09",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157772539",
+      "intervals_url": "https://intervals.icu/activities/i157772539",
       "planned": null,
       "executed": {
         "duration_min": 231,
         "np_w": null,
         "avg_w": null,
-        "kj": 567,
+        "kj": null,
         "hr_avg": 152,
         "hr_max": 186,
         "tss": 248,
@@ -2025,24 +2446,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-01-bike-endurance-i157772526",
       "date": "2026-03-01",
+      "week_id": "2026-W09",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Cyclisme",
       "intervals_id": "i157772526",
+      "intervals_url": "https://intervals.icu/activities/i157772526",
       "planned": null,
       "executed": {
         "duration_min": 74,
         "np_w": null,
         "avg_w": null,
-        "kj": 112,
+        "kj": null,
         "hr_avg": 113,
         "hr_max": 148,
         "tss": 26,
@@ -2064,24 +2487,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Lunch Cyclisme"
     },
     {
       "id": "2026-03-02-bike-endurance-i157772520",
       "date": "2026-03-02",
+      "week_id": "2026-W10",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157772520",
+      "intervals_url": "https://intervals.icu/activities/i157772520",
       "planned": null,
       "executed": {
         "duration_min": 25,
         "np_w": null,
         "avg_w": null,
-        "kj": 46,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 155,
         "tss": 10,
@@ -2103,24 +2528,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-03-run-easy-i157772502",
       "date": "2026-03-03",
+      "week_id": "2026-W10",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772502",
+      "intervals_url": "https://intervals.icu/activities/i157772502",
       "planned": null,
       "executed": {
         "duration_min": 56,
         "np_w": null,
         "avg_w": null,
-        "kj": 141,
+        "kj": null,
         "hr_avg": 150,
         "hr_max": 169,
         "tss": 52,
@@ -2142,24 +2569,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-03-05-run-easy-i157772145",
       "date": "2026-03-05",
+      "week_id": "2026-W10",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772145",
+      "intervals_url": "https://intervals.icu/activities/i157772145",
       "planned": null,
       "executed": {
         "duration_min": 58,
         "np_w": null,
         "avg_w": null,
-        "kj": 151,
+        "kj": null,
         "hr_avg": 153,
         "hr_max": 167,
         "tss": 58,
@@ -2181,24 +2610,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-03-07-run-easy-i157772086",
       "date": "2026-03-07",
+      "week_id": "2026-W10",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Afternoon Course à pied",
       "intervals_id": "i157772086",
+      "intervals_url": "https://intervals.icu/activities/i157772086",
       "planned": null,
       "executed": {
         "duration_min": 79,
         "np_w": null,
         "avg_w": null,
-        "kj": 192,
+        "kj": null,
         "hr_avg": 151,
         "hr_max": 171,
         "tss": 76,
@@ -2220,24 +2651,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Afternoon Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Afternoon Course à pied"
     },
     {
       "id": "2026-03-08-bike-endurance-i157772078",
       "date": "2026-03-08",
+      "week_id": "2026-W10",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157772078",
+      "intervals_url": "https://intervals.icu/activities/i157772078",
       "planned": null,
       "executed": {
         "duration_min": 148,
         "np_w": null,
         "avg_w": null,
-        "kj": 354,
+        "kj": null,
         "hr_avg": 154,
         "hr_max": 182,
         "tss": 163,
@@ -2259,24 +2692,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-09-bike-endurance-i157772039",
       "date": "2026-03-09",
+      "week_id": "2026-W11",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157772039",
+      "intervals_url": "https://intervals.icu/activities/i157772039",
       "planned": null,
       "executed": {
         "duration_min": 22,
         "np_w": null,
         "avg_w": null,
-        "kj": 37,
+        "kj": null,
         "hr_avg": 121,
         "hr_max": 154,
         "tss": 10,
@@ -2298,24 +2733,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-10-bike-endurance-i157772009",
       "date": "2026-03-10",
+      "week_id": "2026-W11",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Cyclisme",
       "intervals_id": "i157772009",
+      "intervals_url": "https://intervals.icu/activities/i157772009",
       "planned": null,
       "executed": {
         "duration_min": 33,
         "np_w": null,
         "avg_w": null,
-        "kj": 56,
+        "kj": null,
         "hr_avg": 121,
         "hr_max": 155,
         "tss": 15,
@@ -2337,24 +2774,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Lunch Cyclisme"
     },
     {
       "id": "2026-03-10-run-easy-i157772015",
       "date": "2026-03-10",
+      "week_id": "2026-W11",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157772015",
+      "intervals_url": "https://intervals.icu/activities/i157772015",
       "planned": null,
       "executed": {
         "duration_min": 54,
         "np_w": null,
         "avg_w": null,
-        "kj": 134,
+        "kj": null,
         "hr_avg": 149,
         "hr_max": 168,
         "tss": 49,
@@ -2376,24 +2815,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-03-11-bike-endurance-i157771981",
       "date": "2026-03-11",
+      "week_id": "2026-W11",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157771981",
+      "intervals_url": "https://intervals.icu/activities/i157771981",
       "planned": null,
       "executed": {
         "duration_min": 70,
         "np_w": null,
         "avg_w": null,
-        "kj": 119,
+        "kj": null,
         "hr_avg": 126,
         "hr_max": 163,
         "tss": 37,
@@ -2415,24 +2856,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-03-12-run-easy-i157771955",
       "date": "2026-03-12",
+      "week_id": "2026-W11",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "10k - S1.02",
       "intervals_id": "i157771955",
+      "intervals_url": "https://intervals.icu/activities/i157771955",
       "planned": null,
       "executed": {
         "duration_min": 65,
         "np_w": null,
         "avg_w": null,
-        "kj": 154,
+        "kj": null,
         "hr_avg": 156,
         "hr_max": 193,
         "tss": 69,
@@ -2454,24 +2897,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 10k - S1.02"
+      "notes": "Importe depuis Intervals.icu -- 10k - S1.02"
     },
     {
       "id": "2026-03-16-bike-endurance-i157771907",
       "date": "2026-03-16",
+      "week_id": "2026-W12",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771907",
+      "intervals_url": "https://intervals.icu/activities/i157771907",
       "planned": null,
       "executed": {
         "duration_min": 65,
         "np_w": null,
         "avg_w": null,
-        "kj": 131,
+        "kj": null,
         "hr_avg": 137,
         "hr_max": 182,
         "tss": 49,
@@ -2493,24 +2938,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-17-run-easy-i157771847",
       "date": "2026-03-17",
+      "week_id": "2026-W12",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "21 - S1 - Vma",
       "intervals_id": "i157771847",
+      "intervals_url": "https://intervals.icu/activities/i157771847",
       "planned": null,
       "executed": {
         "duration_min": 65,
         "np_w": null,
         "avg_w": null,
-        "kj": 159,
+        "kj": null,
         "hr_avg": 151,
         "hr_max": 172,
         "tss": 61,
@@ -2532,24 +2979,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 21 - S1 - Vma"
+      "notes": "Importe depuis Intervals.icu -- 21 - S1 - Vma"
     },
     {
       "id": "2026-03-20-bike-endurance-i157771799",
       "date": "2026-03-20",
+      "week_id": "2026-W12",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Cyclisme",
       "intervals_id": "i157771799",
+      "intervals_url": "https://intervals.icu/activities/i157771799",
       "planned": null,
       "executed": {
         "duration_min": 37,
         "np_w": null,
         "avg_w": null,
-        "kj": 65,
+        "kj": null,
         "hr_avg": 123,
         "hr_max": 153,
         "tss": 18,
@@ -2571,24 +3020,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Lunch Cyclisme"
     },
     {
       "id": "2026-03-22-bike-endurance-i157771707",
       "date": "2026-03-22",
+      "week_id": "2026-W12",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Afternoon Cyclisme",
       "intervals_id": "i157771707",
+      "intervals_url": "https://intervals.icu/activities/i157771707",
       "planned": null,
       "executed": {
         "duration_min": 99,
         "np_w": null,
         "avg_w": null,
-        "kj": 150,
+        "kj": null,
         "hr_avg": 123,
         "hr_max": 187,
         "tss": 47,
@@ -2610,24 +3061,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Afternoon Cyclisme"
     },
     {
       "id": "2026-03-22-bike-endurance-i157771716",
       "date": "2026-03-22",
+      "week_id": "2026-W12",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Cyclisme",
       "intervals_id": "i157771716",
+      "intervals_url": "https://intervals.icu/activities/i157771716",
       "planned": null,
       "executed": {
         "duration_min": 65,
         "np_w": null,
         "avg_w": null,
-        "kj": 95,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 187,
         "tss": 27,
@@ -2649,24 +3102,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Lunch Cyclisme"
     },
     {
       "id": "2026-03-24-run-easy-i157771654",
       "date": "2026-03-24",
+      "week_id": "2026-W13",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "21 - S2 - Vma1",
       "intervals_id": "i157771654",
+      "intervals_url": "https://intervals.icu/activities/i157771654",
       "planned": null,
       "executed": {
         "duration_min": 53,
         "np_w": null,
         "avg_w": null,
-        "kj": 116,
+        "kj": null,
         "hr_avg": 143,
         "hr_max": 161,
         "tss": 41,
@@ -2688,24 +3143,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — 21 - S2 - Vma1"
+      "notes": "Importe depuis Intervals.icu -- 21 - S2 - Vma1"
     },
     {
       "id": "2026-03-25-bike-endurance-i157771621",
       "date": "2026-03-25",
+      "week_id": "2026-W13",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157771621",
+      "intervals_url": "https://intervals.icu/activities/i157771621",
       "planned": null,
       "executed": {
         "duration_min": 28,
         "np_w": null,
         "avg_w": null,
-        "kj": 52,
+        "kj": null,
         "hr_avg": 122,
         "hr_max": 148,
         "tss": 13,
@@ -2727,24 +3184,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-03-26-bike-endurance-i157771616",
       "date": "2026-03-26",
+      "week_id": "2026-W13",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771616",
+      "intervals_url": "https://intervals.icu/activities/i157771616",
       "planned": null,
       "executed": {
         "duration_min": 26,
         "np_w": null,
         "avg_w": null,
-        "kj": 45,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 144,
         "tss": 11,
@@ -2766,24 +3225,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-27-bike-endurance-i157771585",
       "date": "2026-03-27",
+      "week_id": "2026-W13",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771585",
+      "intervals_url": "https://intervals.icu/activities/i157771585",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 37,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 149,
         "tss": 9,
@@ -2805,24 +3266,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-27-bike-endurance-i157771613",
       "date": "2026-03-27",
+      "week_id": "2026-W13",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771613",
+      "intervals_url": "https://intervals.icu/activities/i157771613",
       "planned": null,
       "executed": {
         "duration_min": 52,
         "np_w": null,
         "avg_w": null,
-        "kj": 100,
+        "kj": null,
         "hr_avg": 131,
         "hr_max": 179,
         "tss": 30,
@@ -2844,24 +3307,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-29-bike-endurance-i157771580",
       "date": "2026-03-29",
+      "week_id": "2026-W13",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771580",
+      "intervals_url": "https://intervals.icu/activities/i157771580",
       "planned": null,
       "executed": {
         "duration_min": 161,
         "np_w": null,
         "avg_w": null,
-        "kj": 212,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 175,
         "tss": 63,
@@ -2883,24 +3348,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-03-30-bike-endurance-i157771222",
       "date": "2026-03-30",
+      "week_id": "2026-W14",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771222",
+      "intervals_url": "https://intervals.icu/activities/i157771222",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 39,
+        "kj": null,
         "hr_avg": 117,
         "hr_max": 163,
         "tss": 9,
@@ -2922,24 +3389,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-01-bike-endurance-i157771218",
       "date": "2026-04-01",
+      "week_id": "2026-W14",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771218",
+      "intervals_url": "https://intervals.icu/activities/i157771218",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 33,
+        "kj": null,
         "hr_avg": 108,
         "hr_max": 143,
         "tss": 7,
@@ -2961,24 +3430,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-02-bike-endurance-i157771213",
       "date": "2026-04-02",
+      "week_id": "2026-W14",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771213",
+      "intervals_url": "https://intervals.icu/activities/i157771213",
       "planned": null,
       "executed": {
         "duration_min": 22,
         "np_w": null,
         "avg_w": null,
-        "kj": 21,
+        "kj": null,
         "hr_avg": 93,
         "hr_max": 117,
         "tss": 4,
@@ -3000,24 +3471,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-04-bike-endurance-i157771186",
       "date": "2026-04-04",
+      "week_id": "2026-W14",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157771186",
+      "intervals_url": "https://intervals.icu/activities/i157771186",
       "planned": null,
       "executed": {
         "duration_min": 68,
         "np_w": null,
         "avg_w": null,
-        "kj": 138,
+        "kj": null,
         "hr_avg": 137,
         "hr_max": 171,
         "tss": 45,
@@ -3039,24 +3512,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-04-06-run-easy-i157771173",
       "date": "2026-04-06",
+      "week_id": "2026-W15",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157771173",
+      "intervals_url": "https://intervals.icu/activities/i157771173",
       "planned": null,
       "executed": {
         "duration_min": 26,
         "np_w": null,
         "avg_w": null,
-        "kj": 69,
+        "kj": null,
         "hr_avg": 144,
         "hr_max": 171,
         "tss": 22,
@@ -3078,24 +3553,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-04-08-bike-endurance-i157771115",
       "date": "2026-04-08",
+      "week_id": "2026-W15",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771115",
+      "intervals_url": "https://intervals.icu/activities/i157771115",
       "planned": null,
       "executed": {
         "duration_min": 22,
         "np_w": null,
         "avg_w": null,
-        "kj": 34,
+        "kj": null,
         "hr_avg": 112,
         "hr_max": 137,
         "tss": 7,
@@ -3117,24 +3594,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-09-run-easy-i157771112",
       "date": "2026-04-09",
+      "week_id": "2026-W15",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157771112",
+      "intervals_url": "https://intervals.icu/activities/i157771112",
       "planned": null,
       "executed": {
         "duration_min": 42,
         "np_w": null,
         "avg_w": null,
-        "kj": 124,
+        "kj": null,
         "hr_avg": 157,
         "hr_max": 178,
         "tss": 46,
@@ -3156,24 +3635,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-04-10-bike-endurance-i157771066",
       "date": "2026-04-10",
+      "week_id": "2026-W15",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Evening Cyclisme",
       "intervals_id": "i157771066",
+      "intervals_url": "https://intervals.icu/activities/i157771066",
       "planned": null,
       "executed": {
         "duration_min": 28,
         "np_w": null,
         "avg_w": null,
-        "kj": 49,
+        "kj": null,
         "hr_avg": 115,
         "hr_max": 153,
         "tss": 12,
@@ -3195,24 +3676,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Evening Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Evening Cyclisme"
     },
     {
       "id": "2026-04-11-bike-endurance-i157771055",
       "date": "2026-04-11",
+      "week_id": "2026-W15",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771055",
+      "intervals_url": "https://intervals.icu/activities/i157771055",
       "planned": null,
       "executed": {
         "duration_min": 145,
         "np_w": null,
         "avg_w": null,
-        "kj": 329,
+        "kj": null,
         "hr_avg": 152,
         "hr_max": 194,
         "tss": 153,
@@ -3234,24 +3717,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-12-bike-endurance-i157771047",
       "date": "2026-04-12",
+      "week_id": "2026-W15",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Afternoon Cyclisme",
       "intervals_id": "i157771047",
+      "intervals_url": "https://intervals.icu/activities/i157771047",
       "planned": null,
       "executed": {
         "duration_min": 49,
         "np_w": null,
         "avg_w": null,
-        "kj": 92,
+        "kj": null,
         "hr_avg": 125,
         "hr_max": 169,
         "tss": 25,
@@ -3273,24 +3758,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Afternoon Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Afternoon Cyclisme"
     },
     {
       "id": "2026-04-14-bike-endurance-i157771042",
       "date": "2026-04-14",
+      "week_id": "2026-W16",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771042",
+      "intervals_url": "https://intervals.icu/activities/i157771042",
       "planned": null,
       "executed": {
         "duration_min": 22,
         "np_w": null,
         "avg_w": null,
-        "kj": 26,
+        "kj": null,
         "hr_avg": 102,
         "hr_max": 142,
         "tss": 5,
@@ -3312,24 +3799,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-16-bike-endurance-i157771037",
       "date": "2026-04-16",
+      "week_id": "2026-W16",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157771037",
+      "intervals_url": "https://intervals.icu/activities/i157771037",
       "planned": null,
       "executed": {
         "duration_min": 28,
         "np_w": null,
         "avg_w": null,
-        "kj": 40,
+        "kj": null,
         "hr_avg": 108,
         "hr_max": 156,
         "tss": 9,
@@ -3351,63 +3840,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
-    },
-    {
-      "id": "2026-04-17-bike-endurance-i157771024",
-      "date": "2026-04-17",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
-      "status": "done",
-      "source": "intervals_icu",
-      "strava_activity_name": "Morning Cyclisme",
-      "intervals_id": "i157771024",
-      "planned": null,
-      "executed": {
-        "duration_min": 20,
-        "np_w": null,
-        "avg_w": null,
-        "kj": 36,
-        "hr_avg": 120,
-        "hr_max": 151,
-        "tss": 9,
-        "distance_m": 7115,
-        "cadence": null,
-        "subjective": {
-          "rpe": null,
-          "legs": null,
-          "mental": null,
-          "knee_0_3": null,
-          "ankle_0_3": null
-        },
-        "recovery": {
-          "sleep_raw": null,
-          "hrv_ms": null,
-          "body_battery": null
-        },
-        "nutrition": {
-          "carbs_g": null
-        }
-      },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-18-bike-endurance-i157771019",
       "date": "2026-04-18",
+      "week_id": "2026-W16",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Lunch Cyclisme",
       "intervals_id": "i157771019",
+      "intervals_url": "https://intervals.icu/activities/i157771019",
       "planned": null,
       "executed": {
         "duration_min": 160,
         "np_w": null,
         "avg_w": null,
-        "kj": 459,
+        "kj": null,
         "hr_avg": 171,
         "hr_max": 193,
         "tss": 256,
@@ -3429,24 +3881,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Lunch Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Lunch Cyclisme"
     },
     {
       "id": "2026-04-21-bike-endurance-i157770814",
       "date": "2026-04-21",
+      "week_id": "2026-W17",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770814",
+      "intervals_url": "https://intervals.icu/activities/i157770814",
       "planned": null,
       "executed": {
         "duration_min": 64,
         "np_w": null,
         "avg_w": null,
-        "kj": 182,
+        "kj": null,
         "hr_avg": 157,
         "hr_max": 180,
         "tss": 74,
@@ -3468,24 +3922,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-22-bike-endurance-i157770782",
       "date": "2026-04-22",
+      "week_id": "2026-W17",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770782",
+      "intervals_url": "https://intervals.icu/activities/i157770782",
       "planned": null,
       "executed": {
         "duration_min": 65,
         "np_w": null,
         "avg_w": null,
-        "kj": 115,
+        "kj": null,
         "hr_avg": 121,
         "hr_max": 162,
         "tss": 29,
@@ -3507,24 +3963,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-24-bike-endurance-i157770768",
       "date": "2026-04-24",
+      "week_id": "2026-W17",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770768",
+      "intervals_url": "https://intervals.icu/activities/i157770768",
       "planned": null,
       "executed": {
         "duration_min": 70,
         "np_w": null,
         "avg_w": null,
-        "kj": 119,
+        "kj": null,
         "hr_avg": 120,
         "hr_max": 174,
         "tss": 32,
@@ -3546,24 +4004,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-26-bike-endurance-i157770741",
       "date": "2026-04-26",
+      "week_id": "2026-W17",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770741",
+      "intervals_url": "https://intervals.icu/activities/i157770741",
       "planned": null,
       "executed": {
         "duration_min": 185,
         "np_w": null,
         "avg_w": null,
-        "kj": 238,
+        "kj": null,
         "hr_avg": 115,
         "hr_max": 173,
         "tss": 67,
@@ -3585,24 +4045,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-27-bike-endurance-i157770708",
       "date": "2026-04-27",
+      "week_id": "2026-W18",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770708",
+      "intervals_url": "https://intervals.icu/activities/i157770708",
       "planned": null,
       "executed": {
         "duration_min": 34,
         "np_w": null,
         "avg_w": null,
-        "kj": 56,
+        "kj": null,
         "hr_avg": 120,
         "hr_max": 150,
         "tss": 14,
@@ -3624,24 +4086,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-28-bike-endurance-i157770693",
       "date": "2026-04-28",
+      "week_id": "2026-W18",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Cyclisme",
       "intervals_id": "i157770693",
+      "intervals_url": "https://intervals.icu/activities/i157770693",
       "planned": null,
       "executed": {
         "duration_min": 22,
         "np_w": null,
         "avg_w": null,
-        "kj": 34,
+        "kj": null,
         "hr_avg": 112,
         "hr_max": 143,
         "tss": 7,
@@ -3663,24 +4127,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Morning Cyclisme"
     },
     {
       "id": "2026-04-28-run-easy-i157770700",
       "date": "2026-04-28",
+      "week_id": "2026-W18",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157770700",
+      "intervals_url": "https://intervals.icu/activities/i157770700",
       "planned": null,
       "executed": {
         "duration_min": 30,
         "np_w": null,
         "avg_w": null,
-        "kj": 87,
+        "kj": null,
         "hr_avg": 153,
         "hr_max": 173,
         "tss": 30,
@@ -3702,24 +4168,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-05-06-run-easy-i157770636",
       "date": "2026-05-06",
+      "week_id": "2026-W19",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Morning Course à pied",
       "intervals_id": "i157770636",
+      "intervals_url": "https://intervals.icu/activities/i157770636",
       "planned": null,
       "executed": {
         "duration_min": 32,
         "np_w": null,
         "avg_w": null,
-        "kj": 95,
+        "kj": null,
         "hr_avg": 154,
         "hr_max": 168,
         "tss": 33,
@@ -3741,24 +4209,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Morning Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Morning Course à pied"
     },
     {
       "id": "2026-06-02-bike-endurance-i155251140",
       "date": "2026-06-02",
+      "week_id": "2026-W23",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Cyclisme",
       "intervals_id": "i155251140",
+      "intervals_url": "https://intervals.icu/activities/i155251140",
       "planned": null,
       "executed": {
         "duration_min": 49,
         "np_w": null,
         "avg_w": null,
-        "kj": 82,
+        "kj": null,
         "hr_avg": 118,
         "hr_max": 161,
         "tss": 20,
@@ -3780,24 +4250,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Vorst Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
     },
     {
       "id": "2026-06-04-bike-endurance-i155251253",
       "date": "2026-06-04",
+      "week_id": "2026-W23",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Cyclisme",
       "intervals_id": "i155251253",
+      "intervals_url": "https://intervals.icu/activities/i155251253",
       "planned": null,
       "executed": {
         "duration_min": 21,
         "np_w": null,
         "avg_w": null,
-        "kj": 39,
+        "kj": null,
         "hr_avg": 123,
         "hr_max": 151,
         "tss": 10,
@@ -3819,24 +4291,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Vorst Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
     },
     {
       "id": "2026-06-04-run-easy-i155251194",
       "date": "2026-06-04",
+      "week_id": "2026-W23",
       "sport": "run",
       "type": "easy",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Course à pied",
       "intervals_id": "i155251194",
+      "intervals_url": "https://intervals.icu/activities/i155251194",
       "planned": null,
       "executed": {
         "duration_min": 45,
         "np_w": null,
         "avg_w": null,
-        "kj": 124,
+        "kj": null,
         "hr_avg": 154,
         "hr_max": 174,
         "tss": 46,
@@ -3858,24 +4332,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Vorst Course à pied"
+      "notes": "Importe depuis Intervals.icu -- Vorst Course à pied"
     },
     {
       "id": "2026-06-06-bike-endurance-i155251442",
       "date": "2026-06-06",
+      "week_id": "2026-W23",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Sainte-Ode Cyclisme",
       "intervals_id": "i155251442",
+      "intervals_url": "https://intervals.icu/activities/i155251442",
       "planned": null,
       "executed": {
         "duration_min": 116,
         "np_w": null,
         "avg_w": null,
-        "kj": 209,
+        "kj": null,
         "hr_avg": 127,
         "hr_max": 174,
         "tss": 63,
@@ -3897,24 +4373,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Sainte-Ode Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Sainte-Ode Cyclisme"
     },
     {
       "id": "2026-06-07-run-trail-i155251554",
       "date": "2026-06-07",
+      "week_id": "2026-W23",
       "sport": "run",
       "type": "trail",
-      "type_log": "Course à pied",
+      "type_log": "Course a pied",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Sainte-Ode Trail",
       "intervals_id": "i155251554",
+      "intervals_url": "https://intervals.icu/activities/i155251554",
       "planned": null,
       "executed": {
         "duration_min": 59,
         "np_w": null,
         "avg_w": null,
-        "kj": 70,
+        "kj": null,
         "hr_avg": 101,
         "hr_max": 130,
         "tss": 13,
@@ -3936,24 +4414,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Sainte-Ode Trail"
+      "notes": "Importe depuis Intervals.icu -- Sainte-Ode Trail"
     },
     {
       "id": "2026-06-09-bike-endurance-i155881283",
       "date": "2026-06-09",
+      "week_id": "2026-W24",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Silly Cyclisme",
       "intervals_id": "i155881283",
+      "intervals_url": "https://intervals.icu/activities/i155881283",
       "planned": null,
       "executed": {
         "duration_min": 81,
         "np_w": null,
         "avg_w": null,
-        "kj": 205,
+        "kj": null,
         "hr_avg": 156,
         "hr_max": 194,
         "tss": 93,
@@ -3975,7 +4455,7 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Silly Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Silly Cyclisme"
     },
     {
       "id": "2026-06-10-bike-endurance-i157966524",
@@ -3988,12 +4468,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Cyclisme",
       "intervals_id": "i157966524",
+      "intervals_url": "https://intervals.icu/activities/i157966524",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 39,
+        "kj": null,
         "hr_avg": 119,
         "hr_max": 157,
         "tss": 10,
@@ -4028,12 +4509,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Cyclisme",
       "intervals_id": "i157966589",
+      "intervals_url": "https://intervals.icu/activities/i157966589",
       "planned": null,
       "executed": {
         "duration_min": 23,
         "np_w": null,
         "avg_w": null,
-        "kj": 43,
+        "kj": null,
         "hr_avg": 122,
         "hr_max": 156,
         "tss": 11,
@@ -4058,21 +4540,64 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
     },
     {
-      "id": "2026-06-12-bike-endurance-i157265404",
+      "id": "2026-06-12-bike-endurance-i157966652",
       "date": "2026-06-12",
+      "week_id": "2026-W24",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst Cyclisme",
+      "intervals_id": "i157966652",
+      "intervals_url": "https://intervals.icu/activities/i157966652",
+      "planned": null,
+      "executed": {
+        "duration_min": 38,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 153,
+        "hr_max": 179,
+        "tss": 42,
+        "distance_m": 17421,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
+    },
+    {
+      "id": "2026-06-12-bike-endurance-i157265404",
+      "date": "2026-06-12",
+      "week_id": "2026-W24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Cyclisme",
       "intervals_id": "i157265404",
+      "intervals_url": "https://intervals.icu/activities/i157265404",
       "planned": null,
       "executed": {
         "duration_min": 40,
         "np_w": null,
         "avg_w": null,
-        "kj": 94,
+        "kj": null,
         "hr_avg": 154,
         "hr_max": 179,
         "tss": 46,
@@ -4094,24 +4619,26 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
       "id": "2026-06-13-bike-endurance-i157265400",
       "date": "2026-06-13",
+      "week_id": "2026-W24",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Cyclisme",
       "intervals_id": "i157265400",
+      "intervals_url": "https://intervals.icu/activities/i157265400",
       "planned": null,
       "executed": {
         "duration_min": 58,
         "np_w": null,
         "avg_w": null,
-        "kj": 167,
+        "kj": null,
         "hr_avg": 183,
         "hr_max": 194,
         "tss": 80,
@@ -4133,24 +4660,67 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-06-13-bike-endurance-i157966760",
+      "date": "2026-06-13",
+      "week_id": "2026-W24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Silly Cyclisme",
+      "intervals_id": "i157966760",
+      "intervals_url": "https://intervals.icu/activities/i157966760",
+      "planned": null,
+      "executed": {
+        "duration_min": 83,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": 169,
+        "hr_max": 194,
+        "tss": 135,
+        "distance_m": 44719,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Silly Cyclisme"
     },
     {
       "id": "2026-06-14-bike-endurance-i157265396",
       "date": "2026-06-14",
+      "week_id": "2026-W24",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "done",
       "source": "intervals_icu",
       "strava_activity_name": "Cyclisme",
       "intervals_id": "i157265396",
+      "intervals_url": "https://intervals.icu/activities/i157265396",
       "planned": null,
       "executed": {
         "duration_min": 91,
         "np_w": null,
         "avg_w": null,
-        "kj": 215,
+        "kj": null,
         "hr_avg": 152,
         "hr_max": 174,
         "tss": 89,
@@ -4172,7 +4742,7 @@ window.SPORT_DATA = {
           "carbs_g": null
         }
       },
-      "notes": "Importé depuis Intervals.icu — Cyclisme"
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
       "id": "2026-06-15-bike-endurance-i157966822",
@@ -4185,12 +4755,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Vorst Cyclisme",
       "intervals_id": "i157966822",
+      "intervals_url": "https://intervals.icu/activities/i157966822",
       "planned": null,
       "executed": {
         "duration_min": 24,
         "np_w": null,
         "avg_w": null,
-        "kj": 48,
+        "kj": null,
         "hr_avg": 125,
         "hr_max": 164,
         "tss": 13,
@@ -4225,12 +4796,13 @@ window.SPORT_DATA = {
       "source": "intervals_icu",
       "strava_activity_name": "Cyclisme",
       "intervals_id": "i157947748",
+      "intervals_url": "https://intervals.icu/activities/i157947748",
       "planned": null,
       "executed": {
         "duration_min": 93,
         "np_w": null,
         "avg_w": null,
-        "kj": 203,
+        "kj": null,
         "hr_avg": 148,
         "hr_max": 178,
         "tss": 82,
@@ -4253,134 +4825,150 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-06-18-bike-tempo",
+      "date": "2026-06-18",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "SS 3x12' (230-244W)",
+        "duration_min": 73,
+        "description": "Sweet Spot Z3–Z4 — puissance soutenue de course.\nFC cible 160–173 bpm · Cadence ≥90 rpm · RPE 7/10.\nSi le 3e bloc décroche <230 W → couper à 2×12' + 1×8'.\n\n- 15m ramp 50-65%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 10m 50%",
+        "primary_zone": "Z4"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-19-bike-endurance",
+      "date": "2026-06-19",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Endurance Z2 1h15",
+        "duration_min": 75,
+        "description": "Endurance Z2 — volume aérobie de base.\n155–190 W · Cadence 85–95 rpm · FC <152 bpm.\nConversation possible ; si tu souffles, tu es trop fort.\n\n- 75m 59-73%",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-20-bike-recovery",
+      "date": "2026-06-20",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "recovery",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Recup Z1 45'",
+        "duration_min": 45,
+        "description": "Récupération active Z1 — faire circuler le sang.\n<140 W · Cadence haute 90–100 rpm. Repos complet si fatigue >7/10.\n+ Prépa course : montées de talons 3×15 + mobilité cheville/pied.\n\n- 45m 45-53%",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-21-bike-tempo",
+      "date": "2026-06-21",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Longue Z2 + 2x20' SS (3h)",
+        "duration_min": 180,
+        "description": "Sortie longue 3h (Z2) — la plus rentable de la semaine.\n2×20' Sweet Spot dans la sortie. Boire 1 bidon + 1 glucide/h.\n\n- 30m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 90m 60-72%",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-23-bike-interval",
+      "date": "2026-06-23",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "interval",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "VO2max 5x4' (280-310W)",
+        "duration_min": 65,
+        "description": "VO2max Z5 — capacité à répéter les efforts intenses.\nFC cible blocs 175–185 bpm. La plus dure du bloc.\nSi le 4e/5e décroche <280 W → arrêter à 4 blocs.\n\n- 15m ramp 50-65%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 10m 50%",
+        "primary_zone": "Z5"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-24-bike-endurance",
+      "date": "2026-06-24",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Endurance Z2 1h30",
+        "duration_min": 90,
+        "description": "Endurance Z2 — économie d'effort.\n155–196 W · Cadence 85–95 rpm · FC <152 bpm.\nPuissance constante, pas de pics.\n\n- 90m 59-73%",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-25-bike-tempo",
+      "date": "2026-06-25",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Seuil 2x15' (250-262W)",
+        "duration_min": 71,
+        "description": "Seuil Z4 — puissance au seuil.\nFC cible blocs 170–180 bpm. Effort soutenu mais tenable.\n\n- 15m ramp 50-65%\n- 15m 95-100%\n- 8m 50%\n- 15m 95-100%\n- 8m 50%\n- 10m 50%",
+        "primary_zone": "Z4"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-26-bike-tempo",
+      "date": "2026-06-26",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie plaisir + 3x15s sprints",
+        "duration_min": 73,
+        "description": "Dernière sortie Z2 avant coupure vélo — plaisir.\n3×15\" sprints pour activer les fibres rapides, récup complète.\nGarder de la fraîcheur pour le voyage.\n\n- 20m 60-73%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 40m 60-73%",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
     }
-  ],
-  "wellness": {
-    "2026-05-28": {
-      "resting_hr": 58,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "steps": 2471
-    },
-    "2026-05-29": {
-      "resting_hr": 57,
-      "sleep_secs": 28140,
-      "sleep_h": 7.8,
-      "steps": 11413
-    },
-    "2026-05-30": {
-      "resting_hr": 62,
-      "sleep_secs": 16260,
-      "sleep_h": 4.5,
-      "steps": 12124
-    },
-    "2026-05-31": {
-      "resting_hr": 63,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "steps": 8390
-    },
-    "2026-06-01": {
-      "resting_hr": 56,
-      "sleep_secs": 33420,
-      "sleep_h": 9.3,
-      "steps": 5731
-    },
-    "2026-06-02": {
-      "resting_hr": 55,
-      "sleep_secs": 26940,
-      "sleep_h": 7.5,
-      "steps": 4856
-    },
-    "2026-06-03": {
-      "resting_hr": 60,
-      "sleep_secs": 26220,
-      "sleep_h": 7.3,
-      "steps": 2280
-    },
-    "2026-06-04": {
-      "resting_hr": 59,
-      "sleep_secs": 24480,
-      "sleep_h": 6.8,
-      "steps": 18826
-    },
-    "2026-06-05": {
-      "resting_hr": 65,
-      "sleep_secs": 27240,
-      "sleep_h": 7.6,
-      "steps": 4061
-    },
-    "2026-06-06": {
-      "resting_hr": 64,
-      "sleep_secs": 22860,
-      "sleep_h": 6.3,
-      "steps": 2476
-    },
-    "2026-06-07": {
-      "resting_hr": 65,
-      "sleep_secs": 22320,
-      "sleep_h": 6.2,
-      "steps": 11471
-    },
-    "2026-06-08": {
-      "resting_hr": 63,
-      "sleep_secs": 24420,
-      "sleep_h": 6.8,
-      "steps": 6809
-    },
-    "2026-06-09": {
-      "resting_hr": 58,
-      "sleep_secs": 29280,
-      "sleep_h": 8.1,
-      "steps": 2569
-    },
-    "2026-06-10": {
-      "resting_hr": 65,
-      "sleep_secs": 28740,
-      "sleep_h": 8.0,
-      "steps": 3076
-    },
-    "2026-06-11": {
-      "resting_hr": 61,
-      "sleep_secs": 27000,
-      "sleep_h": 7.5,
-      "steps": 5575
-    },
-    "2026-06-12": {
-      "resting_hr": 58,
-      "sleep_secs": 19080,
-      "sleep_h": 5.3,
-      "steps": 5769
-    },
-    "2026-06-13": {
-      "resting_hr": 61,
-      "sleep_secs": 26880,
-      "sleep_h": 7.5,
-      "steps": 6454
-    },
-    "2026-06-14": {
-      "resting_hr": 61,
-      "sleep_secs": 25020,
-      "sleep_h": 7.0,
-      "steps": 10524
-    },
-    "2026-06-15": {
-      "resting_hr": 63,
-      "sleep_secs": 26580,
-      "sleep_h": 7.4,
-      "steps": 2564
-    },
-    "2026-06-16": {
-      "resting_hr": 59,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "steps": 4594
-    },
-    "2026-06-17": {
-      "resting_hr": 58,
-      "sleep_secs": 26640,
-      "sleep_h": 7.4,
-      "steps": 1272
-    }
-  }
+  ]
 };

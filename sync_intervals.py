@@ -29,6 +29,7 @@ JS_PATH    = HERE / config["sync"].get("sport_data_path", "sport_data.js")
 TAG        = "[CLA]"
 BASE_URL   = f"https://intervals.icu/api/v1/athlete/{ATHLETE_ID}"
 AUTH       = ("API_KEY", API_KEY)
+HEADERS    = {"User-Agent": "cla-dashboard-sync/1.0"}  # evite les 403 Cloudflare
 
 if "REMPLACE" in ATHLETE_ID or "REMPLACE" in API_KEY:
     sys.exit("Remplis athlete_id et api_key dans config.json")
@@ -79,7 +80,7 @@ def fetch_wellness(days_back=30):
     oldest = (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d")
     newest = datetime.now().strftime("%Y-%m-%d")
     print(f"Fetch wellness ({oldest} -> aujourd'hui)...")
-    r = requests.get(f"{BASE_URL}/wellness", params={"oldest": oldest, "newest": newest}, auth=AUTH, timeout=30)
+    r = requests.get(f"{BASE_URL}/wellness", params={"oldest": oldest, "newest": newest}, auth=AUTH, headers=HEADERS, timeout=30)
     r.raise_for_status()
     out = {}
     for item in r.json():
@@ -99,7 +100,7 @@ def fetch_activities(days_back=DAYS_BACK, fetch_all=False):
              (datetime.now(timezone.utc) - timedelta(days=days_back)).strftime("%Y-%m-%dT%H:%M:%S")
     newest = (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%S")
     print(f"Fetch activites ({oldest[:10]} -> aujourd'hui)...")
-    r = requests.get(f"{BASE_URL}/activities", params={"oldest": oldest, "newest": newest}, auth=AUTH, timeout=30)
+    r = requests.get(f"{BASE_URL}/activities", params={"oldest": oldest, "newest": newest}, auth=AUTH, headers=HEADERS, timeout=30)
     r.raise_for_status()
     acts = r.json()
     print(f"   -> {len(acts)} activites")
@@ -110,7 +111,7 @@ def fetch_planned_events(days_ahead=DAYS_AHEAD):
     today  = _date.today().isoformat()
     future = (_date.today() + timedelta(days=days_ahead)).isoformat()
     print(f"Fetch events planifies [CLA] ({today} -> {future})...")
-    r = requests.get(f"{BASE_URL}/events", params={"oldest": today, "newest": future}, auth=AUTH, timeout=30)
+    r = requests.get(f"{BASE_URL}/events", params={"oldest": today, "newest": future}, auth=AUTH, headers=HEADERS, timeout=30)
     r.raise_for_status()
     events = [e for e in r.json() if TAG in (e.get("name") or "")]
     print(f"   -> {len(events)} events [CLA]")
@@ -127,19 +128,22 @@ def event_to_session(ev):
     wtype    = infer_type(name, desc)
     zone     = infer_zone(name, desc)
 
-    dur = None
-    m = re.search(r"Dur[eé]e pr[eé]vue\s*:\s*(\d+)\s*min", desc, re.IGNORECASE)
-    if m:
-        dur = int(m.group(1))
+    # Duree : priorite a moving_time calcule par Intervals.icu (fiable, persiste)
+    mt = ev.get("moving_time")
+    if mt:
+        dur = round(mt / 60)
     else:
-        m2 = re.search(r"(\d+)\s*min", name + " " + desc)
-        dur = int(m2.group(1)) if m2 else 60
+        m = re.search(r"Dur[eé]e pr[eé]vue\s*:\s*(\d+)\s*min", desc, re.IGNORECASE)
+        if m:
+            dur = int(m.group(1))
+        else:
+            m2 = re.search(r"(\d+)\s*min", name + " " + desc)
+            dur = int(m2.group(1)) if m2 else 60
 
-    clean = " ".join(
-        l.strip() for l in desc.splitlines()
-        if l.strip() and not l.startswith("Zone cible")
-        and not l.startswith("Dur") and TAG not in l
-    )[:200]
+    # Detail complet conserve (etapes structurees) pour la vue analyse au clic
+    full_desc = "\n".join(
+        l.rstrip() for l in desc.splitlines() if TAG not in l
+    ).strip()
 
     return {
         "id": f"{date_str}-{sport}-{wtype}",
@@ -147,7 +151,7 @@ def event_to_session(ev):
         "sport": sport, "type": wtype,
         "type_log": TYPE_LOG_MAP.get(sport, sport),
         "status": "planned", "source": "plan_generated",
-        "planned": {"name": name, "duration_min": dur, "description": clean, "primary_zone": zone},
+        "planned": {"name": name, "duration_min": dur, "description": full_desc, "primary_zone": zone},
         "executed": None, "notes": None,
     }
 
@@ -172,6 +176,7 @@ def activity_to_session(act):
         "status": "done", "source": "intervals_icu",
         "strava_activity_name": name,
         "intervals_id": act.get("id"),
+        "intervals_url": f"https://intervals.icu/activities/{act.get('id')}" if act.get("id") else None,
         "planned": None,
         "executed": {
             "duration_min": round(dur_sec / 60) if dur_sec else None,
