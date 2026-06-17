@@ -741,7 +741,8 @@ function computeFitnessSeries(allEntries, daysShown) {
   const series = [];
 
   for (let d = new Date(startDate); d <= today; d.setDate(d.getDate() + 1)) {
-    const iso = d.toISOString().split('T')[0];
+    // Date en heure LOCALE (toISOString() = UTC, décalerait d'un jour en UTC+ et masquerait aujourd'hui)
+    const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
     const tssDay = tssByDay[iso] || 0;
     ctl = ctl * decayCTL + tssDay * (1 - decayCTL);
     atl = atl * decayATL + tssDay * (1 - decayATL);
@@ -1259,9 +1260,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const athlete = window.SPORT_DATA && window.SPORT_DATA.athlete;
   if (athlete) {
     const ftp  = athlete.ftp_ref_w   || '—';
-    const hrZ  = (window.SPORT_DATA.zones && window.SPORT_DATA.zones.hr)
-                  ? window.SPORT_DATA.zones.hr : null;
-    const fcSeuil = hrZ ? (hrZ.Z4_min || hrZ.z4_low || '—') : '—';
+    // FC seuil : champ dédié de l'athlète, sinon haut de la zone HR Z4 vélo
+    const bikeHrZ = window.SPORT_DATA.zones && window.SPORT_DATA.zones.bike && window.SPORT_DATA.zones.bike.hr;
+    const fcSeuil = athlete.hr_threshold_bpm
+                  || (bikeHrZ && bikeHrZ.Z4 ? bikeHrZ.Z4[1] : null)
+                  || '—';
     document.getElementById('header-ftp-line').textContent =
       `FTP ${ftp}W · FC seuil ${fcSeuil} bpm · Fasciite plantaire — cadence ≥ 88 rpm`;
   }

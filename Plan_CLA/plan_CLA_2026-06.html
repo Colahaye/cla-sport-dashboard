@@ -480,7 +480,19 @@ function openDetail(s) {
   if (dur) meta.push(dur + ' min');
   if (p.primary_zone) meta.push(p.primary_zone);
   if (meta.length) html += `<div class="m-meta">${meta.join(' · ')}</div>`;
-  if (p.description) html += `<div class="m-desc">${esc(p.description).replace(/\n/g,'<br>')}</div>`;
+  if (p.description) {
+    let dh = esc(p.description).replace(/\n/g, '<br>');
+    // Vélo : ajouter la valeur en watts à côté des % FTP
+    if (s.sport === 'bike') {
+      const ftp = (DATA.zones && DATA.zones.bike && DATA.zones.bike.power_basis_ftp_w)
+                || (DATA.athlete && DATA.athlete.ftp_ref_w) || 262;
+      dh = dh.replace(/(\d+)(?:-(\d+))?%/g, (m, a, b) => {
+        const wa = Math.round(a / 100 * ftp);
+        return b ? `${m} (${wa}–${Math.round(b / 100 * ftp)} W)` : `${m} (${wa} W)`;
+      });
+    }
+    html += `<div class="m-desc">${dh}</div>`;
+  }
   if (done) {
     const rows = [
       ['Durée', e.duration_min ? e.duration_min + ' min' : null],
