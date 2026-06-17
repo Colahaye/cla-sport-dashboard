@@ -292,6 +292,7 @@
     </div>
     <div class="hero-metrics">
       <div class="hero-metric"><span class="v" id="m-rhr">—</span><span class="l">FC repos</span></div>
+      <div class="hero-metric"><span class="v" id="m-hrv">—</span><span class="l">HRV</span></div>
       <div class="hero-metric"><span class="v" id="m-sleep">—</span><span class="l">Sommeil</span></div>
       <div class="hero-metric"><span class="v" id="m-ctl">—</span><span class="l">CTL</span></div>
       <div class="hero-metric"><span class="v" id="m-tsb">—</span><span class="l">TSB</span></div>
@@ -369,7 +370,7 @@
     const ex = session.executed;
     if (!ex || !ex.duration_min) return 0;
     if (ex.tss !== undefined && ex.tss !== null) return ex.tss;
-    const FTP = (DATA.athlete && DATA.athlete.ftp_ref_w) || 220;
+    const FTP = (DATA.athlete && DATA.athlete.ftp_ref_w) || 262;
     let IF = null;
     if (session.sport === 'bike' && ex.np_w && ex.np_w > 0) {
       IF = ex.np_w / FTP;
@@ -381,13 +382,37 @@
     return (ex.duration_min / 60) * IF * IF * 100;
   }
 
+  // PMC : priorite aux valeurs natives Intervals.icu (champ wellness ctl/atl),
+  // sinon repli sur un calcul maison amorce (pas de cold-start a 0).
+  function pmcFromWellness(asOfISO) {
+    const w = DATA.wellness || {};
+    const days = Object.keys(w).filter(d => d <= asOfISO && w[d] && w[d].ctl != null).sort();
+    if (!days.length) return null;
+    const last = w[days[days.length - 1]];
+    const CTL = last.ctl, ATL = last.atl;
+    return {
+      CTL: Math.round(CTL * 10) / 10,
+      ATL: Math.round(ATL * 10) / 10,
+      TSB: Math.round((CTL - ATL) * 10) / 10,
+      source: 'intervals'
+    };
+  }
+
   function computePMC(asOfISO) {
+    const native = pmcFromWellness(asOfISO);
+    if (native) return native;
+
     const sessions = (DATA.sessions || []).filter(s => s.status === 'done' && s.date <= asOfISO);
-    if (sessions.length === 0) return { CTL: 0, ATL: 0, TSB: 0 };
+    if (sessions.length === 0) return { CTL: 0, ATL: 0, TSB: 0, source: 'computed' };
     const dailyTSS = {};
     sessions.forEach(s => { dailyTSS[s.date] = (dailyTSS[s.date] || 0) + computeTSS(s); });
     const dates = Object.keys(dailyTSS).sort();
-    let CTL = 0, ATL = 0;
+    // Amorce anti cold-start : seed CTL/ATL avec la charge journaliere moyenne
+    // de la serie au lieu de partir de 0 (qui gonflait artificiellement le TSB initial).
+    const totalTSS = Object.values(dailyTSS).reduce((a, b) => a + b, 0);
+    const spanDays = Math.max(1, daysBetween(dates[0], asOfISO) + 1);
+    const seed = totalTSS / spanDays;
+    let CTL = seed, ATL = seed;
     const start = new Date(dates[0] + 'T12:00:00Z');
     const end   = new Date(asOfISO  + 'T12:00:00Z');
     for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
@@ -399,7 +424,8 @@
     return {
       CTL: Math.round(CTL * 10) / 10,
       ATL: Math.round(ATL * 10) / 10,
-      TSB: Math.round((CTL - ATL) * 10) / 10
+      TSB: Math.round((CTL - ATL) * 10) / 10,
+      source: 'computed'
     };
   }
 
@@ -417,7 +443,7 @@
     // FC repos + Sommeil — depuis wellness Intervals.icu
     const wellness = DATA.wellness || {};
     // Chercher la donnée la plus récente (aujourd'hui ou J-1)
-    let rhr = null, sleepH = null;
+    let rhr = null, sleepH = null, hrv = null;
     for (let daysBack = 0; daysBack <= 2; daysBack++) {
       const d = new Date(); d.setDate(d.getDate() - daysBack);
       const iso = d.getFullYear() + '-' +
@@ -427,7 +453,8 @@
       if (w) {
         if (rhr === null && w.resting_hr != null) rhr = w.resting_hr;
         if (sleepH === null && w.sleep_h != null) sleepH = w.sleep_h;
-        if (rhr !== null && sleepH !== null) break;
+        if (hrv === null && w.hrv_ms != null) hrv = w.hrv_ms;
+        if (rhr !== null && sleepH !== null && hrv !== null) break;
       }
     }
     const rhrEl = document.getElementById('m-rhr');
@@ -435,6 +462,18 @@
     const BASELINE_RHR = DATA.athlete && DATA.athlete.hr_rest_bpm || 52;
     rhrEl.classList.toggle('warn', rhr !== null && rhr > BASELINE_RHR + 5);
     rhrEl.classList.toggle('bad',  rhr !== null && rhr > BASELINE_RHR + 10);
+
+    // HRV (rMSSD) — comparaison a la baseline athlete si dispo
+    const hrvEl = document.getElementById('m-hrv');
+    if (hrvEl) {
+      hrvEl.textContent = hrv !== null ? (hrv + ' ms') : '—';
+      const baseHrv = DATA.athlete && DATA.athlete.hrv_baseline_ms;
+      if (hrv !== null && baseHrv) {
+        hrvEl.classList.toggle('bad',  hrv < baseHrv * 0.85);
+        hrvEl.classList.toggle('warn', hrv >= baseHrv * 0.85 && hrv < baseHrv * 0.95);
+        hrvEl.classList.toggle('good', hrv >= baseHrv);
+      }
+    }
 
     const sleepEl = document.getElementById('m-sleep');
     sleepEl.textContent = sleepH !== null ? (sleepH + 'h') : '—';

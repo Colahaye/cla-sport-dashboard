@@ -564,7 +564,7 @@ if (!window.SPORT_DATA) {
   throw new Error("cycling_data.js non charge");
 }
 
-const SEED_VERSION = 8;
+const SEED_VERSION = 8; // (obsolete : conserve sans effet)
 
 function _adaptSessionToFlat(s) {
   const ex = s.executed || {};
@@ -601,66 +601,69 @@ const GARMIN_ENTRIES = [];
 const SEED_DATA = (window.SPORT_DATA.sessions || [])
   .filter(s => s.status === 'done')
   .map(_adaptSessionToFlat);
-const STORAGE_KEY = 'sport_log_2026_cla';
-const SEED_VERSION_KEY = 'sport_log_seed_v_cla';
+const STORAGE_KEY  = 'sport_log_2026_cla';   // entrees AJOUTEES a la main (seances hors Intervals)
+const OVERLAY_KEY  = 'sport_log_manual_cla'; // annotations manuelles par seance (ressenti, douleurs...)
 let editingId = null;
 
 // ═══════════════════════════════════════════════════════════════
-// STORAGE — with smart merge for new seed entries
+// STORAGE — modele "source de verite unique"
+//   * Les seances synchronisees (Intervals.icu) sont relues A CHAQUE
+//     chargement depuis SPORT_DATA -> jamais perimees (TSS, watts, RPE, feel).
+//   * Le localStorage ne conserve QUE :
+//       - OVERLAY_KEY : les champs saisis a la main, par id de seance.
+//       - STORAGE_KEY : les seances ajoutees manuellement (hors Intervals).
+//   * Plus de SEED_VERSION / migration fragile.
 // ═══════════════════════════════════════════════════════════════
-const HARD_RESET_FROM_VERSION = 6;
+const MANUAL_FIELDS = ['rpe','jambes','mental','genou','cheville','sommeil','vfc','bb','glucides','commentaire'];
+
+function _readJSON(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch(e) { return fallback; }
+}
+function _keyOf(e) {
+  return (e && e._v1 && e._v1.id) ? 'iid:' + e._v1.id
+       : (e.date + '|' + e.type + '|' + (e.duree ?? ''));
+}
 
 function loadData() {
   const todayISO = new Date().toISOString().split('T')[0];
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const savedVersion = parseInt(localStorage.getItem(SEED_VERSION_KEY) || '0');
+  const overlay  = _readJSON(OVERLAY_KEY, {});           // { key: {champ: valeur} }
+  const manual   = _readJSON(STORAGE_KEY, []);           // seances ajoutees a la main
 
-    if (raw && savedVersion < HARD_RESET_FROM_VERSION) {
-      console.info('[training_log] Hard reset migration v' + savedVersion + ' -> v' + SEED_VERSION);
-      localStorage.removeItem(STORAGE_KEY);
-    } else if (raw) {
-      let existing = JSON.parse(raw);
-      let dirty = false;
-      // Merge new seed entries — TOUJOURS, pas seulement sur changement de version
-      // Clé de déduplication : intervals_id si dispo, sinon date|type|duree
-      {
-        const existingKeys = new Set(existing.map(e =>
-          (e._v1 && e._v1.id) ? 'iid:' + e._v1.id : e.date + '|' + e.type + '|' + (e.duree ?? '')
-        ));
-        const toAdd = SEED_DATA.filter(s => {
-          const key = (s._v1 && s._v1.id) ? 'iid:' + s._v1.id : s.date + '|' + s.type + '|' + (s.duree ?? '');
-          return !existingKeys.has(key);
-        });
-        if (toAdd.length > 0) {
-          const newEntries = toAdd.map((d, i) => ({ ...d, id: 'garmin_' + d.date + '_' + i }));
-          existing = [...existing, ...newEntries];
-          dirty = true;
-        }
-      }
-      if (savedVersion < SEED_VERSION) {
-        dirty = true;
-        localStorage.setItem(SEED_VERSION_KEY, SEED_VERSION);
-      }
-      // Auto-purge planned sessions whose date has passed (not done in time)
-      const before = existing.length;
-      existing = existing.filter(e => !(e.planned && e.date < todayISO));
-      if (existing.length < before) dirty = true;
-      if (dirty) saveData(existing);
-      return existing;
-    }
-  } catch(e) {}
-  // First load — seed everything (also filter out already-passed planned entries)
-  const seeded = SEED_DATA
+  // Base fraiche depuis la sync, + overlay des champs manuels.
+  const base = SEED_DATA
     .filter(d => !(d.planned && d.date < todayISO))
-    .map((d, i) => ({ ...d, id: 'seed_' + i }));
-  saveData(seeded);
-  localStorage.setItem(SEED_VERSION_KEY, SEED_VERSION);
-  return seeded;
+    .map((d, i) => {
+      const id  = d.id || ('seed_' + i);
+      const ov  = overlay[_keyOf(d)] || {};
+      const out = { ...d, id };
+      MANUAL_FIELDS.forEach(f => { if (ov[f] != null) out[f] = ov[f]; });
+      return out;
+    });
+
+  // Seances purement manuelles (non issues d'Intervals).
+  const baseKeys = new Set(base.map(_keyOf));
+  const extra = manual.filter(m => !baseKeys.has(_keyOf(m)) && !(m.planned && m.date < todayISO));
+
+  return [...base, ...extra];
 }
 
+// Persiste un edit : on range les champs manuels dans l'overlay (par seance),
+// et les seances entierement manuelles dans STORAGE_KEY.
 function saveData(data) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  const overlay = {};
+  const manual  = [];
+  data.forEach(e => {
+    const isSeed = e._v1 && e._v1.source === 'intervals_icu';
+    if (isSeed) {
+      const m = {};
+      MANUAL_FIELDS.forEach(f => { if (e[f] != null) m[f] = e[f]; });
+      if (Object.keys(m).length) overlay[_keyOf(e)] = m;
+    } else {
+      manual.push(e);
+    }
+  });
+  localStorage.setItem(OVERLAY_KEY, JSON.stringify(overlay));
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(manual));
 }
 
 function getData() {
@@ -673,7 +676,7 @@ function getData() {
 // À mettre à jour après chaque ramp test.
 // ═══════════════════════════════════════════════════════════════
 // FTP_REF derive
-const FTP_REF = (window.SPORT_DATA && window.SPORT_DATA.athlete && window.SPORT_DATA.athlete.ftp_ref_w) || 308;
+const FTP_REF = (window.SPORT_DATA && window.SPORT_DATA.athlete && window.SPORT_DATA.athlete.ftp_ref_w) || 262;
 
 // Heuristique RPE → IF (utilisée comme fallback quand NP absent).
 // Calibrée Coggan-style pour le vélo. Pour cross-training (CrossFit, course, padel),

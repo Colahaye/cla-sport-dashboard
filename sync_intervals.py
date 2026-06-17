@@ -48,6 +48,22 @@ EVENT_SPORT_MAP = {
 TYPE_LOG_MAP = {"bike": "Velo", "run": "Course a pied", "strength": "Renforcement"}
 
 
+# Bornes Coggan 7 zones en % de la FTP (haut de chaque zone, sauf Z7).
+COGGAN_PCT = {"Z1": 0.55, "Z2": 0.75, "Z3": 0.90, "Z4": 1.05, "Z5": 1.20, "Z6": 1.50}
+
+
+def derive_bike_power_zones(ftp):
+    """FTP -> zones puissance velo. Rend la FTP source unique des zones."""
+    zones, low = {}, 0
+    for z in ("Z1", "Z2", "Z3", "Z4", "Z5", "Z6"):
+        high = round(COGGAN_PCT[z] * ftp)
+        zones[z] = [low, high]
+        low = high + 1
+    zones["Z7"] = [low, 999]
+    return zones, [round(0.88 * ftp), round(0.93 * ftp)]  # zones, sweet_spot
+
+
+
 def week_id(date_str):
     d = _date.fromisoformat(date_str)
     iso = d.isocalendar()
@@ -76,7 +92,8 @@ def infer_zone(name, desc=""):
     return None
 
 
-def fetch_wellness(days_back=30):
+def fetch_wellness(days_back=DAYS_BACK):
+    # Fenetre alignee sur celle des activites (DAYS_BACK) pour eviter les trous PMC.
     oldest = (datetime.now() - timedelta(days=days_back)).strftime("%Y-%m-%d")
     newest = datetime.now().strftime("%Y-%m-%d")
     print(f"Fetch wellness ({oldest} -> aujourd'hui)...")
@@ -87,10 +104,28 @@ def fetch_wellness(days_back=30):
         d = item.get("id")
         if not d:
             continue
-        ss, rhr = item.get("sleepSecs"), item.get("restingHR")
-        if ss or rhr:
-            out[d] = {"resting_hr": rhr, "sleep_secs": ss,
-                      "sleep_h": round(ss / 3600, 1) if ss else None, "steps": item.get("steps")}
+        ss   = item.get("sleepSecs")
+        rhr  = item.get("restingHR")
+        hrv  = item.get("hrv")          # rMSSD (ms) - signal readiness n.1
+        ctl  = item.get("ctl")          # Fitness calcule par Intervals.icu
+        atl  = item.get("atl")          # Fatigue calcule par Intervals.icu
+        if any(v is not None for v in (ss, rhr, hrv, ctl, atl, item.get("steps"))):
+            out[d] = {
+                "resting_hr":  rhr,
+                "sleep_secs":  ss,
+                "sleep_h":     round(ss / 3600, 1) if ss else None,
+                "sleep_score": item.get("sleepScore"),
+                "steps":       item.get("steps"),
+                "hrv_ms":      round(hrv, 1) if hrv is not None else None,
+                # PMC natif Intervals.icu - source de verite, evite le recalcul maison
+                "ctl":         round(ctl, 1) if ctl is not None else None,
+                "atl":         round(atl, 1) if atl is not None else None,
+                "tsb":         round(ctl - atl, 1) if (ctl is not None and atl is not None) else None,
+                # Ressentis du matin saisis dans l'app Intervals.icu
+                "soreness":    item.get("soreness"),
+                "fatigue":     item.get("fatigue"),
+                "mood":        item.get("mood"),
+            }
     print(f"   -> {len(out)} jours wellness")
     return out
 
@@ -168,6 +203,9 @@ def activity_to_session(act):
     np_w    = act.get("weighted_average_watts") or act.get("icu_weighted_average_watts")
     avg_w   = act.get("average_watts")
     kj      = act.get("kilojoules") or (act.get("calories", 0) * 0.239 if act.get("calories") else None)
+    # Ressentis saisis dans Intervals.icu (app mobile) -> recuperes ici, plus de saisie locale perdue.
+    rpe     = act.get("icu_rpe") or act.get("rpe")          # 1-10
+    feel    = act.get("feel")                                # 1-5 (5 = excellent)
     return {
         "id": f"{date_str}-{sport}-{wtype}-{act.get('id','')}",
         "date": date_str, "week_id": week_id(date_str),
@@ -188,7 +226,7 @@ def activity_to_session(act):
             "tss":    round(t, 1) if (t := act.get("icu_training_load") or act.get("training_load")) else None,
             "distance_m": round(act["distance"]) if act.get("distance") else None,
             "cadence":    round(act["average_cadence"]) if act.get("average_cadence") else None,
-            "subjective": {"rpe": None, "legs": None, "mental": None, "knee_0_3": None, "ankle_0_3": None},
+            "subjective": {"rpe": rpe, "feel": feel, "legs": None, "mental": None, "knee_0_3": None, "ankle_0_3": None},
             "recovery":   {"sleep_raw": None, "hrv_ms": None, "body_battery": None},
             "nutrition":  {"carbs_g": None},
         },
@@ -220,19 +258,42 @@ def write_sport_data(data, original_content):
 def sync(days_back=DAYS_BACK, fetch_all=False):
     data, original_content = read_sport_data()
 
+    # FTP = source unique : on recalcule les zones puissance velo a chaque sync.
+    ftp = (data.get("athlete") or {}).get("ftp_ref_w")
+    if ftp:
+        zb = data.setdefault("zones", {}).setdefault("bike", {})
+        zp, ss = derive_bike_power_zones(ftp)
+        zb["power"] = zp
+        zb["sweet_spot"] = ss
+        zb["power_basis_ftp_w"] = ftp
+        print(f"Zones velo recalculees depuis FTP {ftp} W (SS {ss[0]}-{ss[1]} W)")
+
     executed = [s for s in data.get("sessions", []) if s.get("source") != "plan_generated"]
-    existing_ids  = {s.get("intervals_id") for s in executed if s.get("intervals_id")}
+    by_id    = {s.get("intervals_id"): s for s in executed if s.get("intervals_id")}
     existing_keys = {(s["date"], s["sport"]) for s in executed}
 
+    # Champs saisis a la main qu'on ne doit JAMAIS ecraser lors d'un refresh.
+    MANUAL_KEYS = ("legs", "mental", "knee_0_3", "ankle_0_3")
+
     activities = fetch_activities(days_back, fetch_all)
-    new_sessions, skipped = [], 0
+    new_sessions, updated, skipped = [], 0, 0
     for act in activities:
         if act.get("type") in ("Rest", "Sleep"):
             continue
         s = activity_to_session(act)
         if not s:
             continue
-        if act.get("id") in existing_ids or (s["date"], s["sport"]) in existing_keys:
+        prev = by_id.get(act.get("id"))
+        if prev:
+            # Refresh des donnees Intervals (tss, rpe, feel, watts...) sans toucher au manuel.
+            prev_subj = (prev.get("executed") or {}).get("subjective", {})
+            for k in MANUAL_KEYS:
+                if prev_subj.get(k) is not None:
+                    s["executed"]["subjective"][k] = prev_subj[k]
+            prev.update({k: v for k, v in s.items() if k != "id"})
+            updated += 1
+            continue
+        if (s["date"], s["sport"]) in existing_keys:
             skipped += 1
             continue
         new_sessions.append(s)
@@ -248,7 +309,7 @@ def sync(days_back=DAYS_BACK, fetch_all=False):
         print(f"Warning: events non recuperes ({e}) -- plan non mis a jour")
 
     try:
-        wdata = fetch_wellness(30)
+        wdata = fetch_wellness(days_back)
         data.setdefault("wellness", {}).update(wdata)
         today_str = _date.today().isoformat()
         if today_str in wdata:
@@ -263,7 +324,7 @@ def sync(days_back=DAYS_BACK, fetch_all=False):
     write_sport_data(data, original_content)
 
     print(f"\nSync termine :")
-    print(f"  Nouvelles activites : {len(new_sessions)} ({skipped} ignorees)")
+    print(f"  Nouvelles activites : {len(new_sessions)} (+{updated} actualisees, {skipped} ignorees)")
     print(f"  Seances planifiees  : {len(planned)} (depuis Intervals.icu)")
     print(f"  Total sessions      : {len(all_sessions)}")
 
