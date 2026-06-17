@@ -209,8 +209,10 @@ def read_sport_data():
 def write_sport_data(data, original_content):
     data["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     json_str = json.dumps(data, ensure_ascii=False, indent=2)
+    # IMPORTANT : remplacement via lambda, sinon re.sub interprete les sequences
+    # d'echappement (\n, \t...) de json_str et casse le JSON (LF bruts dans les chaines).
     new = re.sub(r"window\.SPORT_DATA\s*=\s*\{.*\}\s*;",
-                 "window.SPORT_DATA = " + json_str + ";",
+                 lambda _m: "window.SPORT_DATA = " + json_str + ";",
                  original_content, flags=re.DOTALL)
     JS_PATH.write_text(new, encoding="utf-8")
 
