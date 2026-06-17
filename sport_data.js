@@ -6,7 +6,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-17T00:09:46.000Z",
+  "last_updated": "2026-06-17T07:19:43.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -3978,6 +3978,86 @@ window.SPORT_DATA = {
       "notes": "Importé depuis Intervals.icu — Silly Cyclisme"
     },
     {
+      "id": "2026-06-10-bike-endurance-i157966524",
+      "date": "2026-06-10",
+      "week_id": "2026-W24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst Cyclisme",
+      "intervals_id": "i157966524",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 39,
+        "hr_avg": 119,
+        "hr_max": 157,
+        "tss": 10,
+        "distance_m": 8080,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
+    },
+    {
+      "id": "2026-06-11-bike-endurance-i157966589",
+      "date": "2026-06-11",
+      "week_id": "2026-W24",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst Cyclisme",
+      "intervals_id": "i157966589",
+      "planned": null,
+      "executed": {
+        "duration_min": 23,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 43,
+        "hr_avg": 122,
+        "hr_max": 156,
+        "tss": 11,
+        "distance_m": 8103,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
+    },
+    {
       "id": "2026-06-12-bike-endurance-i157265404",
       "date": "2026-06-12",
       "sport": "bike",
@@ -4095,84 +4175,128 @@ window.SPORT_DATA = {
       "notes": "Importé depuis Intervals.icu — Cyclisme"
     },
     {
-      "id": "2026-06-15-repos",
+      "id": "2026-06-15-bike-endurance-i157966822",
       "date": "2026-06-15",
       "week_id": "2026-W25",
       "sport": "bike",
-      "type": "recovery",
-      "type_log": "Vélo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Repos — J+2 CLM",
-        "duration_min": 0,
-        "description": "Repos total. Tu sors d'un CLM hier.",
-        "primary_zone": null
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst Cyclisme",
+      "intervals_id": "i157966822",
+      "planned": null,
+      "executed": {
+        "duration_min": 24,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 48,
+        "hr_avg": 125,
+        "hr_max": 164,
+        "tss": 13,
+        "distance_m": 7952,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
       },
-      "executed": null,
-      "notes": null
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
     },
     {
-      "id": "2026-06-16-bike-z2",
-      "date": "2026-06-16",
+      "id": "2026-06-17-bike-endurance-i157947748",
+      "date": "2026-06-17",
       "week_id": "2026-W25",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i157947748",
+      "planned": null,
+      "executed": {
+        "duration_min": 93,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 203,
+        "hr_avg": 148,
+        "hr_max": 178,
+        "tss": 82,
+        "distance_m": 40044,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-06-17-bike-endurance",
+      "date": "2026-06-17",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Vélo Z2 relance",
-        "duration_min": 120,
-        "description": "2h, FC < 152 bpm, cadence 88+ rpm. Première vraie sortie post-CLM.",
+        "name": "Endurance Z2 — 1h15",
+        "duration_min": 75,
+        "description": "75 min continu @ 155–196W / 132–151 bpm. Cadence 85–95 rpm. Mode ERG parcours plat. Récup lendemain du test FTP.",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-17-bike-sweetspot",
-      "date": "2026-06-17",
+      "id": "2026-06-18-bike-tempo",
+      "date": "2026-06-18",
       "week_id": "2026-W25",
       "sport": "bike",
       "type": "tempo",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Sweet Spot 3×12' Z3",
-        "duration_min": 105,
-        "description": "Échauff 20' + 3×12 min Z3 (FC 158-170) + récup 5' + retour 15'. Total ~1h45.",
+        "name": "Sweet Spot 3×15' — 262W FTP",
+        "duration_min": 80,
+        "description": "10' échauff + 3×15 min @ 230–244W (88–93% FTP) / 5' récup Z1 + 10' retour. FC cible 160–173 bpm.",
         "primary_zone": "Z3"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-18-strength-renfo",
-      "date": "2026-06-18",
-      "week_id": "2026-W25",
-      "sport": "strength",
-      "type": "renfo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo complet",
-        "duration_min": 45,
-        "description": "Squat goblet 4×10, Hip thrust 4×12, Fentes bulgares 3×8, SdT roumain 3×10, Planche 3×60s, Copenhagen 3×25s, Montées talons 3×15.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-19-bike-z2",
+      "id": "2026-06-19-bike-endurance",
       "date": "2026-06-19",
       "week_id": "2026-W25",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4185,30 +4309,30 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-20-repos",
+      "id": "2026-06-20-bike-recovery",
       "date": "2026-06-20",
       "week_id": "2026-W25",
       "sport": "bike",
       "type": "recovery",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Repos",
-        "duration_min": 0,
-        "description": "Repos complet avant la longue du week-end.",
-        "primary_zone": null
+        "name": "Activation légère — 1h",
+        "duration_min": 60,
+        "description": "45–60 min @ Z1–Z2 (145–180W). Inclure 3×15 sec sprints @ 350–380W pour activer les fibres. Récup complète entre sprints. Prépare la longue de dimanche.",
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-21-bike-longue",
+      "id": "2026-06-21-bike-endurance",
       "date": "2026-06-21",
       "week_id": "2026-W25",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4221,12 +4345,12 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-22-bike-recup",
+      "id": "2026-06-22-bike-recovery",
       "date": "2026-06-22",
       "week_id": "2026-W26",
       "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
+      "type": "recovery",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4239,30 +4363,30 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-23-bike-intervalles",
+      "id": "2026-06-23-bike-interval",
       "date": "2026-06-23",
       "week_id": "2026-W26",
       "sport": "bike",
       "type": "interval",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Intervalles Z4 — 5×6'",
-        "duration_min": 120,
-        "description": "Échauff 20' + 5×6 min Z4 (FC 176-185, 105-115% FTP) + récup 4' + retour 20'.",
-        "primary_zone": "Z4"
+        "name": "VO2max — 5×4' Z5",
+        "duration_min": 70,
+        "description": "10' échauff + 5×4 min @ 276–314W (Z5) / 4' récup Z1 + 10' retour. FC cible en bloc : 175–185 bpm. Dernière séance intense avant la grande sortie.",
+        "primary_zone": "Z5"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-24-bike-z2",
+      "id": "2026-06-24-bike-endurance",
       "date": "2026-06-24",
       "week_id": "2026-W26",
       "sport": "bike",
       "type": "endurance",
-      "type_log": "Vélo",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4275,48 +4399,48 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-25-strength-renfo",
+      "id": "2026-06-25-bike-recovery",
       "date": "2026-06-25",
       "week_id": "2026-W26",
-      "sport": "strength",
-      "type": "renfo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo léger",
-        "duration_min": 40,
-        "description": "Squat unijambiste 3×8, hip thrust 3×12, Copenhagen 2×20s, montées talons 3×12.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-26-bike-finale",
-      "date": "2026-06-26",
-      "week_id": "2026-W26",
       "sport": "bike",
-      "type": "endurance",
-      "type_log": "Vélo",
+      "type": "recovery",
+      "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "GRANDE SORTIE FINALE — 3h Z2/Z3",
-        "duration_min": 180,
-        "description": "3h, FC 148-162 bpm. Dernière sortie vélo avant Ardèche. Option : 2×15' Sweet Spot si les jambes répondent.",
+        "name": "Activation pré-événement — 45'",
+        "duration_min": 45,
+        "description": "45 min Z1–Z2 (< 180W). 3×10 sec accélérations légères pour rester vif. Rien d'intense — la grande sortie est demain.",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-28-run-easy",
+      "id": "2026-06-26-bike-tempo",
+      "date": "2026-06-26",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "GRANDE SORTIE FINALE — 3h Z2/Z3",
+        "duration_min": 180,
+        "description": "3h, FC 148-162 bpm. Dernière sortie vélo avant Ardèche. Option : 2×15' Sweet Spot si les jambes répondent.",
+        "primary_zone": "Z3"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-28-run-recovery",
       "date": "2026-06-28",
       "week_id": "2026-W26",
       "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
+      "type": "recovery",
+      "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4329,12 +4453,12 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-30-run-easy",
+      "id": "2026-06-30-run-recovery",
       "date": "2026-06-30",
       "week_id": "2026-W27",
       "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
+      "type": "recovery",
+      "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
@@ -4342,222 +4466,6 @@ window.SPORT_DATA = {
         "duration_min": 30,
         "description": "25-30 min, FC < 152 bpm, terrain plat",
         "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-02-run-easy",
-      "date": "2026-07-02",
-      "week_id": "2026-W27",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "25-30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-04-run-trail",
-      "date": "2026-07-04",
-      "week_id": "2026-W27",
-      "sport": "run",
-      "type": "trail",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Trail D+ Ardèche",
-        "duration_min": 75,
-        "description": "1h-1h15, repérage terrain, montée marchée si FC > 178",
-        "primary_zone": "trail"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-07-run-easy",
-      "date": "2026-07-07",
-      "week_id": "2026-W28",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-09-run-easy",
-      "date": "2026-07-09",
-      "week_id": "2026-W28",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-11-run-trail",
-      "date": "2026-07-11",
-      "week_id": "2026-W28",
-      "sport": "run",
-      "type": "trail",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Trail D+ Ardèche",
-        "duration_min": 90,
-        "description": "1h15-1h30, chercher du dénivelé, montée marchée",
-        "primary_zone": "trail"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-14-run-easy",
-      "date": "2026-07-14",
-      "week_id": "2026-W29",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-16-run-easy",
-      "date": "2026-07-16",
-      "week_id": "2026-W29",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-18-run-trail",
-      "date": "2026-07-18",
-      "week_id": "2026-W29",
-      "sport": "run",
-      "type": "trail",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Trail D+ Ardèche",
-        "duration_min": 90,
-        "description": "1h30, viser 300-400m D+, descente technique",
-        "primary_zone": "trail"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-21-run-easy",
-      "date": "2026-07-21",
-      "week_id": "2026-W30",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-23-run-easy",
-      "date": "2026-07-23",
-      "week_id": "2026-W30",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z1 Ardèche",
-        "duration_min": 30,
-        "description": "30 min",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-25-run-trail",
-      "date": "2026-07-25",
-      "week_id": "2026-W30",
-      "sport": "run",
-      "type": "trail",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Trail Ardèche — dernière sortie",
-        "duration_min": 105,
-        "description": "1h30-2h, viser 400-500m D+",
-        "primary_zone": "trail"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-07-28-run-easy",
-      "date": "2026-07-28",
-      "week_id": "2026-W31",
-      "sport": "run",
-      "type": "easy",
-      "type_log": "Course à pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Running Z2",
-        "duration_min": 40,
-        "description": "40 min, FC 152-162 bpm",
-        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
@@ -4640,7 +4548,55 @@ window.SPORT_DATA = {
       "resting_hr": 58,
       "sleep_secs": 29280,
       "sleep_h": 8.1,
-      "steps": 2457
+      "steps": 2569
+    },
+    "2026-06-10": {
+      "resting_hr": 65,
+      "sleep_secs": 28740,
+      "sleep_h": 8.0,
+      "steps": 3076
+    },
+    "2026-06-11": {
+      "resting_hr": 61,
+      "sleep_secs": 27000,
+      "sleep_h": 7.5,
+      "steps": 5575
+    },
+    "2026-06-12": {
+      "resting_hr": 58,
+      "sleep_secs": 19080,
+      "sleep_h": 5.3,
+      "steps": 5769
+    },
+    "2026-06-13": {
+      "resting_hr": 61,
+      "sleep_secs": 26880,
+      "sleep_h": 7.5,
+      "steps": 6454
+    },
+    "2026-06-14": {
+      "resting_hr": 61,
+      "sleep_secs": 25020,
+      "sleep_h": 7.0,
+      "steps": 10524
+    },
+    "2026-06-15": {
+      "resting_hr": 63,
+      "sleep_secs": 26580,
+      "sleep_h": 7.4,
+      "steps": 2564
+    },
+    "2026-06-16": {
+      "resting_hr": 59,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "steps": 4594
+    },
+    "2026-06-17": {
+      "resting_hr": 58,
+      "sleep_secs": 26640,
+      "sleep_h": 7.4,
+      "steps": 1272
     }
   }
 };
