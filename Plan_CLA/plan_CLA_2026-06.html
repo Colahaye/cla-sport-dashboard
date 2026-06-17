@@ -69,7 +69,7 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 /* Week grid */
 .week-grid {
   display: grid; grid-template-columns: repeat(7, 1fr);
-  gap: 6px; padding: 12px 16px; min-height: calc(100vh - 140px);
+  gap: 6px; padding: 12px 16px; min-height: auto;
 }
 .day-col {
   display: flex; flex-direction: column; gap: 6px;
@@ -124,6 +124,15 @@ body { font-family: var(--font-sans); background: var(--bg); color: var(--text);
 }
 .legend-item { display: flex; align-items: center; gap: 4px; }
 .legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+/* Week row separator */
+.week-row-sep {
+  grid-column: 1 / -1;
+  padding: 6px 0 2px;
+  font-size: 10px; font-weight: 600; font-family: var(--font-mono);
+  color: var(--text-muted); letter-spacing: 0.5px;
+  border-top: 1px solid var(--border); margin-top: 4px;
+}
 
 @media (max-width: 800px) {
   .week-grid { grid-template-columns: repeat(7,1fr); gap: 3px; padding: 8px; }
@@ -217,7 +226,7 @@ function isoDate(d) {
 function todayISO() { return isoDate(new Date()); }
 
 function shiftWeek(delta) {
-  currentMonday.setDate(currentMonday.getDate() + delta * 7);
+  currentMonday.setDate(currentMonday.getDate() + delta * 28);
   render();
 }
 function goToToday() {
@@ -238,20 +247,23 @@ function getPhaseForDate(iso) {
 function render() {
   const today = todayISO();
   const days = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 28; i++) {
     const d = new Date(currentMonday);
     d.setDate(d.getDate() + i);
     days.push(d);
   }
 
-  // Week label
-  const start = days[0], end = days[6];
+  // Week label (4-week range)
+  const start = days[0], end = days[27];
   document.getElementById('week-label').textContent =
     start.getDate() + ' ' + MONTHS_FR[start.getMonth()] +
     ' → ' + end.getDate() + ' ' + MONTHS_FR[end.getMonth()];
 
-  // Phase banner (phase of Monday)
-  const phase = getPhaseForDate(isoDate(days[0])) || getPhaseForDate(isoDate(days[3]));
+  // Phase banner (first phase found across 4 weeks)
+  const phase = getPhaseForDate(isoDate(days[0]))
+             || getPhaseForDate(isoDate(days[7]))
+             || getPhaseForDate(isoDate(days[14]))
+             || getPhaseForDate(isoDate(days[21]));
   const banner = document.getElementById('phase-banner');
   if (phase) {
     banner.style.display = 'block';
@@ -268,7 +280,18 @@ function render() {
   const grid = document.getElementById('week-grid');
   grid.innerHTML = '';
 
-  days.forEach(d => {
+  days.forEach((d, i) => {
+    // Week row separator before weeks 2, 3, 4
+    if (i > 0 && i % 7 === 0) {
+      const sep = document.createElement('div');
+      sep.className = 'week-row-sep';
+      const wStart = days[i];
+      const wEnd   = days[i + 6] || days[days.length - 1];
+      sep.textContent = 'Sem. ' + wStart.getDate() + ' ' + MONTHS_FR[wStart.getMonth()]
+        + ' → ' + wEnd.getDate() + ' ' + MONTHS_FR[wEnd.getMonth()];
+      grid.appendChild(sep);
+    }
+
     const iso = isoDate(d);
     const isPast = iso < today;
     const isToday = iso === today;
@@ -366,26 +389,4 @@ function makePastilles(iso) {
   // Pastille douleur (cycle 0→5)
   const pd = document.createElement('div');
   pd.style.textAlign = 'center';
-  const score = dayData.fasciite !== undefined ? dayData.fasciite : null;
-  const btnD = document.createElement('button');
-  btnD.className = 'pastille' + (score !== null ? ' p-' + score : '');
-  btnD.title = 'Douleur fasciite (0=rien · 5=intense)';
-  btnD.textContent = score !== null ? score : '?';
-  btnD.addEventListener('click', () => {
-    const d = loadSuivi(); if (!d[iso]) d[iso] = {};
-    const cur = d[iso].fasciite !== undefined ? d[iso].fasciite : -1;
-    d[iso].fasciite = cur >= 5 ? 0 : cur + 1; saveSuivi(d);
-    btnD.className = 'pastille p-' + d[iso].fasciite;
-    btnD.textContent = d[iso].fasciite;
-  });
-  const lD = document.createElement('div'); lD.className='pastille-label'; lD.textContent='Douleur';
-  pd.appendChild(btnD); pd.appendChild(lD);
-
-  row.appendChild(pm); row.appendChild(ps); row.appendChild(pd);
-  wrap.appendChild(row);
-  return wrap;
-}
-
-</script>
-</body>
-</html>
+  const score = dayData.fasciite !== undefined ? day
