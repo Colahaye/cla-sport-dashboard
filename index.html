@@ -671,6 +671,12 @@
   document.getElementById('card-next').addEventListener('click',      () => setActiveTab('plan'));
   document.getElementById('card-countdown').addEventListener('click', () => setActiveTab('plan'));
   document.getElementById('card-state').addEventListener('click',     () => setActiveTab('log'));
+
+  // Service Worker — force no-cache sur sport_data.js et HTML à chaque visite
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/cla-sport-dashboard/sw.js', { scope: '/cla-sport-dashboard/' })
+      .catch(err => console.warn('SW registration failed', err));
+  }
 </script>
 </body>
 </html>
