@@ -616,10 +616,9 @@ function loadData() {
     } else if (raw) {
       let existing = JSON.parse(raw);
       let dirty = false;
-      // Merge new seed entries not yet in localStorage
-      if (savedVersion < SEED_VERSION) {
-        // Clé de déduplication : intervals_id si dispo, sinon date|type|duree
-        // Évite les faux doublons quand plusieurs séances du même type le même jour
+      // Merge new seed entries — TOUJOURS, pas seulement sur changement de version
+      // Clé de déduplication : intervals_id si dispo, sinon date|type|duree
+      {
         const existingKeys = new Set(existing.map(e =>
           (e._v1 && e._v1.id) ? 'iid:' + e._v1.id : e.date + '|' + e.type + '|' + (e.duree ?? '')
         ));
@@ -630,7 +629,10 @@ function loadData() {
         if (toAdd.length > 0) {
           const newEntries = toAdd.map((d, i) => ({ ...d, id: 'garmin_' + d.date + '_' + i }));
           existing = [...existing, ...newEntries];
+          dirty = true;
         }
+      }
+      if (savedVersion < SEED_VERSION) {
         dirty = true;
         localStorage.setItem(SEED_VERSION_KEY, SEED_VERSION);
       }
