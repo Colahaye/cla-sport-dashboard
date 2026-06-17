@@ -109,8 +109,10 @@ def fetch_wellness(days_back=DAYS_BACK):
         hrv  = item.get("hrv")          # rMSSD (ms) - signal readiness n.1
         ctl  = item.get("ctl")          # Fitness calcule par Intervals.icu
         atl  = item.get("atl")          # Fatigue calcule par Intervals.icu
-        if any(v is not None for v in (ss, rhr, hrv, ctl, atl, item.get("steps"))):
+        wgt  = item.get("weight")       # poids (kg)
+        if any(v is not None for v in (ss, rhr, hrv, ctl, atl, wgt, item.get("steps"))):
             out[d] = {
+                "weight":      round(wgt, 1) if wgt is not None else None,
                 "resting_hr":  rhr,
                 "sleep_secs":  ss,
                 "sleep_h":     round(ss / 3600, 1) if ss else None,

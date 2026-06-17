@@ -358,6 +358,28 @@
     </div>
     <div class="pmc-mini" id="pmcMini"></div>
   </div>
+
+  <!-- POIDS -->
+  <div class="pmc-section">
+    <div class="pmc-header">
+      <div>
+        <h2>⚖️ Poids</h2>
+        <div class="pmc-help">Source : wellness Intervals.icu. Les jours sans pesée reprennent la dernière valeur connue (ligne plate). Cible en pointillé.</div>
+      </div>
+      <div class="pmc-controls">
+        <label style="font-size:0.7rem;color:var(--text-muted)">Période</label>
+        <select id="weightRange" onchange="renderWeightChart()">
+          <option value="90">90 jours</option>
+          <option value="180" selected>180 jours</option>
+          <option value="365">1 an</option>
+        </select>
+      </div>
+    </div>
+    <div class="pmc-canvas-wrap">
+      <canvas id="weightChart"></canvas>
+    </div>
+  </div>
+
   <!-- FORM -->
   <div class="form-panel" id="formPanel">
     <h2 id="formTitle">Nouvelle séance</h2>
@@ -1111,6 +1133,88 @@ function renderTable() {
 
   renderStats();
   renderFitnessChart();
+  renderWeightChart();
+}
+
+// ═══ COURBE DE POIDS (Chart.js) ═══
+// Source = wellness Intervals.icu. Report (forward-fill) : un jour sans pesee
+// herite du dernier poids connu -> la courbe reste plate au lieu de trouer.
+let weightChartInstance = null;
+function renderWeightChart() {
+  const ctx = document.getElementById('weightChart');
+  if (!ctx || typeof Chart === 'undefined') return;
+
+  const range    = parseInt(document.getElementById('weightRange')?.value || '180');
+  const wellness  = (window.SPORT_DATA && window.SPORT_DATA.wellness) || {};
+  const athlete   = (window.SPORT_DATA && window.SPORT_DATA.athlete)  || {};
+  const target    = athlete.weight_target_kg || null;
+
+  const toISO = (d) => d.getFullYear() + '-' +
+    String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+
+  const start = new Date(); start.setDate(start.getDate() - range + 1);
+  const startISO = toISO(start);
+
+  // Amorce : dernier poids connu AVANT la fenetre (pour ne pas demarrer a vide).
+  const dated = Object.keys(wellness)
+    .filter(d => wellness[d] && wellness[d].weight != null)
+    .sort();
+  let last = null;
+  dated.forEach(d => { if (d < startISO) last = wellness[d].weight; });
+
+  const labels = [], data = [];
+  for (let i = 0; i < range; i++) {
+    const dt = new Date(start); dt.setDate(start.getDate() + i);
+    const iso = toISO(dt);
+    if (wellness[iso] && wellness[iso].weight != null) last = wellness[iso].weight;
+    labels.push(iso);
+    data.push(last);   // forward-fill (reste null tant qu'aucune pesee connue)
+  }
+
+  const datasets = [{
+    label: 'Poids (kg)',
+    data,
+    borderColor: '#185FA5',
+    backgroundColor: 'rgba(24,95,165,0.10)',
+    borderWidth: 2,
+    pointRadius: 0,
+    tension: 0.25,
+    fill: true,
+    spanGaps: true,
+  }];
+  if (target) {
+    datasets.push({
+      label: 'Cible ' + target + ' kg',
+      data: labels.map(() => target),
+      borderColor: '#888780',
+      borderWidth: 1.5,
+      borderDash: [5, 4],
+      pointRadius: 0,
+      fill: false,
+    });
+  }
+
+  const vals = data.filter(v => v != null);
+  const lo = vals.length ? Math.min(...vals, target || Infinity) - 1 : 60;
+  const hi = vals.length ? Math.max(...vals, target || -Infinity) + 1 : 80;
+
+  if (weightChartInstance) weightChartInstance.destroy();
+  weightChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { labels: { boxWidth: 12, font: { size: 11 } } },
+        tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + (c.parsed.y != null ? c.parsed.y + ' kg' : '—') } },
+      },
+      scales: {
+        x: { ticks: { maxTicksLimit: 8, font: { size: 10 } }, grid: { display: false } },
+        y: { min: lo, max: hi, ticks: { font: { size: 10 }, callback: (v) => v + ' kg' } },
+      },
+    },
+  });
 }
 
 // NAV
