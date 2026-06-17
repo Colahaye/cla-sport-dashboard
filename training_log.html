@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Training Log — CLA 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -292,7 +295,7 @@
 <header>
   <div class="header-left">
     <h1>🚴 Training Log — CLA 2026</h1>
-    <p>FTP 250W (eFTP Intervals.icu) · FC seuil 176 bpm · Fasciite plantaire — cadence ≥ 88 rpm</p>
+    <p id="header-ftp-line">FTP — · FC seuil — bpm · Fasciite plantaire — cadence ≥ 88 rpm</p>
   </div>
   <div class="header-actions">
     <button class="btn-ghost" onclick="openCurrentPlan()">📅 Plan →</button>
@@ -1239,6 +1242,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tbody && typeof MutationObserver !== 'undefined') {
     new MutationObserver(() => setupNoteToggles()).observe(tbody, { childList: true });
     setupNoteToggles();
+  }
+
+  // Mise à jour dynamique de la ligne FTP dans le header
+  const athlete = window.SPORT_DATA && window.SPORT_DATA.athlete;
+  if (athlete) {
+    const ftp  = athlete.ftp_ref_w   || '—';
+    const hrZ  = (window.SPORT_DATA.zones && window.SPORT_DATA.zones.hr)
+                  ? window.SPORT_DATA.zones.hr : null;
+    const fcSeuil = hrZ ? (hrZ.Z4_min || hrZ.z4_low || '—') : '—';
+    document.getElementById('header-ftp-line').textContent =
+      `FTP ${ftp}W · FC seuil ${fcSeuil} bpm · Fasciite plantaire — cadence ≥ 88 rpm`;
   }
 });
 

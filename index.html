@@ -325,7 +325,7 @@
 
 <div class="frame-wrap">
   <div class="loading-msg" id="loading-msg">Chargement…</div>
-  <iframe id="frame-log"       class="active" src="training_log.html"              title="Training Log"></iframe>
+  <iframe id="frame-log"       class="active" src="about:blank"                   title="Training Log"></iframe>
   <iframe id="frame-plan"      src="about:blank"                                   title="Training Plan"></iframe>
   <iframe id="frame-renfo"     src="about:blank"                                   title="Renforcement"></iframe>
   <iframe id="frame-nutrition" src="about:blank"                                   title="Nutrition"></iframe>
@@ -333,9 +333,12 @@
 
 <script>
   const DATA = window.SPORT_DATA || {};
-  const PLAN_PATH  = (DATA.current_plan && DATA.current_plan.html_path) || 'Plan_CLA/plan_CLA_2026-06.html';
-  const RENFO_PATH = 'Renfo_CLA/renfo.html';
-  const NUTRI_PATH = 'Nutrition_CLA/nutrition.html';
+  // Cache-buster : change chaque jour → force le navigateur à recharger les iframes
+  const CB = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const PLAN_PATH  = ((DATA.current_plan && DATA.current_plan.html_path) || 'Plan_CLA/plan_CLA_2026-06.html') + '?v=' + CB;
+  const RENFO_PATH = 'Renfo_CLA/renfo.html?v=' + CB;
+  const NUTRI_PATH = 'Nutrition_CLA/nutrition.html?v=' + CB;
+  const LOG_PATH   = 'training_log.html?v=' + CB;
 
   // ── Helpers ──────────────────────────────────────────────────
   function formatDateShort(iso) {
@@ -629,6 +632,11 @@
   // ── Tabs ─────────────────────────────────────────────────────
   const framePlan = document.getElementById('frame-plan');
   const frameLog  = document.getElementById('frame-log');
+  const frameRenfo = document.getElementById('frame-renfo');
+  const frameNutri = document.getElementById('frame-nutrition');
+
+  // Chargement initial du log avec cache-buster
+  frameLog.src = LOG_PATH;
 
   frameLog.addEventListener('load', () => {
     document.getElementById('loading-msg').classList.add('hidden');
@@ -636,9 +644,6 @@
       if (framePlan.src === 'about:blank') framePlan.src = PLAN_PATH;
     }, 100);
   });
-
-  const frameRenfo = document.getElementById('frame-renfo');
-  const frameNutri = document.getElementById('frame-nutrition');
 
   function setActiveTab(target) {
     document.querySelectorAll('.shell-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === target));
