@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T00:10:04.000Z",
+  "last_updated": "2026-06-18T09:10:15.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4876,6 +4876,48 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
+      "id": "2026-06-18-bike-endurance-i158248998",
+      "date": "2026-06-18",
+      "week_id": "2026-W25",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i158248998",
+      "intervals_url": "https://intervals.icu/activities/i158248998",
+      "planned": null,
+      "executed": {
+        "duration_min": 79,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 190,
+        "hr_avg": 155,
+        "hr_max": 183,
+        "tss": 77,
+        "distance_m": 38017,
+        "cadence": 89,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
       "id": "2026-06-18-bike-tempo",
       "date": "2026-06-18",
       "week_id": "2026-W25",
@@ -4930,18 +4972,36 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-21-bike-tempo",
+      "id": "2026-06-21-bike-endurance",
       "date": "2026-06-21",
       "week_id": "2026-W25",
       "sport": "bike",
-      "type": "tempo",
+      "type": "endurance",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
         "name": "Longue Z2 + 2x20' SS (3h)",
         "duration_min": 180,
-        "description": "Sortie longue 3h (Z2) — la plus rentable de la semaine.\n2×20' Sweet Spot dans la sortie. Boire 1 bidon + 1 glucide/h.\n\n- 30m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 20m 88-93%\n- 10m 60-72%\n- 90m 60-72%",
+        "description": "Sortie longue 3h (Z2) - la base, le plus rentable. SS DEGRADE (jambes fatiguees, fin de bloc, FTP reglee trop haut) : viser FC <= 165, pas plus. Si jambes mortes -> tout Z2. Boire 1 bidon + 1 glucide/h.\n- 30m 60-72%\n- 20m 78-83%\n- 10m 60-72%\n- 20m 78-83%\n- 10m 60-72%\n- 90m 60-72%",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-22-bike-endurance",
+      "date": "2026-06-22",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie Z2 amis",
+        "duration_min": 90,
+        "description": "Sortie avec un ami (remplace le repos). Z2 social, FC plafond < 152. Rester facile meme si le groupe accelere - tu es en fin de bloc, jambes lourdes. Si ca chauffe en cote, laisse filer.\n- 90m 60-72%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -4957,10 +5017,10 @@ window.SPORT_DATA = {
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "VO2max 5x4' (280-310W)",
-        "duration_min": 65,
-        "description": "VO2max Z5 — capacité à répéter les efforts intenses.\nFC cible blocs 175–185 bpm. La plus dure du bloc.\nSi le 4e/5e décroche <280 W → arrêter à 4 blocs.\n\n- 15m ramp 50-65%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 4m 107-118%\n- 4m 45%\n- 10m 50%",
-        "primary_zone": "Z5"
+        "name": "Récup Z1 45'",
+        "duration_min": 45,
+        "description": "Recup active - remplace le VO2 (TSB bas + chantier imminent). Tout facile.\n- 45m 50-55%",
+        "primary_zone": "Z1"
       },
       "executed": null,
       "notes": null
@@ -5324,6 +5384,24 @@ window.SPORT_DATA = {
       },
       "executed": null,
       "notes": null
+    },
+    {
+      "id": "2026-07-31-bike-tempo",
+      "date": "2026-07-31",
+      "week_id": "2026-W31",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Test FTP 20min",
+        "duration_min": 55,
+        "description": "TEST FTP OUTDOOR (Wahoo) - jambes fraiches, route plate/montee reguliere, peu de trafic.\n1) 15min echauffement progressif Z1->Z2\n2) 3x1min a ~Z4 (dur mais maitrise), 1min facile entre\n3) 5min facile\n4) 20min A FOND allure tenable (regulier, finir vide) <- bloc qui compte\n5) 10min retour au calme\nFTP outdoor = 0.95 x puissance moyenne des 20min. Garder 262 pour Zwift, cette valeur sert aux zones route.",
+        "primary_zone": "Z4"
+      },
+      "executed": null,
+      "notes": null
     }
   ],
   "wellness": {
@@ -5612,7 +5690,7 @@ window.SPORT_DATA = {
       "sleep_secs": 26640,
       "sleep_h": 7.4,
       "sleep_score": null,
-      "steps": 1272,
+      "steps": 4240,
       "hrv_ms": null,
       "ctl": 26.7,
       "atl": 51.3,
@@ -6602,15 +6680,15 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-18": {
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
+      "resting_hr": 57,
+      "sleep_secs": 25320,
+      "sleep_h": 7.0,
       "sleep_score": null,
-      "steps": null,
+      "steps": 1283,
       "hrv_ms": null,
-      "ctl": 27.8,
-      "atl": 54.3,
-      "tsb": -26.5,
+      "ctl": 27.9,
+      "atl": 54.7,
+      "tsb": -26.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
