@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-18T21:17:55.000Z",
+  "last_updated": "2026-06-19T00:21:07.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4918,24 +4918,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-18-bike-tempo",
-      "date": "2026-06-18",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "tempo",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "SS 3x12' (230-244W)",
-        "duration_min": 73,
-        "description": "Sweet Spot Z3–Z4 — puissance soutenue de course.\nFC cible 160–173 bpm · Cadence ≥90 rpm · RPE 7/10.\nSi le 3e bloc décroche <230 W → couper à 2×12' + 1×8'.\n\n- 15m ramp 50-65%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 12m 88-93%\n- 4m 50%\n- 10m 50%",
-        "primary_zone": "Z4"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-19-bike-endurance",
       "date": "2026-06-19",
       "week_id": "2026-W25",
@@ -6689,6 +6671,20 @@ window.SPORT_DATA = {
       "ctl": 25.1,
       "atl": 45.9,
       "tsb": -20.8,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-19": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 25.8,
+      "atl": 47.1,
+      "tsb": -21.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
