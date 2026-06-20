@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-19T21:59:26.000Z",
+  "last_updated": "2026-06-20T00:03:06.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4960,24 +4960,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-19-bike-endurance",
-      "date": "2026-06-19",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Endurance Z2 1h15",
-        "duration_min": 75,
-        "description": "Endurance Z2 — volume aérobie de base.\n155–190 W · Cadence 85–95 rpm · FC <152 bpm.\nConversation possible ; si tu souffles, tu es trop fort.\n\n- 75m 59-73%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-20-bike-recovery",
       "date": "2026-06-20",
       "week_id": "2026-W25",
@@ -6727,6 +6709,20 @@ window.SPORT_DATA = {
       "ctl": 26.0,
       "atl": 48.3,
       "tsb": -22.3,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-20": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 25.8,
+      "atl": 44.3,
+      "tsb": -18.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
