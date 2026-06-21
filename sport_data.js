@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-20T22:01:24.000Z",
+  "last_updated": "2026-06-21T00:00:58.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -4960,24 +4960,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-20-bike-recovery",
-      "date": "2026-06-20",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "recovery",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Recup Z1 45'",
-        "duration_min": 45,
-        "description": "Récupération active Z1 — faire circuler le sang.\n<140 W · Cadence haute 90–100 rpm. Repos complet si fatigue >7/10.\n+ Prépa course : montées de talons 3×15 + mobilité cheville/pied.\n\n- 45m 45-53%",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-21-bike-endurance",
       "date": "2026-06-21",
       "week_id": "2026-W25",
@@ -6723,6 +6705,20 @@ window.SPORT_DATA = {
       "ctl": 25.8,
       "atl": 44.3,
       "tsb": -18.5,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-21": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 28.6,
+      "atl": 57.8,
+      "tsb": -29.2,
       "soreness": null,
       "fatigue": null,
       "mood": null
