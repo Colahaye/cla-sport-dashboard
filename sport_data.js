@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-21T15:08:40.000Z",
+  "last_updated": "2026-06-21T18:15:30.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5020,8 +5020,26 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-06-22-bike-endurance",
+      "id": "2026-06-22-bike-recovery",
       "date": "2026-06-22",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "recovery",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Récup Z1 1h (cool)",
+        "duration_min": 60,
+        "description": "Récup active avec les potes (TSB -31, fin de bloc). VRAIMENT facile : < 140 W, 90-100 rpm, conversation totale. Si le groupe accélère, laisse filer — cette sortie ne doit rien fatiguer.\n\n- 60m 50-55%",
+        "primary_zone": "Z1"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-06-23-bike-endurance",
+      "date": "2026-06-23",
       "week_id": "2026-W26",
       "sport": "bike",
       "type": "endurance",
@@ -5029,28 +5047,10 @@ window.SPORT_DATA = {
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Sortie Z2 amis",
-        "duration_min": 90,
-        "description": "Sortie avec un ami (remplace le repos). Z2 social, FC plafond < 152. Rester facile meme si le groupe accelere - tu es en fin de bloc, jambes lourdes. Si ca chauffe en cote, laisse filer.\n- 90m 60-72%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-06-23-bike-interval",
-      "date": "2026-06-23",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "interval",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Récup Z1 45'",
-        "duration_min": 45,
-        "description": "Recup active - remplace le VO2 (TSB bas + chantier imminent). Tout facile.\n- 45m 50-55%",
-        "primary_zone": "Z1"
+        "name": "Repos complet",
+        "duration_min": 60,
+        "description": "Repos total. Réhydrate sérieusement (déficit hydrique après dimanche à 38°C). Mobilité légère pieds/mollets le soir si envie.",
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
@@ -5065,28 +5065,28 @@ window.SPORT_DATA = {
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Endurance Z2 1h30",
-        "duration_min": 90,
-        "description": "Endurance Z2 — économie d'effort.\n155–196 W · Cadence 85–95 rpm · FC <152 bpm.\nPuissance constante, pas de pics.\n\n- 90m 59-73%",
+        "name": "Endurance Z2 souple 1h",
+        "duration_min": 60,
+        "description": "Z2 souple — on laisse la Form remonter (TSB encore négatif). 155-185 W, FC < 150, cadence 88-95. Puissance constante, aucun pic.\n\n- 60m 59-70%",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-06-25-bike-tempo",
+      "id": "2026-06-25-bike-interval",
       "date": "2026-06-25",
       "week_id": "2026-W26",
       "sport": "bike",
-      "type": "tempo",
+      "type": "interval",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Seuil 2x15' (250-262W)",
-        "duration_min": 71,
-        "description": "Seuil Z4 — puissance au seuil.\nFC cible blocs 170–180 bpm. Effort soutenu mais tenable.\n\n- 15m ramp 50-65%\n- 15m 95-100%\n- 8m 50%\n- 15m 95-100%\n- 8m 50%\n- 10m 50%",
-        "primary_zone": "Z4"
+        "name": "VO2max 5x4' (conditionnel)",
+        "duration_min": 61,
+        "description": "VO2max — CONDITIONNEL, check au réveil :\n- Jambes fraiches -> 5x4' @ 280-310 W (107-118%)\n- Doute / un peu lourd -> 4x4' @ 270 W (~103%), arrete au 4e\n- Cuit -> remplace par 1h Z2 facile, zero culpabilite\nDerniere vraie seance avant 1 mois sans velo : pas la peine d'aller au fond. Recup 4' a 50% entre les blocs.\n\n- 15m ramp 50-75%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 10m 50%",
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
