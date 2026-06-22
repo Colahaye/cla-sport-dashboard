@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-22T15:48:16.000Z",
+  "last_updated": "2026-06-22T20:00:04.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5002,6 +5002,90 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
+      "id": "2026-06-22-bike-endurance-i159459271",
+      "date": "2026-06-22",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i159459271",
+      "intervals_url": "https://intervals.icu/activities/i159459271",
+      "planned": null,
+      "executed": {
+        "duration_min": 88,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 133,
+        "hr_avg": 132,
+        "hr_max": 166,
+        "tss": 47,
+        "distance_m": 34891,
+        "cadence": 83,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-06-22-bike-indoor-i159432088",
+      "date": "2026-06-22",
+      "week_id": "2026-W26",
+      "sport": "bike",
+      "type": "indoor",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i159432088",
+      "intervals_url": "https://intervals.icu/activities/i159432088",
+      "planned": null,
+      "executed": {
+        "duration_min": 0,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": null,
+        "hr_max": null,
+        "tss": null,
+        "distance_m": null,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
       "id": "2026-06-22-bike-recovery",
       "date": "2026-06-22",
       "week_id": "2026-W26",
@@ -6754,9 +6838,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": 688,
       "hrv_ms": null,
-      "ctl": 29.1,
-      "atl": 56.3,
-      "tsb": -27.3,
+      "ctl": 30.2,
+      "atl": 62.6,
+      "tsb": -32.4,
       "soreness": 1,
       "fatigue": 1,
       "mood": 2
