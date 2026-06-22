@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-21T22:08:49.000Z",
+  "last_updated": "2026-06-22T00:05:10.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5002,24 +5002,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-21-bike-endurance",
-      "date": "2026-06-21",
-      "week_id": "2026-W25",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Longue Z2 + 2x20' SS (3h)",
-        "duration_min": 180,
-        "description": "Sortie longue 3h (Z2) - la base, le plus rentable. SS DEGRADE (jambes fatiguees, fin de bloc, FTP reglee trop haut) : viser FC <= 165, pas plus. Si jambes mortes -> tout Z2. Boire 1 bidon + 1 glucide/h.\n- 30m 60-72%\n- 20m 78-83%\n- 10m 60-72%\n- 20m 78-83%\n- 10m 60-72%\n- 90m 60-72%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-22-bike-recovery",
       "date": "2026-06-22",
       "week_id": "2026-W26",
@@ -6761,6 +6743,20 @@ window.SPORT_DATA = {
       "ctl": 29.1,
       "atl": 60.7,
       "tsb": -31.6,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-22": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 29.1,
+      "atl": 56.3,
+      "tsb": -27.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
