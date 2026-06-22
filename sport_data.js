@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-22T00:05:10.000Z",
+  "last_updated": "2026-06-22T10:33:41.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6696,7 +6696,7 @@ window.SPORT_DATA = {
       "sleep_secs": 25320,
       "sleep_h": 7.0,
       "sleep_score": null,
-      "steps": 1283,
+      "steps": 2556,
       "hrv_ms": null,
       "ctl": 25.1,
       "atl": 45.9,
@@ -6706,11 +6706,11 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-19": {
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
+      "resting_hr": 62,
+      "sleep_secs": 28740,
+      "sleep_h": 8.0,
       "sleep_score": null,
-      "steps": null,
+      "steps": 6688,
       "hrv_ms": null,
       "ctl": 26.0,
       "atl": 48.3,
@@ -6720,11 +6720,11 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-20": {
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
+      "resting_hr": 59,
+      "sleep_secs": 25260,
+      "sleep_h": 7.0,
       "sleep_score": null,
-      "steps": null,
+      "steps": 8224,
       "hrv_ms": null,
       "ctl": 25.4,
       "atl": 41.9,
@@ -6734,11 +6734,11 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-21": {
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
+      "resting_hr": 64,
+      "sleep_secs": 24960,
+      "sleep_h": 6.9,
       "sleep_score": null,
-      "steps": null,
+      "steps": 9753,
       "hrv_ms": null,
       "ctl": 29.1,
       "atl": 60.7,
@@ -6748,18 +6748,18 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-22": {
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
+      "resting_hr": 60,
+      "sleep_secs": 27120,
+      "sleep_h": 7.5,
       "sleep_score": null,
-      "steps": null,
+      "steps": 688,
       "hrv_ms": null,
       "ctl": 29.1,
       "atl": 56.3,
       "tsb": -27.3,
-      "soreness": null,
-      "fatigue": null,
-      "mood": null
+      "soreness": 1,
+      "fatigue": 1,
+      "mood": 2
     }
   }
 };
