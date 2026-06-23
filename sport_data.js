@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-22T22:43:09.000Z",
+  "last_updated": "2026-06-23T00:00:50.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5086,24 +5086,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-22-bike-recovery",
-      "date": "2026-06-22",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "recovery",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Récup Z1 1h (cool)",
-        "duration_min": 60,
-        "description": "Récup active avec les potes (TSB -31, fin de bloc). VRAIMENT facile : < 140 W, 90-100 rpm, conversation totale. Si le groupe accélère, laisse filer — cette sortie ne doit rien fatiguer.\n\n- 60m 50-55%",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-23-bike-endurance",
       "date": "2026-06-23",
       "week_id": "2026-W26",
@@ -6844,6 +6826,20 @@ window.SPORT_DATA = {
       "soreness": 1,
       "fatigue": 1,
       "mood": 2
+    },
+    "2026-06-23": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 29.5,
+      "atl": 54.2,
+      "tsb": -24.8,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
     }
   }
 };
