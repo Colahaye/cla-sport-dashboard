@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-23T23:50:45.000Z",
+  "last_updated": "2026-06-24T08:18:38.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5086,24 +5086,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-23-bike-endurance",
-      "date": "2026-06-23",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Repos complet",
-        "duration_min": 60,
-        "description": "Repos total. Réhydrate sérieusement (déficit hydrique après dimanche à 38°C). Mobilité légère pieds/mollets le soir si envie.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-24-bike-endurance",
       "date": "2026-06-24",
       "week_id": "2026-W26",
@@ -6820,9 +6802,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": 688,
       "hrv_ms": null,
-      "ctl": 30.2,
-      "atl": 62.6,
-      "tsb": -32.4,
+      "ctl": 29.5,
+      "atl": 58.8,
+      "tsb": -29.3,
       "soreness": 1,
       "fatigue": 1,
       "mood": 2
@@ -6834,9 +6816,23 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 29.5,
-      "atl": 54.2,
-      "tsb": -24.8,
+      "ctl": 28.8,
+      "atl": 51.0,
+      "tsb": -22.2,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-24": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 29.1,
+      "atl": 49.8,
+      "tsb": -20.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
