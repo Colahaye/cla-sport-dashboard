@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-24T22:10:21.000Z",
+  "last_updated": "2026-06-25T00:01:19.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5086,24 +5086,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-24-bike-endurance",
-      "date": "2026-06-24",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Endurance Z2 souple 1h",
-        "duration_min": 60,
-        "description": "Z2 souple — on laisse la Form remonter (TSB encore négatif). 155-185 W, FC < 150, cadence 88-95. Puissance constante, aucun pic.\n\n- 60m 59-70%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-25-bike-interval",
       "date": "2026-06-25",
       "week_id": "2026-W26",
@@ -6833,6 +6815,20 @@ window.SPORT_DATA = {
       "ctl": 29.1,
       "atl": 49.8,
       "tsb": -20.7,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-25": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 31.1,
+      "atl": 58.4,
+      "tsb": -27.2,
       "soreness": null,
       "fatigue": null,
       "mood": null
