@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-25T22:16:16.000Z",
+  "last_updated": "2026-06-26T00:04:54.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5086,24 +5086,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-25-bike-interval",
-      "date": "2026-06-25",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "interval",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "VO2max 5x4' (conditionnel)",
-        "duration_min": 61,
-        "description": "VO2max — CONDITIONNEL, check au réveil :\n- Jambes fraiches -> 5x4' @ 280-310 W (107-118%)\n- Doute / un peu lourd -> 4x4' @ 270 W (~103%), arrete au 4e\n- Cuit -> remplace par 1h Z2 facile, zero culpabilite\nDerniere vraie seance avant 1 mois sans velo : pas la peine d'aller au fond. Recup 4' a 50% entre les blocs.\n\n- 15m ramp 50-75%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 4m 50%\n- 4m 107-118%\n- 10m 50%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-26-bike-tempo",
       "date": "2026-06-26",
       "week_id": "2026-W26",
@@ -6829,6 +6811,20 @@ window.SPORT_DATA = {
       "ctl": 30.2,
       "atl": 53.5,
       "tsb": -23.4,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-26": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 30.7,
+      "atl": 53.3,
+      "tsb": -22.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
