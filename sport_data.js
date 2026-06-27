@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-06-26T23:57:41.000Z",
+  "last_updated": "2026-06-27T07:44:15.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-06-26-bike-tempo",
-      "date": "2026-06-26",
-      "week_id": "2026-W26",
-      "sport": "bike",
-      "type": "tempo",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Sortie plaisir + 3x15s sprints",
-        "duration_min": 73,
-        "description": "Dernière sortie Z2 avant coupure vélo — plaisir.\n3×15\" sprints pour activer les fibres rapides, récup complète.\nGarder de la fraîcheur pour le voyage.\n\n- 20m 60-73%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 15s 130-150%\n- 4m 50%\n- 40m 60-73%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-06-28-run-recovery",
       "date": "2026-06-28",
       "week_id": "2026-W26",
@@ -6867,6 +6849,20 @@ window.SPORT_DATA = {
       "ctl": 28.4,
       "atl": 42.0,
       "tsb": -13.6,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-06-27": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 27.7,
+      "atl": 36.4,
+      "tsb": -8.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
