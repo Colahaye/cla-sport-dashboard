@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-02T23:58:02.000Z",
+  "last_updated": "2026-07-03T07:56:35.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-07-02-run-recovery",
-      "date": "2026-07-02",
-      "week_id": "2026-W27",
-      "sport": "run",
-      "type": "recovery",
-      "type_log": "Course a pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Footing Z1 30 min + lignes",
-        "duration_min": 30,
-        "description": "30 min facile + 4×15\" lignes droites en souplesse (optionnel, seulement si pieds OK).",
-        "primary_zone": "Z1"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-07-05-run-recovery",
       "date": "2026-07-05",
       "week_id": "2026-W27",
@@ -6879,6 +6861,20 @@ window.SPORT_DATA = {
       "ctl": 24.6,
       "atl": 17.8,
       "tsb": 6.8,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-07-03": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 24.0,
+      "atl": 15.5,
+      "tsb": 8.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
