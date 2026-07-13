@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-12T23:44:38.000Z",
+  "last_updated": "2026-07-13T08:11:32.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-07-12-run-endurance",
-      "date": "2026-07-12",
-      "week_id": "2026-W28",
-      "sport": "run",
-      "type": "endurance",
-      "type_log": "Course a pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Sortie longue 55 min",
-        "duration_min": 55,
-        "description": "55–60 min roulant, 150–250 m D+. Marche les raidillons. Allure facile.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-07-15-run-recovery",
       "date": "2026-07-15",
       "week_id": "2026-W29",
@@ -6929,6 +6911,20 @@ window.SPORT_DATA = {
       "ctl": 19.4,
       "atl": 4.3,
       "tsb": 15.1,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-07-13": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 18.7,
+      "atl": 3.5,
+      "tsb": 15.2,
       "soreness": null,
       "fatigue": null,
       "mood": null
