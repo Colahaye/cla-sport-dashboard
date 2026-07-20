@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-19T23:50:50.000Z",
+  "last_updated": "2026-07-20T07:53:01.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-07-19-run-trail",
-      "date": "2026-07-19",
-      "week_id": "2026-W29",
-      "sport": "run",
-      "type": "trail",
-      "type_log": "Course a pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Trail 65 min — 250-400m D+",
-        "duration_min": 65,
-        "description": "Trail 1h–1h15, 250–400 m D+. Montées en marche rapide. Allure facile, ne pas chasser le chrono.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-07-21-run-recovery",
       "date": "2026-07-21",
       "week_id": "2026-W30",
@@ -6955,6 +6937,20 @@ window.SPORT_DATA = {
       "ctl": 16.4,
       "atl": 1.6,
       "tsb": 14.8,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-07-20": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 15.8,
+      "atl": 1.3,
+      "tsb": 14.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
