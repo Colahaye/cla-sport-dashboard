@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-26T17:56:17.000Z",
+  "last_updated": "2026-07-26T20:04:54.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5146,8 +5146,44 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-07-31-bike-tempo",
-      "date": "2026-07-31",
+      "id": "2026-07-27-bike-endurance",
+      "date": "2026-07-27",
+      "week_id": "2026-W31",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Reprise en selle. Z2 155-196W / FC 135-155. Cadence >=88rpm. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-28-strength-tempo",
+      "date": "2026-07-28",
+      "week_id": "2026-W31",
+      "sport": "strength",
+      "type": "tempo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B (chaine posterieure)",
+        "duration_min": 30,
+        "description": "Hip thrust 3x15, fentes arriere 3x12/jambe, step up 3x12/jambe, heel drop excentrique 3x15 (anti-fasciite), squat lent 3x12, short foot 3x15/pied.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-29-bike-tempo",
+      "date": "2026-07-29",
       "week_id": "2026-W31",
       "sport": "bike",
       "type": "tempo",
@@ -5155,10 +5191,676 @@ window.SPORT_DATA = {
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Test FTP 20min",
-        "duration_min": 55,
-        "description": "TEST FTP OUTDOOR (Wahoo) - jambes fraiches, route plate/montee reguliere, peu de trafic.\n1) 15min echauffement progressif Z1->Z2\n2) 3x1min a ~Z4 (dur mais maitrise), 1min facile entre\n3) 5min facile\n4) 20min A FOND allure tenable (regulier, finir vide) <- bloc qui compte\n5) 10min retour au calme\nFTP outdoor = 0.95 x puissance moyenne des 20min. Garder 262 pour Zwift, cette valeur sert aux zones route.",
-        "primary_zone": "Z4"
+        "name": "Velo Z2 + 3x5min Z3",
+        "duration_min": 90,
+        "description": "1h30 dont 3x5min Z3 (197-236W) recup 3min. Protocole fasciite matin+soir.",
+        "primary_zone": "Z3"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-07-31-bike-endurance",
+      "date": "2026-07-31",
+      "week_id": "2026-W31",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 2h",
+        "duration_min": 120,
+        "description": "2h endurance Z2 155-196W / FC 135-155. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-01-strength-tempo",
+      "date": "2026-08-01",
+      "week_id": "2026-W31",
+      "sport": "strength",
+      "type": "tempo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A (tronc/haut du corps)",
+        "duration_min": 30,
+        "description": "Pompes 3x12, planche 3x45s, planche laterale 2x30s/cote, superman 3x15, dips 3x10.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-02-bike-endurance",
+      "date": "2026-08-02",
+      "week_id": "2026-W31",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue Z2 2h30",
+        "duration_min": 150,
+        "description": "2h30 Z2 155-196W, terrain roulant. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-03-bike-endurance",
+      "date": "2026-08-03",
+      "week_id": "2026-W32",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h45",
+        "duration_min": 105,
+        "description": "Endurance Z2. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-04-strength-renfo",
+      "date": "2026-08-04",
+      "week_id": "2026-W32",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B",
+        "duration_min": 30,
+        "description": "Hip thrust, fentes, step up, heel drop excentrique, squat lent, short foot.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-05-bike-tempo",
+      "date": "2026-08-05",
+      "week_id": "2026-W32",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sweet Spot 3x15min",
+        "duration_min": 90,
+        "description": "Echauff 10min + 3x15min SS 230-244W / recup 4min + retour 10min. FC 160-173.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-06-run-recovery",
+      "date": "2026-08-06",
+      "week_id": "2026-W32",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "TEST reprise course 2x15min run/walk",
+        "duration_min": 35,
+        "description": "2min course Z1-Z2 (<169bpm) / 1min marche, x2 blocs de 15min. Terrain souple (herbe/chemin). ANNULER si douleur reveil >=3/10.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-07-bike-endurance",
+      "date": "2026-08-07",
+      "week_id": "2026-W32",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 2h",
+        "duration_min": 120,
+        "description": "Endurance. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-08-strength-renfo",
+      "date": "2026-08-08",
+      "week_id": "2026-W32",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A",
+        "duration_min": 30,
+        "description": "Pompes, planche, planche laterale, superman, dips.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-09-bike-endurance",
+      "date": "2026-08-09",
+      "week_id": "2026-W32",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue Z2 2h30-3h",
+        "duration_min": 165,
+        "description": "Endurance Z2, terrain vallonne si possible.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-10-bike-endurance",
+      "date": "2026-08-10",
+      "week_id": "2026-W33",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-11-strength-renfo",
+      "date": "2026-08-11",
+      "week_id": "2026-W33",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo leger 20min",
+        "duration_min": 20,
+        "description": "Version allegee : squat unijambiste, hip thrust, copenhagen, montees de talons.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-12-bike-tempo",
+      "date": "2026-08-12",
+      "week_id": "2026-W33",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sweet Spot 2x20min",
+        "duration_min": 90,
+        "description": "Echauff 10min + 2x20min SS 230-244W / recup 5min + retour 10min.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-13-run-endurance",
+      "date": "2026-08-13",
+      "week_id": "2026-W33",
+      "sport": "run",
+      "type": "endurance",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 2x20-25min run/walk",
+        "duration_min": 50,
+        "description": "Si test du 06/08 concluant (douleur <3/10). Sinon repeter le format S2. Terrain souple.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-14-bike-endurance",
+      "date": "2026-08-14",
+      "week_id": "2026-W33",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-15-strength-renfo",
+      "date": "2026-08-15",
+      "week_id": "2026-W33",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B",
+        "duration_min": 30,
+        "description": "Chaine posterieure + heel drop + short foot.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-17-bike-endurance",
+      "date": "2026-08-17",
+      "week_id": "2026-W34",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 2h",
+        "duration_min": 120,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-18-strength-renfo",
+      "date": "2026-08-18",
+      "week_id": "2026-W34",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A",
+        "duration_min": 30,
+        "description": "Tronc + haut du corps.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-19-bike-tempo",
+      "date": "2026-08-19",
+      "week_id": "2026-W34",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "RETEST FTP (Ramp Test Zwift)",
+        "duration_min": 60,
+        "description": "Dernier test 16/06 (262W). Recalibrer les zones apres 1 mois sans velo structure. Si pas envie: seuil 2x15min @250-262W a la place.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-20-run-recovery",
+      "date": "2026-08-20",
+      "week_id": "2026-W34",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 25-30min continu",
+        "duration_min": 30,
+        "description": "Z1-Z2 continu (<169bpm), surface souple, pas de walk/run cette fois si tout va bien.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-21-bike-endurance",
+      "date": "2026-08-21",
+      "week_id": "2026-W34",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-22-strength-renfo",
+      "date": "2026-08-22",
+      "week_id": "2026-W34",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo B",
+        "duration_min": 30,
+        "description": "Chaine posterieure + heel drop + short foot.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-23-bike-tempo",
+      "date": "2026-08-23",
+      "week_id": "2026-W34",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue + 2x20min SS",
+        "duration_min": 165,
+        "description": "2h30-3h dont 2x20min Sweet Spot (recalibre sur FTP retestee si fait le 19/08).",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-24-bike-endurance",
+      "date": "2026-08-24",
+      "week_id": "2026-W35",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-25-run-recovery",
+      "date": "2026-08-25",
+      "week_id": "2026-W35",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 30min continu",
+        "duration_min": 30,
+        "description": "Z1-Z2, terrain souple.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-26-bike-interval",
+      "date": "2026-08-26",
+      "week_id": "2026-W35",
+      "sport": "bike",
+      "type": "interval",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "VO2max 5x4min Z5",
+        "duration_min": 105,
+        "description": "Echauff 15min + 5x4min Z5 (recalibre FTP) / recup 4min + retour 10min.",
+        "primary_zone": "Z5"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-27-strength-renfo",
+      "date": "2026-08-27",
+      "week_id": "2026-W35",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo A",
+        "duration_min": 30,
+        "description": "Tronc + haut du corps.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-28-bike-endurance",
+      "date": "2026-08-28",
+      "week_id": "2026-W35",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-29-run-endurance",
+      "date": "2026-08-29",
+      "week_id": "2026-W35",
+      "sport": "run",
+      "type": "endurance",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 30min continu (3e seance optionnelle)",
+        "duration_min": 30,
+        "description": "Seulement si tout va bien depuis semaine 4.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-30-bike-endurance",
+      "date": "2026-08-30",
+      "week_id": "2026-W35",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sortie longue Z2 3h",
+        "duration_min": 180,
+        "description": "Semaine la plus chargee. Protocole fasciite matin+soir.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-08-31-bike-endurance",
+      "date": "2026-08-31",
+      "week_id": "2026-W36",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z2 1h30",
+        "duration_min": 90,
+        "description": "Debut de decharge avant depart Indonesie.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-01-run-recovery",
+      "date": "2026-09-01",
+      "week_id": "2026-W36",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 25min facile",
+        "duration_min": 25,
+        "description": "Z1-Z2.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-02-bike-tempo",
+      "date": "2026-09-02",
+      "week_id": "2026-W36",
+      "sport": "bike",
+      "type": "tempo",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Sweet Spot 3x15min",
+        "duration_min": 75,
+        "description": "Echauff + 3x15min SS / recup 4min.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-03-strength-renfo",
+      "date": "2026-09-03",
+      "week_id": "2026-W36",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Renfo leger 20min",
+        "duration_min": 20,
+        "description": "Version allegee.",
+        "primary_zone": null
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-04-bike-recovery",
+      "date": "2026-09-04",
+      "week_id": "2026-W36",
+      "sport": "bike",
+      "type": "recovery",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo Z1-Z2 1h30",
+        "duration_min": 90,
+        "description": "Facile.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-05-run-recovery",
+      "date": "2026-09-05",
+      "week_id": "2026-W36",
+      "sport": "run",
+      "type": "recovery",
+      "type_log": "Course a pied",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Course 25min facile",
+        "duration_min": 25,
+        "description": "Z1-Z2, derniere seance course avant voyage.",
+        "primary_zone": "Z2"
+      },
+      "executed": null,
+      "notes": null
+    },
+    {
+      "id": "2026-09-07-bike-recovery",
+      "date": "2026-09-07",
+      "week_id": "2026-W37",
+      "sport": "bike",
+      "type": "recovery",
+      "type_log": "Velo",
+      "status": "planned",
+      "source": "plan_generated",
+      "planned": {
+        "name": "Velo tres facile (optionnel)",
+        "duration_min": 45,
+        "description": "45min max Z1, seulement si envie. Sinon repos.",
+        "primary_zone": "Z1"
       },
       "executed": null,
       "notes": null
