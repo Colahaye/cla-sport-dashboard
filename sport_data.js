@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-27T23:56:42.000Z",
+  "last_updated": "2026-07-28T07:34:06.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-07-27-bike-endurance",
-      "date": "2026-07-27",
-      "week_id": "2026-W31",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Velo Z2 1h30",
-        "duration_min": 90,
-        "description": "Reprise en selle. Z2 155-196W / FC 135-155. Cadence >=88rpm. Protocole fasciite matin+soir.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-07-28-strength-tempo",
       "date": "2026-07-28",
       "week_id": "2026-W31",
@@ -7679,6 +7661,20 @@ window.SPORT_DATA = {
       "ctl": 13.4,
       "atl": 0.5,
       "tsb": 12.9,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-07-28": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 13.1,
+      "atl": 0.4,
+      "tsb": 12.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
