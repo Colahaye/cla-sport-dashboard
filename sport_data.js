@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-07-28T23:53:29.000Z",
+  "last_updated": "2026-07-29T07:38:14.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-07-28-strength-tempo",
-      "date": "2026-07-28",
-      "week_id": "2026-W31",
-      "sport": "strength",
-      "type": "tempo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo B (chaine posterieure)",
-        "duration_min": 30,
-        "description": "Hip thrust 3x15, fentes arriere 3x12/jambe, step up 3x12/jambe, heel drop excentrique 3x15 (anti-fasciite), squat lent 3x12, short foot 3x15/pied.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-07-29-bike-tempo",
       "date": "2026-07-29",
       "week_id": "2026-W31",
@@ -7675,6 +7657,20 @@ window.SPORT_DATA = {
       "ctl": 13.1,
       "atl": 0.4,
       "tsb": 12.7,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-07-29": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 12.8,
+      "atl": 0.4,
+      "tsb": 12.4,
       "soreness": null,
       "fatigue": null,
       "mood": null
