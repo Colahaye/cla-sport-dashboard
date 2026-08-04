@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-03T22:00:06.000Z",
+  "last_updated": "2026-08-04T00:01:16.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,24 +5128,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-03-bike-endurance",
-      "date": "2026-08-03",
-      "week_id": "2026-W32",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Velo Z2 1h45",
-        "duration_min": 105,
-        "description": "Endurance Z2. Protocole fasciite matin+soir.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-04-strength-renfo",
       "date": "2026-08-04",
       "week_id": "2026-W32",
@@ -7669,6 +7651,20 @@ window.SPORT_DATA = {
       "ctl": 11.3,
       "atl": 0.2,
       "tsb": 11.2,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-04": {
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 11.1,
+      "atl": 0.2,
+      "tsb": 10.9,
       "soreness": null,
       "fatigue": null,
       "mood": null
