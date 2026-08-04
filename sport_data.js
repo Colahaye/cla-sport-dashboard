@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-04T00:01:16.000Z",
+  "last_updated": "2026-08-04T07:31:40.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5128,6 +5128,48 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
+      "id": "2026-08-04-bike-endurance-i172272922",
+      "date": "2026-08-04",
+      "week_id": "2026-W32",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i172272922",
+      "intervals_url": "https://intervals.icu/activities/i172272922",
+      "planned": null,
+      "executed": {
+        "duration_min": 62,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 147,
+        "hr_avg": 147,
+        "hr_max": 177,
+        "tss": 50,
+        "distance_m": 29589,
+        "cadence": 89,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
       "id": "2026-08-04-strength-renfo",
       "date": "2026-08-04",
       "week_id": "2026-W32",
@@ -7452,9 +7494,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 15.8,
-      "atl": 1.3,
-      "tsb": 14.5,
+      "ctl": 16.0,
+      "atl": 1.4,
+      "tsb": 14.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7508,9 +7550,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 14.4,
-      "atl": 0.7,
-      "tsb": 13.7,
+      "ctl": 14.6,
+      "atl": 0.8,
+      "tsb": 13.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7522,9 +7564,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": 4898,
       "hrv_ms": null,
-      "ctl": 14.1,
-      "atl": 0.6,
-      "tsb": 13.4,
+      "ctl": 14.2,
+      "atl": 0.7,
+      "tsb": 13.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7550,9 +7592,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": 1108,
       "hrv_ms": null,
-      "ctl": 13.4,
+      "ctl": 13.6,
       "atl": 0.5,
-      "tsb": 12.9,
+      "tsb": 13.1,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7564,9 +7606,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 13.1,
+      "ctl": 13.2,
       "atl": 0.4,
-      "tsb": 12.7,
+      "tsb": 12.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7578,9 +7620,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 12.8,
+      "ctl": 12.9,
       "atl": 0.4,
-      "tsb": 12.4,
+      "tsb": 12.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7592,9 +7634,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 12.5,
+      "ctl": 12.6,
       "atl": 0.3,
-      "tsb": 12.2,
+      "tsb": 12.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7620,9 +7662,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 11.9,
+      "ctl": 12.0,
       "atl": 0.2,
-      "tsb": 11.7,
+      "tsb": 11.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7634,9 +7676,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 11.6,
+      "ctl": 11.8,
       "atl": 0.2,
-      "tsb": 11.4,
+      "tsb": 11.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7648,9 +7690,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 11.3,
+      "ctl": 11.5,
       "atl": 0.2,
-      "tsb": 11.2,
+      "tsb": 11.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
@@ -7662,9 +7704,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 11.1,
-      "atl": 0.2,
-      "tsb": 10.9,
+      "ctl": 12.4,
+      "atl": 6.8,
+      "tsb": 5.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
