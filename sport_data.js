@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-04T13:15:00.000Z",
+  "last_updated": "2026-08-04T12:43:49.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5177,18 +5177,18 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-05-strength-renfo",
+      "id": "2026-08-05-strength-tempo",
       "date": "2026-08-05",
       "week_id": "2026-W32",
       "sport": "strength",
-      "type": "renfo",
+      "type": "tempo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Renfo B",
+        "name": "Renfo B (chaine posterieure)",
         "duration_min": 30,
-        "description": "Hip thrust, fentes, step up, heel drop excentrique, squat lent, short foot.",
+        "description": "Hip thrust 3x15, fentes arriere 3x12/jambe, step up 3x12/jambe, heel drop excentrique 3x15, squat lent 3x12, short foot 3x15/pied.",
         "primary_zone": null
       },
       "executed": null,
@@ -5231,18 +5231,18 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-08-09-strength-renfo",
+      "id": "2026-08-09-strength-tempo",
       "date": "2026-08-09",
       "week_id": "2026-W32",
       "sport": "strength",
-      "type": "renfo",
+      "type": "tempo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "Renfo A",
+        "name": "Renfo A (tronc/haut du corps)",
         "duration_min": 30,
-        "description": "Pompes, planche, planche laterale, superman, dips.",
+        "description": "Pompes 3x12, planche 3x45s, planche laterale 2x30s/cote, superman 3x15, dips 3x10.",
         "primary_zone": null
       },
       "executed": null,
@@ -5315,25 +5315,25 @@ window.SPORT_DATA = {
         "name": "Sweet Spot 3x15min",
         "duration_min": 90,
         "description": "Echauff 10min + 3x15min SS 230-244W / recup 4min + retour 10min.",
-        "primary_zone": "SS"
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-08-14-run-run_walk",
+      "id": "2026-08-14-run-recovery",
       "date": "2026-08-14",
       "week_id": "2026-W33",
       "sport": "run",
-      "type": "run_walk",
+      "type": "recovery",
       "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
         "name": "TEST reprise course 2x15min run/walk",
         "duration_min": 35,
-        "description": "2min course Z1-Z2 / 1min marche x2. Terrain souple. ANNULER si douleur reveil >=3/10.",
-        "primary_zone": "Z1-Z2"
+        "description": "2min course Z1-Z2 (<169bpm) / 1min marche, x2 blocs de 15min. Terrain souple. ANNULER si douleur reveil >=3/10.",
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
@@ -5411,11 +5411,11 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-08-19-strength-autre",
+      "id": "2026-08-19-strength-renfo",
       "date": "2026-08-19",
       "week_id": "2026-W34",
       "sport": "strength",
-      "type": "autre",
+      "type": "renfo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
@@ -5441,17 +5441,17 @@ window.SPORT_DATA = {
         "name": "Sweet Spot 2x20min",
         "duration_min": 90,
         "description": "Echauff 10min + 2x20min SS 230-244W / recup 5min + retour 10min.",
-        "primary_zone": "SS"
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-08-21-run-run_walk",
+      "id": "2026-08-21-run-endurance",
       "date": "2026-08-21",
       "week_id": "2026-W34",
       "sport": "run",
-      "type": "run_walk",
+      "type": "endurance",
       "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
@@ -5459,7 +5459,7 @@ window.SPORT_DATA = {
         "name": "Course 2x20-25min run/walk",
         "duration_min": 50,
         "description": "Si test du 14/08 concluant. Sinon repeter le format.",
-        "primary_zone": "Z1-Z2"
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
@@ -5501,18 +5501,18 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-08-24-bike-test",
+      "id": "2026-08-24-bike-endurance",
       "date": "2026-08-24",
       "week_id": "2026-W35",
       "sport": "bike",
-      "type": "test",
+      "type": "endurance",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
-        "name": "RETEST FTP + point de decision douleur",
+        "name": "RETEST FTP (Ramp Test Zwift) + point de decision douleur",
         "duration_min": 60,
-        "description": "Dernier test 16/06 (262W). Si douleur reveil >=4/10 persistante -> consulter avant le 08/09.",
+        "description": "Dernier test 16/06 (262W). Si douleur reveil >=4/10 persistante -> consulter podologue/kine avant le 08/09.",
         "primary_zone": null
       },
       "executed": null,
@@ -5555,11 +5555,11 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-08-27-run-easy",
+      "id": "2026-08-27-run-recovery",
       "date": "2026-08-27",
       "week_id": "2026-W35",
       "sport": "run",
-      "type": "easy",
+      "type": "recovery",
       "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
@@ -5567,7 +5567,7 @@ window.SPORT_DATA = {
         "name": "Course 25-30min continu",
         "duration_min": 30,
         "description": "Z1-Z2 continu, surface souple.",
-        "primary_zone": "Z1-Z2"
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
@@ -5621,17 +5621,17 @@ window.SPORT_DATA = {
         "name": "Sortie longue + 2x20min SS",
         "duration_min": 165,
         "description": "2h30-3h dont 2x20min Sweet Spot (recalibre sur FTP retestee).",
-        "primary_zone": "SS"
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-08-31-bike-vo2max",
+      "id": "2026-08-31-bike-interval",
       "date": "2026-08-31",
       "week_id": "2026-W36",
       "sport": "bike",
-      "type": "vo2max",
+      "type": "interval",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
@@ -5663,11 +5663,11 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-09-02-run-easy",
+      "id": "2026-09-02-run-recovery",
       "date": "2026-09-02",
       "week_id": "2026-W36",
       "sport": "run",
-      "type": "easy",
+      "type": "recovery",
       "type_log": "Course a pied",
       "status": "planned",
       "source": "plan_generated",
@@ -5675,17 +5675,17 @@ window.SPORT_DATA = {
         "name": "Course 25min facile",
         "duration_min": 25,
         "description": "Z1-Z2.",
-        "primary_zone": "Z1-Z2"
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-09-03-strength-autre",
+      "id": "2026-09-03-strength-renfo",
       "date": "2026-09-03",
       "week_id": "2026-W36",
       "sport": "strength",
-      "type": "autre",
+      "type": "renfo",
       "type_log": "Renforcement",
       "status": "planned",
       "source": "plan_generated",
@@ -5699,11 +5699,11 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-09-04-bike-endurance",
+      "id": "2026-09-04-bike-recovery",
       "date": "2026-09-04",
       "week_id": "2026-W36",
       "sport": "bike",
-      "type": "endurance",
+      "type": "recovery",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
@@ -5711,7 +5711,7 @@ window.SPORT_DATA = {
         "name": "Velo Z1-Z2 1h30",
         "duration_min": 90,
         "description": "Derniere seance avant le mariage.",
-        "primary_zone": "Z1-Z2"
+        "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
@@ -5737,6 +5737,7 @@ window.SPORT_DATA = {
   ],
   "wellness": {
     "2026-05-28": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": null,
       "sleep_h": null,
@@ -5751,6 +5752,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-29": {
+      "weight": null,
       "resting_hr": 57,
       "sleep_secs": 28140,
       "sleep_h": 7.8,
@@ -5765,6 +5767,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-30": {
+      "weight": null,
       "resting_hr": 62,
       "sleep_secs": 16260,
       "sleep_h": 4.5,
@@ -5779,6 +5782,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-31": {
+      "weight": null,
       "resting_hr": 63,
       "sleep_secs": null,
       "sleep_h": null,
@@ -5793,6 +5797,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-01": {
+      "weight": null,
       "resting_hr": 56,
       "sleep_secs": 33420,
       "sleep_h": 9.3,
@@ -5807,6 +5812,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-02": {
+      "weight": null,
       "resting_hr": 55,
       "sleep_secs": 26940,
       "sleep_h": 7.5,
@@ -5821,6 +5827,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-03": {
+      "weight": null,
       "resting_hr": 60,
       "sleep_secs": 26220,
       "sleep_h": 7.3,
@@ -5835,6 +5842,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-04": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": 24480,
       "sleep_h": 6.8,
@@ -5849,6 +5857,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-05": {
+      "weight": null,
       "resting_hr": 65,
       "sleep_secs": 27240,
       "sleep_h": 7.6,
@@ -5863,6 +5872,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-06": {
+      "weight": null,
       "resting_hr": 64,
       "sleep_secs": 22860,
       "sleep_h": 6.3,
@@ -5877,6 +5887,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-07": {
+      "weight": null,
       "resting_hr": 65,
       "sleep_secs": 22320,
       "sleep_h": 6.2,
@@ -5891,6 +5902,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-08": {
+      "weight": null,
       "resting_hr": 63,
       "sleep_secs": 24420,
       "sleep_h": 6.8,
@@ -5905,6 +5917,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-09": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 29280,
       "sleep_h": 8.1,
@@ -5919,6 +5932,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-10": {
+      "weight": null,
       "resting_hr": 65,
       "sleep_secs": 28740,
       "sleep_h": 8.0,
@@ -5933,6 +5947,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-11": {
+      "weight": null,
       "resting_hr": 61,
       "sleep_secs": 27000,
       "sleep_h": 7.5,
@@ -5947,6 +5962,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-12": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 19080,
       "sleep_h": 5.3,
@@ -5961,6 +5977,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-13": {
+      "weight": null,
       "resting_hr": 61,
       "sleep_secs": 26880,
       "sleep_h": 7.5,
@@ -5975,6 +5992,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-14": {
+      "weight": null,
       "resting_hr": 61,
       "sleep_secs": 25020,
       "sleep_h": 7.0,
@@ -5989,6 +6007,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-15": {
+      "weight": null,
       "resting_hr": 63,
       "sleep_secs": 26580,
       "sleep_h": 7.4,
@@ -6003,6 +6022,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-16": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6017,6 +6037,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-17": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 26640,
       "sleep_h": 7.4,
@@ -6703,6 +6724,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-06": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6717,6 +6739,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-07": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6731,6 +6754,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-08": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6745,6 +6769,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-09": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6759,6 +6784,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-10": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6773,6 +6799,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-11": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6787,6 +6814,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-12": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6801,6 +6829,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-13": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6815,6 +6844,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-14": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6829,6 +6859,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-15": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6843,6 +6874,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-16": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6857,6 +6889,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-17": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6871,6 +6904,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-18": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6885,6 +6919,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-19": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6899,6 +6934,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-20": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6913,6 +6949,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-21": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6927,6 +6964,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-22": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6941,6 +6979,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-23": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6955,6 +6994,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-24": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6969,6 +7009,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-25": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6983,6 +7024,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-26": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -6997,6 +7039,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-05-27": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7011,6 +7054,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-18": {
+      "weight": null,
       "resting_hr": 57,
       "sleep_secs": 25320,
       "sleep_h": 7.0,
@@ -7025,6 +7069,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-19": {
+      "weight": null,
       "resting_hr": 62,
       "sleep_secs": 28740,
       "sleep_h": 8.0,
@@ -7039,6 +7084,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-20": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": 25260,
       "sleep_h": 7.0,
@@ -7053,6 +7099,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-21": {
+      "weight": null,
       "resting_hr": 64,
       "sleep_secs": 24960,
       "sleep_h": 6.9,
@@ -7067,6 +7114,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-22": {
+      "weight": null,
       "resting_hr": 60,
       "sleep_secs": 27120,
       "sleep_h": 7.5,
@@ -7081,6 +7129,7 @@ window.SPORT_DATA = {
       "mood": 2
     },
     "2026-06-23": {
+      "weight": null,
       "resting_hr": 54,
       "sleep_secs": 29160,
       "sleep_h": 8.1,
@@ -7095,6 +7144,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-24": {
+      "weight": null,
       "resting_hr": 54,
       "sleep_secs": 25860,
       "sleep_h": 7.2,
@@ -7109,6 +7159,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-25": {
+      "weight": null,
       "resting_hr": 55,
       "sleep_secs": 30540,
       "sleep_h": 8.5,
@@ -7123,6 +7174,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-26": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 20580,
       "sleep_h": 5.7,
@@ -7137,6 +7189,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-27": {
+      "weight": null,
       "resting_hr": 57,
       "sleep_secs": 16320,
       "sleep_h": 4.5,
@@ -7151,6 +7204,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-28": {
+      "weight": null,
       "resting_hr": 52,
       "sleep_secs": 30480,
       "sleep_h": 8.5,
@@ -7165,6 +7219,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-29": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 26640,
       "sleep_h": 7.4,
@@ -7179,6 +7234,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-06-30": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": 24360,
       "sleep_h": 6.8,
@@ -7193,6 +7249,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-01": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 22560,
       "sleep_h": 6.3,
@@ -7207,6 +7264,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-02": {
+      "weight": null,
       "resting_hr": 53,
       "sleep_secs": 24240,
       "sleep_h": 6.7,
@@ -7221,6 +7279,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-03": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": 22920,
       "sleep_h": 6.4,
@@ -7235,6 +7294,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-04": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7249,6 +7309,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-05": {
+      "weight": null,
       "resting_hr": 62,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7263,6 +7324,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-06": {
+      "weight": null,
       "resting_hr": 62,
       "sleep_secs": 18660,
       "sleep_h": 5.2,
@@ -7277,6 +7339,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-07": {
+      "weight": null,
       "resting_hr": 61,
       "sleep_secs": 21240,
       "sleep_h": 5.9,
@@ -7291,6 +7354,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-08": {
+      "weight": null,
       "resting_hr": 61,
       "sleep_secs": 25320,
       "sleep_h": 7.0,
@@ -7305,6 +7369,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-09": {
+      "weight": null,
       "resting_hr": 67,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7319,6 +7384,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-10": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7333,6 +7399,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-11": {
+      "weight": null,
       "resting_hr": 62,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7347,6 +7414,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-12": {
+      "weight": null,
       "resting_hr": 58,
       "sleep_secs": 32160,
       "sleep_h": 8.9,
@@ -7361,6 +7429,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-13": {
+      "weight": null,
       "resting_hr": 60,
       "sleep_secs": 23880,
       "sleep_h": 6.6,
@@ -7375,6 +7444,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-14": {
+      "weight": null,
       "resting_hr": 67,
       "sleep_secs": 24120,
       "sleep_h": 6.7,
@@ -7389,6 +7459,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-15": {
+      "weight": null,
       "resting_hr": 72,
       "sleep_secs": 22200,
       "sleep_h": 6.2,
@@ -7403,6 +7474,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-16": {
+      "weight": null,
       "resting_hr": 66,
       "sleep_secs": 25260,
       "sleep_h": 7.0,
@@ -7417,6 +7489,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-17": {
+      "weight": null,
       "resting_hr": 72,
       "sleep_secs": 25020,
       "sleep_h": 7.0,
@@ -7431,6 +7504,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-18": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7445,6 +7519,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-19": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7459,6 +7534,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-20": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7473,6 +7549,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-21": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7487,6 +7564,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-22": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7501,6 +7579,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-23": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7515,6 +7594,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-24": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7529,6 +7609,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-25": {
+      "weight": null,
       "resting_hr": 68,
       "sleep_secs": 23220,
       "sleep_h": 6.5,
@@ -7543,6 +7624,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-26": {
+      "weight": null,
       "resting_hr": 59,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7557,6 +7639,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-27": {
+      "weight": null,
       "resting_hr": 57,
       "sleep_secs": 31500,
       "sleep_h": 8.8,
@@ -7571,6 +7654,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-28": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7585,6 +7669,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-29": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7599,6 +7684,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-30": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7613,6 +7699,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-07-31": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7627,6 +7714,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-08-01": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7641,6 +7729,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-08-02": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7655,6 +7744,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-08-03": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
@@ -7669,6 +7759,7 @@ window.SPORT_DATA = {
       "mood": null
     },
     "2026-08-04": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
