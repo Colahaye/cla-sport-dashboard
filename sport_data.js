@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-05T23:52:39.000Z",
+  "last_updated": "2026-08-06T07:34:04.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5177,22 +5177,46 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-05-strength-tempo",
-      "date": "2026-08-05",
+      "id": "2026-08-06-bike-endurance-i172951847",
+      "date": "2026-08-06",
       "week_id": "2026-W32",
-      "sport": "strength",
-      "type": "tempo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo B (chaine posterieure)",
-        "duration_min": 30,
-        "description": "Hip thrust 3x15, fentes arriere 3x12/jambe, step up 3x12/jambe, heel drop excentrique 3x15, squat lent 3x12, short foot 3x15/pied.",
-        "primary_zone": null
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i172951847",
+      "intervals_url": "https://intervals.icu/activities/i172951847",
+      "planned": null,
+      "executed": {
+        "duration_min": 86,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 204,
+        "hr_avg": 153,
+        "hr_max": 187,
+        "tss": 80,
+        "distance_m": 40227,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
       },
-      "executed": null,
-      "notes": null
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
       "id": "2026-08-06-bike-tempo",
@@ -7784,6 +7808,21 @@ window.SPORT_DATA = {
       "ctl": 12.1,
       "atl": 5.9,
       "tsb": 6.2,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-06": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 13.7,
+      "atl": 15.8,
+      "tsb": -2.1,
       "soreness": null,
       "fatigue": null,
       "mood": null
