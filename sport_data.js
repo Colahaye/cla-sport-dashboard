@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-06T15:08:42.000Z",
+  "last_updated": "2026-08-07T00:36:27.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5219,24 +5219,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-06-bike-tempo",
-      "date": "2026-08-06",
-      "week_id": "2026-W32",
-      "sport": "bike",
-      "type": "tempo",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Velo Z2 1h30 + 3x5min Z3",
-        "duration_min": 90,
-        "description": "1h30 dont 3x5min Z3 (197-236W) recup 3min.",
-        "primary_zone": "Z3"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-08-bike-endurance",
       "date": "2026-08-08",
       "week_id": "2026-W32",
@@ -7823,6 +7805,21 @@ window.SPORT_DATA = {
       "ctl": 13.7,
       "atl": 15.8,
       "tsb": -2.1,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-07": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 13.4,
+      "atl": 13.7,
+      "tsb": -0.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
