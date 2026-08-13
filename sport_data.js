@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-13T19:52:25.000Z",
+  "last_updated": "2026-08-13T21:36:39.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5392,7 +5392,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 2h",
         "duration_min": 120,
-        "description": "Endurance Z2 (weekend). 145-196W / 135-155bpm.",
+        "description": "120m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5410,7 +5410,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Sortie longue Z2 2h30",
         "duration_min": 150,
-        "description": "Endurance Z2, terrain roulant. Deplacee du 10/08 (regle : pas de sortie >1h30 en semaine). 145-196W / 135-155bpm.",
+        "description": "150m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5446,7 +5446,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 1h30",
         "duration_min": 90,
-        "description": "Protocole fasciite matin+soir. 145-196W / 135-155bpm.",
+        "description": "90m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5482,7 +5482,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Sweet Spot 2x20min",
         "duration_min": 90,
-        "description": "Echauff 10min + 2x20min SS 230-244W / recup 5min + retour 10min. HR indicatif 158-172bpm.",
+        "description": "10m 50-65%\n20m 88-93%\n5m 40-50%\n20m 88-93%\n10m 50-65%",
         "primary_zone": null
       },
       "executed": null,
@@ -5518,7 +5518,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 1h30",
         "duration_min": 90,
-        "description": "Protocole fasciite matin+soir. 145-196W / 135-155bpm.",
+        "description": "90m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5536,7 +5536,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Sortie longue Z2 2h30-3h",
         "duration_min": 165,
-        "description": "Endurance Z2. Deplacee du 17/08 (regle : pas de sortie >1h30 en semaine). 145-196W / 135-155bpm.",
+        "description": "165m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5590,7 +5590,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 1h30",
         "duration_min": 90,
-        "description": "Protocole fasciite matin+soir. Raccourcie de 2h (regle : pas de sortie >1h30 en semaine). 145-196W / 135-155bpm.",
+        "description": "90m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5644,7 +5644,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 1h30",
         "duration_min": 90,
-        "description": "Protocole fasciite matin+soir. 145-196W / 135-155bpm.",
+        "description": "90m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5669,19 +5669,19 @@ window.SPORT_DATA = {
       "notes": null
     },
     {
-      "id": "2026-08-30-bike-tempo",
+      "id": "2026-08-30-bike-endurance",
       "date": "2026-08-30",
       "week_id": "2026-W35",
       "sport": "bike",
-      "type": "tempo",
+      "type": "endurance",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
         "name": "Sortie longue + 2x20min SS",
         "duration_min": 165,
-        "description": "2h30-3h Z2 (145-196W / 135-155bpm, weekend) dont 2x20min Sweet Spot ~88-93% nouvelle FTP (recalibre sur retest du 24/08) / HR indicatif 158-172bpm.",
-        "primary_zone": "Z2"
+        "description": "70m 55-75%\n20m 88-93%\n10m 55-75%\n20m 88-93%\n45m 55-75%",
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
@@ -5698,7 +5698,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "VO2max 5x4min Z5",
         "duration_min": 85,
-        "description": "Echauff 15min + 5x4min Z5 / recup 4min + retour 10min (~1h05 de protocole, duree plafonnee a 1h25 -- regle : pas de sortie >1h30 en semaine). Z5 = 106-120% nouvelle FTP (a definir apres retest du 24/08) / HR cible 185-194bpm.",
+        "description": "15m 50-65%\n4m 106-120%\n4m 40-50%\n4m 106-120%\n4m 40-50%\n4m 106-120%\n4m 40-50%\n4m 106-120%\n4m 40-50%\n4m 106-120%\n10m 50-65%",
         "primary_zone": "Z5"
       },
       "executed": null,
@@ -5716,7 +5716,7 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z2 1h30",
         "duration_min": 90,
-        "description": "Debut de decharge. 145-196W / 135-155bpm.",
+        "description": "90m 55-75%",
         "primary_zone": "Z2"
       },
       "executed": null,
@@ -5770,26 +5770,26 @@ window.SPORT_DATA = {
       "planned": {
         "name": "Velo Z1-Z2 1h30",
         "duration_min": 90,
-        "description": "Derniere seance avant le mariage. 0-196W / <=155bpm.",
+        "description": "90m 45-70%",
         "primary_zone": "Z2"
       },
       "executed": null,
       "notes": null
     },
     {
-      "id": "2026-09-07-bike-recovery",
+      "id": "2026-09-07-bike-endurance",
       "date": "2026-09-07",
       "week_id": "2026-W37",
       "sport": "bike",
-      "type": "recovery",
+      "type": "endurance",
       "type_log": "Velo",
       "status": "planned",
       "source": "plan_generated",
       "planned": {
         "name": "Velo tres facile (optionnel)",
         "duration_min": 45,
-        "description": "45min max Z1 (0-144W / <=135bpm), seulement si envie apres le mariage. Sinon repos avant le vol.",
-        "primary_zone": "Z1"
+        "description": "45m 30-50%",
+        "primary_zone": null
       },
       "executed": null,
       "notes": null
