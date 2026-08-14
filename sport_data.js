@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-13T23:33:17.000Z",
+  "last_updated": "2026-08-14T06:07:38.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5345,24 +5345,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-13-bike-tempo",
-      "date": "2026-08-13",
-      "week_id": "2026-W33",
-      "sport": "bike",
-      "type": "tempo",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Sweet Spot 3x15min",
-        "duration_min": 90,
-        "description": "Echauff 10min + 3x15min SS 230-244W / recup 4min + retour 10min. HR indicatif 158-172bpm.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-14-run-recovery",
       "date": "2026-08-14",
       "week_id": "2026-W33",
@@ -7964,6 +7946,21 @@ window.SPORT_DATA = {
       "ctl": 18.1,
       "atl": 34.9,
       "tsb": -16.7,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-14": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 17.7,
+      "atl": 30.2,
+      "tsb": -12.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
