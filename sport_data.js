@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-14T23:14:23.000Z",
+  "last_updated": "2026-08-15T05:17:46.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5345,24 +5345,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-14-run-recovery",
-      "date": "2026-08-14",
-      "week_id": "2026-W33",
-      "sport": "run",
-      "type": "recovery",
-      "type_log": "Course a pied",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "TEST reprise course 2x15min run/walk",
-        "duration_min": 35,
-        "description": "2min course Z1-Z2 (<169bpm) / 1min marche, x2 blocs de 15min. Terrain souple. ANNULER si douleur reveil >=3/10.",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-15-bike-endurance",
       "date": "2026-08-15",
       "week_id": "2026-W33",
@@ -7961,6 +7943,21 @@ window.SPORT_DATA = {
       "ctl": 17.7,
       "atl": 30.2,
       "tsb": -12.5,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-15": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 17.3,
+      "atl": 26.2,
+      "tsb": -8.9,
       "soreness": null,
       "fatigue": null,
       "mood": null
