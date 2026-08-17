@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-16T23:12:33.000Z",
+  "last_updated": "2026-08-17T05:28:13.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5429,42 +5429,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-16-bike-endurance",
-      "date": "2026-08-16",
-      "week_id": "2026-W33",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Sortie longue Z2 2h30",
-        "duration_min": 150,
-        "description": "150m 55-75%",
-        "primary_zone": "Z2"
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
-      "id": "2026-08-16-strength-renfo",
-      "date": "2026-08-16",
-      "week_id": "2026-W33",
-      "sport": "strength",
-      "type": "renfo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo A",
-        "duration_min": 30,
-        "description": "Tronc + haut du corps.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-18-bike-endurance",
       "date": "2026-08-18",
       "week_id": "2026-W34",
@@ -8039,6 +8003,21 @@ window.SPORT_DATA = {
       "ctl": 21.8,
       "atl": 49.4,
       "tsb": -27.5,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-17": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 21.3,
+      "atl": 42.8,
+      "tsb": -21.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
