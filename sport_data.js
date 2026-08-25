@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-24T23:15:47.000Z",
+  "last_updated": "2026-08-25T05:24:39.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5429,24 +5429,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-24-bike-endurance",
-      "date": "2026-08-24",
-      "week_id": "2026-W35",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "RETEST FTP (Ramp Test Zwift) + point de decision douleur",
-        "duration_min": 60,
-        "description": "Dernier test 16/06 (262W). Si douleur reveil >=4/10 persistante -> consulter podologue/kine avant le 08/09. Protocole paliers progressifs jusqu'a l'echec, zones N/A (effort maximal).",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-25-bike-endurance",
       "date": "2026-08-25",
       "week_id": "2026-W35",
@@ -7997,6 +7979,21 @@ window.SPORT_DATA = {
       "ctl": 18.1,
       "atl": 15.7,
       "tsb": 2.3,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-25": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 17.6,
+      "atl": 13.6,
+      "tsb": 4.0,
       "soreness": null,
       "fatigue": null,
       "mood": null
