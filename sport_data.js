@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-26T21:31:19.000Z",
+  "last_updated": "2026-08-27T04:09:49.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5429,24 +5429,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-26-strength-renfo",
-      "date": "2026-08-26",
-      "week_id": "2026-W35",
-      "sport": "strength",
-      "type": "renfo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo A",
-        "duration_min": 30,
-        "description": "Tronc + haut du corps.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-27-run-recovery",
       "date": "2026-08-27",
       "week_id": "2026-W35",
@@ -7991,6 +7973,21 @@ window.SPORT_DATA = {
       "ctl": 17.2,
       "atl": 11.8,
       "tsb": 5.4,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-27": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 16.8,
+      "atl": 10.3,
+      "tsb": 6.6,
       "soreness": null,
       "fatigue": null,
       "mood": null
