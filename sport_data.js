@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-29T22:56:24.000Z",
+  "last_updated": "2026-08-30T00:58:58.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5429,24 +5429,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-29-strength-renfo",
-      "date": "2026-08-29",
-      "week_id": "2026-W35",
-      "sport": "strength",
-      "type": "renfo",
-      "type_log": "Renforcement",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Renfo B",
-        "duration_min": 30,
-        "description": "Chaine posterieure + heel drop + short foot.",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-30-bike-endurance",
       "date": "2026-08-30",
       "week_id": "2026-W35",
@@ -7982,6 +7964,21 @@ window.SPORT_DATA = {
       "ctl": 16.0,
       "atl": 7.7,
       "tsb": 8.3,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-30": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 15.6,
+      "atl": 6.7,
+      "tsb": 9.0,
       "soreness": null,
       "fatigue": null,
       "mood": null
