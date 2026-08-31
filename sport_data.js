@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-08-30T23:02:14.000Z",
+  "last_updated": "2026-08-31T11:15:40.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5429,24 +5429,6 @@ window.SPORT_DATA = {
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
     },
     {
-      "id": "2026-08-30-bike-endurance",
-      "date": "2026-08-30",
-      "week_id": "2026-W35",
-      "sport": "bike",
-      "type": "endurance",
-      "type_log": "Velo",
-      "status": "planned",
-      "source": "plan_generated",
-      "planned": {
-        "name": "Sortie longue + 2x20min SS",
-        "duration_min": 165,
-        "description": "70m 55-75%\n20m 88-93%\n10m 55-75%\n20m 88-93%\n45m 55-75%",
-        "primary_zone": null
-      },
-      "executed": null,
-      "notes": null
-    },
-    {
       "id": "2026-08-31-bike-interval",
       "date": "2026-08-31",
       "week_id": "2026-W36",
@@ -7979,6 +7961,21 @@ window.SPORT_DATA = {
       "ctl": 15.6,
       "atl": 6.7,
       "tsb": 9.0,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-08-31": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 15.3,
+      "atl": 5.8,
+      "tsb": 9.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
