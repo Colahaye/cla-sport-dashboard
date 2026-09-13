@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-09-12T21:07:53.000Z",
+  "last_updated": "2026-09-13T00:30:41.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -8048,6 +8048,21 @@ window.SPORT_DATA = {
       "ctl": 11.5,
       "atl": 1.0,
       "tsb": 10.4,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-09-13": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 11.2,
+      "atl": 0.9,
+      "tsb": 10.3,
       "soreness": null,
       "fatigue": null,
       "mood": null
