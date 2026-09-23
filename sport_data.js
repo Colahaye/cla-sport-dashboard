@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-09-23T15:14:17.000Z",
+  "last_updated": "2026-09-23T19:55:14.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
