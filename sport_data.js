@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-08T00:38:14.000Z",
+  "last_updated": "2026-10-08T11:42:30.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5469,6 +5469,90 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-08-bike-endurance-i194953429",
+      "date": "2026-10-08",
+      "week_id": "2026-W41",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Sint-Pieters-Leeuw Cyclisme",
+      "intervals_id": "i194953429",
+      "intervals_url": "https://intervals.icu/activities/i194953429",
+      "planned": null,
+      "executed": {
+        "duration_min": 18,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 53,
+        "hr_avg": 150,
+        "hr_max": 168,
+        "tss": 17,
+        "distance_m": 7126,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Sint-Pieters-Leeuw Cyclisme"
+    },
+    {
+      "id": "2026-10-08-bike-endurance-i194920324",
+      "date": "2026-10-08",
+      "week_id": "2026-W41",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst Cyclisme",
+      "intervals_id": "i194920324",
+      "intervals_url": "https://intervals.icu/activities/i194920324",
+      "planned": null,
+      "executed": {
+        "duration_min": 13,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 32,
+        "hr_avg": 138,
+        "hr_max": 165,
+        "tss": 9,
+        "distance_m": 4937,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst Cyclisme"
     }
   ],
   "wellness": {
@@ -8456,11 +8540,11 @@ window.SPORT_DATA = {
     },
     "2026-10-07": {
       "weight": 70.0,
-      "resting_hr": 83,
+      "resting_hr": 70,
       "sleep_secs": null,
       "sleep_h": null,
       "sleep_score": null,
-      "steps": 1038,
+      "steps": 1963,
       "hrv_ms": null,
       "ctl": 8.0,
       "atl": 9.7,
@@ -8471,15 +8555,15 @@ window.SPORT_DATA = {
     },
     "2026-10-08": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 67,
+      "sleep_secs": 21840,
+      "sleep_h": 6.1,
+      "sleep_score": 76.0,
+      "steps": 1450,
       "hrv_ms": null,
-      "ctl": 7.9,
-      "atl": 8.4,
-      "tsb": -0.6,
+      "ctl": 8.5,
+      "atl": 11.9,
+      "tsb": -3.4,
       "soreness": null,
       "fatigue": null,
       "mood": null
