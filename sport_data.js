@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-20T01:24:16.000Z",
+  "last_updated": "2026-10-20T09:44:21.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5679,6 +5679,90 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-19-strength-renfo-i199375207",
+      "date": "2026-10-19",
+      "week_id": "2026-W43",
+      "sport": "strength",
+      "type": "renfo",
+      "type_log": "Renforcement",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Pied : étirements soir 10' + force mollet",
+      "intervals_id": "i199375207",
+      "intervals_url": "https://intervals.icu/activities/i199375207",
+      "planned": null,
+      "executed": {
+        "duration_min": 3,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": null,
+        "hr_max": null,
+        "tss": null,
+        "distance_m": null,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Pied : étirements soir 10' + force mollet"
+    },
+    {
+      "id": "2026-10-20-bike-endurance-i199322232",
+      "date": "2026-10-20",
+      "week_id": "2026-W43",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i199322232",
+      "intervals_url": "https://intervals.icu/activities/i199322232",
+      "planned": null,
+      "executed": {
+        "duration_min": 64,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 135,
+        "hr_avg": 138,
+        "hr_max": 162,
+        "tss": 45,
+        "distance_m": 28492,
+        "cadence": 90,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     }
   ],
   "wellness": {
@@ -8867,9 +8951,9 @@ window.SPORT_DATA = {
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 14.2,
-      "atl": 34.1,
-      "tsb": -19.8,
+      "ctl": 14.3,
+      "atl": 34.2,
+      "tsb": -20.0,
       "soreness": null,
       "fatigue": null,
       "mood": null
