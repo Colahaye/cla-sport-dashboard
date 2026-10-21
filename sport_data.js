@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-20T23:33:28.000Z",
+  "last_updated": "2026-10-21T09:45:40.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5763,6 +5763,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-21-run-easy-i199835993",
+      "date": "2026-10-21",
+      "week_id": "2026-W43",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Course-marche 8x(1'/1')",
+      "intervals_id": "i199835993",
+      "intervals_url": "https://intervals.icu/activities/i199835993",
+      "planned": null,
+      "executed": {
+        "duration_min": 26,
+        "np_w": null,
+        "avg_w": null,
+        "kj": null,
+        "hr_avg": null,
+        "hr_max": null,
+        "tss": 11,
+        "distance_m": null,
+        "cadence": null,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Course-marche 8x(1'/1')"
     }
   ],
   "wellness": {
@@ -8954,6 +8996,21 @@ window.SPORT_DATA = {
       "ctl": 14.3,
       "atl": 34.2,
       "tsb": -20.0,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-10-21": {
+      "weight": null,
+      "resting_hr": null,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": null,
+      "hrv_ms": null,
+      "ctl": 14.2,
+      "atl": 31.1,
+      "tsb": -16.9,
       "soreness": null,
       "fatigue": null,
       "mood": null
