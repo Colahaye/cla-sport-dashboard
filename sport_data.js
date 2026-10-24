@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-24T17:44:37.000Z",
+  "last_updated": "2026-10-24T21:21:08.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -5889,6 +5889,90 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-24-run-easy-i201202317",
+      "date": "2026-10-24",
+      "week_id": "2026-W43",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course-marche 8x(1'/1')",
+      "intervals_id": "i201202317",
+      "intervals_url": "https://intervals.icu/activities/i201202317",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 52,
+        "hr_avg": 132,
+        "hr_max": 163,
+        "tss": 12,
+        "distance_m": 3285,
+        "cadence": 72,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche 8x(1'/1')"
+    },
+    {
+      "id": "2026-10-24-run-easy-i201202279",
+      "date": "2026-10-24",
+      "week_id": "2026-W43",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course-marche 8x(1'/1')",
+      "intervals_id": "i201202279",
+      "intervals_url": "https://intervals.icu/activities/i201202279",
+      "planned": null,
+      "executed": {
+        "duration_min": 1,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 2,
+        "hr_avg": 126,
+        "hr_max": 149,
+        "tss": 1,
+        "distance_m": 172,
+        "cadence": 83,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche 8x(1'/1')"
     }
   ],
   "wellness": {
@@ -9135,11 +9219,11 @@ window.SPORT_DATA = {
       "sleep_secs": 31140,
       "sleep_h": 8.7,
       "sleep_score": 81.0,
-      "steps": 148,
+      "steps": 5848,
       "hrv_ms": null,
       "ctl": 16.2,
-      "atl": 35.7,
-      "tsb": -19.6,
+      "atl": 36.0,
+      "tsb": -19.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
