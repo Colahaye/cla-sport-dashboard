@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-27T01:49:21.000Z",
+  "last_updated": "2026-10-27T10:08:21.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6015,6 +6015,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-27-bike-endurance-i202165604",
+      "date": "2026-10-27",
+      "week_id": "2026-W44",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i202165604",
+      "intervals_url": "https://intervals.icu/activities/i202165604",
+      "planned": null,
+      "executed": {
+        "duration_min": 62,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 126,
+        "hr_avg": 139,
+        "hr_max": 173,
+        "tss": 46,
+        "distance_m": 27401,
+        "cadence": 90,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     }
   ],
   "wellness": {
@@ -9302,15 +9344,15 @@ window.SPORT_DATA = {
     },
     "2026-10-27": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 53,
+      "sleep_secs": 26400,
+      "sleep_h": 7.3,
+      "sleep_score": 82.0,
+      "steps": 2752,
       "hrv_ms": null,
-      "ctl": 18.1,
-      "atl": 38.2,
-      "tsb": -20.0,
+      "ctl": 18.3,
+      "atl": 39.0,
+      "tsb": -20.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
