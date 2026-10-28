@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-28T01:56:32.000Z",
+  "last_updated": "2026-10-28T10:54:38.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6057,6 +6057,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-28-run-easy-i202598492",
+      "date": "2026-10-28",
+      "week_id": "2026-W44",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course-marche étape 2 : 6x(2'/1",
+      "intervals_id": "i202598492",
+      "intervals_url": "https://intervals.icu/activities/i202598492",
+      "planned": null,
+      "executed": {
+        "duration_min": 28,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 62,
+        "hr_avg": 129,
+        "hr_max": 156,
+        "tss": 15,
+        "distance_m": 4133,
+        "cadence": 70,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche étape 2 : 6x(2'/1"
     }
   ],
   "wellness": {
@@ -9348,7 +9390,7 @@ window.SPORT_DATA = {
       "sleep_secs": 26400,
       "sleep_h": 7.3,
       "sleep_score": 82.0,
-      "steps": 7564,
+      "steps": 7608,
       "hrv_ms": null,
       "ctl": 18.3,
       "atl": 39.0,
@@ -9359,11 +9401,11 @@ window.SPORT_DATA = {
     },
     "2026-10-28": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 56,
+      "sleep_secs": 28200,
+      "sleep_h": 7.8,
+      "sleep_score": 80.0,
+      "steps": 3048,
       "hrv_ms": null,
       "ctl": 18.2,
       "atl": 35.8,
