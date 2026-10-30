@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-10-29T23:03:09.000Z",
+  "last_updated": "2026-10-30T11:06:54.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6141,6 +6141,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-10-30-run-easy-i203431294",
+      "date": "2026-10-30",
+      "week_id": "2026-W44",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course-marche étape 2 : 6x(2'/1",
+      "intervals_id": "i203431294",
+      "intervals_url": "https://intervals.icu/activities/i203431294",
+      "planned": null,
+      "executed": {
+        "duration_min": 16,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 33,
+        "hr_avg": 124,
+        "hr_max": 151,
+        "tss": 15,
+        "distance_m": 2301,
+        "cadence": 71,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche étape 2 : 6x(2'/1"
     }
   ],
   "wellness": {
@@ -9462,11 +9504,26 @@ window.SPORT_DATA = {
       "sleep_secs": 25074,
       "sleep_h": 7.0,
       "sleep_score": 74.0,
-      "steps": 2914,
+      "steps": 3083,
       "hrv_ms": null,
       "ctl": 18.9,
       "atl": 37.3,
       "tsb": -18.4,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-10-30": {
+      "weight": null,
+      "resting_hr": 57,
+      "sleep_secs": null,
+      "sleep_h": null,
+      "sleep_score": null,
+      "steps": 18,
+      "hrv_ms": null,
+      "ctl": 18.8,
+      "atl": 34.3,
+      "tsb": -15.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
