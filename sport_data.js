@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-01T11:36:11.000Z",
+  "last_updated": "2026-11-01T18:12:16.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6225,6 +6225,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-11-01-bike-endurance-i204366523",
+      "date": "2026-11-01",
+      "week_id": "2026-W44",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i204366523",
+      "intervals_url": "https://intervals.icu/activities/i204366523",
+      "planned": null,
+      "executed": {
+        "duration_min": 148,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 273,
+        "hr_avg": 128,
+        "hr_max": 156,
+        "tss": 92,
+        "distance_m": 63917,
+        "cadence": 88,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     }
   ],
   "wellness": {
@@ -9593,9 +9635,9 @@ window.SPORT_DATA = {
       "sleep_score": 38.0,
       "steps": 231,
       "hrv_ms": null,
-      "ctl": 22.1,
-      "atl": 48.0,
-      "tsb": -25.9,
+      "ctl": 22.0,
+      "atl": 47.7,
+      "tsb": -25.7,
       "soreness": null,
       "fatigue": null,
       "mood": null
