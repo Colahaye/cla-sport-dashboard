@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-08T11:37:25.000Z",
+  "last_updated": "2026-11-08T18:09:48.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6351,6 +6351,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche étape 3 : 5x(3'/1"
+    },
+    {
+      "id": "2026-11-08-bike-endurance-i207404040",
+      "date": "2026-11-08",
+      "week_id": "2026-W45",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Sortie longue Z2 2h30",
+      "intervals_id": "i207404040",
+      "intervals_url": "https://intervals.icu/activities/i207404040",
+      "planned": null,
+      "executed": {
+        "duration_min": 153,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 321,
+        "hr_avg": 141,
+        "hr_max": 166,
+        "tss": 105,
+        "distance_m": 67583,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Sortie longue Z2 2h30"
     }
   ],
   "wellness": {
@@ -9825,8 +9867,8 @@ window.SPORT_DATA = {
       "steps": null,
       "hrv_ms": null,
       "ctl": 22.5,
-      "atl": 36.1,
-      "tsb": -13.6,
+      "atl": 35.9,
+      "tsb": -13.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
