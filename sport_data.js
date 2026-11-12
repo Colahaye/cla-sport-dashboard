@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-11T19:56:30.000Z",
+  "last_updated": "2026-11-12T02:03:58.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6393,6 +6393,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Sortie longue Z2 2h30"
+    },
+    {
+      "id": "2026-11-11-run-easy-i208902373",
+      "date": "2026-11-11",
+      "week_id": "2026-W46",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course-marche étape 4 : 3x(5'/1",
+      "intervals_id": "i208902373",
+      "intervals_url": "https://intervals.icu/activities/i208902373",
+      "planned": null,
+      "executed": {
+        "duration_min": 22,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 57,
+        "hr_avg": 146,
+        "hr_max": 172,
+        "tss": 15,
+        "distance_m": 3693,
+        "cadence": 78,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche étape 4 : 3x(5'/1"
     }
   ],
   "wellness": {
@@ -9845,11 +9887,11 @@ window.SPORT_DATA = {
     },
     "2026-11-07": {
       "weight": null,
-      "resting_hr": 61,
+      "resting_hr": 64,
       "sleep_secs": 27120,
       "sleep_h": 7.5,
       "sleep_score": 59.0,
-      "steps": null,
+      "steps": 8165,
       "hrv_ms": null,
       "ctl": 20.5,
       "atl": 25.3,
@@ -9860,11 +9902,11 @@ window.SPORT_DATA = {
     },
     "2026-11-08": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 59,
+      "sleep_secs": 29640,
+      "sleep_h": 8.2,
+      "sleep_score": 85.0,
+      "steps": 5742,
       "hrv_ms": null,
       "ctl": 22.5,
       "atl": 35.9,
@@ -9875,11 +9917,11 @@ window.SPORT_DATA = {
     },
     "2026-11-09": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 59,
+      "sleep_secs": 28380,
+      "sleep_h": 7.9,
+      "sleep_score": 84.0,
+      "steps": 3644,
       "hrv_ms": null,
       "ctl": 21.9,
       "atl": 31.2,
@@ -9890,11 +9932,11 @@ window.SPORT_DATA = {
     },
     "2026-11-10": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 63,
+      "sleep_secs": 17160,
+      "sleep_h": 4.8,
+      "sleep_score": 34.0,
+      "steps": 5458,
       "hrv_ms": null,
       "ctl": 21.4,
       "atl": 27.0,
@@ -9905,15 +9947,30 @@ window.SPORT_DATA = {
     },
     "2026-11-11": {
       "weight": null,
+      "resting_hr": 57,
+      "sleep_secs": 25380,
+      "sleep_h": 7.0,
+      "sleep_score": 79.0,
+      "steps": 10546,
+      "hrv_ms": null,
+      "ctl": 21.3,
+      "atl": 25.4,
+      "tsb": -4.1,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-11-12": {
+      "weight": null,
       "resting_hr": null,
       "sleep_secs": null,
       "sleep_h": null,
       "sleep_score": null,
       "steps": null,
       "hrv_ms": null,
-      "ctl": 21.3,
-      "atl": 25.7,
-      "tsb": -4.4,
+      "ctl": 21.5,
+      "atl": 26.0,
+      "tsb": -4.5,
       "soreness": null,
       "fatigue": null,
       "mood": null
