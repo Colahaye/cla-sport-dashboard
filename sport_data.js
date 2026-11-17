@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-16T23:36:01.000Z",
+  "last_updated": "2026-11-17T14:01:05.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6561,6 +6561,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-11-17-bike-endurance-i211217915",
+      "date": "2026-11-17",
+      "week_id": "2026-W47",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i211217915",
+      "intervals_url": "https://intervals.icu/activities/i211217915",
+      "planned": null,
+      "executed": {
+        "duration_min": 61,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 125,
+        "hr_avg": 142,
+        "hr_max": 172,
+        "tss": 49,
+        "distance_m": 26123,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     }
   ],
   "wellness": {
@@ -10152,11 +10194,26 @@ window.SPORT_DATA = {
       "sleep_secs": 28680,
       "sleep_h": 8.0,
       "sleep_score": 80.0,
-      "steps": 4493,
+      "steps": 5955,
       "hrv_ms": null,
       "ctl": 22.8,
       "atl": 30.8,
       "tsb": -8.0,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-11-17": {
+      "weight": null,
+      "resting_hr": 58,
+      "sleep_secs": 24480,
+      "sleep_h": 6.8,
+      "sleep_score": 79.0,
+      "steps": 2076,
+      "hrv_ms": null,
+      "ctl": 23.4,
+      "atl": 33.3,
+      "tsb": -9.8,
       "soreness": null,
       "fatigue": null,
       "mood": null
