@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-21T03:40:05.000Z",
+  "last_updated": "2026-11-21T13:09:59.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6687,6 +6687,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Vorst - Course-marche étape 5 : 2x(10'/"
+    },
+    {
+      "id": "2026-11-21-bike-endurance-i212723950",
+      "date": "2026-11-21",
+      "week_id": "2026-W47",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Cyclisme",
+      "intervals_id": "i212723950",
+      "intervals_url": "https://intervals.icu/activities/i212723950",
+      "planned": null,
+      "executed": {
+        "duration_min": 111,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 240,
+        "hr_avg": 146,
+        "hr_max": 174,
+        "tss": 95,
+        "distance_m": 49989,
+        "cadence": 90,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Cyclisme"
     }
   ],
   "wellness": {
@@ -10338,7 +10380,7 @@ window.SPORT_DATA = {
       "sleep_secs": 25440,
       "sleep_h": 7.1,
       "sleep_score": 84.0,
-      "steps": 8379,
+      "steps": 8467,
       "hrv_ms": null,
       "ctl": 22.8,
       "atl": 26.8,
@@ -10349,15 +10391,15 @@ window.SPORT_DATA = {
     },
     "2026-11-21": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 58,
+      "sleep_secs": 26220,
+      "sleep_h": 7.3,
+      "sleep_score": 77.0,
+      "steps": 168,
       "hrv_ms": null,
-      "ctl": 24.4,
-      "atl": 35.5,
-      "tsb": -11.0,
+      "ctl": 24.5,
+      "atl": 35.9,
+      "tsb": -11.4,
       "soreness": null,
       "fatigue": null,
       "mood": null
