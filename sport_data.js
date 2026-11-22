@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-22T00:49:18.000Z",
+  "last_updated": "2026-11-22T12:57:44.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6729,6 +6729,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Cyclisme"
+    },
+    {
+      "id": "2026-11-22-bike-endurance-i213149755",
+      "date": "2026-11-22",
+      "week_id": "2026-W47",
+      "sport": "bike",
+      "type": "endurance",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Sortie longue Z2 2h30",
+      "intervals_id": "i213149755",
+      "intervals_url": "https://intervals.icu/activities/i213149755",
+      "planned": null,
+      "executed": {
+        "duration_min": 169,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 337,
+        "hr_avg": 133,
+        "hr_max": 162,
+        "tss": 117,
+        "distance_m": 71170,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Sortie longue Z2 2h30"
     }
   ],
   "wellness": {
@@ -10406,15 +10448,15 @@ window.SPORT_DATA = {
     },
     "2026-11-22": {
       "weight": null,
-      "resting_hr": 62,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": 183,
+      "resting_hr": 61,
+      "sleep_secs": 26580,
+      "sleep_h": 7.4,
+      "sleep_score": 83.0,
+      "steps": 229,
       "hrv_ms": null,
-      "ctl": 26.4,
-      "atl": 45.1,
-      "tsb": -18.7,
+      "ctl": 26.7,
+      "atl": 46.7,
+      "tsb": -20.0,
       "soreness": null,
       "fatigue": null,
       "mood": null
