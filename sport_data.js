@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-24T03:06:57.000Z",
+  "last_updated": "2026-11-24T15:27:28.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6771,6 +6771,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Sortie longue Z2 2h30"
+    },
+    {
+      "id": "2026-11-24-bike-indoor-i213936887",
+      "date": "2026-11-24",
+      "week_id": "2026-W48",
+      "sport": "bike",
+      "type": "indoor",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Zwift - Intervals icu: Z2 + sprints 60'",
+      "intervals_id": "i213936887",
+      "intervals_url": "https://intervals.icu/activities/i213936887",
+      "planned": null,
+      "executed": {
+        "duration_min": 60,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 120,
+        "hr_avg": 134,
+        "hr_max": 155,
+        "tss": 40,
+        "distance_m": 23764,
+        "cadence": 85,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Zwift - Intervals icu: Z2 + sprints 60'"
     }
   ],
   "wellness": {
@@ -10463,11 +10505,11 @@ window.SPORT_DATA = {
     },
     "2026-11-23": {
       "weight": null,
-      "resting_hr": 52,
+      "resting_hr": 48,
       "sleep_secs": 23520,
       "sleep_h": 6.5,
       "sleep_score": 82.0,
-      "steps": 3437,
+      "steps": 4909,
       "hrv_ms": null,
       "ctl": 26.1,
       "atl": 40.5,
@@ -10478,15 +10520,15 @@ window.SPORT_DATA = {
     },
     "2026-11-24": {
       "weight": null,
-      "resting_hr": null,
-      "sleep_secs": null,
-      "sleep_h": null,
-      "sleep_score": null,
-      "steps": null,
+      "resting_hr": 53,
+      "sleep_secs": 26760,
+      "sleep_h": 7.4,
+      "sleep_score": 90.0,
+      "steps": 3533,
       "hrv_ms": null,
       "ctl": 26.4,
-      "atl": 40.5,
-      "tsb": -14.1,
+      "atl": 40.4,
+      "tsb": -14.0,
       "soreness": null,
       "fatigue": null,
       "mood": null
