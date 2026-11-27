@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-26T23:24:55.000Z",
+  "last_updated": "2026-11-27T14:32:40.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6897,6 +6897,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Zwift - Intervals icu: Z2 + cadence 60'"
+    },
+    {
+      "id": "2026-11-27-run-easy-i215204410",
+      "date": "2026-11-27",
+      "week_id": "2026-W48",
+      "sport": "run",
+      "type": "easy",
+      "type_log": "Course a pied",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Vorst - Course 20' continu + Renfo B",
+      "intervals_id": "i215204410",
+      "intervals_url": "https://intervals.icu/activities/i215204410",
+      "planned": null,
+      "executed": {
+        "duration_min": 28,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 71,
+        "hr_avg": 141,
+        "hr_max": 162,
+        "tss": 20,
+        "distance_m": 4611,
+        "cadence": 78,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Vorst - Course 20' continu + Renfo B"
     }
   ],
   "wellness": {
@@ -10638,11 +10680,26 @@ window.SPORT_DATA = {
       "sleep_secs": 25440,
       "sleep_h": 7.1,
       "sleep_score": 88.0,
-      "steps": 5166,
+      "steps": 5193,
       "hrv_ms": null,
       "ctl": 26.6,
       "atl": 38.3,
       "tsb": -11.7,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-11-27": {
+      "weight": null,
+      "resting_hr": 57,
+      "sleep_secs": 16020,
+      "sleep_h": 4.5,
+      "sleep_score": 37.0,
+      "steps": 4433,
+      "hrv_ms": null,
+      "ctl": 26.5,
+      "atl": 35.9,
+      "tsb": -9.4,
       "soreness": null,
       "fatigue": null,
       "mood": null
