@@ -5,7 +5,7 @@
 
 window.SPORT_DATA = {
   "schema_version": "1.0",
-  "last_updated": "2026-11-27T23:06:23.000Z",
+  "last_updated": "2026-11-28T13:47:19.000Z",
   "athlete": {
     "name": "CLA",
     "full_name": "Corto Lahaye",
@@ -6939,6 +6939,48 @@ window.SPORT_DATA = {
         }
       },
       "notes": "Importe depuis Intervals.icu -- Vorst - Course 20' continu + Renfo B"
+    },
+    {
+      "id": "2026-11-28-bike-indoor-i215596216",
+      "date": "2026-11-28",
+      "week_id": "2026-W48",
+      "sport": "bike",
+      "type": "indoor",
+      "type_log": "Velo",
+      "status": "done",
+      "source": "intervals_icu",
+      "strava_activity_name": "Zwift - Intervals icu: Sortie qualité 1h45 : SS 3x12'",
+      "intervals_id": "i215596216",
+      "intervals_url": "https://intervals.icu/activities/i215596216",
+      "planned": null,
+      "executed": {
+        "duration_min": 107,
+        "np_w": null,
+        "avg_w": null,
+        "kj": 250,
+        "hr_avg": 159,
+        "hr_max": 186,
+        "tss": 100,
+        "distance_m": 56548,
+        "cadence": 87,
+        "subjective": {
+          "rpe": null,
+          "feel": null,
+          "legs": null,
+          "mental": null,
+          "knee_0_3": null,
+          "ankle_0_3": null
+        },
+        "recovery": {
+          "sleep_raw": null,
+          "hrv_ms": null,
+          "body_battery": null
+        },
+        "nutrition": {
+          "carbs_g": null
+        }
+      },
+      "notes": "Importe depuis Intervals.icu -- Zwift - Intervals icu: Sortie qualité 1h45 : SS 3x12'"
     }
   ],
   "wellness": {
@@ -10691,15 +10733,30 @@ window.SPORT_DATA = {
     },
     "2026-11-27": {
       "weight": null,
-      "resting_hr": 57,
+      "resting_hr": 55,
       "sleep_secs": 16020,
       "sleep_h": 4.5,
       "sleep_score": 37.0,
-      "steps": 4433,
+      "steps": 5897,
       "hrv_ms": null,
       "ctl": 26.5,
       "atl": 35.9,
       "tsb": -9.4,
+      "soreness": null,
+      "fatigue": null,
+      "mood": null
+    },
+    "2026-11-28": {
+      "weight": null,
+      "resting_hr": 52,
+      "sleep_secs": 35760,
+      "sleep_h": 9.9,
+      "sleep_score": 97.0,
+      "steps": 2561,
+      "hrv_ms": null,
+      "ctl": 28.2,
+      "atl": 44.4,
+      "tsb": -16.2,
       "soreness": null,
       "fatigue": null,
       "mood": null
